@@ -137,7 +137,20 @@ Die Daten stammen von TERRA-REF Feld Scanner von der University von Arizona Mari
 
 Der 3D Laser Scanner erzeugt sogenannte 3D Punktwolken. Dabei werden die Objekte durch den Scanner erfasst und eine 3D Repräsentation welche durch Punkte in einen 3 Dimensionalen Koordinaten System erfasst werden können dargestellt. Dabei wird ein Laser über das zu scannende Objekt gefahren durch geflektierung des Laserstrahls auf der Oberfläche des Objektes könen x,y,z Koordinaten des jeweiligen Punktes auf den Objekt bestimmt werden.
 
-Die Objekte werden PLY - Polygon File Format gespeichert. 
+Die Objekte werden PLY - Polygon File Format gespeichert.
+
+\section{autoencoder}
+Autoencoder
+Autoencoder sind ein anderes Modell von generativen Modelle. Ihre Aufgabe besteht darin einen Input zu komprimieren und dann wieder zu erstellen. Die Aufgabe wird als rekunstrunktions benannt. 
+Die Technik auf die Dabei zurückgegriffen wird nennt sich Dimensionreduction. Dabei werden die Dimension der Daten so reduziert und Informationen bei zu behalten welche als relevant gelten. Diese Methode finden auch in anderen Machine Learning Ansätzen Anwendung wie in beispielsweiße der Principale component anaysis(PCA). Bestandteile eines Autoencoder ist ein Encoder g parametrisiert mit $\phi$ welcher einen Input x element von $x\textsuperscript{i}$ wo x ein vektor der länge i ist. Und Damit die Input Dimension bestimmt. Dieser wird durch den Encoder auf einen Vektor $z\textsuperscript{k}$ abgebildet wobei k<i ist. Der Decoder f $\theta$ bekommt nun als Inpu t$z\textsuperscript{k}$ und mappt z auf $x\textsuperscript{l}$ wobei l = i. Und somit die gleiche Dimension wie der Input. Aufgabe ist es nun das der Encoder den Input z so gut komprimiert das encoder es schaft das x = z. 
+\\\\
+Die Paramter $\phi$ und $\theta$ werden durch erlernt. Und können beispielsweiße durch fully-COnnected Layer,Convolutional-Layer oder Deconvolutional Layer dargestellt werden. Eine Metrik um zu messen wie gut das Modell seine Aufgabe erfühllt könnte Beispielsweiße Cross-Entropy functionen sein. 
+
+Zielfunktionen Autoencoder
+Da in der Arbeit der Input 3d Pointcloud sind und diese Sets und diese invariant zu ihren Permutationen. Das heißt ändere ich die Anordnung meiner einzelnen Punkte in meien Set bleibt das Ergebniss unverändert.  sind sind kann auf übliche Zielfunktionen nicht zürockgegriffen werden da diese mit Sturcturierten Input Daten arbeiten. Das Problem dabei besteht wenn ich 2 unterschiedliche Sets von Punkten habe wie Messe ich um herraus zu finden wie hoch die discrepanc zwischen den Beiden sets ist. 
+
+http://graphics.stanford.edu/courses/cs468-17-spring/LectureSlides/L14%20-%203d%20deep%20learning%20on%20point%20cloud%20representation%20(analysis).pdf
+
 
 \section{Objekterkennung}
 Das zweite Modell beruht auf dem Konzept, der Objekterkennung auf Bildern aus den Be-reich Computer Vision. Dabei bekommt das Neuronales Netz (NN) als Input ein Bild und gibt als Output die Bounding-Box Koordinaten und die Klassenbezeichnung des Objekts mit den jeweiligen Prozentangaben zurück.
