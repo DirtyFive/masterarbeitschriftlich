@@ -1,30 +1,30 @@
 \babel@toc {english}{}
 \babel@toc {german}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces aaaa}}{6}{figure.1.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{7}{figure.1.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{8}{figure.1.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{8}{figure.1.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces autoencoder}}{10}{figure.1.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{10}{figure.1.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{11}{figure.1.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{16}{figure.1.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces k\IeC {\"u}nstliches neuronales Netzwerk}}{17}{figure.1.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Minimum Maximum Saddle Point}}{18}{figure.1.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces LossFunktion}}{19}{figure.1.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Nicht trennbar}}{21}{figure.1.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Sigmoid Funktion}}{22}{figure.1.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Softmax}}{22}{figure.1.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Neuronal Netzwork als Markov Chain}}{24}{figure.1.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Gr\IeC {\"o}\IeC {\ss }e des Netzwerkes}}{26}{figure.1.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Generative Modelle}}{27}{figure.1.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Convolutional Neural Network}}{28}{figure.1.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Convolution Beispiel}}{29}{figure.1.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Deconvolution Beispiel}}{30}{figure.1.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Generativ Adverserial Network}}{31}{figure.1.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Deep Convolutional GAN}}{33}{figure.1.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces KL Divergenz und JS Divergenz}}{34}{figure.1.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Conditional Adverserial Network}}{36}{figure.1.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Conditional Adverserial Network}}{37}{figure.1.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces Conditional Adverserial Network}}{37}{figure.1.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Conditional Adverserial Network}}{38}{figure.1.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces Conditional Adverserial Network}}{39}{figure.1.28}
+\contentsline {figure}{\numberline {1}{\ignorespaces aaaa}}{7}{figure.1.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{8}{figure.1.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{9}{figure.1.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{9}{figure.1.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces autoencoder}}{11}{figure.1.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{11}{figure.1.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{12}{figure.1.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{17}{figure.1.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces k\IeC {\"u}nstliches neuronales Netzwerk}}{18}{figure.1.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Minimum Maximum Saddle Point}}{19}{figure.1.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces LossFunktion}}{20}{figure.1.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Nicht trennbar}}{22}{figure.1.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Sigmoid Funktion}}{23}{figure.1.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Softmax}}{23}{figure.1.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Neuronal Netzwork als Markov Chain}}{25}{figure.1.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Gr\IeC {\"o}\IeC {\ss }e des Netzwerkes}}{27}{figure.1.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Generative Modelle}}{28}{figure.1.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Convolutional Neural Network}}{29}{figure.1.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Convolution Beispiel}}{30}{figure.1.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Deconvolution Beispiel}}{31}{figure.1.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Generativ Adverserial Network}}{32}{figure.1.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Deep Convolutional GAN}}{34}{figure.1.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces KL Divergenz und JS Divergenz}}{35}{figure.1.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Conditional Adverserial Network}}{37}{figure.1.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Conditional Adverserial Network}}{38}{figure.1.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Conditional Adverserial Network}}{38}{figure.1.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Conditional Adverserial Network}}{39}{figure.1.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Conditional Adverserial Network}}{40}{figure.1.28}

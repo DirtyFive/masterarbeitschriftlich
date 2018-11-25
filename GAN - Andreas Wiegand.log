@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.24)  24 NOV 2018 18:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.24)  25 NOV 2018 13:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -788,7 +788,17 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 \AC@clearlist=\toks27
 )
-(./GAN - Andreas Wiegand.aux
+(f:/texlive/2017/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (./GAN - Andreas Wiegand.aux
+
+LaTeX Warning: Label `fig:Bild1' multiply defined.
+
 
 LaTeX Warning: Label `fig:Bild1' multiply defined.
 
@@ -849,22 +859,22 @@ LaTeX Warning: Label `fig:Bild2' multiply defined.
 )
 \openout1 = `"GAN - Andreas Wiegand.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 \AtBeginShipoutBox=\box64
-Package hyperref Info: Link coloring OFF on input line 13.
+Package hyperref Info: Link coloring OFF on input line 16.
  (f:/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -873,9 +883,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count155
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \ref on input line 16.
+LaTeX Info: Redefining \pageref on input line 16.
+LaTeX Info: Redefining \nameref on input line 16.
 
 (./GAN - Andreas Wiegand.out) (./GAN - Andreas Wiegand.out)
 \@outlinefile=\write4
@@ -918,392 +928,564 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 29.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 29.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 29.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 29.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 29.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 29.
- [1
-
-{f:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for U+msa on input line 29.
+(./GAN - Andreas Wiegand.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
 
 (f:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 29.
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
 (f:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+! Undefined control sequence.
+l.5 \authcount
+               {1}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...ine {author}{Andreas Wiegand}{2}{chapter.1}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 8170) in paragraph at lines 15--15
+  
+ []
+
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 29.
+(babel)             in language append on input line 43.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 29.
+(babel)             in language append on input line 43.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 29.
+(babel)             in language append on input line 43.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 36.
+(babel)             in language append on input line 43.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 36.
+(babel)             in language append on input line 43.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 36.
+(babel)             in language append on input line 43.
+[1
+
+
+{f:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+\tf@toc=\write5
+\openout5 = `"GAN - Andreas Wiegand.toc"'.
+
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 36.
+(babel)             in language append on input line 33.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 36.
+(babel)             in language append on input line 33.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 36.
+(babel)             in language append on input line 33.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 33.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 33.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 33.
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 42--46
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 33.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 33.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 33.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--46
-
+Overfull \hbox (3.86139pt too wide) in paragraph at lines 34--35
+[]\OT1/cmr/m/n/9 Generative Ad-ver-se-ri-al Net-work(GAN) ist ein k[]un-
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 46.
+(babel)             in language append on input line 37.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 46.
+(babel)             in language append on input line 37.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 46.
+(babel)             in language append on input line 37.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 46.
+(babel)             in language append on input line 40.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 46.
+(babel)             in language append on input line 40.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 46.
+(babel)             in language append on input line 40.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 40.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 40.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 40.
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 47--50
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 41.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 41.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 41.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 45.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 45.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 45.
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 62.
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
+
+ []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 50.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 50.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 50.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 50.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 50.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 50.
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 51--54
+
+ []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 55.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 55.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 55.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 59.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 59.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 59.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 66.
 (f:/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
-
-Underfull \vbox (badness 3260) has occurred while \output is active []
-
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 79.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 79.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 79.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 79.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 79.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 79.
- [4]
-<batchnorm.png, id=76, 209.28188pt x 219.82124pt>
-File: batchnorm.png Graphic file (type png)
-<use batchnorm.png>
-Package pdftex.def Info: batchnorm.png  used on input line 97.
-(pdftex.def)             Requested size: 347.12354pt x 364.60463pt.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 104.
+(babel)             in language append on input line 83.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 104.
+(babel)             in language append on input line 83.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 104.
+(babel)             in language append on input line 83.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 104.
+(babel)             in language append on input line 83.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 104.
+(babel)             in language append on input line 83.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 104.
+(babel)             in language append on input line 83.
  [5]
+<batchnorm.png, id=188, 209.28188pt x 219.82124pt>
+File: batchnorm.png Graphic file (type png)
+<use batchnorm.png>
+Package pdftex.def Info: batchnorm.png  used on input line 101.
+(pdftex.def)             Requested size: 347.12354pt x 364.60463pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 104.
+(babel)             in language append on input line 106.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 104.
+(babel)             in language append on input line 106.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 104.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 104.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 104.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 104.
+(babel)             in language append on input line 106.
 
-[6 <./batchnorm.png>]
-<datenformat.png, id=115, 429.10312pt x 407.27156pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 108.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 108.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 108.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 108.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 108.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 108.
+ [6]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 108.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 108.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 108.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 108.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 108.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 108.
+
+[7 <./batchnorm.png>]
+<datenformat.png, id=228, 429.10312pt x 407.27156pt>
 File: datenformat.png Graphic file (type png)
 <use datenformat.png>
-Package pdftex.def Info: datenformat.png  used on input line 108.
+Package pdftex.def Info: datenformat.png  used on input line 112.
 (pdftex.def)             Requested size: 347.12354pt x 329.46556pt.
-<lematech_1.png, id=116, 650.43pt x 279.29344pt>
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 116.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 116.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 116.
+<lematech_1.png, id=229, 650.43pt x 279.29344pt>
 File: lematech_1.png Graphic file (type png)
 <use lematech_1.png>
-Package pdftex.def Info: lematech_1.png  used on input line 117.
+Package pdftex.def Info: lematech_1.png  used on input line 121.
 (pdftex.def)             Requested size: 347.12354pt x 149.05614pt.
-<lematech_2.png, id=117, 624.08156pt x 249.18094pt>
+<lematech_2.png, id=230, 624.08156pt x 249.18094pt>
 File: lematech_2.png Graphic file (type png)
 <use lematech_2.png>
-Package pdftex.def Info: lematech_2.png  used on input line 123.
+Package pdftex.def Info: lematech_2.png  used on input line 127.
 (pdftex.def)             Requested size: 347.12354pt x 138.60121pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 127.
+(babel)             in language append on input line 131.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 127.
+(babel)             in language append on input line 131.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 127.
+(babel)             in language append on input line 131.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 127.
+(babel)             in language append on input line 131.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 127.
+(babel)             in language append on input line 131.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 127.
- [7 <./datenformat.png>]
-Overfull \hbox (252.89961pt too wide) in paragraph at lines 128--137
+(babel)             in language append on input line 131.
+ [8 <./datenformat.png>]
+Overfull \hbox (252.89961pt too wide) in paragraph at lines 132--141
 [][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 138.
+(babel)             in language append on input line 143.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 138.
+(babel)             in language append on input line 143.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 138.
+(babel)             in language append on input line 143.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 138.
+(babel)             in language append on input line 143.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 138.
+(babel)             in language append on input line 143.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 138.
- [8 <./lematech_1.png> <./lematech_2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 143--148
+(babel)             in language append on input line 143.
+[9 <./lematech_1.png> <./lematech_2.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 146.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 146.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 146.
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--152
 
  []
 
-<autoencoder.png, id=135, 447.92343pt x 240.9pt>
+<autoencoder.png, id=245, 447.92343pt x 240.9pt>
 File: autoencoder.png Graphic file (type png)
 <use autoencoder.png>
-Package pdftex.def Info: autoencoder.png  used on input line 151.
+Package pdftex.def Info: autoencoder.png  used on input line 155.
 (pdftex.def)             Requested size: 347.12354pt x 186.69188pt.
-<objekterkennung1.png, id=136, 359.09157pt x 92.59593pt>
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 162.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 162.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 162.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 162.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 162.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--164
+
+ []
+
+
+Overfull \hbox (79.59946pt too wide) in paragraph at lines 162--164
+\OT1/cmr/m/n/10 schen den Bei-den sets ist. http://graphics.stanford.edu/course
+s/cs468-17-spring/LectureSlides/L14 
+ []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 166.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 166.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 166.
+<objekterkennung1.png, id=246, 359.09157pt x 92.59593pt>
 File: objekterkennung1.png Graphic file (type png)
 <use objekterkennung1.png>
-Package pdftex.def Info: objekterkennung1.png  used on input line 166.
+Package pdftex.def Info: objekterkennung1.png  used on input line 170.
 (pdftex.def)             Requested size: 347.12354pt x 89.51556pt.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 170.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 170.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 170.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 170.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 170.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 170.
-[9]
-<objekterkennung2.png, id=143, 216.05719pt x 203.25937pt>
+<objekterkennung2.png, id=247, 216.05719pt x 203.25937pt>
 File: objekterkennung2.png Graphic file (type png)
 <use objekterkennung2.png>
-Package pdftex.def Info: objekterkennung2.png  used on input line 174.
+Package pdftex.def Info: objekterkennung2.png  used on input line 178.
 (pdftex.def)             Requested size: 347.12354pt x 326.59868pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 180.
+(babel)             in language append on input line 182.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 180.
+(babel)             in language append on input line 182.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 180.
+(babel)             in language append on input line 182.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 180.
+(babel)             in language append on input line 182.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 180.
+(babel)             in language append on input line 182.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 180.
- [10 <./autoencoder.png> <./objekterkennung1.png>]
+(babel)             in language append on input line 182.
+[10]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 180.
+(babel)             in language append on input line 182.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 180.
+(babel)             in language append on input line 182.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 180.
+(babel)             in language append on input line 182.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 180.
+(babel)             in language append on input line 182.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 180.
+(babel)             in language append on input line 182.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 180.
- [11 <./objekterkennung2.png>]
+(babel)             in language append on input line 182.
+ [11 <./autoencoder.png> <./objekterkennung1.png>]
+Underfull \vbox (badness 2012) has occurred while \output is active []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 187.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 187.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 187.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 187.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 187.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 187.
+ [12 <./objekterkennung2.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 205.
+(babel)             in language append on input line 209.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 205.
+(babel)             in language append on input line 209.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 205.
+(babel)             in language append on input line 209.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 205.
+(babel)             in language append on input line 209.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 205.
+(babel)             in language append on input line 209.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 205.
- [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 205.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 205.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 205.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 205.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 205.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 205.
+(babel)             in language append on input line 209.
  [13]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 208.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 208.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 208.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 208.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 208.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 208.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 215--217
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 209.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 209.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 209.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 209.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 209.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 209.
+ [14]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 210.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 210.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 210.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 212.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 212.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 212.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 212.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 212.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 212.
+
+[15]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 215.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 215.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 215.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 219.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 219.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 219.
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--221
 
  []
 
-<Neuron.png, id=177, 1688.3075pt x 801.99625pt>
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 222.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 222.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 222.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 230.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 230.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 230.
+<Neuron.png, id=283, 1688.3075pt x 801.99625pt>
 File: Neuron.png Graphic file (type png)
 <use Neuron.png>
-Package pdftex.def Info: Neuron.png  used on input line 232.
+Package pdftex.def Info: Neuron.png  used on input line 236.
 (pdftex.def)             Requested size: 347.12354pt x 164.88754pt.
-<neuronalesnetzwerk.jpg, id=178, 475.7775pt x 401.5pt>
+<neuronalesnetzwerk.jpg, id=284, 475.7775pt x 401.5pt>
 File: neuronalesnetzwerk.jpg Graphic file (type jpg)
 <use neuronalesnetzwerk.jpg>
-Package pdftex.def Info: neuronalesnetzwerk.jpg  used on input line 240.
+Package pdftex.def Info: neuronalesnetzwerk.jpg  used on input line 244.
 (pdftex.def)             Requested size: 347.12354pt x 292.94553pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--245
+Underfull \hbox (badness 10000) in paragraph at lines 241--249
 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 245.
+(babel)             in language append on input line 249.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 245.
+(babel)             in language append on input line 249.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 245.
+(babel)             in language append on input line 249.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 245.
+(babel)             in language append on input line 249.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 245.
+(babel)             in language append on input line 249.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 245.
-[15]
-<saddle.png, id=194, 362.85562pt x 121.95563pt>
+(babel)             in language append on input line 249.
+[16]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 250.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 250.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 250.
+<saddle.png, id=296, 362.85562pt x 121.95563pt>
 File: saddle.png Graphic file (type png)
 <use saddle.png>
-Package pdftex.def Info: saddle.png  used on input line 252.
+Package pdftex.def Info: saddle.png  used on input line 256.
 (pdftex.def)             Requested size: 347.12354pt x 116.67036pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 256.
+(babel)             in language append on input line 260.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 256.
+(babel)             in language append on input line 260.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 256.
+(babel)             in language append on input line 260.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 256.
+(babel)             in language append on input line 260.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 256.
+(babel)             in language append on input line 260.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 256.
- [16 <./Neuron.png>]
+(babel)             in language append on input line 260.
+ [17 <./Neuron.png>]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 256.
+(babel)             in language append on input line 260.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 256.
+(babel)             in language append on input line 260.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 256.
+(babel)             in language append on input line 260.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 256.
+(babel)             in language append on input line 260.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 256.
+(babel)             in language append on input line 260.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 256.
- [17 <./neuronalesnetzwerk.jpg>]
-<gradient.png, id=209, 306.14375pt x 165.61874pt>
+(babel)             in language append on input line 260.
+ [18 <./neuronalesnetzwerk.jpg>]
+<gradient.png, id=311, 306.14375pt x 165.61874pt>
 File: gradient.png Graphic file (type png)
 <use gradient.png>
-Package pdftex.def Info: gradient.png  used on input line 262.
+Package pdftex.def Info: gradient.png  used on input line 266.
 (pdftex.def)             Requested size: 347.12354pt x 187.799pt.
 
-Overfull \hbox (19.04372pt too wide) in paragraph at lines 258--266
+Overfull \hbox (19.04372pt too wide) in paragraph at lines 262--270
 \OT1/cmr/m/n/10 von Op-ti-mie-rung, oh-ne die-se ist ei-ne Um-set-zung des Lern
 -pro-zes-ses na-he-zu unm[]oglich.
  []
 
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 274.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 274.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 274.
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--279
+Underfull \hbox (badness 10000) in paragraph at lines 276--283
 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 279.
+(babel)             in language append on input line 283.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 279.
+(babel)             in language append on input line 283.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 279.
+(babel)             in language append on input line 283.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 279.
+(babel)             in language append on input line 283.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 279.
+(babel)             in language append on input line 283.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 279.
-[18 <./saddle.png>]
-Overfull \hbox (13.73828pt too wide) in paragraph at lines 280--285
+(babel)             in language append on input line 283.
+[19 <./saddle.png>]
+Overfull \hbox (13.73828pt too wide) in paragraph at lines 284--289
 \OT1/cmr/m/n/10 aber aus einen lo-ca-len Op-ti-mum hin-aus rich-tung ei-nes glo
 -ba-len Optimum[][]Sutskever,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--285
+Underfull \hbox (badness 10000) in paragraph at lines 284--289
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--285
+Underfull \hbox (badness 10000) in paragraph at lines 284--289
 
  []
 
@@ -1311,246 +1493,295 @@ Underfull \hbox (badness 10000) in paragraph at lines 280--285
 Underfull \vbox (badness 1609) has occurred while \output is active []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 285.
+(babel)             in language append on input line 289.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 285.
+(babel)             in language append on input line 289.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 285.
+(babel)             in language append on input line 289.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 285.
+(babel)             in language append on input line 289.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 285.
+(babel)             in language append on input line 289.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 285.
- [19 <./gradient.png>]
-<lineartrennbar.png, id=235, 336.50719pt x 349.305pt>
+(babel)             in language append on input line 289.
+ [20 <./gradient.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 293.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 293.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 293.
+<lineartrennbar.png, id=336, 336.50719pt x 349.305pt>
 File: lineartrennbar.png Graphic file (type png)
 <use lineartrennbar.png>
-Package pdftex.def Info: lineartrennbar.png  used on input line 296.
+Package pdftex.def Info: lineartrennbar.png  used on input line 300.
 (pdftex.def)             Requested size: 347.12354pt x 360.33182pt.
-<sigmoid.png, id=236, 343.2825pt x 188.95593pt>
+<sigmoid.png, id=337, 343.2825pt x 188.95593pt>
 File: sigmoid.png Graphic file (type png)
 <use sigmoid.png>
-Package pdftex.def Info: sigmoid.png  used on input line 303.
+Package pdftex.def Info: sigmoid.png  used on input line 307.
 (pdftex.def)             Requested size: 347.12354pt x 191.06886pt.
-<softmax.png, id=237, 301.8778pt x 170.13562pt>
+<softmax.png, id=338, 301.8778pt x 170.13562pt>
 File: softmax.png Graphic file (type png)
 <use softmax.png>
-Package pdftex.def Info: softmax.png  used on input line 314.
+Package pdftex.def Info: softmax.png  used on input line 318.
 (pdftex.def)             Requested size: 347.12354pt x 195.63625pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 323.
- [20]
+(babel)             in language append on input line 327.
+ [21]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 323.
- [21 <./lineartrennbar.png>]
+(babel)             in language append on input line 327.
+ [22 <./lineartrennbar.png>]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 323.
+(babel)             in language append on input line 327.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 323.
- [22 <./sigmoid.png> <./softmax.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 326--333
+(babel)             in language append on input line 327.
+ [23 <./sigmoid.png> <./softmax.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 330.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 330.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 330.
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--337
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--333
+Underfull \hbox (badness 10000) in paragraph at lines 330--337
 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 333.
+(babel)             in language append on input line 337.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 333.
+(babel)             in language append on input line 337.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 333.
+(babel)             in language append on input line 337.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 333.
+(babel)             in language append on input line 337.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 333.
+(babel)             in language append on input line 337.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 333.
-[23]
-<markovdeep.png, id=268, 241.65282pt x 157.33781pt>
+(babel)             in language append on input line 337.
+[24]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 338.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 338.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 338.
+<markovdeep.png, id=368, 241.65282pt x 157.33781pt>
 File: markovdeep.png Graphic file (type png)
 <use markovdeep.png>
-Package pdftex.def Info: markovdeep.png  used on input line 339.
+Package pdftex.def Info: markovdeep.png  used on input line 343.
 (pdftex.def)             Requested size: 347.12354pt x 226.03328pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 349.
+(babel)             in language append on input line 352.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 349.
+(babel)             in language append on input line 352.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 349.
+(babel)             in language append on input line 352.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 349.
+(babel)             in language append on input line 353.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 349.
+(babel)             in language append on input line 353.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 349.
- [24 <./markovdeep.png>]
-Overfull \hbox (0.3977pt too wide) in paragraph at lines 352--353
+(babel)             in language append on input line 353.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 353.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 353.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 353.
+ [25 <./markovdeep.png>]
+Overfull \hbox (0.3977pt too wide) in paragraph at lines 356--357
 []\OT1/cmr/m/n/10 Randomizing la-bels is-so-le-ly ada-ta-trans-for-ma-ti-on,lea
 ving all other pro-
  []
 
 
-Overfull \hbox (29.32129pt too wide) in paragraph at lines 359--360
+Overfull \hbox (29.32129pt too wide) in paragraph at lines 363--364
 []\OT1/cmr/m/n/10 Thereexistsatwo-layerneuralnetworkwithReLUactivationsand2n+d 
 weights-
  []
 
-<networksize.png, id=291, 563.85657pt x 329.73187pt>
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 370.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 370.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 370.
+<networksize.png, id=390, 563.85657pt x 329.73187pt>
 File: networksize.png Graphic file (type png)
 <use networksize.png>
-Package pdftex.def Info: networksize.png  used on input line 370.
+Package pdftex.def Info: networksize.png  used on input line 374.
 (pdftex.def)             Requested size: 347.12354pt x 202.99268pt.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 379.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 379.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 379.
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--389
+Underfull \hbox (badness 10000) in paragraph at lines 381--393
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--389
+Underfull \hbox (badness 10000) in paragraph at lines 381--393
 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 389.
+(babel)             in language append on input line 393.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 389.
+(babel)             in language append on input line 393.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 389.
+(babel)             in language append on input line 393.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 389.
+(babel)             in language append on input line 393.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 389.
+(babel)             in language append on input line 393.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 389.
-[25]
+(babel)             in language append on input line 393.
+[26]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 389.
+(babel)             in language append on input line 393.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 389.
+(babel)             in language append on input line 393.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 389.
+(babel)             in language append on input line 393.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 389.
+(babel)             in language append on input line 393.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 389.
+(babel)             in language append on input line 393.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 389.
- [26 <./networksize.png>]
-<genmodel.png, id=320, 487.06969pt x 225.09094pt>
+(babel)             in language append on input line 393.
+ [27 <./networksize.png>]
+<genmodel.png, id=416, 487.06969pt x 225.09094pt>
 File: genmodel.png Graphic file (type png)
 <use genmodel.png>
-Package pdftex.def Info: genmodel.png  used on input line 392.
+Package pdftex.def Info: genmodel.png  used on input line 396.
 (pdftex.def)             Requested size: 347.12354pt x 160.41673pt.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 401.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 401.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 401.
 
-Overfull \hbox (1.82039pt too wide) in paragraph at lines 402--412
+Overfull \hbox (1.82039pt too wide) in paragraph at lines 406--416
 []\OT1/cmr/m/n/10 Convolution Neural Netz-works(CNN) sind ei-ne be-son-de-re Ar
 t von k[]unstlichen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--412
+Underfull \hbox (badness 10000) in paragraph at lines 406--416
 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 412.
+(babel)             in language append on input line 416.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 412.
+(babel)             in language append on input line 416.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 412.
+(babel)             in language append on input line 416.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 412.
+(babel)             in language append on input line 416.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 412.
+(babel)             in language append on input line 416.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 412.
-[27 <./genmodel.png>]
-<convol.png, id=333, 1043.9pt x 321.2pt>
+(babel)             in language append on input line 416.
+[28 <./genmodel.png>]
+<convol.png, id=427, 1043.9pt x 321.2pt>
 File: convol.png Graphic file (type png)
 <use convol.png>
-Package pdftex.def Info: convol.png  used on input line 415.
+Package pdftex.def Info: convol.png  used on input line 419.
 (pdftex.def)             Requested size: 347.12354pt x 106.80501pt.
-<conv.png, id=340, 307.1475pt x 188.20313pt>
+<conv.png, id=434, 307.1475pt x 188.20313pt>
 File: conv.png Graphic file (type png)
 <use conv.png>
-Package pdftex.def Info: conv.png  used on input line 426.
+Package pdftex.def Info: conv.png  used on input line 430.
 (pdftex.def)             Requested size: 277.69987pt x 170.17096pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--433
+Underfull \hbox (badness 10000) in paragraph at lines 435--437
 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 433.
+(babel)             in language append on input line 437.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 433.
+(babel)             in language append on input line 437.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 433.
+(babel)             in language append on input line 437.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 433.
+(babel)             in language append on input line 437.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 433.
+(babel)             in language append on input line 437.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 433.
-[28 <./convol.png>]
-<decon.png, id=355, 333.49594pt x 110.66344pt>
+(babel)             in language append on input line 437.
+[29 <./convol.png>]
+<decon.png, id=451, 333.49594pt x 110.66344pt>
 File: decon.png Graphic file (type png)
 <use decon.png>
-Package pdftex.def Info: decon.png  used on input line 438.
+Package pdftex.def Info: decon.png  used on input line 442.
 (pdftex.def)             Requested size: 347.12354pt x 115.19362pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 442.
+(babel)             in language append on input line 446.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 442.
+(babel)             in language append on input line 446.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 442.
+(babel)             in language append on input line 446.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 442.
+(babel)             in language append on input line 446.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 442.
+(babel)             in language append on input line 446.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 442.
- [29 <./conv.png>]
-<GAN_GRUNDAUFBAU.png, id=365, 343.2825pt x 244.66406pt>
+(babel)             in language append on input line 446.
+ [30 <./conv.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 447.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 447.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 447.
+<GAN_GRUNDAUFBAU.png, id=461, 343.2825pt x 244.66406pt>
 File: GAN_GRUNDAUFBAU.png Graphic file (type png)
 <use GAN_GRUNDAUFBAU.png>
-Package pdftex.def Info: GAN_GRUNDAUFBAU.png  used on input line 449.
+Package pdftex.def Info: GAN_GRUNDAUFBAU.png  used on input line 453.
 (pdftex.def)             Requested size: 347.12354pt x 247.39993pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--475
+Underfull \hbox (badness 10000) in paragraph at lines 460--479
 
  []
 
@@ -1558,231 +1789,263 @@ Underfull \hbox (badness 10000) in paragraph at lines 456--475
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 477.
+(babel)             in language append on input line 481.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 477.
+(babel)             in language append on input line 481.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 477.
+(babel)             in language append on input line 481.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 477.
+(babel)             in language append on input line 481.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 477.
+(babel)             in language append on input line 481.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 477.
- [30 <./decon.png>]
+(babel)             in language append on input line 481.
+ [31 <./decon.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 478.
+(babel)             in language append on input line 482.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 478.
+(babel)             in language append on input line 482.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 478.
+(babel)             in language append on input line 482.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 478.
+(babel)             in language append on input line 482.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 478.
+(babel)             in language append on input line 482.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 478.
- [31 <./GAN_GRUNDAUFBAU.png>]
+(babel)             in language append on input line 482.
+ [32 <./GAN_GRUNDAUFBAU.png>]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 478.
+(babel)             in language append on input line 482.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 478.
+(babel)             in language append on input line 482.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 478.
+(babel)             in language append on input line 482.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 478.
+(babel)             in language append on input line 482.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 478.
+(babel)             in language append on input line 482.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 478.
- [32]
-<dcgan1.png, id=406, 779.16093pt x 188.95593pt>
+(babel)             in language append on input line 482.
+ [33]
+<dcgan1.png, id=499, 779.16093pt x 188.95593pt>
 File: dcgan1.png Graphic file (type png)
 <use dcgan1.png>
-Package pdftex.def Info: dcgan1.png  used on input line 483.
+Package pdftex.def Info: dcgan1.png  used on input line 487.
 (pdftex.def)             Requested size: 347.12354pt x 84.1817pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 490--491
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 492--495
+Underfull \hbox (badness 10000) in paragraph at lines 496--499
 
  []
 
-<KLdiv.png, id=414, 716.6775pt x 173.89969pt>
+<KLdiv.png, id=507, 716.6775pt x 173.89969pt>
 File: KLdiv.png Graphic file (type png)
 <use KLdiv.png>
-Package pdftex.def Info: KLdiv.png  used on input line 500.
+Package pdftex.def Info: KLdiv.png  used on input line 504.
 (pdftex.def)             Requested size: 347.12354pt x 84.22978pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 505.
+(babel)             in language append on input line 509.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 505.
+(babel)             in language append on input line 509.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 505.
+(babel)             in language append on input line 509.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 505.
+(babel)             in language append on input line 509.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 505.
+(babel)             in language append on input line 509.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 505.
-[33 <./dcgan1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 513--515
+(babel)             in language append on input line 509.
+[34 <./dcgan1.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 510.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 510.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 510.
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--519
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 516--518
+Underfull \hbox (badness 10000) in paragraph at lines 520--522
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 519--521
+Underfull \hbox (badness 10000) in paragraph at lines 523--525
 
  []
 
 
-Overfull \hbox (7.83786pt too wide) in paragraph at lines 522--523
+Overfull \hbox (7.83786pt too wide) in paragraph at lines 526--527
 []\OT1/cmr/m/n/10 Die Loss Funk-ti-on der GANs
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 524.
+(babel)             in language append on input line 528.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 524.
+(babel)             in language append on input line 528.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 524.
+(babel)             in language append on input line 528.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 524.
+(babel)             in language append on input line 528.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 524.
+(babel)             in language append on input line 528.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 524.
-[34 <./KLdiv.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 531--532
+(babel)             in language append on input line 528.
+[35 <./KLdiv.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 530.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 530.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 530.
+
+Underfull \hbox (badness 10000) in paragraph at lines 535--536
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 533--534
+Underfull \hbox (badness 10000) in paragraph at lines 537--538
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
+Underfull \hbox (badness 10000) in paragraph at lines 540--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 539--540
+Underfull \hbox (badness 10000) in paragraph at lines 543--544
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
+Underfull \hbox (badness 10000) in paragraph at lines 546--547
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--546
+Underfull \hbox (badness 10000) in paragraph at lines 549--550
 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 548.
+(babel)             in language append on input line 552.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 548.
+(babel)             in language append on input line 552.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 548.
+(babel)             in language append on input line 552.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 548.
+(babel)             in language append on input line 552.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 548.
+(babel)             in language append on input line 552.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 548.
-[35]
-<cgan.png, id=461, 338.76563pt x 263.48438pt>
+(babel)             in language append on input line 552.
+[36]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 556.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 556.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 556.
+<cgan.png, id=552, 338.76563pt x 263.48438pt>
 File: cgan.png Graphic file (type png)
 <use cgan.png>
-Package pdftex.def Info: cgan.png  used on input line 561.
+Package pdftex.def Info: cgan.png  used on input line 565.
 (pdftex.def)             Requested size: 347.12354pt x 269.99281pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 552--565
+Underfull \hbox (badness 10000) in paragraph at lines 556--569
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 552--565
+Underfull \hbox (badness 10000) in paragraph at lines 556--569
 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 568.
+(babel)             in language append on input line 572.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 568.
+(babel)             in language append on input line 572.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 568.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 568.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 568.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 568.
-[36 <./cgan.png>]
-<pix2pix.png, id=472, 725.71124pt x 261.22594pt>
+(babel)             in language append on input line 572.
+<pix2pix.png, id=555, 725.71124pt x 261.22594pt>
 File: pix2pix.png Graphic file (type png)
 <use pix2pix.png>
-Package pdftex.def Info: pix2pix.png  used on input line 572.
+Package pdftex.def Info: pix2pix.png  used on input line 576.
 (pdftex.def)             Requested size: 416.54718pt x 149.94066pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 572--573
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 576--577
  [][] 
  []
 
-<encoder.png, id=473, 376.40625pt x 144.54pt>
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 580.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 580.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 580.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 580.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 580.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 580.
+[37 <./cgan.png>]
+<encoder.png, id=564, 376.40625pt x 144.54pt>
 File: encoder.png Graphic file (type png)
 <use encoder.png>
-Package pdftex.def Info: encoder.png  used on input line 580.
+Package pdftex.def Info: encoder.png  used on input line 584.
 (pdftex.def)             Requested size: 416.54718pt x 159.96489pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 580--581
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 584--585
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--592
+Underfull \hbox (badness 10000) in paragraph at lines 588--596
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--592
+Underfull \hbox (badness 10000) in paragraph at lines 588--596
 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 592.
+(babel)             in language append on input line 596.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 592.
+(babel)             in language append on input line 596.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 592.
+(babel)             in language append on input line 596.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 592.
+(babel)             in language append on input line 596.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 592.
+(babel)             in language append on input line 596.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 592.
-[37 <./pix2pix.png> <./encoder.png>]
-<proggan.png, id=488, 516.42938pt x 225.84375pt>
+(babel)             in language append on input line 596.
+[38 <./pix2pix.png> <./encoder.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 596.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 596.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 596.
+<proggan.png, id=577, 516.42938pt x 225.84375pt>
 File: proggan.png Graphic file (type png)
 <use proggan.png>
-Package pdftex.def Info: proggan.png  used on input line 595.
+Package pdftex.def Info: proggan.png  used on input line 599.
 (pdftex.def)             Requested size: 416.54718pt x 182.17084pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 595--596
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 599--600
  [][] 
  []
 
@@ -1793,57 +2056,40 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language append on input line 605.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 605.
+(babel)             in language append on input line 610.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 605.
+(babel)             in language append on input line 610.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 605.
-[38 <./proggan.png>]
-Overfull \hbox (30.99857pt too wide) in paragraph at lines 606--610
+(babel)             in language append on input line 610.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 610.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 610.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 610.
+[39 <./proggan.png>]
+Overfull \hbox (30.99857pt too wide) in paragraph at lines 610--614
 []\OT1/cmr/m/n/10 Die Ziel-funk-ti-on bleibt die glei-che wie bei den []ubliche
 n GANS $\OML/cmm/m/it/10 min[]max[]V\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 D; G\OT1/
 cmr/m/n/10 ) =
  []
 
-<3dgan.png, id=502, 395.22656pt x 125.71968pt>
+<3dgan.png, id=590, 395.22656pt x 125.71968pt>
 File: 3dgan.png Graphic file (type png)
 <use 3dgan.png>
-Package pdftex.def Info: 3dgan.png  used on input line 613.
+Package pdftex.def Info: 3dgan.png  used on input line 617.
 (pdftex.def)             Requested size: 416.54718pt x 132.50255pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 613--614
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 617--618
  [][] 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 621.
+(babel)             in language append on input line 622.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 621.
+(babel)             in language append on input line 622.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 621.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 621.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 621.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 621.
-[39 <./3dgan.png>]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 621.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 621.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 621.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 621.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 621.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 621.
- [40] (./GAN - Andreas Wiegand.lof)
-\tf@lof=\write5
-\openout5 = `"GAN - Andreas Wiegand.lof"'.
-
+(babel)             in language append on input line 622.
 Package babel Info: Redefining german shorthand "f
 (babel)             in language append on input line 623.
 Package babel Info: Redefining german shorthand "|
@@ -1851,96 +2097,163 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language append on input line 623.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 623.
+(babel)             in language append on input line 624.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 623.
+(babel)             in language append on input line 624.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 623.
+(babel)             in language append on input line 624.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 625.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 625.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 625.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 626.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 626.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 626.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 628.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 628.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 628.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 628.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 628.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 628.
+[40 <./3dgan.png>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 628.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 628.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 628.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 628.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 628.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 628.
  [41]
-(./GAN - Andreas Wiegand.toc)
-\tf@toc=\write6
-\openout6 = `"GAN - Andreas Wiegand.toc"'.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 629.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 629.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 629.
+ (./GAN - Andreas Wiegand.lof)
+\tf@lof=\write6
+\openout6 = `"GAN - Andreas Wiegand.lof"'.
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 625.
+(babel)             in language append on input line 630.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 625.
+(babel)             in language append on input line 630.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 625.
+(babel)             in language append on input line 630.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 625.
+(babel)             in language append on input line 630.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 625.
+(babel)             in language append on input line 630.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 625.
+(babel)             in language append on input line 630.
  [42
 
-] (./GAN - Andreas Wiegand.lot)
+]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 631.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 631.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 631.
+
+(./GAN - Andreas Wiegand.lot)
 \tf@lot=\write7
 \openout7 = `"GAN - Andreas Wiegand.lot"'.
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 627.
+(babel)             in language append on input line 632.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 627.
+(babel)             in language append on input line 632.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 627.
+(babel)             in language append on input line 632.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 627.
+(babel)             in language append on input line 632.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 627.
+(babel)             in language append on input line 632.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 627.
- [43]
-(./GAN - Andreas Wiegand.bbl
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 509.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 509.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 509.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 509.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 509.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 509.
- [44])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 631.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 631.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 631.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 631.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language append on input line 631.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language append on input line 631.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language append on input line 631.
- [45]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 631.
- (./GAN - Andreas Wiegand.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 631.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 631.
-Package rerunfilecheck Info: File `"GAN - Andreas Wiegand".out' has not changed
-.
-(rerunfilecheck)             Checksum: 5CADE7FAA83334B45AA127D2C9C09F59;94.
+(babel)             in language append on input line 632.
+ [43
 
+] (./GAN - Andreas Wiegand.bbl
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 1.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 1.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 1.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 530.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 530.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 530.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 530.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 530.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 530.
+ [44
+
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 636.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 636.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 636.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 636.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 636.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 636.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 636.
+ [45]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 636.
+
+(./GAN - Andreas Wiegand.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 636.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 636.
+
+
+Package rerunfilecheck Warning: File `"GAN - Andreas Wiegand".out' has changed.
+
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"GAN - Andreas Wiegand".out':
+(rerunfilecheck)             Before: 314E06EB877DC6EE7BB224FF44A96B45;654
+(rerunfilecheck)             After:  16644B5A3BD401EA559E9AFD3DF7A89B;3165.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 631.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 636.
  ) 
 Here is how much of TeX's memory you used:
- 9917 strings out of 492982
- 139343 string characters out of 6136225
- 271020 words of memory out of 5000000
- 13124 multiletter control sequences out of 15000+600000
+ 10011 strings out of 492982
+ 140810 string characters out of 6136225
+ 270715 words of memory out of 5000000
+ 13209 multiletter control sequences out of 15000+600000
  8288 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,20n,29p,1943b,542s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,20n,32p,1943b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
 <f:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><f:/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><f:/texlive/2017
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><f:/texlive/2017/texmf-dis
@@ -1956,10 +2269,10 @@ e1/public/amsfonts/cm/cmsy7.pfb><f:/texlive/2017/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmti10.pfb><f:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt10.pfb><f:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb>
-Output written on "GAN - Andreas Wiegand.pdf" (45 pages, 2789972 bytes).
+Output written on "GAN - Andreas Wiegand.pdf" (45 pages, 2793432 bytes).
 PDF statistics:
- 654 PDF objects out of 1000 (max. 8388607)
- 530 compressed objects within 6 object streams
- 179 named destinations out of 1000 (max. 500000)
- 149 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 759 PDF objects out of 1000 (max. 8388607)
+ 634 compressed objects within 7 object streams
+ 184 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

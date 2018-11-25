@@ -9,8 +9,12 @@
 \usepackage[linesnumbered,ruled]{algorithm2e}
 \usepackage[noend]{algpseudocode}
 \usepackage{acronym}
+\usepackage{tocbibind}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
 
 \begin{document}
+\tableofcontents
 \begin{acronym}[Bash]
 	\acro{KDE}{K Desktop Environment}
 	\acro{SQL}{Structured Query Language}
@@ -21,13 +25,13 @@
 	\acro{PIX2PIX} Image-to-Image GAN
 \end{acronym}
 \selectlanguage{german}
-\title{Eine Einführung in Generative Adverserial Network(GAN)}
+\title{3-D Datenrekonstruktion mit generative Adverserial Networks}
 \author{Andreas Wiegand}
-\institute{Seminar KI: gestern, heute, morgen\\ Angewandte Informatik, Universität Bamberg}
+\institute{Master These in künstlicher Intelligenz}
 \maketitle								%% Titel setzen
 %
 \begin{abstract}		
-Generative Adverserial Network(GAN) ist ein kü-nstliches neuronales Netzwerk(ANN) aus dem Bereich der generativen Modelle. Die Aufgabe des GANs ist es, die Wahrscheinlichkeitsverteilung von Trainingsdaten zu erlernen und dadurch anschließend neue Samples aus dieser Wahrscheinlichkeitsverteilung zu generieren. Man erhofft sich, den hohen Datenaufwand beim trainieren von ANN zu umgehen und durch GANS neue Trainingsdaten zu generieren. Im Folgenden wird auf die Theorie von GANs eingegangen, wie deren Aufbau und deren zugrunde liegendes mathematische Modell. Es wird aufgezeigt wie GANs trainiert werden. Des weiteren sollen Vorteile gegenüber anderen generativen Modelle aufgezeigt werden und derzeitige Schwachstellen von GAN, sowie Möglichkeiten diese zu verbessern.
+Generative Adverserial Network(GAN) ist ein kün-stliches neuronales Netzwerk(ANN) aus dem Bereich der generativen Modelle. Die Aufgabe des GANs ist es, die Wahrscheinlichkeitsverteilung von Trainingsdaten zu erlernen und dadurch anschließend neue Samples aus dieser Wahrscheinlichkeitsverteilung zu generieren. Man erhofft sich, den hohen Datenaufwand beim trainieren von ANN zu umgehen und durch GANS neue Trainingsdaten zu generieren. Im Folgenden wird auf die Theorie von GANs eingegangen, wie deren Aufbau und deren zugrunde liegendes mathematische Modell. Es wird aufgezeigt wie GANs trainiert werden. Des weiteren sollen Vorteile gegenüber anderen generativen Modelle aufgezeigt werden und derzeitige Schwachstellen von GAN, sowie Möglichkeiten diese zu verbessern.
 \end{abstract}
 %
 \section{Einleitung}%
@@ -48,11 +52,11 @@ Chapter 4 - Methods This chapter provides the experimental design, data set and 
 \\\\
 Chapter 5 - Discussion The thesis ends with a discussion of the results and the limitations of this work. In addition, an outlook is given on possible research directions
 
-\section{Grundlagen}
+\section{Grundlagen und ähnliche Arbeiten}
 
 Im folgenden Kapitel wird auf theoretische Grundlagen eingegangen, welche zum Verständnis von GANs benötigt werden. Zunächst werden  generative Modelle im Allgemeinen vorgestellt, welche den Grundgedanken der Datengeneration für GANs aufzeigen. Darauf folgend werden Convolutional Neuronale Netzwerke vorgestellt, aus welchen GANs aufgebaut werden können, um mit Bild Daten zu arbeiten.
 
-\section{Batch Normalisation}
+\subsection{Batch Normalisation}
 
 Wie in Kapitel backpropagation Algorithums gezeigt wurde wird durch den stochstischen Gradianten Vorteile gegenüber des normalen gradianten Verfahren ergeben. Durch das der Input in jeden Layern abhängig von den vorherigen Layern abhängig. Dadurch können änderungen in vorherigen Layern große Auswirkungen in tiefern Layern im Netzwerk haben.
 Dadurch resultiert dann das in trainingsläufen die Verteilung von jeden Layens input sich während des Trainings verändert die verlangsamt das Training erheblich \cite{batchnorm}. Dieses Problem wird als internal covariate shift definiert. Wenn sich die Input Verteilung von einen lernenden System verändert macht es einen covariate shift durch \cite{batchnorm}. 
@@ -99,7 +103,7 @@ Je mehr Layer das Netzwerk hat desto stärker wird der internal covariate shift
 	\label{fig:Bild1}
 \end{figure}
 
-\section{Datenformat}
+\subsection{Datenformat}
 Voxel (zusammengesetzt aus dem englischen volume vox und el von elements[1]) bezeichnet in der Computergrafik einen Gitterpunkt („Bild“punkt, Datenelement) in einem dreidimensionalen Gitter. Dies entspricht einem Pixel in einem 2D-Bild, einer Rastergrafik. Wie bei Pixeln wird bei Voxeln üblicherweise die Position nicht explizit gespeichert, sondern implizit aus der Position zu anderen Voxeln hergeleitet. Im Gegensatz dazu werden bei Punkten oder Polygonen die Positionen der Eckkoordinaten gespeichert. Eine direkte Konsequenz dieses Unterschiedes ist, dass man mit Polygonen eine 3D-Struktur mit viel leerem oder homogen gefülltem Raum effizient darstellen kann. Voxel hingegen sind gut bei der Repräsentation eines äquidistant gesampelten Raums, der nicht homogen gefüllt ist. wikipedia kopie
 
 
@@ -109,7 +113,7 @@ Voxel (zusammengesetzt aus dem englischen volume vox und el von elements[1]) bez
 	\caption{künstliches Neuron}
 	\label{fig:Bild1}
 \end{figure}
-\section{Woher stammen die Daten}
+\subsection{Woher stammen die Daten}
 
 Die Daten stammen von TERRA-REF Feld Scanner von der University von Arizona Maricopa Agricultural Center and USD Arid Land Researh Station in Maricopa. Es ist der größe Feld crop scnanner 
 \begin{figure}[htbp] 
@@ -139,7 +143,7 @@ Der 3D Laser Scanner erzeugt sogenannte 3D Punktwolken. Dabei werden die Objekte
 
 Die Objekte werden PLY - Polygon File Format gespeichert.
 
-\section{autoencoder}
+\subsection{autoencoder}
 Autoencoder
 Autoencoder sind ein anderes Modell von generativen Modelle. Ihre Aufgabe besteht darin einen Input zu komprimieren und dann wieder zu erstellen. Die Aufgabe wird als rekunstrunktions benannt. 
 Die Technik auf die Dabei zurückgegriffen wird nennt sich Dimensionreduction. Dabei werden die Dimension der Daten so reduziert und Informationen bei zu behalten welche als relevant gelten. Diese Methode finden auch in anderen Machine Learning Ansätzen Anwendung wie in beispielsweiße der Principale component anaysis(PCA). Bestandteile eines Autoencoder ist ein Encoder g parametrisiert mit $\phi$ welcher einen Input x element von $x\textsuperscript{i}$ wo x ein vektor der länge i ist. Und Damit die Input Dimension bestimmt. Dieser wird durch den Encoder auf einen Vektor $z\textsuperscript{k}$ abgebildet wobei k<i ist. Der Decoder f $\theta$ bekommt nun als Inpu t$z\textsuperscript{k}$ und mappt z auf $x\textsuperscript{l}$ wobei l = i. Und somit die gleiche Dimension wie der Input. Aufgabe ist es nun das der Encoder den Input z so gut komprimiert das encoder es schaft das x = z. 
@@ -153,13 +157,13 @@ Die Paramter $\phi$ und $\theta$ werden durch erlernt. Und können beispielswei�
 	\label{fig:Bild1}
 \end{figure}
 
-Zielfunktionen Autoencoder
-Da in der Arbeit der Input 3d Pointcloud sind und diese Sets und diese invariant zu ihren Permutationen. Das heißt ändere ich die Anordnung meiner einzelnen Punkte in meien Set bleibt das Ergebniss unverändert.  sind sind kann auf übliche Zielfunktionen nicht zürockgegriffen werden da diese mit Sturcturierten Input Daten arbeiten. Das Problem dabei besteht wenn ich 2 unterschiedliche Sets von Punkten habe wie Messe ich um herraus zu finden wie hoch die discrepanc zwischen den Beiden sets ist. 
+\subsubsection{Zielfunktion Autoencoder\\\\}
 
+Da in der Arbeit der Input 3d Pointcloud sind und diese Sets und diese invariant zu ihren Permutationen. Das heißt ändere ich die Anordnung meiner einzelnen Punkte in meien Set bleibt das Ergebniss unverändert.  sind sind kann auf übliche Zielfunktionen nicht zürockgegriffen werden da diese mit Sturcturierten Input Daten arbeiten. Das Problem dabei besteht wenn ich 2 unterschiedliche Sets von Punkten habe wie Messe ich um herraus zu finden wie hoch die discrepanc zwischen den Beiden sets ist. 
 http://graphics.stanford.edu/courses/cs468-17-spring/LectureSlides/L14%20-%203d%20deep%20learning%20on%20point%20cloud%20representation%20(analysis).pdf
 
 
-\section{Objekterkennung}
+\subsection{Objekterkennung}
 Das zweite Modell beruht auf dem Konzept, der Objekterkennung auf Bildern aus den Be-reich Computer Vision. Dabei bekommt das Neuronales Netz (NN) als Input ein Bild und gibt als Output die Bounding-Box Koordinaten und die Klassenbezeichnung des Objekts mit den jeweiligen Prozentangaben zurück.
 \begin{figure}[htbp] 
 	\centering
@@ -203,7 +207,7 @@ Das Faster R-CNN ist derzeit der aktuellste Entwicklungsstand der R-CNN Modell R
 27
 auf bestimmte Bildbereiche lenkt. Die cost function für das Region Proposal Network ist zum einem geben aus, Klassifikation Region Proposal und Regression, welche die Koordi-naten mit den Ground-Truth Koordinaten der Boxen vergleicht. Die cost function folgt dem gleichen Prinzip der Bounding-Box Regression des R-CNN. Anschließend geht das Verfah-ren wie beim Fast-RCNN Modell weiter. Die vom RPN ermittelten Koordinaten werden nun auf der Convolutional Feature Map angewandt, darauf folgt das ROI-Pooling und die Klas-sifikation der einzelnen Bounding Boxen. Die dadurch resultierte Inferenzzeit ist enorm ge-stiegen und liegt im Durchschnitt bei 10 ms pro Bild (Shaoqing Ren, 2016).
 
-\section{Maschine Learning Basics}
+\subsection{Maschine Learning Basics}
 Im folgenden wird auf Grundlegende Begriffe des machines Learnings eingangen ihre Definitionen und ihr gebraucht in dieser Arbeit. Ziel ist es die Begriffe zu Definierne um keine verwirrung zu stiften. 
 \newpage
 \subsubsection{Überwachtes Lernen}
@@ -223,7 +227,7 @@ Diese Arbeit benutzt alle oben aufgezählten techniken um das Ziel zu erreichen 
 
 
 
-\section{Deep Feedforward neuroal Networks}
+\subsection{Deep Feedforward neuroal Networks}
 
 Künstliche Neuronale Netzwerke(ANN) haben das Ziel ein Funktion f* zu approximieren. Dabei werden Parameter $\Theta$ eines Models so angepasst, um die Abbildung von y = f(x;$\Theta)$ zu approximieren. Die Modelle werden als feedforward betitelt weil der Informationsfluss des Models von Input zu Output fließt und keine Recurrsion von Output zu Input statt findet. Deep weil das Modell aus mehrer Schichten sogenannten hidden layer besteht. Es gibt den Input layer welche den Input in das Netzwerk aufnimmt und der letzte layer des Netzwerkes wird output Layer genannt\cite{Grundlagen}. 
 
@@ -440,7 +444,7 @@ Transposed Convolution, auch genannt Fractionally Strided Convolution oder Decon
 	\label{fig:Bild4}
 \end{figure}
 \newpage
-\section{Generative Adversarial Network}
+\subsection{Generative Adversarial Network}
 
 Ein GAN besteht besteht aus zwei ANN, dem Discriminator D und dem Generator G. Das Ziel des G ist es, Daten x zu erzeugen, welche nicht von Trainingsdaten y unterschieden werden können. Dabei wird eine vorangegangene Input Noise Variable p\textsubscript{z}(z) verwendet, welche eine Abbildung zum Datenraum G(z;$\Phi$\textsubscript{g}) herstellt. Dabei sind $\Phi$\textsubscript{g} die Gewichte des neuronalen Netzwerkes von G. Der Discriminator hat die Aufgabe zu unterscheiden, ob der jeweilige Datensatz von G erzeugt wurde und somit ein fake Datensatz ist, oder von Trainingsdaten y stammt\cite{goodfellow2014}. Die Zusammensetzung zwischen den beiden Netzwerken kann aus Abbildung \ref{fig:Bild5} entnommen werden.
 \\
@@ -547,7 +551,7 @@ Die JS Divergenz von vanilla GAN sorgt für bessere Trainingsergebnisse im Vergl
 \end{description}
 \newpage
 
-\section{Conditional Adversarial Networks}
+\subsubsection{Conditional Adversarial Networks}
 
 Conditional Adversarial Networks(CGAN) beruhen auf das Grundkonzept von vanilla GAN(vgl. Kapitel GAN). Es wird zusätzlich die extra Information y hinzugefügt. Diese kann jegliche Information sein welche auf x abgestimmt ist. Beispielsweise kann y ein Klassenlabel zu den gelernten P(x) sein. Die Zielfunktion des CGAN ist
 \\\\
@@ -565,7 +569,7 @@ und beschreibt eine  bedingte Wahrscheinlichkeit das ein Trainingsdatensatz x od
 
 Ein Beispielhafter Anwendungsfall ist das erlernen von selbstgenerierten Zahlen. Der MNIST Datensatz besteht auch 10000 Handschriftlich eingescannten Zahlen von 0 - 9. Die Daten x können nun während des Training mit den dazugehörigen Zahlenlabels y trainiert werden und anschließend kann der Generator verwendet werden um selbst die gewünschten x zu erzeugen indem y gewählt wird\cite{cgan}. Das Konzept von CGAN wird nun in folgender Arbeit weiterentwickelt um das Ziel zu haben selber Bilder zu verändern. 
 
-\section{Image-to-Image GAN}
+\subsection{Image-to-Image GAN}
 Image-to-Image GAN(PIX GAN) passiert auf der Grundidee von CGAN bei welche der Generator $\log $D$(x|y)$ lernt und somit eine abhänige Wahrscheinlichkeit von Data x zu einer Zusatzinformation Y. Das Ziel von PIX2PIX ist es ein Input Bild Y zu einen Output Bild $\hat{^y}$ zu verändern. 
 \begin{figure}[htbp] 
 	\centering
@@ -589,7 +593,7 @@ min\textsubscript{G} max\textsubscript{D}V(D,G)=E\textsubscript{x$\sim$p\textsub
 \\\\  
 Besonderheit ergibts sich beim Aufbau des Generators. Dieses Ähnelt den Aufbau von Autoencodern deren Ziel es ist einen Input zu einen Output Y zu kopieren und dabei zunächst Information zu verringern und anschließend wieder zu erhöhen bis g($f$(x)) = x \cite{Grundlagen}. In fall des PIX2PIX Netzwerkes wird aber das Ziel angestrebt  g($f$(x)) = y zu erlernen und damit eine Bild Transformationen auf die Wahrscheinlichkeitsverteilung P(Y) zu erlangen. 
 \cite{imagetoimage}
-\section{progressiv growing GAN}
+\subsection{progressiv growing GAN}
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.2\textwidth]{proggan.png}
@@ -598,7 +602,7 @@ Besonderheit ergibts sich beim Aufbau des Generators. Dieses Ähnelt den Aufbau 
 \end{figure}
 
 \cite{progre}
-\section{3D-GAN}
+\subsection{3D-GAN}
 Das besondere an den 3D Raum im Vergleich zu Normalen 2D Bildern ist die hohe steigerung der Dimension und zu gleich der Hohe Informationsgehalt welcher in 3D Objekten steckt. Das Ziel von 3D-GANS ist es Modelle von Objekten zu erhalten. Dabei wird der latente Objektraum erfasst und soll damit die Wahrscheinlichkeiten für einzelne Objektklassen enthalten. 
 \\
 Die Architektur des typischen 3D-GAN ist dem vanilla GAN von Goodfellow ähnelt. Durch den Aufbau von 3D-Objekten unterscheidet sich nur die Dimensionalität der einzelnen Layer. Dadurch das 3d Objekte ins Räumliche Verhältnis gestellt werden müssen braucht man eine dritte Dimenson in den Layern welche die Tiefe der Objekte Darstellt. \cite{3d}. 
@@ -615,13 +619,14 @@ min\textsubscript{G} max\textsubscript{D}V(D,G)=E\textsubscript{x$\sim$p\textsub
 	\label{fig:Bild2}
 \end{figure}
 \cite{3d}
-
-\section{Zusammenfassung und Ausblick}
+\section{Methoden}
+\subsection{Aufbau}
+\subsection{Ergebnis}
+\section{Evaluation und Ergebnise}
+\section{Zusammenfassung und Diskussion }
 Ein GAN besteht aus zwei ANN, dem Discriminator und dem Generator. Das Ziel des G ist es Daten zu erzeugen, welche nicht von Trainingsdaten unterschieden werden können. Der Discriminator hat die Aufgabe zu unterscheiden ob der jeweilige Datensatz von G erzeugt wurde und somit ein fake Datensatz ist, oder von den Trainingsdaten stammt\cite{goodfellow2014}. GANs werden derzeit noch erforscht. Es gibt noch einige offene Fragen, beispielsweise bezüglich der Performance hochauflösender Bilder\cite{ende}. Es wurden in diesem Paper einige Probleme, welche beim Trainieren von GAN auftreten können und mögliche Lösungsansätze, vorgestellt. Es gibt derzeit einige praktische Ansätze, welche in der Anwendung auf GANs zurück greifen. Beispielsweise durch Textbeschreibung eigene Bilder als Output generiert werden \cite{texttoimage}, oder 3D Daten erzeugt werden\cite{3dgan}. GANs finden Anwendung in unterschiedlichen Bereichen des Deep Learnings, da sie als Lösung des Problems angesehen werden, dass Neuronale Netzwerke eine hohe Menge an Trainingsdaten benötigen und GANs dieses Problem durch ihre Fähigkeit, neue Daten zu generieren, umgehen. GANs lernen eine Art "verstecke" Repräsentation von Klassen, was dazu beitragen kann auch Modelle von komplexen Prozessen zu erlernen. Es gibt erste Ansätze bei denen im Reinforcement Learning durch GANs versucht wird Modelle von der Umwelt eines Agenten zu erlernen, welche dann auf Grundlage dieser Modelle Vorhersagen über zukünftige Ereignisse treffen kann\cite{reinforcment}.
 \newpage
 \listoffigures
-\newpage
-\tableofcontents
 \newpage
 \listoftables
 \newpage
