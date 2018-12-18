@@ -1,32 +1,39 @@
 \babel@toc {english}{}
 \babel@toc {german}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces aaaa}}{7}{figure.1.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{8}{figure.1.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{9}{figure.1.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{9}{figure.1.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces autoencoder}}{11}{figure.1.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{11}{figure.1.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{12}{figure.1.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{17}{figure.1.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces k\IeC {\"u}nstliches neuronales Netzwerk}}{18}{figure.1.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Minimum Maximum Saddle Point}}{19}{figure.1.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces LossFunktion}}{20}{figure.1.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Nicht trennbar}}{22}{figure.1.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Sigmoid Funktion}}{23}{figure.1.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Softmax}}{23}{figure.1.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Neuronal Netzwork als Markov Chain}}{25}{figure.1.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Gr\IeC {\"o}\IeC {\ss }e des Netzwerkes}}{27}{figure.1.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Generative Modelle}}{28}{figure.1.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Convolutional Neural Network}}{29}{figure.1.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Convolution Beispiel}}{30}{figure.1.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Deconvolution Beispiel}}{31}{figure.1.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Generativ Adverserial Network}}{32}{figure.1.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Deep Convolutional GAN}}{34}{figure.1.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces KL Divergenz und JS Divergenz}}{35}{figure.1.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Conditional Adverserial Network}}{37}{figure.1.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Conditional Adverserial Network}}{38}{figure.1.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces Conditional Adverserial Network}}{38}{figure.1.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Conditional Adverserial Network}}{39}{figure.1.27}
+\contentsline {figure}{\numberline {1}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{6}{figure.1.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces k\IeC {\"u}nstliches neuronales Netzwerk}}{7}{figure.1.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Minimum Maximum Saddle Point}}{8}{figure.1.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces LossFunktion}}{9}{figure.1.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces aaaa}}{12}{figure.1.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Nicht trennbar}}{13}{figure.1.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Sigmoid Funktion}}{14}{figure.1.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Softmax}}{15}{figure.1.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Nicht trennbar}}{16}{figure.1.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Sigmoid Funktion}}{17}{figure.1.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Softmax}}{17}{figure.1.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{19}{figure.1.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{20}{figure.1.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{20}{figure.1.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{21}{figure.1.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{22}{figure.1.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces k\IeC {\"u}nstliches neuronales Netzwerk}}{27}{figure.1.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Neuronal Netzwork als Markov Chain}}{28}{figure.1.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Gr\IeC {\"o}\IeC {\ss }e des Netzwerkes}}{29}{figure.1.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Convolutional Neural Network}}{30}{figure.1.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Convolution Beispiel}}{31}{figure.1.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Deconvolution Beispiel}}{32}{figure.1.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces autoencoder}}{33}{figure.1.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Generative Modelle}}{34}{figure.1.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Generativ Adverserial Network}}{35}{figure.1.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Deep Convolutional GAN}}{37}{figure.1.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces KL Divergenz und JS Divergenz}}{38}{figure.1.27}
 \contentsline {figure}{\numberline {28}{\ignorespaces Conditional Adverserial Network}}{40}{figure.1.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{41}{figure.1.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{42}{figure.1.30}
+\contentsline {figure}{\numberline {29}{\ignorespaces Conditional Adverserial Network}}{41}{figure.1.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Conditional Adverserial Network}}{41}{figure.1.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Conditional Adverserial Network}}{42}{figure.1.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Conditional Adverserial Network}}{43}{figure.1.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{44}{figure.1.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{45}{figure.1.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{46}{figure.1.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{48}{figure.1.36}
+\contentsline {figure}{\numberline {37}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{49}{figure.1.37}
