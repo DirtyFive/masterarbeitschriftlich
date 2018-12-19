@@ -75,7 +75,7 @@ Im folgenden Kapitel wird auf theoretische Grundlagen eingegangen, welche zum Ve
 
 \subsection{künstliche Neuronale Netzwerke}
 
-Künstliche Neuronale Netzwerke(ANN) haben das Ziel ein Funktion f* zu approximieren. Dabei werden Parameter $\Theta$ eines Models so angepasst, um die Abbildung von y = f(x;$\Theta)$ zu approximieren. Die Modelle werden als feedforward betitelt weil der Informationsfluss des Models von Input zu Output fließt und keine Recurrsion von Output zu Input statt findet. Deep weil das Modell aus mehrer Schichten sogenannten hidden layer besteht. Es gibt den Input layer welche den Input in das Netzwerk aufnimmt und der letzte layer des Netzwerkes wird output Layer genannt\cite{Grundlagen}. 
+Künstliche Neuronale Netzwerke(ANN) haben das Ziel ein Funktion f* zu approximieren. Dabei werden Parameter $\Theta$ eines Models so angepasst, um die Abbildung von y = f(x;$\Theta)$ zu approximieren. Die Modelle werden auch als feedforward Neuronale Netzwerke betitelt weil der Informationsfluss des Models von Input zu Output fließt und keine Rekursion von Output zu Input statt findet. ANN können aus mehreren Schichten sogenannten Hidden Layer besteht welche als f(x)=f\textsuperscript{(2)}(f\textsuperscript{(1)}(x))wobei n für die Anzahl der Layer steht und nn >=1 ist. Ein 2-Layer ANN ist dann definiert durch f\textsuperscript{(n)} Es gibt den Input layer welche den Input in das Netzwerk aufnimmt. Im vorherigen Beispiel ist dies f\textsuperscript{(1)} und der letzte layer des Netzwerkes wird Output Layer genannt. Im vorherigen Beispiel wäre das f\textsuperscript{(2)}\cite{Grundlagen}. 
 
 \begin{figure}[htbp] 
 	\centering
@@ -84,7 +84,7 @@ Künstliche Neuronale Netzwerke(ANN) haben das Ziel ein Funktion f* zu approximi
 	\label{fig:Bild1}
 \end{figure}
 
-künstliche Neuronen haben ihren Namesgeber von der aus der natur stammende Neuron. Neuronen sind die Buasteine aus denen die Gehirne von Lebewesen, wie Fische, Vögel, Säugetiere zusammen gesetzt sind. Neuronen oder auch Nervenzellen bestehen in eine Zellkern der Zetrum der Zelle um sie herum sind dendriten. Neuronen sind untereinander mit den Axon verbunden.axon haben an den enden Synapen welche die grenze von Axon zur Nervenzelle einen Spalt bilde. Dieser Spalt überwunden indem von der Synapse botenstoffe abgesendet werden welche sich dann an Rezeptor der Zelle anhaften. Diese Übertragung findet statt wenn an der Synapse ein bestimmter Schwellenwert überschritten wurde von elektrischen reizen welche die Zelle abfeurt lässt. Künstliche Neuronen haben diese Schwellenwert durch songenannte Gewichte w\textsubscript{ij} diese sind auf den Verbidungen zwischen den Neuronen in den unterschiedlichen layern im Netwerk
+Jeder Layer besteht aus künstliche Neuronen diese haben ihren Namesgeber von der aus der natur stammende Neuron. Neuronen sind die Buasteine aus denen die Gehirne von Lebewesen, wie Fische, Vögel, Säugetiere zusammen gesetzt sind. Neuronen oder auch Nervenzellen bestehen in eine Zellkern der Zetrum der Zelle um sie herum sind dendriten. Neuronen sind untereinander mit den Axon verbunden.axon haben an den enden Synapen welche die grenze von Axon zur Nervenzelle einen Spalt bilde. Dieser Spalt überwunden indem von der Synapse botenstoffe abgesendet werden welche sich dann an Rezeptor der Zelle anhaften. Diese Übertragung findet statt wenn an der Synapse ein bestimmter Schwellenwert überschritten wurde von elektrischen reizen welche die Zelle abfeurt lässt. Künstliche Neuronen haben diese Schwellenwert durch songenannte Gewichte w\textsubscript{ij} diese sind auf den Verbidungen zwischen den Neuronen in den unterschiedlichen layern im Netwerk
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.0\textwidth]{neuronalesnetzwerk.jpg}
@@ -93,8 +93,10 @@ künstliche Neuronen haben ihren Namesgeber von der aus der natur stammende Neur
 \end{figure}
 \\
 
+
 \subsubsection{Backpropagation Algogrithmus}
-Wurde von Geofrey Hintion im Jahre 1989 vorgestellt\cite{backpro}. Er konnte zeigen das sein Algorithmus schneller und effizienter auf Neuronalen Networks arbeitet als andere vor ihm. Das mathematische Zugrundeliegende Konzept ist die der Partitiellen Ableitung von  $\frac{\partial Z}{\partial w}$, wobei Z die Zielfunktion und w die Gewichte im zu Optimierenden Neuronalen Netzwerk sind. Für eine Funktion $f$(x) = y ist die Ableitung Definiert als $f^\prime$(x) oder $\frac{dy}{dx}$ und gibt die Steigung der Funktion an Punkt x an. Dieses Verfahren kann dabei helfen Funktionen zu optimieren. Wenn man weiß wie sehr die Steigung and Punkt x ist kann man x mit einer Änderung von der Ableitung x dahin gehen optimieren \cite{Grundlagen}. \\
+
+Um nun ANNs zu trainieren und den gewünschten Output y genierieren wird der Backpropagation Algorithmus ergenommen. Dieser wurde von Geofrey Hintion im Jahre 1989 vorgestellt\cite{backpro}. Er konnte zeigen das sein Algorithmus schneller und effizienter auf Neuronalen Networks arbeitet als andere vor ihm. Das mathematische Zugrundeliegende Konzept ist die der Partitiellen Ableitung von  $\frac{\partial Z}{\partial w}$, wobei Z die Zielfunktion und w die Gewichte im zu Optimierenden Neuronalen Netzwerk sind. Für eine Funktion $f$(x) = y ist die Ableitung Definiert als $f^\prime$(x) oder $\frac{dy}{dx}$ und gibt die Steigung der Funktion an Punkt x an. Dieses Verfahren kann dabei helfen Funktionen zu optimieren. Wenn man weiß wie sehr die Steigung and Punkt x ist kann man x mit einer Änderung von der Ableitung x dahin gehen optimieren \cite{Grundlagen}. \\
 Wenn nun $f^\prime$(x) = 0 haben wir keinerlei Information über die Steigung erreicht. Dies ist aber kein garant dafür das $f$ ein Optimum erreicht hat.  Es könnten wie in Abbildung unten dargstellt. Ein locales Minimum sein. Dass heißt das wir nur an diesen Punkt ein Minimum erreich thaben aber im Funktionsverlauf ein noch niedrigeres Minimum vorhanden ist. Oder einen Sattlepunkt welche ein Übergang zu einen anstieg der Funktion bildet.
 Ist nun die die Funktion $f$ definiert als $f$: $\mathbb{R}$\textsuperscript{n} $\rightarrow$  $\mathbb{R}$ und hat als Input mehrere Variablen. Die partielle Ableitung $\frac{\partial f(x)}{\partial x\textsubscript{i}}$ zeigt an wie sehr sich $f(x)$ ändert wenn wir x\textsubscript{i} ändern. Der Gradiant $\nabla\textsubscript{x}f(x)$ ist ein Vektor welche alle partiellen Ableitungen von $f$ enthält. Nun kann man f optimierne in dem man in die Richtung des Gradianten geht welche negativ ist dieses Verfahren wird gradient descent genannt \cite{Grundlagen}.
 \begin{figure}[htbp] 
@@ -187,6 +189,7 @@ Je mehr Layer das Netzwerk hat desto stärker wird der internal covariate shift
 Neurnonale Netzwerke sind universelle Funktions approximierer \cite{universal}. Es sei erfohrzuheben das zwar Feedforward Neuronale Netzwerke mit hidden Layer unisversel sind. Aber nicht jede aktivierungsfunktion ist für alle probleme gleich effizient. \cite{universal}.
 In Kapital BLABLA wurde gezeigt das Neuronale Netzwerke durch Matrizen dargestellt werden können und das durch simple Matrixmultiplikation der Output von Layern berechnet werden können. Die Aktivierungsfunktion sorgen dafür das das ANN auch nicht lineare Funktionen erlernen kann. Also das unser Input X und unser Output Y immer proportional als Y = X$*$k. Wobei k eine Konstante ist.  Wie wir in Kapitel BLABLA gesehen habe möchten wir das unser Input linear Trennpaar ist damit wir unsere Input in Klassen einteilen können. Würde X nun aber nicht linear trennbar sein wie Beispielsweiße in Abbildung UNTEN gezeigt Könnten wir duch die lineare transformation des Inputs keine Trennung von X erreichen. http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/ Mit den einführen von nicht linearen Funktionen können der Raum der durch die Layer dargsetllt wird gedreht gewendet und gezogen werden. Aber es scheidet, zerbricht oder faltet in. 
 
+Ein Neuron hat einen Input x\textsubscript{n} sowie ein Gewicht w\textsubscript{ij} und einen Bias b. der Output eines Neurons ist definieniert durch y = x\textsubscript{n} * w\textsubscript{ij} + b
 
 \begin{figure}[htbp] 
 	\centering
@@ -349,34 +352,6 @@ Das Faster R-CNN ist derzeit der aktuellste Entwicklungsstand der R-CNN Modell R
 27
 auf bestimmte Bildbereiche lenkt. Die cost function für das Region Proposal Network ist zum einem geben aus, Klassifikation Region Proposal und Regression, welche die Koordi-naten mit den Ground-Truth Koordinaten der Boxen vergleicht. Die cost function folgt dem gleichen Prinzip der Bounding-Box Regression des R-CNN. Anschließend geht das Verfah-ren wie beim Fast-RCNN Modell weiter. Die vom RPN ermittelten Koordinaten werden nun auf der Convolutional Feature Map angewandt, darauf folgt das ROI-Pooling und die Klas-sifikation der einzelnen Bounding Boxen. Die dadurch resultierte Inferenzzeit ist enorm ge-stiegen und liegt im Durchschnitt bei 10 ms pro Bild (Shaoqing Ren, 2016).
 
-\subsubsection{Maschine Learning Basics}
-Im folgenden wird auf Grundlegende Begriffe des machines Learnings eingangen ihre Definitionen und ihr gebraucht in dieser Arbeit. Ziel ist es die Begriffe zu Definierne um keine verwirrung zu stiften. 
-\newpage
-\subsubsection{Überwachtes Lernen}
-
-Der Datensatz der erlernt werden soll enthält Features welche zu einen Label oder Ziel verbunden sind. Zum Beispiel einen Datensatz welcher Rötgenbilder von Organen welche mit Label versehen sind wie "Krebs" "kein Krebs". 
-
-\subsubsection{Unüberwachtes Lernen}
-
-Beim unüberwachten Lernen ist das ein Datensatz mit Featuren gegeben. Ziel ist es nun die Struktur des Datensatzes zu erlernen und ihre zugrundeliegende Datenverteilung. 
-\\
-
-\subsubsection{Die unterschiedlichen Aufgabengebiete im Maschine Learning}
-
-Machine Learning kann in verschiedene Aufgaben angewendet werden. Beispielsweise Klassifikation bei der ein Input X einem Label Y zugewissen wird. Anwendung kann dieses Anwenundung in Bereich Robotics bei der Klassifikation von Objekten mit dennen der Ropoter aufgaben ausführen soll. Oder bei der Bilderkennung. Synthesis und Sampling hat der Maschine Learning Algorithmus Daten zu erzeugen welche ähnlich zu den vorhanden Trainingsdaten sind. Diese Anwenundung kann Zielführent bei Aufgaben sein welche eine hohen Datenanzahl brauchen und kann beispielsweiße unterstüzent bei der Aufgaben von Klassifikationen sein. transformation hat die Aufgabe ein Bestimmten Input X zu einem Output Y umzuwandeln. Die umwandlung geschieht dabei durch bestimmte regeln \cite{dcgan}. Beispiele dafür könnte sein Bilder so umzuwandeln das sie heller oder dunkler sind oder Inhalte auf den Bilder verändert. Ein anderes Beispiel könnte sein das Texte aus einer Sprache in eine Andere übersetzt werden. 
-\\
-Diese Arbeit benutzt alle oben aufgezählten techniken um das Ziel zu erreichen Daten zu Transformieren dabei sythesiren und neue Samples zu generieren. Dabei gehst es darum für einen weiteren Schritt des Klassifizieren neue daten zu generieren. 
-
-
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.0\textwidth]{neuronalesnetzwerk.jpg}
-	\caption{künstliches neuronales Netzwerk}
-	\label{fig:Bild1}
-\end{figure}
-
-
 \subsection{Deep Learning und Informationstheorie}
 Um das Konzept von Deep Larning besser zu verstehen kann man diese aus den Informationstheoretischen Blickwinkel betrachten. Tischby and Schwarz-Ziv  \cite{infoth} untersuchten dabei Neuronale Netzwerke in Verbindung mit Deep Learning. 
 
@@ -388,35 +363,6 @@ Um das Konzept von Deep Larning besser zu verstehen kann man diese aus den Infor
 \end{figure}
 
 Das ins \ref{fig:Bild4} dargestelle Netzwerk kann als Markov kette betrachtet werden. Wobei jeder Layer h\textsuperscript{n}:1,...,N als ein Zustand einer Markov Kette betrachet werden kann. Wobei der Übergang durch von Informations als h\textsubscript{i} $\rightarrow$ h\textsubscript{i+1} dargestellt werden kann. Da es keine Rekursion gibt und die Information von Input Layer X durch h\textsubscript{arg} zu Output Layer Y durch fließt. Dabei untersuchten sie wie sich die Transinformation I(X;Y) von Input Variable X zu Output Variable Y verhält gegeben durch die Multivariate Verteilung p(X,Y). Dieses Prinzip wird Information Bottleneck Prinziple genannt \cite{bottleneck}. 
-
-\subsubsection{Hypothesen Raum}
-
-Wie in Kapitel Neuronale Netzwerke gezeigt ist das Ziel von ANN haben das Ziel ein Funktion $f*$ zu approximieren. Dabei werden Parameter $\Theta$ eines Models so angepasst, um die Abbildung von y = $f$(x;$\Theta)$ zu approximieren. $f$ bildet also unsere Hypothesen Raum $H$. Die Größe von $\mid H\mid$ wird bestimmt durch die Anzahl von möglichen $f$ welche den Input X auf unseren Output Y abbilden können. Da die Netzwerke letztendlich das Ziel haben eine möglichst niedrigen generalization error zu bekommen. Das heißt die Differenz zwischen Trainingserror und test error sollte möglichst gering bleiben. In einen Experiment zeigeten Zhang und Recht 2016 \cite{hypothesenraum} das Neuronale Netzwerke in der Trainingsphase auch ein Trainingserror zwischen X und zufallsgenerierten Y erlernen können. Natürlich erhöht sich dann der Test error da es keine korrelation zwischen die Zufallsgenerierten Labels und den Labels aus den Validierungsdatensatz gibt.  auf dem validierungsset. Aber ANN können den Trainingsdatensatz komplett auswendig sehen. 
-\begin{description}
-	\item[Kapazität] The effekitve Kapazität von neuronalen Netzwerken reicht aus den gesamten Datensatz zu speichern.
-	\item[Daten]  Even optimization on random labels remains easy. In fact, training time increases only by a small constant factor compared with training on the true labels.
-	\item[Random] Randomizing labels issolely adatatransformation,leaving all other properties of the learning problem unchanged\cite{hypothesenraum}.
-	
-	
-\end{description}
-Jedes Netzwerk C kann jede Funktion von einer Beispiel der Größe n in der Dimension d representieren wenn für jedes S $\subseteq$ $\mathbb{R}\textsuperscript{d}$ und jede $f$: S $\rightarrow$ $\mathbb{R}$ gibt es Einstellung der Gewichte C sodas C(x) = $f$ für jedes x $\in$ S \cite{hypothesenraum}
-
-\begin{description}
-	\item[Theorem] Thereexistsatwo-layerneuralnetworkwithReLUactivationsand2n+d weightsthat can represent any function on a sample of size n in d dimension \cite{hypothesenraum}	
-	
-\end{description}
-
-
-\subsubsection{Netzwerkgröße und Trainings Daten größe}
-
-Wie in Hypthesen Raum gezeigt wurde kann ein 2 schichtiges Netzwerk general universel jede $f$ approximieren. Nun ist die Frage wie groß muss mein Netzwerk sein, dass heißt wieviele Schichten um möglichst effizient zu lernen.
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.0\textwidth]{networksize.png}
-	\caption{Größe des Netzwerkes}
-	\label{fig:Bild1}
-\end{figure}
 
 \subsection{Convolution Neural Networks}
 
@@ -633,45 +579,27 @@ und beschreibt eine  bedingte Wahrscheinlichkeit das ein Trainingsdatensatz x od
 
 Ein Beispielhafter Anwendungsfall ist das erlernen von selbstgenerierten Zahlen. Der MNIST Datensatz besteht auch 10000 Handschriftlich eingescannten Zahlen von 0 - 9. Die Daten x können nun während des Training mit den dazugehörigen Zahlenlabels y trainiert werden und anschließend kann der Generator verwendet werden um selbst die gewünschten x zu erzeugen indem y gewählt wird\cite{cgan}. Das Konzept von CGAN wird nun in folgender Arbeit weiterentwickelt um das Ziel zu haben selber Bilder zu verändern. 
 
-\subsection{Image-to-Image GAN}
-Image-to-Image GAN(PIX GAN) passiert auf der Grundidee von CGAN bei welche der Generator $\log $D$(x|y)$ lernt und somit eine abhänige Wahrscheinlichkeit von Data x zu einer Zusatzinformation Y. Das Ziel von PIX2PIX ist es ein Input Bild Y zu einen Output Bild $\hat{^y}$ zu verändern. 
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.2\textwidth]{pix2pix.png}
-	\caption{Conditional Adverserial Network}
-	\label{fig:Bild2}
-\end{figure}
-
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.2\textwidth]{encoder.png}
-	\caption{Conditional Adverserial Network}
-	\label{fig:Bild2}
-\end{figure}
-Die Zielfunktion bleibt die selbe wie beim CGAN besonderheit ergibst sich beim Aufbau des Generators. 
-\\\\
+\subsection{Conditional-GAN}
+Conditional-GAN(C-GAN) ist eine modification des ursprünglichen GAN welches erlaubt bedingte Wahrscheinlichkeiten in Datensätze zu erlernen. Dass heißt zusätzliche Informationen in den lern Prozess einzuspeißen um den Output zu modifizieren. Im ursprünglichen GAN gibt es keine Möglichkeit auf den Output des GANs einfluß zu nehmen. Dabei wird das Modell so verändert das eine zusätzliche Information y zusätzlich als Input in den Discriminator oder den Generator zugefügt wird. Dabei kann y jedliche Information sein wie Label.
+Die Ziel funktion wird bedingt geändert.
 \begin{math}
-min\textsubscript{G} max\textsubscript{D}V(D,G)=E\textsubscript{x$\sim$p\textsubscript{data}(x)}[\log $D$(x|y)]  + E\textsubscript{z$\sim$p\textsubscript{z}(z)}[log(1-D(G(z|y))]           
+min\textsubscript{G} max\textsubscript{D}V(D,G)=E\textsubscript{x$\sim$p\textsubscript{data}(x)}[logD(x)]  + E\textsubscript{z$\sim$p\textsubscript{z}(z)}[log(1-D(G(z))]
+\\\\             
 \end{math}
-\\\\  
-Besonderheit ergibts sich beim Aufbau des Generators. Dieses Ähnelt den Aufbau von Autoencodern deren Ziel es ist einen Input zu einen Output Y zu kopieren und dabei zunächst Information zu verringern und anschließend wieder zu erhöhen bis g($f$(x)) = x \cite{Grundlagen}. In fall des PIX2PIX Netzwerkes wird aber das Ziel angestrebt  g($f$(x)) = y zu erlernen und damit eine Bild Transformationen auf die Wahrscheinlichkeitsverteilung P(Y) zu erlangen. 
-\cite{imagetoimage}
-\subsection{progressiv growing GAN}
+
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{proggan.png}
+	\includegraphics[width=1.2\textwidth]{cgan.png}
 	\caption{Conditional Adverserial Network}
 	\label{fig:Bild2}
 \end{figure}
 
-\cite{progre}
 \subsection{3D-GAN}
 Das besondere an den 3D Raum im Vergleich zu Normalen 2D Bildern ist die hohe steigerung der Dimension und zu gleich der Hohe Informationsgehalt welcher in 3D Objekten steckt. Das Ziel von 3D-GANS ist es Modelle von Objekten zu erhalten. Dabei wird der latente Objektraum erfasst und soll damit die Wahrscheinlichkeiten für einzelne Objektklassen enthalten. 
 \\
 Die Architektur des typischen 3D-GAN ist dem vanilla GAN von Goodfellow ähnelt. Durch den Aufbau von 3D-Objekten unterscheidet sich nur die Dimensionalität der einzelnen Layer. Dadurch das 3d Objekte ins Räumliche Verhältnis gestellt werden müssen braucht man eine dritte Dimenson in den Layern welche die Tiefe der Objekte Darstellt. \cite{3d}. 
 
-Die Zielfunktion bleibt die gleiche wie bei den üblichen GANS
+Die Zielfunktion bleibt die gleiche wie bei den üblichen GANS 
 \begin{math}
 min\textsubscript{G} max\textsubscript{D}V(D,G)=E\textsubscript{x$\sim$p\textsubscript{data}(x)}[\log $D$(x|y)]  + E\textsubscript{z$\sim$p\textsubscript{z}(z)}[log(1-D(G(z|y))]           
 \end{math}
@@ -683,6 +611,17 @@ min\textsubscript{G} max\textsubscript{D}V(D,G)=E\textsubscript{x$\sim$p\textsub
 	\label{fig:Bild2}
 \end{figure}
 \cite{3d}
+
+Das latent GAN hingegen benutzt eine andere Technik. Zunächst wird ein Autoencoder(siehe Autoencoder) verwebdet um Trainingsdaten zu trainieren. Ziel dabei ist den latenten Raum der Trainingsdaten zu erlernen und eine kompression der Daten um den suchraum zu verringern und dadurch das Training des GANs zu erleichtern. Nachdem das Trainingsabgeschloßen hat wird der Trainingsdaten satz durch den Encoder komprimiert und das Training vom GAN wird mit dem komprimierten Datensatz getan. 
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{3dgan.png}
+	\caption{Conditional Adverserial Network}
+	\label{fig:Bild2}
+\end{figure}
+\cite{3d}
+
 \section{Methoden}
 \subsection{Aufbau}
 \subsubsection{Datensatz 1. Versuchsaufbau}
