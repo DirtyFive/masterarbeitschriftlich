@@ -33,8 +33,8 @@
 \contentsline {subsubsection}{\numberline {3.1.1}Datensatz 1. Versuchsaufbau}{40}{subsubsection.1.3.1.1}
 \contentsline {subsubsection}{\numberline {3.1.2}Datensatz 2. Versuchsaufbau}{41}{subsubsection.1.3.1.2}
 \contentsline {subsubsection}{\numberline {3.1.3}Trainingsaufbau - GAN}{41}{subsubsection.1.3.1.3}
-\contentsline {subsection}{\numberline {3.2}Trainingsaufbau 2 - CGAN f\IeC {\"u}r Punktwolkenrekunstroktion }{45}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {3.3}Ergebnis}{45}{subsection.1.3.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Trainingsaufbau 2 - CGAN f\IeC {\"u}r Punktwolkenrekunstroktion }{45}{subsubsection.1.3.1.4}
+\contentsline {subsection}{\numberline {3.2}Ergebnis}{45}{subsection.1.3.2}
 \contentsline {section}{\numberline {4}Evaluation und Ergebnise}{45}{section.1.4}
 \contentsline {section}{\numberline {5}Zusammenfassung und Diskussion }{45}{section.1.5}
 \contentsline {chapter}{Abbildungsverzeichnis}{49}{chapter*.3}
