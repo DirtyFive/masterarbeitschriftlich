@@ -8,31 +8,30 @@
 \BOOKMARK [3][-]{subsubsection.1.2.1.1}{Backpropagation Algogrithmus}{subsection.1.2.1}% 8
 \BOOKMARK [3][-]{subsubsection.1.2.1.2}{momentum}{subsection.1.2.1}% 9
 \BOOKMARK [3][-]{subsubsection.1.2.1.3}{Batch Normalisation}{subsection.1.2.1}% 10
-\BOOKMARK [3][-]{subsubsection.1.2.1.4}{Nicht Lineare Gleichungssysteme}{subsection.1.2.1}% 11
-\BOOKMARK [3][-]{subsubsection.1.2.1.5}{short title}{subsection.1.2.1}% 12
-\BOOKMARK [2][-]{subsection.1.2.2}{Datenformat}{section.1.2}% 13
-\BOOKMARK [3][-]{subsubsection.1.2.2.1}{Woher stammen die Daten}{subsection.1.2.2}% 14
-\BOOKMARK [3][-]{subsubsection.1.2.2.2}{Das Problem mit 3D-Data}{subsection.1.2.2}% 15
-\BOOKMARK [2][-]{subsection.1.2.3}{Deep Learning und Informationstheorie}{section.1.2}% 16
-\BOOKMARK [2][-]{subsection.1.2.4}{Convolution Neural Networks}{section.1.2}% 17
-\BOOKMARK [2][-]{subsection.1.2.5}{Generative Modelle}{section.1.2}% 18
-\BOOKMARK [3][-]{subsubsection.1.2.5.1}{autoencoder}{subsection.1.2.5}% 19
-\BOOKMARK [3][-]{subsubsection.1.2.5.2}{Zielfunktion Autoencoder}{subsection.1.2.5}% 20
-\BOOKMARK [2][-]{subsection.1.2.6}{Generative Adversarial Network}{section.1.2}% 21
-\BOOKMARK [3][-]{subsubsection.1.2.6.1}{Probleme mit Generative Adverserial Networks}{subsection.1.2.6}% 22
-\BOOKMARK [3][-]{subsubsection.1.2.6.2}{L\366sungsans\344tze f\374r Generative Adverserial Networks Probleme}{subsection.1.2.6}% 23
-\BOOKMARK [3][-]{subsubsection.1.2.6.3}{Conditional Adversarial Networks}{subsection.1.2.6}% 24
-\BOOKMARK [2][-]{subsection.1.2.7}{Conditional-GAN}{section.1.2}% 25
-\BOOKMARK [2][-]{subsection.1.2.8}{3D-GAN}{section.1.2}% 26
-\BOOKMARK [1][-]{section.1.3}{Methoden}{chapter.1}% 27
-\BOOKMARK [2][-]{subsection.1.3.1}{Aufbau}{section.1.3}% 28
-\BOOKMARK [3][-]{subsubsection.1.3.1.1}{Datensatz 1. Versuchsaufbau}{subsection.1.3.1}% 29
-\BOOKMARK [3][-]{subsubsection.1.3.1.2}{Datensatz 2. Versuchsaufbau}{subsection.1.3.1}% 30
-\BOOKMARK [3][-]{subsubsection.1.3.1.3}{Trainingsaufbau - GAN}{subsection.1.3.1}% 31
-\BOOKMARK [3][-]{subsubsection.1.3.1.4}{Trainingsaufbau 2 - CGAN f\374r Punktwolkenrekunstroktion }{subsection.1.3.1}% 32
-\BOOKMARK [2][-]{subsection.1.3.2}{Ergebnis}{section.1.3}% 33
-\BOOKMARK [1][-]{section.1.4}{Evaluation und Ergebnise}{chapter.1}% 34
-\BOOKMARK [1][-]{section.1.5}{Zusammenfassung und Diskussion }{chapter.1}% 35
-\BOOKMARK [0][-]{chapter*.3}{Abbildungsverzeichnis}{}% 36
-\BOOKMARK [0][-]{chapter*.4}{Tabellenverzeichnis}{}% 37
-\BOOKMARK [0][-]{chapter*.5}{Literaturverzeichnis}{}% 38
+\BOOKMARK [3][-]{subsubsection.1.2.1.4}{Ziel-Funktion}{subsection.1.2.1}% 11
+\BOOKMARK [2][-]{subsection.1.2.2}{Datenformat}{section.1.2}% 12
+\BOOKMARK [3][-]{subsubsection.1.2.2.1}{Woher stammen die Daten}{subsection.1.2.2}% 13
+\BOOKMARK [3][-]{subsubsection.1.2.2.2}{Das Problem mit 3D-Data}{subsection.1.2.2}% 14
+\BOOKMARK [2][-]{subsection.1.2.3}{Deep Learning und Informationstheorie}{section.1.2}% 15
+\BOOKMARK [2][-]{subsection.1.2.4}{Convolution Neural Networks}{section.1.2}% 16
+\BOOKMARK [2][-]{subsection.1.2.5}{Generative Modelle}{section.1.2}% 17
+\BOOKMARK [3][-]{subsubsection.1.2.5.1}{autoencoder}{subsection.1.2.5}% 18
+\BOOKMARK [3][-]{subsubsection.1.2.5.2}{Zielfunktion Autoencoder}{subsection.1.2.5}% 19
+\BOOKMARK [2][-]{subsection.1.2.6}{Generative Adversarial Network}{section.1.2}% 20
+\BOOKMARK [3][-]{subsubsection.1.2.6.1}{Probleme mit Generative Adverserial Networks}{subsection.1.2.6}% 21
+\BOOKMARK [3][-]{subsubsection.1.2.6.2}{L\366sungsans\344tze f\374r Generative Adverserial Networks Probleme}{subsection.1.2.6}% 22
+\BOOKMARK [3][-]{subsubsection.1.2.6.3}{Conditional Adversarial Networks}{subsection.1.2.6}% 23
+\BOOKMARK [2][-]{subsection.1.2.7}{Conditional-GAN}{section.1.2}% 24
+\BOOKMARK [2][-]{subsection.1.2.8}{3D-GAN}{section.1.2}% 25
+\BOOKMARK [1][-]{section.1.3}{Methoden}{chapter.1}% 26
+\BOOKMARK [2][-]{subsection.1.3.1}{Aufbau}{section.1.3}% 27
+\BOOKMARK [3][-]{subsubsection.1.3.1.1}{Datensatz 1. Versuchsaufbau}{subsection.1.3.1}% 28
+\BOOKMARK [3][-]{subsubsection.1.3.1.2}{Datensatz 2. Versuchsaufbau}{subsection.1.3.1}% 29
+\BOOKMARK [3][-]{subsubsection.1.3.1.3}{Trainingsaufbau - GAN}{subsection.1.3.1}% 30
+\BOOKMARK [3][-]{subsubsection.1.3.1.4}{Trainingsaufbau 2 - CGAN f\374r Punktwolkenrekunstroktion }{subsection.1.3.1}% 31
+\BOOKMARK [2][-]{subsection.1.3.2}{Ergebnis}{section.1.3}% 32
+\BOOKMARK [1][-]{section.1.4}{Evaluation und Ergebnise}{chapter.1}% 33
+\BOOKMARK [1][-]{section.1.5}{Zusammenfassung und Diskussion }{chapter.1}% 34
+\BOOKMARK [0][-]{chapter*.3}{Abbildungsverzeichnis}{}% 35
+\BOOKMARK [0][-]{chapter*.4}{Tabellenverzeichnis}{}% 36
+\BOOKMARK [0][-]{chapter*.5}{Literaturverzeichnis}{}% 37
