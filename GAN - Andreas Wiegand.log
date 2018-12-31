@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.21)  30 DEC 2018 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.21)  31 DEC 2018 09:19
 entering extended mode
 **"./GAN - Andreas Wiegand.tex"
 ("GAN - Andreas Wiegand.tex"
@@ -1079,47 +1079,47 @@ Overfull \hbox (69.42365pt too wide) in paragraph at lines 568--569
  [][] 
  []
 
-<plant.png, id=602, 487.8225pt x 446.41782pt>
+[33 <./3dgan.png>]
+<plant.png, id=609, 487.8225pt x 446.41782pt>
 File: plant.png Graphic file (type png)
 <use plant.png>
-Package pdftex.def Info: plant.png  used on input line 580.
+Package pdftex.def Info: plant.png  used on input line 582.
 (pdftex.def)             Requested size: 416.54718pt x 381.19392pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 580--581
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 582--583
  [][] 
  []
 
-[33 <./3dgan.png>]
 <leaf1.png, id=610, 408.02437pt x 406.51875pt>
 File: leaf1.png Graphic file (type png)
 <use leaf1.png>
-Package pdftex.def Info: leaf1.png  used on input line 587.
+Package pdftex.def Info: leaf1.png  used on input line 589.
 (pdftex.def)             Requested size: 416.54718pt x 415.02821pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 587--588
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 589--590
  [][] 
  []
 
 File: leaf1.png Graphic file (type png)
 <use leaf1.png>
-Package pdftex.def Info: leaf1.png  used on input line 597.
+Package pdftex.def Info: leaf1.png  used on input line 599.
 (pdftex.def)             Requested size: 416.54718pt x 415.02821pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 597--598
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 599--600
  [][] 
  []
 
 File: leaf1.png Graphic file (type png)
 <use leaf1.png>
-Package pdftex.def Info: leaf1.png  used on input line 609.
+Package pdftex.def Info: leaf1.png  used on input line 611.
 (pdftex.def)             Requested size: 416.54718pt x 415.02821pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 609--610
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 611--612
  [][] 
  []
 
 
-Overfull \hbox (46.05669pt too wide) in paragraph at lines 604--613
+Overfull \hbox (46.05669pt too wide) in paragraph at lines 606--615
 \OT1/cmr/m/n/10 herk[]ommlichen Auf-bau von GAN zur[]uckgegriffen. Die Al-ge-me
 i-nen Meta-Trainingsvariablen
  []
@@ -1127,20 +1127,20 @@ i-nen Meta-Trainingsvariablen
 [34] [35 <./plant.png>] [36 <./leaf1.png>] [37]
 File: leaf1.png Graphic file (type png)
 <use leaf1.png>
-Package pdftex.def Info: leaf1.png  used on input line 619.
+Package pdftex.def Info: leaf1.png  used on input line 621.
 (pdftex.def)             Requested size: 416.54718pt x 415.02821pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 619--620
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 621--622
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 626--627
+Underfull \hbox (badness 10000) in paragraph at lines 628--629
 
  []
 
 
-Overfull \hbox (3.43028pt too wide) in paragraph at lines 631--632
+Overfull \hbox (3.43028pt too wide) in paragraph at lines 633--634
 []\OT1/cmr/m/n/10 Der Auf-bau des C-GANS ent-spricht der in im 3.4 be-schrie-be
 n C-GAN []ublichen
  []
@@ -1161,13 +1161,13 @@ n C-GAN []ublichen
 ] ("GAN - Andreas Wiegand.bbl" [44
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 656.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 658.
  [45]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 656.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 658.
 
 ("GAN - Andreas Wiegand.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 656.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 656.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 658.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 658.
 Package rerunfilecheck Info: File `"GAN - Andreas Wiegand".out' has not changed
 .
 (rerunfilecheck)             Checksum: D8A13A99281349159732323FD08A24F6;2933.
@@ -1175,7 +1175,7 @@ Package rerunfilecheck Info: File `"GAN - Andreas Wiegand".out' has not changed
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 656.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 658.
  ) 
 Here is how much of TeX's memory you used:
  9710 strings out of 492970
@@ -1200,7 +1200,7 @@ gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files
 /type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
 sfonts/symbols/msbm10.pfb>
-Output written on "GAN - Andreas Wiegand.pdf" (45 pages, 2232424 bytes).
+Output written on "GAN - Andreas Wiegand.pdf" (45 pages, 2232661 bytes).
 PDF statistics:
  808 PDF objects out of 1000 (max. 8388607)
  183 named destinations out of 1000 (max. 500000)
