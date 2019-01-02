@@ -249,6 +249,8 @@ Die Ziel-Funktion muss Differenzierbar sein. Das heißt unseren Funktion f: D $\
 Wobei  x\textsubscript{n}:n=1,...,N die Traingsdaten sind ist und c\textsubscript{n}:n=1,...,N die mögliche Klassen.
 \newpage
 
+
+
 \subsection{Datenformat}
 
 Punktwolken sind eine Menge von N Punkten welche im Vektorraum dargestellt werden können. Jeder Punkt n Element von N wird durch seine (x,y,z) im Euklidischen Raum dargestellt. Punkte können zusätzliche Features gegeben werden wie Farbe oder Material. Es gibt unterschiedliche Dateiformate welche für die Abspeicherung von Punktwolken herangezogen werden können bespiele dafür sind PLY,STL oder OBJ. 
@@ -574,6 +576,10 @@ Das latent GAN hingegen benutzt eine andere Technik. Zunächst wird ein Autoenco
 \section{Methoden}
 In diesen Kapitel werden die Methoden für die Versuchsaufbauten besprochen welche die Ziele 1 - 3 überprüfen sollen. Es wird zunächst ein generelle Struktur des Aufbaus besprochen und anschließend auf spezifische gegebeneingeganngen. Außerdem werden die spezifischen Datensätze für die jeweiligen Datensätze aufgezeigt und ihre enstehung erläutert. 
 
+
+Alle Versuche wurden auf einen Computer mit Ubuntu 14.05 Betriebssystem mit einen IntelR CoreTM i7-7700k mit 4.50GHz einer Geforce GTX 1089 mit 8G Grafikspeicher. Training und Testen wurden mit CUDA 9.0 und cudNN 7.1.1.
+
+
 \subsection{Aufbau}
 \subsubsection{Datensatz 1. Versuchsaufbau}
 Der erste Datensatz "Stühle" besteht aus 4014 Punktwolken mit je 2056 Punkten. Der Datensatz wurde aus von den Shapenet Datensatz entnommen. Ein Beispielpunktwolke kann aus Abbildung entnommen werden. Die Daten für den zweiten Datensatz "Blätter" stammen vom Fraunhofer Institut. Der Grunddatensatz bestand aus mehreren 3D-Scans von Tabakpflanzen bei den die Blätter der Pflanze zu einen Datensatz zusammengefügt wurden sind. Der "Blätter" Datensatz besteht aus 420 Punktwolken mit je 2056 Punkten. 
@@ -641,8 +647,13 @@ Als Zielfunktion wird wieder das W-GAN verwendet da es im Versuchsaufbau 1 die b
 
 \subsection{Ergebnis}
 
+Es wird nun in diesen Kapitel auf die Ergebnisse von Versuchsaufbau 1 und 2 eingeganngen. Zunächst wird Versuchsaufbau 1 mit des erlernen von latenten Raum von Punktwolken gezeigt. Anschließend geht es um die Ergebnisse von Versuchsaufbau 2 für die Rekunstruntion von zerstörten Blättern. 
 
-Lernkurve + example bilder
+\subsubsection{Ergebnisse - Versuchsaufbau 1}
+\subsubsection{Ergebnisse - Versuchsaufbau 2
+
+
+
 \section{Evaluation und Ergebnise}
 bilder aus nicht trainingsdatensatz
 \section{Zusammenfassung und Diskussion }
