@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.21)  31 DEC 2018 16:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.21)  4 JAN 2019 12:49
 entering extended mode
 **"./GAN - Andreas Wiegand.tex"
 ("GAN - Andreas Wiegand.tex"
@@ -532,6 +532,12 @@ LaTeX Warning: Label `fig:Bild1' multiply defined.
 LaTeX Warning: Label `fig:Bild1' multiply defined.
 
 
+LaTeX Warning: Label `fig:Bild1' multiply defined.
+
+
+LaTeX Warning: Label `fig:Bild1' multiply defined.
+
+
 LaTeX Warning: Label `fig:Bild2' multiply defined.
 
 
@@ -844,10 +850,7 @@ Package pdftex.def Info: markovdeep.png  used on input line 311.
 
 LaTeX Warning: Citation `bottleneck' undefined on input line 316.
 
-
-Underfull \vbox (badness 1019) has occurred while \output is active []
-
- [18 <./lematech_2.png>]
+[18 <./lematech_2.png>]
 Overfull \hbox (1.82039pt too wide) in paragraph at lines 323--333
 []\OT1/cmr/m/n/10 Convolution Neural Netz-works(CNN) sind ei-ne be-son-de-re Ar
 t von k[]unstlichen
@@ -935,232 +938,242 @@ File: genmodel.png Graphic file (type png)
 <use genmodel.png>
 Package pdftex.def Info: genmodel.png  used on input line 402.
 (pdftex.def)             Requested size: 347.12354pt x 160.41673pt.
-<GAN_GRUNDAUFBAU.png, id=408, 343.2825pt x 244.66406pt>
+<emd.png, id=405, 523.35526pt x 306.54526pt>
+File: emd.png Graphic file (type png)
+<use emd.png>
+Package pdftex.def Info: emd.png  used on input line 423.
+(pdftex.def)             Requested size: 347.12354pt x 203.32147pt.
+<chamfer.png, id=406, 522.753pt x 303.534pt>
+File: chamfer.png Graphic file (type png)
+<use chamfer.png>
+Package pdftex.def Info: chamfer.png  used on input line 430.
+(pdftex.def)             Requested size: 347.12354pt x 201.55577pt.
+<GAN_GRUNDAUFBAU.png, id=410, 343.2825pt x 244.66406pt>
 File: GAN_GRUNDAUFBAU.png Graphic file (type png)
 <use GAN_GRUNDAUFBAU.png>
-Package pdftex.def Info: GAN_GRUNDAUFBAU.png  used on input line 414.
+Package pdftex.def Info: GAN_GRUNDAUFBAU.png  used on input line 441.
 (pdftex.def)             Requested size: 347.12354pt x 247.39993pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--440
+Underfull \vbox (badness 2103) has occurred while \output is active []
+
+ [24 <./genmodel.png>] [25 <./emd.png> <./chamfer.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 448--467
 
  []
 
-[24 <./genmodel.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[26 <./GAN_GRUNDAUFBAU.png>] [27]
 
- [25 <./GAN_GRUNDAUFBAU.png>] [26]
+LaTeX Warning: Citation `dcgan' undefined on input line 471.
 
-LaTeX Warning: Citation `dcgan' undefined on input line 444.
-
-<dcgan1.png, id=448, 779.16093pt x 188.95593pt>
+<dcgan1.png, id=458, 779.16093pt x 188.95593pt>
 File: dcgan1.png Graphic file (type png)
 <use dcgan1.png>
-Package pdftex.def Info: dcgan1.png  used on input line 448.
+Package pdftex.def Info: dcgan1.png  used on input line 475.
 (pdftex.def)             Requested size: 347.12354pt x 84.1817pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 457--460
+Underfull \hbox (badness 10000) in paragraph at lines 484--487
 
  []
 
 
-LaTeX Warning: Citation `sha' undefined on input line 461.
+LaTeX Warning: Citation `sha' undefined on input line 488.
 
-<KLdiv.png, id=456, 716.6775pt x 173.89969pt>
+<KLdiv.png, id=466, 716.6775pt x 173.89969pt>
 File: KLdiv.png Graphic file (type png)
 <use KLdiv.png>
-Package pdftex.def Info: KLdiv.png  used on input line 465.
+Package pdftex.def Info: KLdiv.png  used on input line 492.
 (pdftex.def)             Requested size: 347.12354pt x 84.22978pt.
-[27 <./dcgan1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 478--480
+[28 <./dcgan1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 505--507
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 481--483
+Underfull \hbox (badness 10000) in paragraph at lines 508--510
 
  []
 
 
-LaTeX Warning: Citation `wasserstein' undefined on input line 484.
+LaTeX Warning: Citation `wasserstein' undefined on input line 511.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--486
+Underfull \hbox (badness 10000) in paragraph at lines 511--513
 
  []
 
 
-LaTeX Warning: Citation `metrics' undefined on input line 487.
+LaTeX Warning: Citation `metrics' undefined on input line 514.
 
 
-Overfull \hbox (7.83786pt too wide) in paragraph at lines 487--488
+Overfull \hbox (7.83786pt too wide) in paragraph at lines 514--515
 []\OT1/cmr/m/n/10 Die Loss Funk-ti-on der GANs
  []
 
-[28 <./KLdiv.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 496--497
+[29 <./KLdiv.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 523--524
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 498--499
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--502
+Underfull \hbox (badness 10000) in paragraph at lines 528--529
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--505
+Underfull \hbox (badness 10000) in paragraph at lines 531--532
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--508
+Underfull \hbox (badness 10000) in paragraph at lines 534--535
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 510--511
+Underfull \hbox (badness 10000) in paragraph at lines 537--538
 
  []
 
-[29]
+[30]
 
-LaTeX Warning: Citation `cgan' undefined on input line 523.
+LaTeX Warning: Citation `cgan' undefined on input line 550.
 
-<cgan.png, id=499, 338.76563pt x 263.48438pt>
+<cgan.png, id=509, 338.76563pt x 263.48438pt>
 File: cgan.png Graphic file (type png)
 <use cgan.png>
-Package pdftex.def Info: cgan.png  used on input line 526.
+Package pdftex.def Info: cgan.png  used on input line 553.
 (pdftex.def)             Requested size: 347.12354pt x 269.99281pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--530
+Underfull \hbox (badness 10000) in paragraph at lines 544--557
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--530
+Underfull \hbox (badness 10000) in paragraph at lines 544--557
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 534--540
+Underfull \hbox (badness 10000) in paragraph at lines 561--567
 
  []
 
-[30 <./cgan.png>]
+[31 <./cgan.png>]
 File: cgan.png Graphic file (type png)
 <use cgan.png>
-Package pdftex.def Info: cgan.png  used on input line 543.
+Package pdftex.def Info: cgan.png  used on input line 570.
 (pdftex.def)             Requested size: 416.54718pt x 323.99136pt.
-
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 543--544
- [][] 
- []
-
-
-LaTeX Warning: Citation `3d' undefined on input line 551.
-
-[31]
-Overfull \hbox (30.99857pt too wide) in paragraph at lines 553--557
-[]\OT1/cmr/m/n/10 Die Ziel-funk-ti-on bleibt die glei-che wie bei den []ubliche
-n GANS $\OML/cmm/m/it/10 min[]max[]V\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 D; G\OT1/
-cmr/m/n/10 ) =
- []
-
-<3dgan.png, id=517, 395.22656pt x 125.71968pt>
-File: 3dgan.png Graphic file (type png)
-<use 3dgan.png>
-Package pdftex.def Info: 3dgan.png  used on input line 560.
-(pdftex.def)             Requested size: 416.54718pt x 132.50255pt.
-
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 560--561
- [][] 
- []
-
-File: 3dgan.png Graphic file (type png)
-<use 3dgan.png>
-Package pdftex.def Info: 3dgan.png  used on input line 570.
-(pdftex.def)             Requested size: 416.54718pt x 132.50255pt.
 
 Overfull \hbox (69.42365pt too wide) in paragraph at lines 570--571
  [][] 
  []
 
-[32 <./3dgan.png>]
-<plant.png, id=529, 487.8225pt x 446.41782pt>
+
+LaTeX Warning: Citation `3d' undefined on input line 578.
+
+[32]
+Overfull \hbox (30.99857pt too wide) in paragraph at lines 580--584
+[]\OT1/cmr/m/n/10 Die Ziel-funk-ti-on bleibt die glei-che wie bei den []ubliche
+n GANS $\OML/cmm/m/it/10 min[]max[]V\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 D; G\OT1/
+cmr/m/n/10 ) =
+ []
+
+<3dgan.png, id=527, 395.22656pt x 125.71968pt>
+File: 3dgan.png Graphic file (type png)
+<use 3dgan.png>
+Package pdftex.def Info: 3dgan.png  used on input line 587.
+(pdftex.def)             Requested size: 416.54718pt x 132.50255pt.
+
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 587--588
+ [][] 
+ []
+
+File: 3dgan.png Graphic file (type png)
+<use 3dgan.png>
+Package pdftex.def Info: 3dgan.png  used on input line 597.
+(pdftex.def)             Requested size: 416.54718pt x 132.50255pt.
+
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 597--598
+ [][] 
+ []
+
+[33 <./3dgan.png>]
+<plant.png, id=539, 487.8225pt x 446.41782pt>
 File: plant.png Graphic file (type png)
 <use plant.png>
-Package pdftex.def Info: plant.png  used on input line 588.
+Package pdftex.def Info: plant.png  used on input line 615.
 (pdftex.def)             Requested size: 416.54718pt x 381.19392pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 588--589
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 615--616
  [][] 
  []
 
-<leaf1.png, id=530, 408.02437pt x 406.51875pt>
+<leaf1.png, id=540, 408.02437pt x 406.51875pt>
 File: leaf1.png Graphic file (type png)
 <use leaf1.png>
-Package pdftex.def Info: leaf1.png  used on input line 595.
+Package pdftex.def Info: leaf1.png  used on input line 622.
 (pdftex.def)             Requested size: 416.54718pt x 415.02821pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 595--596
- [][] 
- []
-
-File: leaf1.png Graphic file (type png)
-<use leaf1.png>
-Package pdftex.def Info: leaf1.png  used on input line 605.
-(pdftex.def)             Requested size: 416.54718pt x 415.02821pt.
-
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 605--606
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 622--623
  [][] 
  []
 
 File: leaf1.png Graphic file (type png)
 <use leaf1.png>
-Package pdftex.def Info: leaf1.png  used on input line 617.
+Package pdftex.def Info: leaf1.png  used on input line 632.
 (pdftex.def)             Requested size: 416.54718pt x 415.02821pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 617--618
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 632--633
+ [][] 
+ []
+
+File: leaf1.png Graphic file (type png)
+<use leaf1.png>
+Package pdftex.def Info: leaf1.png  used on input line 644.
+(pdftex.def)             Requested size: 416.54718pt x 415.02821pt.
+
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 644--645
  [][] 
  []
 
 
-Overfull \hbox (46.05669pt too wide) in paragraph at lines 612--621
+Overfull \hbox (46.05669pt too wide) in paragraph at lines 639--648
 \OT1/cmr/m/n/10 herk[]ommlichen Auf-bau von GAN zur[]uckgegriffen. Die Al-ge-me
 i-nen Meta-Trainingsvariablen
  []
 
-[33] [34 <./plant.png>] [35 <./leaf1.png>] [36]
+[34] [35 <./plant.png>] [36 <./leaf1.png>] [37]
 File: leaf1.png Graphic file (type png)
 <use leaf1.png>
-Package pdftex.def Info: leaf1.png  used on input line 627.
+Package pdftex.def Info: leaf1.png  used on input line 654.
 (pdftex.def)             Requested size: 416.54718pt x 415.02821pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 627--628
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 654--655
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 634--635
+Underfull \hbox (badness 10000) in paragraph at lines 661--662
 
  []
 
 
-Overfull \hbox (3.43028pt too wide) in paragraph at lines 639--640
+Overfull \hbox (3.43028pt too wide) in paragraph at lines 666--667
 []\OT1/cmr/m/n/10 Der Auf-bau des C-GANS ent-spricht der in im 3.4 be-schrie-be
 n C-GAN []ublichen
  []
 
-[37] [38] [39])
+[38] [39] [40])
 Runaway argument?
 {Ergebnisse - Versuchsaufbau 2 \par \par \par \section {Evaluation un\ETC.
 ! File ended while scanning use of \@xdblarg.
@@ -1180,10 +1193,10 @@ you'd better type `E' or `X' now and fix your file.
 
  
 Here is how much of TeX's memory you used:
- 9639 strings out of 492970
- 137872 string characters out of 3135854
+ 9652 strings out of 492970
+ 138029 string characters out of 3135854
  263894 words of memory out of 3000000
- 13193 multiletter control sequences out of 15000+200000
+ 13201 multiletter control sequences out of 15000+200000
  8120 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  31i,20n,30p,1943b,542s stack positions out of 5000i,500n,10000p,200000b,50000s

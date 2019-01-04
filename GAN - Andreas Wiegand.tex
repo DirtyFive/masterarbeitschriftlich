@@ -84,7 +84,7 @@ Künstliche Neuronale Netzwerke(ANN) haben das Ziel ein Funktion f* zu approximi
 	\label{fig:Bild1}
 \end{figure}
 
-Jeder Layer besteht aus künstliche Neuronen diese haben ihren Namesgeber von der aus der Natur stammende Neuron in Gehirnen von Lebewesen. Neuronen sind die Bausteine aus denen die Gehirne von Lebewesen, wie Fische, Vögel, Säugetiere zusammen gesetzt sind. Neuronen oder auch Nervenzellen bestehen in eine Zellkern der Zetrum der Zelle um sie herum sind dendriten. Neuronen sind untereinander mit den Axon verbunden.axon haben an den enden Synapen welche die grenze von Axon zur Nervenzelle einen Spalt bilde. Dieser Spalt überwunden indem von der Synapse botenstoffe abgesendet werden welche sich dann an Rezeptor der Zelle anhaften. Diese Übertragung findet statt wenn an der Synapse ein bestimmter Schwellenwert überschritten wurde von elektrischen reizen welche die Zelle abfeurt lässt. Künstliche Neuronen haben diese Schwellenwert durch songenannte Gewichte w\textsubscript{ij} diese sind auf den Verbidungen zwischen den Neuronen in den unterschiedlichen layern im Netwerk
+Jeder Layer besteht aus künstliche Neuronen diese haben ihren Namesgeber von der aus der Natur stammende Neuron in Gehirnen von Lebewesen. Neuronen sind die Bausteine aus denen die Gehirne von Lebewesen, wie Fische, Vögel, Säugetiere zusammen gesetzt sind. Neuronen oder auch Nervenzellen bestehen in eine Zellkern der Zetrum der Zelle um sie herum sind dendriten. Neuronen sind untereinander mit den Axon verbunden.axon haben an den enden Synapen welche die grenze von Axon zur Nervenzelle einen Spalt bilde. Dieser Spalt überwunden indem von der Synapse botenstoffe abgesendet werden welche sich dann an Rezeptor der Zelle anhaften. Diese Übertragung findet statt wenn an der Synapse ein bestimmter Schwellenwert überschritten wurde von elektrischen reizen welche die Zelle abfeurt lässt. Künstliche Neuronen haben diese Schwellenwert durch songenannte Gewichte w\textsubscript{ij} diese sind auf den Verbindungen zwischen den Neuronen in den unterschiedlichen layern im Netwerk
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.0\textwidth]{neuronalesnetzwerk.jpg}
@@ -303,7 +303,7 @@ Ein weiteres Problem für Deep Learning ist das die aus Kapitel Convolutional Ne
 
 \subsection{Deep Learning und Informationstheorie}
 
-
+Von Deep Learning wird gesprochen wird ANN mehr als 1 Layer besitzen und dadurch Komplexere Aufgaben lösen können. Der Trainingsalgorithmus ist immernoch mit den Backprobagation Algorithmus. 
 Um das Konzept von Deep Larning besser zu verstehen kann man diese aus den Informationstheoretischen Blickwinkel betrachten. Tischby and Schwarz-Ziv  \cite{infoth} untersuchten dabei Neuronale Netzwerke in Verbindung mit Deep Learning. 
 
 \begin{figure}[htbp] 
@@ -404,6 +404,33 @@ Unter GAN werden wir auf dieses Problem erneut aufgreifen und es wird gezeigt in
 	\label{fig:Bild1}
 \end{figure}
 
+Eine weitere Möglichkeit speziell für Autoencoder für Punktwolken ist die Earth Mover distance(EMD). Sind X\textsuperscript{1} und X\textsuperscript{2} zwei Punktwolken mit jeweils x\textsuperscript{n} definierten Punkten. 
+
+\begin{math}
+d\textsuperscript{EMD}=\min_{\theta : X\textsubscript{1}\rightarrow X\textsubscript{2}}  \sum_{x\in X\textsubscript{1}} || x - \theta(x)\textsubscript{2} wobei \theta: X\textsubscript{1} \rightarrow X\textsubscript{2} bijektiv ist 
+\end{math}
+
+bei den Ergebnissen von ZITAT 3D-GAN hat sich eine Zielfunktion besser herauskirstalisiert die Chamfer distance(CD). Wie auch zuvor sind  X\textsuperscript{1} und X\textsuperscript{2} zwei Punktwolken mit jeweils x\textsuperscript{n} definierten Punkten.
+
+\begin{math}
+d\textsuperscript{EMD}=\min_{\theta : X\textsubscript{1}\rightarrow X\textsubscript{2}}  \sum_{x\in X\textsubscript{1}} || x - \theta(x)\textsubscript{2} wobei \theta: X\textsubscript{1} \rightarrow X\textsubscript{2} bijektiv ist 
+\end{math}
+
+Der unterschied ergibt sich zwischen den beiden das bei der EMD von der Ausgangswolke die Punkte zu der anderen jeweils optimiert werden. WOhingegen bei der CD die distanzen von und zu der Ausgangspunktwolke berechnet werden. Dies geht sehr gut aus den Grafiken 1 und 2 hinaus in welche die distanceberechnungen der einzelnen Punkte dargestellt wird. 
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.0\textwidth]{emd.png}
+	\caption{Generative Modelle}
+	\label{fig:Bild1}
+\end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.0\textwidth]{chamfer.png}
+	\caption{Generative Modelle}
+	\label{fig:Bild1}
+\end{figure}
 
 \subsection{Generative Adversarial Network}
 
