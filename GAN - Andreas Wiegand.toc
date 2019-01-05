@@ -1,0 +1,43 @@
+\babel@toc {english}{}
+\contentsline {chapter}{Table of Contents}{1}{chapter*.1}
+\babel@toc {german}{}
+\contentsline {title}{3-D Datenrekonstruktion mit generative Adverserial Networks}{3}{chapter.1}
+\authcount {1}
+\contentsline {author}{Andreas Wiegand}{3}{chapter.1}
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1}Objectives}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.2}Outline}{5}{subsection.1.1.2}
+\contentsline {section}{\numberline {2}Grundlagen und \IeC {\"a}hnliche Arbeiten}{5}{section.1.2}
+\contentsline {subsection}{\numberline {2.1}k\IeC {\"u}nstliche Neuronale Netzwerke}{6}{subsection.1.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Backpropagation Algogrithmus}{8}{subsubsection.1.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}momentum}{10}{subsubsection.1.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Batch Normalisation}{11}{subsubsection.1.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Ziel-Funktion}{14}{subsubsection.1.2.1.4}
+\contentsline {subsection}{\numberline {2.2}Datenformat}{17}{subsection.1.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Woher stammen die Daten}{17}{subsubsection.1.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Das Problem mit 3D-Data}{17}{subsubsection.1.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Deep Learning und Informationstheorie}{19}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {2.4}Convolution Neural Networks}{20}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {2.5}Generative Modelle}{23}{subsection.1.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}autoencoder}{23}{subsubsection.1.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.2}Zielfunktion Autoencoder\\\\}{23}{subsubsection.1.2.5.2}
+\contentsline {subsection}{\numberline {2.6}Generative Adversarial Network}{27}{subsection.1.2.6}
+\contentsline {subsubsection}{\numberline {2.6.1}Probleme mit Generative Adverserial Networks}{30}{subsubsection.1.2.6.1}
+\contentsline {subsubsection}{\numberline {2.6.2}L\IeC {\"o}sungsans\IeC {\"a}tze f\IeC {\"u}r Generative Adverserial Networks Probleme}{31}{subsubsection.1.2.6.2}
+\contentsline {subsubsection}{\numberline {2.6.3}Conditional Adversarial Networks}{32}{subsubsection.1.2.6.3}
+\contentsline {subsection}{\numberline {2.7}Conditional-GAN}{33}{subsection.1.2.7}
+\contentsline {subsection}{\numberline {2.8}3D-GAN}{34}{subsection.1.2.8}
+\contentsline {section}{\numberline {3}Methoden}{34}{section.1.3}
+\contentsline {subsection}{\numberline {3.1}Aufbau}{35}{subsection.1.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Datensatz 1. Versuchsaufbau}{35}{subsubsection.1.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Datensatz 2. Versuchsaufbau}{35}{subsubsection.1.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Trainingsaufbau - GAN}{39}{subsubsection.1.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Trainingsaufbau 2 - CGAN f\IeC {\"u}r Punktwolkenrekunstroktion }{39}{subsubsection.1.3.1.4}
+\contentsline {subsection}{\numberline {3.2}Ergebnis}{42}{subsection.1.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Ergebnisse - Versuchsaufbau 1}{42}{subsubsection.1.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Ergebnisse - Versuchsaufbau 2}{42}{subsubsection.1.3.2.2}
+\contentsline {section}{\numberline {4}Evaluation und Ergebnise}{42}{section.1.4}
+\contentsline {section}{\numberline {5}Zusammenfassung und Diskussion }{42}{section.1.5}
+\contentsline {chapter}{Abbildungsverzeichnis}{43}{chapter*.3}
+\contentsline {chapter}{Tabellenverzeichnis}{44}{chapter*.4}
+\contentsline {chapter}{Literaturverzeichnis}{45}{chapter*.5}

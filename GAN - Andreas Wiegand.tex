@@ -367,8 +367,7 @@ Transposed Convolution, auch genannt Fractionally Strided Convolution oder Decon
 
 \subsubsection{autoencoder}
 
-Autoencoder sind ein anderes Modell von generativen Modelle. Ihre Aufgabe besteht darin einen Input zu komprimieren und dann wieder zu erstellen. Die Aufgabe wird als rekunstrunktions benannt. 
-Die Technik auf die Dabei zurückgegriffen wird nennt sich Dimensionreduction. Dabei werden die Dimension der Daten so reduziert und Informationen bei zu behalten welche als relevant gelten. Diese Methode finden auch in anderen Machine Learning Ansätzen Anwendung wie in beispielsweiße der Principale component anaysis(PCA). Bestandteile eines Autoencoder ist ein Encoder g parametrisiert mit $\phi$ welcher einen Input x element von $x\textsuperscript{i}$ wo x ein vektor der länge i ist. Und Damit die Input Dimension bestimmt. Dieser wird durch den Encoder auf einen Vektor $z\textsuperscript{k}$ abgebildet wobei k<i ist. Der Decoder f $\theta$ bekommt nun als Inpu t$z\textsuperscript{k}$ und mappt z auf $x\textsuperscript{l}$ wobei l = i. Und somit die gleiche Dimension wie der Input. Aufgabe ist es nun das der Encoder den Input z so gut komprimiert das encoder es schaft das x = z. 
+Autoencoder sind ein anderes Modell von generativen Modelle. Ihre Aufgabe besteht darin einen Input zu komprimieren und dann wieder zu erstellen. Die Aufgabe wird als rekunstrunktions benannt. Die Technik auf die Dabei zurückgegriffen wird nennt sich Dimensionreduction. Dabei werden die Dimension der Daten so reduziert und Informationen bei zu behalten welche als relevant gelten. Diese Methode finden auch in anderen Machine Learning Ansätzen Anwendung wie in beispielsweiße der Principale component anaysis(PCA). Bestandteile eines Autoencoder ist ein Encoder g parametrisiert mit $\phi$ welcher einen Input x element von $x\textsuperscript{i}$ wo x ein vektor der länge i ist. Und Damit die Input Dimension bestimmt. Dieser wird durch den Encoder auf einen Vektor $z\textsuperscript{k}$ abgebildet wobei k<i ist. Der Decoder f $\theta$ bekommt nun als Inpu t$z\textsuperscript{k}$ und mappt z auf $x\textsuperscript{l}$ wobei l = i. Und somit die gleiche Dimension wie der Input. Aufgabe ist es nun das der Encoder den Input z so gut komprimiert das encoder es schaft das x = z. 
 \\\\
 Die Paramter $\phi$ und $\theta$ werden durch erlernt. Und können beispielsweiße durch fully-COnnected Layer,Convolutional-Layer oder Deconvolutional Layer dargestellt werden. Eine Metrik um zu messen wie gut das Modell seine Aufgabe erfühllt könnte Beispielsweiße Cross-Entropy functionen sein.
 
@@ -677,7 +676,7 @@ Als Zielfunktion wird wieder das W-GAN verwendet da es im Versuchsaufbau 1 die b
 Es wird nun in diesen Kapitel auf die Ergebnisse von Versuchsaufbau 1 und 2 eingeganngen. Zunächst wird Versuchsaufbau 1 mit des erlernen von latenten Raum von Punktwolken gezeigt. Anschließend geht es um die Ergebnisse von Versuchsaufbau 2 für die Rekunstruntion von zerstörten Blättern. 
 
 \subsubsection{Ergebnisse - Versuchsaufbau 1}
-\subsubsection{Ergebnisse - Versuchsaufbau 2
+\subsubsection{Ergebnisse - Versuchsaufbau 2}
 
 
 
@@ -694,5 +693,3 @@ Ein GAN besteht aus zwei ANN, dem Discriminator und dem Generator. Das Ziel des 
 \bibliography{mybib.bib}
 
 \end{document}
-\end
-Alles was hinter \end steht wird von Latex ignoriert...

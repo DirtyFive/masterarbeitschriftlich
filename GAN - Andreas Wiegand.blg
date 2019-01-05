@@ -1,61 +1,33 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/W32TeX)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
-The top-level auxiliary file: GAN - Andreas Wiegand.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: GAN - Andreas Wiegand.aux
 The style file: apacite.bst
-Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=20001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=4) to 20 items from 10.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: mybib.bib.bib
-Repeated entry---line 195 of file mybib.bib.bib
- : @article{dcgan
- :               ,
-I'm skipping whatever remains of this entry
+I couldn't open database file mybib.bib.bib
+---line 202 of file GAN - Andreas Wiegand.aux
+ : \bibdata{mybib.bib
+ :                   }
+I'm skipping whatever remains of this command
+I found no database files---while reading file GAN - Andreas Wiegand.aux
+Warning--I didn't find a database entry for "Grundlagen"
+Warning--I didn't find a database entry for "discrim"
+Warning--I didn't find a database entry for "goodfellow2014"
+Warning--I didn't find a database entry for "data"
+Warning--I didn't find a database entry for "backpro"
+Warning--I didn't find a database entry for "momentum"
+Warning--I didn't find a database entry for "batchnorm"
+Warning--I didn't find a database entry for "universal"
+Warning--I didn't find a database entry for "crossentropy"
+Warning--I didn't find a database entry for "infoth"
+Warning--I didn't find a database entry for "bottleneck"
+Warning--I didn't find a database entry for "conv"
+Warning--I didn't find a database entry for "improvingan"
+Warning--I didn't find a database entry for "dcgan"
+Warning--I didn't find a database entry for "sha"
+Warning--I didn't find a database entry for "wasserstein"
+Warning--I didn't find a database entry for "metrics"
+Warning--I didn't find a database entry for "cgan"
+Warning--I didn't find a database entry for "3d"
+Warning--I didn't find a database entry for "ende"
+Warning--I didn't find a database entry for "texttoimage"
+Warning--I didn't find a database entry for "3dgan"
+Warning--I didn't find a database entry for "reinforcment"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 26 entries,
-            6951 wiz_defined-function locations,
-            1395 strings with 14846 characters,
-and the built_in function-call counts, 54577 in all, are:
-= -- 6755
-> -- 574
-< -- 2493
-+ -- 2561
-- -- 53
-* -- 3421
-:= -- 9442
-add.period$ -- 119
-call.type$ -- 26
-change.case$ -- 466
-chr.to.int$ -- 0
-cite$ -- 52
-duplicate$ -- 1605
-empty$ -- 2121
-format.name$ -- 965
-if$ -- 10505
-int.to.chr$ -- 0
-int.to.str$ -- 82
-missing$ -- 0
-newline$ -- 694
-num.names$ -- 208
-pop$ -- 1053
-preamble$ -- 1
-purify$ -- 104
-quote$ -- 0
-skip$ -- 3593
-stack$ -- 0
-substring$ -- 2827
-swap$ -- 907
-text.length$ -- 105
-text.prefix$ -- 0
-top$ -- 1
-type$ -- 2592
-warning$ -- 0
-while$ -- 329
-width$ -- 0
-write$ -- 923
-(There was 1 error message)
+(There were 2 error messages)
