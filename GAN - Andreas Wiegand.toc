@@ -18,9 +18,8 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Das Problem mit 3D-Data}{17}{subsubsection.1.2.2.2}
 \contentsline {subsection}{\numberline {2.3}Deep Learning und Informationstheorie}{19}{subsection.1.2.3}
 \contentsline {subsection}{\numberline {2.4}Convolution Neural Networks}{20}{subsection.1.2.4}
-\contentsline {subsection}{\numberline {2.5}Generative Modelle}{23}{subsection.1.2.5}
-\contentsline {subsubsection}{\numberline {2.5.1}autoencoder}{23}{subsubsection.1.2.5.1}
-\contentsline {subsubsection}{\numberline {2.5.2}Zielfunktion Autoencoder\\\\}{23}{subsubsection.1.2.5.2}
+\contentsline {subsection}{\numberline {2.5}autoencoder}{23}{subsection.1.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Zielfunktion Autoencoder\\\\}{23}{subsubsection.1.2.5.1}
 \contentsline {subsection}{\numberline {2.6}Generative Adversarial Network}{27}{subsection.1.2.6}
 \contentsline {subsubsection}{\numberline {2.6.1}Probleme mit Generative Adverserial Networks}{30}{subsubsection.1.2.6.1}
 \contentsline {subsubsection}{\numberline {2.6.2}L\IeC {\"o}sungsans\IeC {\"a}tze f\IeC {\"u}r Generative Adverserial Networks Probleme}{31}{subsubsection.1.2.6.2}
