@@ -75,7 +75,7 @@ Im folgenden Kapitel wird auf theoretische Grundlagen eingegangen, welche zum Ve
 
 \subsection{künstliche Neuronale Netzwerke}
 
-Künstliche Neuronale Netzwerke(ANN) haben das Ziel ein Funktion f* zu approximieren. Dabei werden Parameter $\Theta$ eines Models so angepasst, um die Abbildung von y = f(x;$\Theta)$ zu approximieren. Die Modelle werden auch als feedforward Neuronale Netzwerke betitelt weil der Informationsfluss des Models von Input zu Output fließt und keine Rekursion von Output zu Input statt findet. ANN können aus mehreren Schichten sogenannten Hidden Layer besteht welche als f(x)=f\textsuperscript{(2)}(f\textsuperscript{(1)}(x))wobei n für die Anzahl der Layer steht und nn >=1 ist. Ein 2-Layer ANN ist dann definiert durch f\textsuperscript{(n)} Es gibt den Input layer welche den Input in das Netzwerk aufnimmt. Hat man ein ANN mit mehreren Layern spricht man auch von Deep Learning. Im vorherigen Beispiel ist dies f\textsuperscript{(1)} und der letzte layer des Netzwerkes wird Output Layer genannt. Im vorherigen Beispiel wäre das f\textsuperscript{(2)}\cite{Grundlagen}. 
+Künstliche Neuronale Netzwerke(ANN) ist eine Datenstruktur welche von biologischen Neuronalen Netzwerken wie sie bei Lebewesen vorkommen inspiriert sind. ANN haben das Ziel ein Funktion f* zu approximieren. Dabei werden Parameter $\Theta$ eines Models so angepasst, um die Abbildung von y = f(x;$\Theta)$ zu approximieren. Die Modelle werden auch als feedforward Neuronale Netzwerke betitelt weil der Informationsfluss des Models von Input zu Output fließt und keine Rekursion von Output zu Input statt findet. ANN können aus mehreren Schichten sogenannten Hidden Layer besteht welche als f(x)=f\textsuperscript{(2)}(f\textsuperscript{(1)}(x))wobei n für die Anzahl der Layer steht und nn >=1 ist. Ein 2-Layer ANN ist dann definiert durch f\textsuperscript{(n)} Es gibt den Input layer welche den Input in das Netzwerk aufnimmt. Hat man ein ANN mit mehreren Layern spricht man auch von Deep Learning. Im vorherigen Beispiel ist dies f\textsuperscript{(1)} und der letzte Layer des Netzwerkes wird Output Layer genannt. Im vorherigen Beispiel wäre das f\textsuperscript{(2)}\cite{Grundlagen}. In \ref{fig:Bild1} sind ein ANN exemplarisch dargestellt. Es soll die Konnektivität der einzelnen Layer veranschaulichen und den Informationsfluss von Input zu Output. 
 
 \begin{figure}[htbp] 
 	\centering
@@ -89,10 +89,10 @@ Jeder Layer besteht aus künstliche Neuronen diese haben ihren Namesgeber von de
 	\centering
 	\includegraphics[width=1.0\textwidth]{neuronalesnetzwerk.jpg}
 	\caption{künstliches neuronales Netzwerk}
-	\label{fig:Bild1}
+	\label{fig:Bild2}
 \end{figure}
 \\
-Jeder Layer eines ANN besteht aus mehreren Neuronen. Ein Neuron $\theta$ kann mehre Input X\textsubscript{n} erhalten und produziert einen Output $\omega$\. Die berechnungen welche von den Neuron durchgeführt wird ist zunächst jeden Input X\textsubscript{n} mit einen Gewicht w\textsubscript{ij} zu multiplizieren wobei. Anschließend wird die Summe von x* w gebildet. Das ergebnis wird dann in eine Aktivierungsfunktion gegeben. Die Aufgabe dieser ist es die eine nicht linieare transformation des Inputs zu erzeugen. Damit geben wir den ANN die möglichkeit nicht lineare Funktionen zu lernen und somit complexe Aufgaben zu lösen. Es gibt unterschiedliche Aktivierungsfunktionen Beispiele sind sigmoid oder Softmax welche aus Abbildung babbla entnommen werden können.
+Jeder Layer eines ANN besteht aus mehreren Neuronen. Ein Neuron $\theta$ kann mehre Input X\textsubscript{n} erhalten und produziert einen Output $\omega$\. Die berechnungen welche von den Neuron durchgeführt wird ist zunächst jeden Input X\textsubscript{n} mit einen Gewicht w\textsubscript{ij} zu multiplizieren wobei. Anschließend wird die Summe von x* w gebildet. Das ergebnis wird dann in eine Aktivierungsfunktion gegeben. Die Aufgabe dieser ist es die eine nicht liniere Transformation des Inputs zu erzeugen. Damit geben wir den ANN die möglichkeit nicht lineare Funktionen zu lernen und somit komplexe Aufgaben zu lösen. Es gibt unterschiedliche Aktivierungsfunktionen Beispiele sind sigmoid oder Softmax welche aus Abb. \ref{fig:Bild3} und \ref{fig:Bild3} entnommen werden können.
 
 \begin{math}
 y = Aktivierungsfunktion(\sum(w+x)+b)                
@@ -102,29 +102,28 @@ y = Aktivierungsfunktion(\sum(w+x)+b)
 	\centering
 	\includegraphics[width=1.0\textwidth]{sigmoid.png}
 	\caption{Sigmoid Funktion}
-	\label{fig:Bild1}
+	\label{fig:Bild3}
 \end{figure}
 
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.0\textwidth]{softmax.png}
 	\caption{Softmax}
-	\label{fig:Bild1}
+	\label{fig:Bild4}
 \end{figure}
 
 
-\subsubsection{Backpropagation Algogrithmus}
+\subsubsection{Backpropagation Algorithmus}
 
-Um nun ANNs zu trainieren und den gewünschten Output y genierieren wird der Backpropagation Algorithmus ergenommen. Dieser wurde von Geofrey Hintion im Jahre 1989 vorgestellt\cite{backpro}. Er konnte zeigen das sein Algorithmus schneller und effizienter auf Neuronalen Networks arbeitet als andere vor ihm. Das mathematische Zugrundeliegende Konzept ist die der Partitiellen Ableitung von  $\frac{\partial Z}{\partial w}$, wobei Z die Zielfunktion und w die Gewichte im zu Optimierenden Neuronalen Netzwerk sind. Für eine Funktion $f$(x) = y ist die Ableitung Definiert als $f^\prime$(x) oder $\frac{dy}{dx}$ und gibt die Steigung der Funktion an Punkt x an. Dieses Verfahren kann dabei helfen Funktionen zu optimieren. Wenn man weiß wie sehr die Steigung and Punkt x ist kann man x mit einer Änderung von der Ableitung x dahin gehen optimieren \cite{Grundlagen}. \\
+Um nun ANNs zu trainieren und den gewünschten Output y genierieren wird der Backpropagation Algorithmus hergenommen. Dieser wurde von Geofrey Hintion im Jahre 1989 vorgestellt\cite{backpro}. Er konnte zeigen das sein Algorithmus schneller und effizienter auf Neuronalen Networks arbeitet als andere vor ihm. Das mathematische Zugrundeliegende Konzept ist die der Partitiellen Ableitung von  $\frac{\partial Z}{\partial w}$, wobei Z die Zielfunktion und w die Gewichte im zu Optimierenden Neuronalen Netzwerk sind. Für eine Funktion $f$(x) = y ist die Ableitung Definiert als $f^\prime$(x) oder $\frac{dy}{dx}$ und gibt die Steigung der Funktion an Punkt x an. Dieses Verfahren kann dabei helfen Funktionen zu optimieren. Wenn man weiß wie sehr die Steigung and Punkt x ist kann man x mit einer Änderung von der Ableitung x dahin gehen optimieren \cite{Grundlagen}. \\
 Wenn nun $f^\prime$(x) = 0 haben wir keinerlei Information über die Steigung erreicht. Dies ist aber kein garant dafür das $f$ ein Optimum erreicht hat.  Es könnten wie in Abbildung unten dargstellt. Ein locales Minimum sein. Dass heißt das wir nur an diesen Punkt ein Minimum erreich thaben aber im Funktionsverlauf ein noch niedrigeres Minimum vorhanden ist. Oder einen Sattlepunkt welche ein Übergang zu einen anstieg der Funktion bildet.
 Ist nun die die Funktion $f$ definiert als $f$: $\mathbb{R}$\textsuperscript{n} $\rightarrow$  $\mathbb{R}$ und hat als Input mehrere Variablen. Die partielle Ableitung $\frac{\partial f(x)}{\partial x\textsubscript{i}}$ zeigt an wie sehr sich $f(x)$ ändert wenn wir x\textsubscript{i} ändern. Der Gradiant $\nabla\textsubscript{x}f(x)$ ist ein Vektor welche alle partiellen Ableitungen von $f$ enthält. Nun kann man f optimierne in dem man in die Richtung des Gradianten geht welche negativ ist dieses Verfahren wird gradient descent genannt \cite{Grundlagen}.
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.0\textwidth]{saddle.png}
 	\caption{Minimum Maximum Saddle Point}
-	\label{fig:Bild1}
+	\label{fig:Bild5}
 \end{figure}
-
 
 Algorithmen die für Deep Learning eingesetzt werden, beinhalten eine Art von Optimierung, ohne diese ist eine Umsetzung des Lernprozesses nahezu unmöglich. Diese Minimierungs-funktionen oder auch cost function (welche in vielen Publikationen unterschiedlich bezeich-net wird „loss“- oder „error function“) wollen immer dasselbe Ziel: eine gewisse Target Funktion ermitteln, welche für einen Input den gewünschten Output ausgibt. Das Ziel ist in anderen Worten eine Menge an Gewichten und Biases zu finden, für welche, die quadrati-schen Kosten (C(w,b)) so gering wie möglich sind. Um dies zu erreichen, wird der Gradient Decient Algorithmus eingesetzt (Nielsen, 2017).
 Der Grund des Einsatzes dieses Algorithmus ist derer, dass zwar versucht werden könnte die Anzahl der richtig klassifizierten Bilder direkt zu erhöhen. Aber das Problem ist, den Per-formancegewinn bei Veränderungen der Gewichte festzustellen. Da meisten kleine Verän-derungen an den Gewichten und Baises führen zu keinerlei Veränderung bei der Klassifizie-rung. Somit liegt eine gewisse Schwierigkeit, bei der Ermittlung der richtigen Anpassung dieser Werte. Zuerst muss die quadratische cost function (C (w,b)) minimiert werden, bevor sich die Maximierung der Bestimmungsgenauigkeit des Netzwerkes als Ziel gesetzt kann (Nielsen, 2017).
@@ -132,12 +131,12 @@ Der Grund des Einsatzes dieses Algorithmus ist derer, dass zwar versucht werden 
 	\centering
 	\includegraphics[width=1.0\textwidth]{gradient.png}
 	\caption{LossFunktion}
-	\label{fig:Bild1}
+	\label{fig:Bild6}
 \end{figure}
 
 Backpropagation Algorithmus wird das Verfahren genannt mit den ANN trainiert werden. Dabei wird der Gradiant der Ziel Funktion bestimmt.
 
-\subsubsection{momentum}
+\subsubsection{Momentum}
 Momentum hat das Ziel das Gradientenverfahren zu beschleunigen  um eine effizienter Konfergierung der Zielfunktion herbei zu führen und ein schnelleres Lernen erzielt. 
 
 \begin{math}
@@ -147,7 +146,6 @@ v\textsubscript{t+1} =\mu v\textsubscript{t}-\epsilon\nabla$f$(\theta\textsubscr
 \theta\textsubscript{t+1}= \theta\textsubscript{t}+v\textsubscript{t+1}
 \\\
 \end{math}
-
 wobei $\epsilon$ $>$ 0 die Lernrate ist und $\mu$ $\in$ [0,1] das Momentum ist und $\nabla$f$(\theta\textsubscript{t}$ der Gradiant von $\theta\textsubscript{t}$ ist. Je größter das Momentum desto schneller Bewegt sich der Gradient abwärts. Da am Anfang eines Lernphase der gradiant überlicherweiße recht hoch ist empfielt sich zunächst mit einen niedrigen Momentum zu Arbeiten da sonnst die Gefahr besteht über das globale Optimum hinüberzuschießen. Wenn nun das Training stagniert welches auf Gründe der Aufbau der Loss-Funktion zurückzuführen ist das zur nähe des globalen Optimums flache Täller entstehen welche das Trainings verlangsamen. und es zu keiner Verbesserung kommt kann man durch momentum erzwingen größere Gradianten sprünge einzugehen und sich somit schneller zu einen globalen Optimum zu bewegen oder aber aus einen localen Optimum hinaus richtung eines globalen Optimum\cite{momentum}. .
 \\\\\\
 Here’s a popular story about momentum gradient descent is a man walking down a hill. He follows the steepest path downwards; his progress is slow, but steady. Momentum is a heavy ball rolling down the same hill. The added inertia acts both as a smoother and an accelerator, dampening oscillations and causing us to barrel through narrow valleys, small humps and local minima. 
@@ -160,9 +158,7 @@ https://distill.pub/2017/momentum/
 
 \subsubsection{Batch Normalisation}
 
-Wie in Kapitel backpropagation Algorithums gezeigt wurde wird durch den stochstischen Gradianten Vorteile gegenüber des normalen gradianten Verfahren ergeben. Durch das der Input in jeden Layern abhängig von den vorherigen Layern abhängig. Dadurch können änderungen in vorherigen Layern große Auswirkungen in tiefern Layern im Netzwerk haben.
-Dadurch resultiert dann das in trainingsläufen die Verteilung von jeden Layens input sich während des Trainings verändert die verlangsamt das Training erheblich \cite{batchnorm}. Dieses Problem wird als internal covariate shift definiert. Wenn sich die Input Verteilung von einen lernenden System verändert macht es einen covariate shift durch \cite{batchnorm}. 
-Um dies zu verhindert zeigten Sergey Ioffe und Christian Szegedy \cite{batchnorm} eine Methode welche Batchnormalization genannt wird.Je mehr Layer das Netzwerk hat desto stärker wird der internal covariate shift. Batch normalization besteht aus zwei Algorithmen. Algortithmus 1 verändert den eigentlichen Input von Layer n zu einen normalisierten Input y und Algorithmus 2 verändert das eigentliche Training eine batch normalisierten Netzwerkes.
+Wie in Kapitel backpropagation Algorithums gezeigt wurde wird durch den stochstischen Gradianten Vorteile gegenüber des normalen gradianten Verfahren ergeben. Durch das der Input in jeden Layern abhängig von den vorherigen Layern abhängig. Dadurch können änderungen in vorherigen Layern große Auswirkungen in tiefern Layern im Netzwerk haben. Dadurch resultiert dann das in trainingsläufen die Verteilung von jeden Layens input sich während des Trainings verändert die verlangsamt das Training erheblich \cite{batchnorm}. Dieses Problem wird als internal covariate shift definiert. Wenn sich die Input Verteilung von einen lernenden System verändert macht es einen covariate shift durch \cite{batchnorm}.Um dies zu verhindert zeigten Sergey Ioffe und Christian Szegedy \cite{batchnorm} eine Methode welche Batchnormalization genannt wird.Je mehr Layer das Netzwerk hat desto stärker wird der internal covariate shift. Batch normalization besteht aus zwei Algorithmen. Algortithmus 1 verändert den eigentlichen Input von Layer n zu einen normalisierten Input y und Algorithmus 2 verändert das eigentliche Training eine batch normalisierten Netzwerkes.
 
 \begin{algorithm}[H]
 Input: Werte von x über einen Mini-Batch $B$ = \{$x\textsubscript{1},...,x\textsubscript{n}$\}\\
@@ -253,50 +249,44 @@ Wobei  x\textsubscript{n}:n=1,...,N die Traingsdaten sind ist und c\textsubscrip
 
 \subsection{Datenformat}
 
-Punktwolken sind eine Menge von N Punkten welche im Vektorraum dargestellt werden können. Jeder Punkt n Element von N wird durch seine (x,y,z) im Euklidischen Raum dargestellt. Punkte können zusätzliche Features gegeben werden wie Farbe oder Material. Es gibt unterschiedliche Dateiformate welche für die Abspeicherung von Punktwolken herangezogen werden können bespiele dafür sind PLY,STL oder OBJ. 
-
-Voxel (zusammengesetzt aus dem englischen volume vox und el von elements[1]) bezeichnet in der Computergrafik einen Gitterpunkt („Bild“punkt, Datenelement) in einem dreidimensionalen Gitter. Dies entspricht einem Pixel in einem 2D-Bild, einer Rastergrafik. Wie bei Pixeln wird bei Voxeln üblicherweise die Position nicht explizit gespeichert, sondern implizit aus der Position zu anderen Voxeln hergeleitet. Im Gegensatz dazu werden bei Punkten oder Polygonen die Positionen der Eckkoordinaten gespeichert. Eine direkte Konsequenz dieses Unterschiedes ist, dass man mit Polygonen eine 3D-Struktur mit viel leerem oder homogen gefülltem Raum effizient darstellen kann. Voxel hingegen sind gut bei der Repräsentation eines äquidistant gesampelten Raums, der nicht homogen gefüllt ist. wikipedia kopie
-
+Punktwolken sind eine Menge von N Punkten welche im Vektorraum dargestellt werden können. Jeder Punkt n Element von N wird durch seine (x,y,z) im Euklidischen Raum dargestellt. Punkte können zusätzliche Features gegeben werden wie Farbe oder Material. Es gibt unterschiedliche Dateiformate welche für die Abspeicherung von Punktwolken herangezogen werden können bespiele dafür sind PLY,STL oder OBJ. Das Polygon File Format(PLY) speichert die einzelnen Koordinaten in einer Liste diese wird Vertex List genannt. In Abb. \ref{fig:Bild13} kann eine Beispieldatei entnommen werden. Diese kann als Menge betrachtet werden die jeweiligen Punkte sind zwar geordnet in dieser Listen gespeichert jedoch spielt es keine Rolle für den Punktwolkencompiler bei der Visualisierung der Liste an welcher Listenposition ein jeweiliger Punkt geführt wird, die Liste wird jedes mal gleich angezeigt egal welche Permutation der einzelnen Punkte in der Liste durchgeführt wird. In Abb. \ref{fig:Bild12} kann eine visualisierte Punktwolke eines Tabakblattes entnommen werden. 
 
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.0\textwidth]{datenformat.png}
-	\caption{künstliches Neuron}
-	\label{fig:Bild1}
+	\caption{Punktwolke eines Tabakblattes}
+	\label{fig:Bild12}
 \end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.0\textwidth]{datenformat.png}
+	\caption{Polygon File Format}
+	\label{fig:Bild13}
+\end{figure}
+
 \subsubsection{Woher stammen die Daten}
 
-Die Daten stammen von TERRA-REF Feld Scanner von der University von Arizona Maricopa Agricultural Center and USD Arid Land Researh Station in Maricopa. Es ist der größe Feld crop scnanner 
+Die Daten stammen von TERRA-REF Feld Scanner von der University von Arizona Maricopa Agricultural Center and USD Arid Land Researh Station in Maricopa. Es ist der größe Feld crop scnanner. In Abb. \ref{fig:Bild13} ist dieser abgebildet. In Abb. \ref{fig:Bild14} ist der Scankopf des TERRA-REF dargestellt mit den unterschiedlichen Scanmöglichkeiten für das du scannende Objekt. 
+ 
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.0\textwidth]{lematech_1.png}
-	\caption{künstliches Neuron}
-	\label{fig:Bild1}
+	\caption{TERRA-REF Feld Scanner}
+	\label{fig:Bild13}
 \end{figure}
+
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.0\textwidth]{lematech_2.png}
-	\caption{künstliches Neuron}
-	\label{fig:Bild1}
+	\caption{Scankopf}
+	\label{fig:Bild14}
 \end{figure}
 
-\begin{tabular}{|c|c|c|c|c|c|}\hline
-	Sensor & Senor Name & Beschreibung & Field of View & Pixel size(mm) & Beispiel von Potentiellen Anwendungen \\ \hline
-	3D laser scanner & 3d Frauenhofer & a&a&d&b \\ \hline
-	Termal IR & FLIR & a&a&d&b \\ \hline
-	Stereo-RGB & Prosilica GT3300C & a&a&d&b\\ \hline
-	Visual-Near IR(VNIR) & Headwall  Inspector & a&a&d&b\\ \hline
-	Shortwave IR(SWIR) & Headwall Inspector & a&a&d&b\\ \hline
-	PSII & PSII Camera LemmnaTec & a&a&d&b\\ \hline
-\end{tabular}
+Der 3D Laser Scanner erzeugt 3D Punktwolken. Dabei werden die Objekte durch den Scanner erfasst und eine 3D Repräsentation welche durch Punkte in einen 3 Dimensionalen Koordinaten System erfasst werden können dargestellt. Dabei wird ein Laser über das zu scannende Objekt gefahren durch reflektion des Laserstrahls auf der Oberfläche des Objektes können x,y,z Koordinaten des jeweiligen Punktes auf den Objekt bestimmt werden. Durch die Sammlung eizelner Scanpunkte entsteht eine 3D-Repräsentation eines Gegenstandes. 
+\subsubsection{Das Problem mit 3D-Data bei Machine Learning Ansätzen}
 
-Der 3D Laser Scanner erzeugt sogenannte 3D Punktwolken. Dabei werden die Objekte durch den Scanner erfasst und eine 3D Repräsentation welche durch Punkte in einen 3 Dimensionalen Koordinaten System erfasst werden können dargestellt. Dabei wird ein Laser über das zu scannende Objekt gefahren durch geflektierung des Laserstrahls auf der Oberfläche des Objektes könen x,y,z Koordinaten des jeweiligen Punktes auf den Objekt bestimmt werden.
-
-Die Objekte werden PLY - Polygon File Format gespeichert.
-
-\subsubsection{Das Problem mit 3D-Data}
-
-Vergleicht man 3D-Data auf ihre Dimensionalität mit anderen Datenformaten wie Bild,- , Audio ,- Textdateien. Wie im gezeigt Kapitel"Woher stammen die daten " gezeigt sind 3D-Daten als Menge gespeichert werden in denen keine Relation untereinander besteht das heißt es ist für den Punktwolkencompiler egal auf welchen Platz die einezlen Punkte abgespeichert werden angezeigte Punktwolke schaut gleich aus. Vergleichen wir nur ein Bild mit 512 Pixeln mit RGB Farbkanällen sind wir bei einer Dimension von 391680 bei 3 Farbchanneln zwischen 0-255. Vergleichen wir nun das mit einer Punktwolke in einen 125 cm \textsubscript{3} großen Bereich. Da die einzelen koordianten eines Punktes als Rationale Zahlen dargestellt wird und rationale zahlen abzählbar Unendlich ist ist unser Suchraum "unendlichzeichen " grpß. Dies führt zu einen erheblichen mehrAufwand für Machine Learning Ansätzen wie Deep Learning für Punktwolken.\\
+Vergleicht man 3D-Data auf ihre Dimensionalität mit anderen Datenformaten wie Bild,- , Audio ,- Textdateien. Wie im gezeigt Kapitel"Woher stammen die daten " gezeigt sind 3D-Daten als Menge gespeichert werden in denen keine Relation untereinander besteht das heißt es ist für den Punktwolkencompiler egal auf welchen Platz die einezlen Punkte abgespeichert werden angezeigte Punktwolke schaut gleich aus. Vergleichen wir nur ein Bild mit 512 Pixeln mit RGB Farbkanälen sind wir bei einer Dimension von 391680 bei 3 Farbchanneln zwischen 0-255. Vergleichen wir nun das mit einer Punktwolke in einen 125 cm \textsubscript{3} großen Bereich. Da die einzelen Koordianten eines Punktes als Rationale Zahlen dargestellt wird und rationale zahlen abzählbar Unendlich ist ist unser Suchraum "unendlichzeichen " grpß. Dies führt zu einen erheblichen mehrAufwand für Machine Learning Ansätzen wie Deep Learning für Punktwolken.\\
 
 Ein weiteres Problem für Deep Learning ist das die aus Kapitel Convolutional Neural Network beschrieben Convolutionel Layer einen großen Beitrag bei den Fortschritt von Deep Learning gebracht hat. Da sie helfen die Strukturen von strukturierten Daten zu lernen und den latenten Raum zu entdecken. Da jedoch Pointclouds unstrukturiert sind hilft es nicht diese Tools bei PC einzusetzen und bringen keinen mehr gewinn. 
 
@@ -362,20 +352,20 @@ Transposed Convolution, auch genannt Fractionally Strided Convolution oder Decon
 \end{figure}
 \newpage
 
-\subsection{autoencoder}
+\subsection{Autoencoder}
 
-Autoencoder sind ein anderes Modell von generativen Modelle. Ihre Aufgabe besteht darin einen Input zu komprimieren und dann wieder zu erstellen. Die Aufgabe wird als rekunstrunktions benannt. Die Technik auf die Dabei zurückgegriffen wird nennt sich Dimensionreduction. Dabei werden die Dimension der Daten so reduziert und Informationen bei zu behalten welche als relevant gelten. Diese Methode finden auch in anderen Machine Learning Ansätzen Anwendung wie in beispielsweiße der Principale component anaysis(PCA). Bestandteile eines Autoencoder ist ein Encoder g parametrisiert mit $\phi$ welcher einen Input x element von $x\textsuperscript{i}$ wo x ein vektor der länge i ist. Und Damit die Input Dimension bestimmt. Dieser wird durch den Encoder auf einen Vektor $z\textsuperscript{k}$ abgebildet wobei k<i ist. Der Decoder f $\theta$ bekommt nun als Inpu t$z\textsuperscript{k}$ und mappt z auf $x\textsuperscript{l}$ wobei l = i. Und somit die gleiche Dimension wie der Input. Aufgabe ist es nun das der Encoder den Input z so gut komprimiert das encoder es schaft das x = z. 
+Autoencoder sind ein andere Art von Modell aus den Bereich der generativen Modelle. Ihre Aufgabe besteht darin einen Input zu komprimieren und aus der komprimierten Information den Input wieder herzustellen. Die Aufgabe kann auch als Rekonstruktion benannt werden. Die Technik auf welche Autoencoder zurückgreifen nennt sich Dimensionreduction. Dabei werden die Dimension der Daten so reduziert und Informationen bei zu behalten welche als relevant gelten. Diese Technik finden auch in anderen Machine Learning Anwendung wie in beispielsweise der Principale component anaysis(PCA) anwendung.  Ein Autoencoder besteht aus 2 Bestandteilen. Erstens ein Encoder e parametrisiert mit $\phi$ welcher einen Input x $\in$ von $x\textsuperscript{i}$ wo x ein Vektor der länge i ist und damit die Input Dimension bestimmt. Dieser wird durch den Encoder auf einen Vektor $z\textsuperscript{k}$ abgebildet wobei k<i ist.  Zweitens der Decoder d parametrisiert durch  $\theta$ bekommt als Input t$z\textsuperscript{k}$ und mapt z auf $x\textsuperscript{l}$ wobei l = i. Und somit die gleiche Dimension wie der Input. Aufgabe ist es nun das der Encoder den Input z so gut komprimiert das der  Encoder es schafft das x $\thickapprox$ z. Eine grafische Darstellung kann aus Abb. $\ref{fig:Bild8}$ entnommen werden. 
 \\\\
-Die Paramter $\phi$ und $\theta$ werden durch erlernt. Und können beispielsweiße durch fully-COnnected Layer,Convolutional-Layer oder Deconvolutional Layer dargestellt werden. Eine Metrik um zu messen wie gut das Modell seine Aufgabe erfühllt könnte Beispielsweiße Cross-Entropy functionen sein.
+Die Paramter $\phi$ und $\theta$ werden können durch Deep Learning erlernt werden. Und können beispielsweise durch fully-COnnected Layer,Convolutional-Layer oder Deconvolutional Layer modelliert werden. Eine Metrik um zu messen wie gut das Modell seine Aufgabe erfüllt könnte Beispielsweiße Cross-Entropy functionen sein welche schon in Kapitel vorgestellt worden sind. Weitere spezfische Zielfunktionen für Autoencoder welche mit 3D-Daten arbeiten werden unter Kapitel vorgestellt.
 
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.0\textwidth]{autoencoder.png}
 	\caption{autoencoder}
-	\label{fig:Bild1}
+	\label{fig:Bild8}
 \end{figure}
 
-\subsubsection{Zielfunktion Autoencoder}
+\subsubsection{Zielfunktion 3D-Punktwolken Autoencoder}
 
 Da in der Arbeit der Input 3d Pointcloud sind und diese Sets und diese invariant zu ihren Permutationen. Das heißt ändere ich die Anordnung meiner einzelnen Punkte in meien Set bleibt das Ergebniss unverändert.  sind sind kann auf übliche Zielfunktionen nicht zürockgegriffen werden da diese mit Sturcturierten Input Daten arbeiten. Das Problem dabei besteht wenn ich 2 unterschiedliche Sets von Punkten habe wie Messe ich um herraus zu finden wie hoch die discrepanc zwischen den Beiden sets ist. 
 http://graphics.stanford.edu/courses/cs468-17-spring/LectureSlides/L14%20-%203d%20deep%20learning%20on%20point%20cloud%20representation%20(analysis).pdf
@@ -409,7 +399,7 @@ d\textsuperscript{EMD}=\min_{\theta : X\textsubscript{1}\rightarrow X\textsubscr
 bei den Ergebnissen von ZITAT 3D-GAN hat sich eine Zielfunktion besser herauskirstalisiert die Chamfer distance(CD). Wie auch zuvor sind  X\textsuperscript{1} und X\textsuperscript{2} zwei Punktwolken mit jeweils x\textsuperscript{n} definierten Punkten.
 
 \begin{math}
-d\textsuperscript{EMD}=\min_{\theta : X\textsubscript{1}\rightarrow X\textsubscript{2}}  \sum_{x\in X\textsubscript{1}} || x - \theta(x)\textsubscript{2} wobei \theta: X\textsubscript{1} \rightarrow X\textsubscript{2} bijektiv ist 
+d\textsuperscript{CD}(X\textsubscript{1},X\textsubscript{2})=\sum_{x\in X\textsuperscript{1}} \min_{y \in X\textsuperscript{2}}||x-y|| + \sum_{y\in X\textsuperscript{2}} \min_{x \in X\textsuperscript{2}}||x-y||
 \end{math}
 
 Der unterschied ergibt sich zwischen den beiden das bei der EMD von der Ausgangswolke die Punkte zu der anderen jeweils optimiert werden. WOhingegen bei der CD die distanzen von und zu der Ausgangspunktwolke berechnet werden. Dies geht sehr gut aus den Grafiken 1 und 2 hinaus in welche die distanceberechnungen der einzelnen Punkte dargestellt wird. 
@@ -554,18 +544,21 @@ und beschreibt eine  bedingte Wahrscheinlichkeit das ein Trainingsdatensatz x od
 Ein Beispielhafter Anwendungsfall ist das erlernen von selbstgenerierten Zahlen. Der MNIST Datensatz besteht auch 10000 Handschriftlich eingescannten Zahlen von 0 - 9. Die Daten x können nun während des Training mit den dazugehörigen Zahlenlabels y trainiert werden und anschließend kann der Generator verwendet werden um selbst die gewünschten x zu erzeugen indem y gewählt wird\cite{cgan}. Das Konzept von CGAN wird nun in folgender Arbeit weiterentwickelt um das Ziel zu haben selber Bilder zu verändern. 
 
 \subsection{Conditional-GAN}
-Conditional-GAN(C-GAN) ist eine modification des ursprünglichen GAN welches erlaubt bedingte Wahrscheinlichkeiten in Datensätze zu erlernen. Dass heißt zusätzliche Informationen in den lern Prozess einzuspeißen um den Output zu modifizieren. Im ursprünglichen GAN gibt es keine Möglichkeit auf den Output des GANs einfluß zu nehmen. Dabei wird das Modell so verändert das eine zusätzliche Information y zusätzlich als Input in den Discriminator oder den Generator zugefügt wird. Dabei kann y jedliche Information sein wie Label.
-Die Ziel funktion wird bedingt geändert.
+
+Conditional-GAN(C-GAN) ist eine Modifikation des ursprünglichen GAN von Goodfellow, welches erlaubt bedingte Wahrscheinlichkeiten in Datensätze zu erlernen. Das heißt zusätzliche Informationen in den Lernprozess einzuspeißen um den Output zu modifizieren. Im ursprünglichen GAN gibt es keine Möglichkeit auf den Output des GANs Einfluss zu nehmen. Dabei wird das Modell so verändert das eine zusätzliche Information y zusätzlich als Input in den Discriminator und den Generator zugefügt wird. Dabei kann y jedliche Information sein wie Label,Bilddaten oder 3D-Daten. Dem entsprechend muss die Zielfunktion dahin gehen angepasst werden bedingte Wahrscheinlichkeiten zu lernen
+\\\\
 \begin{math}
-min\textsubscript{G} max\textsubscript{D}V(D,G)=E\textsubscript{x$\sim$p\textsubscript{data}(x)}[logD(x)]  + E\textsubscript{z$\sim$p\textsubscript{z}(z)}[log(1-D(G(z))]
+min\textsubscript{G} max\textsubscript{D}V(D,G)=E\textsubscript{x$\sim$p\textsubscript{data}(x)}[logD(x|y)]  + E\textsubscript{z$\sim$p\textsubscript{z}(z)}[log(1-D(G(z|y))]
 \\\\             
 \end{math}
+
+Im Abb. \ref{fig:Bild20} kann der Informationsfluss und die Konnektivät der einzelnen Module entnommen werden. Die Module Generator und Discriminator bleiben gleich und können von ihren Aufbau für die jeweiligen Datentyp verändert werden. Zum Trainingsablauf können die gleichen Abläufe wie in Kapitel GAN TRICKS verwendet werden um das Trainingsergebnis zu verbessern und die Trainingsdauer zu verkürzen. 
 
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.2\textwidth]{cgan.png}
 	\caption{Conditional Adverserial Network}
-	\label{fig:Bild2}
+	\label{fig:Bild20}
 \end{figure}
 
 \subsection{3D-GAN}
@@ -605,7 +598,9 @@ Alle Versuche wurden auf einen Computer mit Ubuntu 14.05 Betriebssystem mit eine
 
 \subsection{Aufbau}
 \subsubsection{Datensatz 1. Versuchsaufbau}
-Der erste Datensatz "Stühle" besteht aus 4014 Punktwolken mit je 2056 Punkten. Der Datensatz wurde aus von den Shapenet Datensatz entnommen. Ein Beispielpunktwolke kann aus Abbildung entnommen werden. Die Daten für den zweiten Datensatz "Blätter" stammen vom Fraunhofer Institut. Der Grunddatensatz bestand aus mehreren 3D-Scans von Tabakpflanzen bei den die Blätter der Pflanze zu einen Datensatz zusammengefügt wurden sind. Der "Blätter" Datensatz besteht aus 420 Punktwolken mit je 2056 Punkten. 
+Der erste Datensatz "Stühle" besteht aus 4014 Punktwolken mit je 2056 Punkten. Der Datensatz wurde aus von den Shapenet Datensatz entnommen. Ein Beispielpunktwolke kann aus Abbildung entnommen werden. Er ist als .ply Datenformat abgespeichert. 
+
+ Die Daten für den zweiten Datensatz "Blätter" stammen vom Fraunhofer Institut. Der Grunddatensatz bestand aus mehreren 3D-Scans von Tabakpflanzen bei den die Blätter der Pflanze zu einen Datensatz zusammengefügt wurden sind. Der "Blätter" Datensatz besteht aus 420 Punktwolken mit je 2056 Punkten. Er ist als .ply Datenformat abgespeichert.
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.2\textwidth]{plant.png}
@@ -631,7 +626,7 @@ Für den zweiten Versuchsaufbau wird auf den in Datensatz Versuchsaufbau 1. Blat
 \end{figure}
 
 Insgesamt besteht der Trainingsdatensatz aus 450 unzerstörten Blättern sowie 1024 zerstörten paaren. 
-\subsubsection{Trainingsaufbau - GAN}
+\subsubsection{Trainingsaufbau 1 - GAN}
 Der Aufbau besteht aus zwei unterschiedlichen Versuchen. Aufbau 1 ist der RAW - GAN Aufbau. Dabei wird auf den herkömmlichen Aufbau von GAN zurückgegriffen. Die Algemeinen Meta-Trainingsvariablen sind Learningrate mit 0,005 und einen AdamOptimizer, mit einem Beta1 von 0.5 und einem Beta2 von 0,5Der Discriminator besteht aus 4-Layern welche 1-Dimensionaler Convolutional Layer bestehen. Mit einer Kernel Größe von 1 und stride von 1. Die Aktivierungsfunktion sind Relus. Darauf folgt 3 fully connected Layer mit der Größe 128, 54 und 1 alle mit einer Relu Aktivierungsfunktion.
 \\
 Der Generator besteht auf 5 fully-connected Layern mit [64,128,512,1024,1536] neuronen jeweils mit einer Relu Aktivationsfunktion. Der Aufbau kann in Abbildung entnommen werden. Die Zielfunktion ist die Wasserstein Metric und die übliche GAN Zielfunktion. 
