@@ -659,24 +659,52 @@ Das selbe wird mit den unzerstörten Blattdaten x`gemacht welche mit den Encoder
 
 Der Aufbau des C-GANS entspricht der in im 3.4 beschrieben C-GAN üblichen Aufbau. der Generator bekommt als Input x' und x welches einen 128-D Vektor welcher aus einer Gausischen Verteilung gesamplet wird. Der Generator besteht aus 3 layern [256,128,128] der Diskriminator besteht aus 2 fully Connectected Layer mit der Größe [128,128]\\ Bei generator und Diskriminator wird beim Trainieren jeweils Batchnormalization eingesetzt. 
 
-Als Zielfunktion wird wieder das W-GAN verwendet da es im Versuchsaufbau 1 die besseren Ergebnisse liefert. 
-
-
-
-
-
-
-\subsection{Ergebnis}
-
+Als Zielfunktion wird wieder das W-GAN verwendet da es im Versuchsaufbau 1 die besseren Ergebnisse liefert. \section{Evaluation und Ergebnise}
 Es wird nun in diesen Kapitel auf die Ergebnisse von Versuchsaufbau 1 und 2 eingeganngen. Zunächst wird Versuchsaufbau 1 mit des erlernen von latenten Raum von Punktwolken gezeigt. Anschließend geht es um die Ergebnisse von Versuchsaufbau 2 für die Rekunstruntion von zerstörten Blättern. 
 
 \subsubsection{Ergebnisse - Versuchsaufbau 1}
+
+Die Ergebnisse von RAW-GAN mit den Blattdaten welches nach 500 Epochen Training lassen sich in Abb. entnehmen. Wie zu sehen ist sind die Blätter nicht gut genug für eine Weiterverarbeitung. Die Daten erinnern eher an einen hohlen Ball als an Blättern. Auch lässt der Trainingsverlauf aus Abb. zu entnehmen darauf schließen das keine weitere Verbesserung möglich ist auch auf längere Epochen gesehen da es zu viele Sprünge in der Zielfunktion den Discriminator zu gut werden lässt und den Generator nicht verbessern lässt. 
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{raw_gan_leaf_result.png}
+	\caption{Traingsverlauf des RAW-GAN mit den Blattdaten}
+	\label{fig:Bild35}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{raw_gan_leaf_example.png}
+	\caption{Traingsverlauf des RAW-GAN mit den Blattdaten}
+	\label{fig:Bild36}
+\end{figure}
+
+Ähnliche Ergebnisse sind auch mit den Stuhldaten zu beobachten in Abb. jeweils die Ergebnisse dafür. Es sind besser die Strukturen zu erkennen als bei den Blättern ebenfalls nicht obtimale Ergebnisse. In Abb. der Trainingsverlauf. 
+\\\\
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{raw_gan_leaf_result.png}
+	\caption{Traingsverlauf des RAW-GAN mit den Blattdaten}
+	\label{fig:Bild37}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{raw_gan_leaf_example.png}
+	\caption{Traingsverlauf des RAW-GAN mit den Blattdaten}
+	\label{fig:Bild38}
+\end{figure}
+Die Ergebnisse für das Latent-GAN mit den Blattdaten welches zunächst für 500 Epochs mit den Autoencoder trainiert wurde können Input und Output Paare aus Abbildung entnommen werden in Abbildung sind die Loss jeweils mit EMD-Loss und Damfer Distanz aufgelistet.
+\\\\
+Die Ergebnisse für das Latent-GAN mit den Tischdaten welches zunächst für 500 Epochs mit den Autoencoder trainiert wurde können Input und Output Paare aus Abbildung entnommen werden in Abbildung sind die Loss jeweils mit EMD-Loss und Damfer Distanz aufgelistet.
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{autoencoder_training_blaetter_result.png}
+	\caption{Trainingsverlauf des RAW-GAN mit den Blattdaten}
+	\label{fig:Bild42}
+\end{figure}
 \subsubsection{Ergebnisse - Versuchsaufbau 2}
 
-
-
-\section{Evaluation und Ergebnise}
-bilder aus nicht trainingsdatensatz
 \section{Zusammenfassung und Diskussion }
 Ein GAN besteht aus zwei ANN, dem Discriminator und dem Generator. Das Ziel des G ist es Daten zu erzeugen, welche nicht von Trainingsdaten unterschieden werden können. Der Discriminator hat die Aufgabe zu unterscheiden ob der jeweilige Datensatz von G erzeugt wurde und somit ein fake Datensatz ist, oder von den Trainingsdaten stammt\cite{goodfellow2014}. GANs werden derzeit noch erforscht. Es gibt noch einige offene Fragen, beispielsweise bezüglich der Performance hochauflösender Bilder\cite{ende}. Es wurden in diesem Paper einige Probleme, welche beim Trainieren von GAN auftreten können und mögliche Lösungsansätze, vorgestellt. Es gibt derzeit einige praktische Ansätze, welche in der Anwendung auf GANs zurück greifen. Beispielsweise durch Textbeschreibung eigene Bilder als Output generiert werden \cite{texttoimage}, oder 3D Daten erzeugt werden\cite{3dgan}. GANs finden Anwendung in unterschiedlichen Bereichen des Deep Learnings, da sie als Lösung des Problems angesehen werden, dass Neuronale Netzwerke eine hohe Menge an Trainingsdaten benötigen und GANs dieses Problem durch ihre Fähigkeit, neue Daten zu generieren, umgehen. GANs lernen eine Art "verstecke" Repräsentation von Klassen, was dazu beitragen kann auch Modelle von komplexen Prozessen zu erlernen. Es gibt erste Ansätze bei denen im Reinforcement Learning durch GANs versucht wird Modelle von der Umwelt eines Agenten zu erlernen, welche dann auf Grundlage dieser Modelle Vorhersagen über zukünftige Ereignisse treffen kann\cite{reinforcment}.
 \newpage
