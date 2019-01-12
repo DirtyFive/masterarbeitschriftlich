@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.21)  11 JAN 2019 11:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.21)  12 JAN 2019 14:16
 entering extended mode
 **"./GAN - Andreas Wiegand.tex"
 ("GAN - Andreas Wiegand.tex"
@@ -551,6 +551,9 @@ LaTeX Warning: Label `fig:Bild2' multiply defined.
 
 
 LaTeX Warning: Label `fig:Bild2' multiply defined.
+
+
+LaTeX Warning: Label `fig:Bild44' multiply defined.
 
 )
 \openout1 = `"GAN - Andreas Wiegand.aux"'.
@@ -1249,31 +1252,92 @@ Underfull \hbox (badness 10000) in paragraph at lines 697--706
 
  []
 
+<autoencoder_destroyed_example_chamfer_fake.png, id=660, 1153.30875pt x 371.588
+26pt>
+File: autoencoder_destroyed_example_chamfer_fake.png Graphic file (type png)
+<use autoencoder_destroyed_example_chamfer_fake.png>
+Package pdftex.def Info: autoencoder_destroyed_example_chamfer_fake.png  used o
+n input line 710.
+(pdftex.def)             Requested size: 416.54718pt x 134.20825pt.
 
-LaTeX Warning: Citation `ende' undefined on input line 709.
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 710--711
+ [][] 
+ []
+
+<autoencoder_destroyed_example_chamfer_real.png, id=661, 1153.30875pt x 540.820
+5pt>
+File: autoencoder_destroyed_example_chamfer_real.png Graphic file (type png)
+<use autoencoder_destroyed_example_chamfer_real.png>
+Package pdftex.def Info: autoencoder_destroyed_example_chamfer_real.png  used o
+n input line 717.
+(pdftex.def)             Requested size: 416.54718pt x 195.33064pt.
+
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 717--718
+ [][] 
+ []
+
+<autoencoder_training_bleatter_zer_result.png, id=662, 462.528pt x 346.896pt>
+File: autoencoder_training_bleatter_zer_result.png Graphic file (type png)
+<use autoencoder_training_bleatter_zer_result.png>
+Package pdftex.def Info: autoencoder_training_bleatter_zer_result.png  used on 
+input line 724.
+(pdftex.def)             Requested size: 416.54718pt x 312.42581pt.
+
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 724--725
+ [][] 
+ []
+
+<autoencoder_training_bleatter_zer_result_emd.png, id=663, 462.528pt x 346.896p
+t>
+File: autoencoder_training_bleatter_zer_result_emd.png Graphic file (type png)
+<use autoencoder_training_bleatter_zer_result_emd.png>
+Package pdftex.def Info: autoencoder_training_bleatter_zer_result_emd.png  used
+ on input line 731.
+(pdftex.def)             Requested size: 416.54718pt x 312.42581pt.
+
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 731--732
+ [][] 
+ []
+
+<autoencoder_destroyed_example.png, id=664, 1153.30875pt x 371.58826pt>
+File: autoencoder_destroyed_example.png Graphic file (type png)
+<use autoencoder_destroyed_example.png>
+Package pdftex.def Info: autoencoder_destroyed_example.png  used on input line 
+737.
+(pdftex.def)             Requested size: 416.54718pt x 134.20825pt.
+
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 737--738
+ [][] 
+ []
 
 
-LaTeX Warning: Citation `texttoimage' undefined on input line 709.
+LaTeX Warning: Citation `ende' undefined on input line 745.
 
 
-LaTeX Warning: Citation `3dgan' undefined on input line 709.
+LaTeX Warning: Citation `texttoimage' undefined on input line 745.
 
 
-LaTeX Warning: Citation `reinforcment' undefined on input line 709.
+LaTeX Warning: Citation `3dgan' undefined on input line 745.
+
+
+LaTeX Warning: Citation `reinforcment' undefined on input line 745.
 
 [43] [44 <./raw_gan_leaf_result.png> <./raw_gan_leaf_example.png>] [45]
-[46 <./autoencoder_training_blaetter_result.png>] [47]
+[46 <./autoencoder_training_blaetter_result.png> <./autoencoder_destroyed_examp
+le_chamfer_fake.png>] [47 <./autoencoder_destroyed_example_chamfer_real.png>]
+[48 <./autoencoder_training_bleatter_zer_result.png>] [49 <./autoencoder_traini
+ng_bleatter_zer_result_emd.png> <./autoencoder_destroyed_example.png>]
 ("GAN - Andreas Wiegand.lof")
 \tf@lof=\write6
 \openout6 = `"GAN - Andreas Wiegand.lof"'.
 
- [48
+ [50
 
-] ("GAN - Andreas Wiegand.lot")
+] [51] ("GAN - Andreas Wiegand.lot")
 \tf@lot=\write7
 \openout7 = `"GAN - Andreas Wiegand.lot"'.
 
- [49
+ [52
 
 ]
 ("GAN - Andreas Wiegand.bbl"
@@ -1281,31 +1345,37 @@ LaTeX Warning: Citation `reinforcment' undefined on input line 709.
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 718.
- [50
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 754.
+ [53
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 718.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 754.
  ("GAN - Andreas Wiegand.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 718.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 718.
-Package rerunfilecheck Info: File `"GAN - Andreas Wiegand".out' has not changed
-.
-(rerunfilecheck)             Checksum: 9971187C2D893E5851EF2C4EA20C0469;3024.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 754.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 754.
 
+
+Package rerunfilecheck Warning: File `"GAN - Andreas Wiegand".out' has changed.
+
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"GAN - Andreas Wiegand".out':
+(rerunfilecheck)             Before: 500DF11E9BF7C4337697B21D5F2F5729;3014
+(rerunfilecheck)             After:  31AACD0830B925B5A41BDC4E3E0F25EE;3014.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 718.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 754.
  ) 
 Here is how much of TeX's memory you used:
- 9729 strings out of 492970
- 139512 string characters out of 3135854
- 263894 words of memory out of 3000000
- 13238 multiletter control sequences out of 15000+200000
+ 9764 strings out of 492970
+ 140782 string characters out of 3135854
+ 264042 words of memory out of 3000000
+ 13260 multiletter control sequences out of 15000+200000
  8120 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  31i,20n,30p,1943b,564s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1392,9 +1462,9 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/symbols/msbm10.pfb>
-Output written on "GAN - Andreas Wiegand.pdf" (50 pages, 2290059 bytes).
+Output written on "GAN - Andreas Wiegand.pdf" (53 pages, 2432054 bytes).
 PDF statistics:
- 841 PDF objects out of 1000 (max. 8388607)
- 193 named destinations out of 1000 (max. 500000)
- 442 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 873 PDF objects out of 1000 (max. 8388607)
+ 201 named destinations out of 1000 (max. 500000)
+ 467 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -705,6 +705,42 @@ Die Ergebnisse für das Latent-GAN mit den Tischdaten welches zunächst für 500
 \end{figure}
 \subsubsection{Ergebnisse - Versuchsaufbau 2}
 
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{autoencoder_destroyed_example_chamfer_fake.png}
+	\caption{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten CD Output}
+	\label{fig:Bild43}
+\end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{autoencoder_destroyed_example_chamfer_real.png}
+	\caption{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten CD input }
+	\label{fig:Bild43}
+\end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{autoencoder_training_bleatter_zer_result.png}
+	\caption{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten}
+	\label{fig:Bild43}
+\end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{autoencoder_training_bleatter_zer_result_emd.png}
+	\caption{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten EMD}
+	\label{fig:Bild44}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{autoencoder_destroyed_example.png}
+	\caption{Trainingsbeispiele des Autoencoders mit den zerstörten Blattdaten EMD}
+	\label{fig:Bild44}
+\end{figure}
+
+
+
 \section{Zusammenfassung und Diskussion }
 Ein GAN besteht aus zwei ANN, dem Discriminator und dem Generator. Das Ziel des G ist es Daten zu erzeugen, welche nicht von Trainingsdaten unterschieden werden können. Der Discriminator hat die Aufgabe zu unterscheiden ob der jeweilige Datensatz von G erzeugt wurde und somit ein fake Datensatz ist, oder von den Trainingsdaten stammt\cite{goodfellow2014}. GANs werden derzeit noch erforscht. Es gibt noch einige offene Fragen, beispielsweise bezüglich der Performance hochauflösender Bilder\cite{ende}. Es wurden in diesem Paper einige Probleme, welche beim Trainieren von GAN auftreten können und mögliche Lösungsansätze, vorgestellt. Es gibt derzeit einige praktische Ansätze, welche in der Anwendung auf GANs zurück greifen. Beispielsweise durch Textbeschreibung eigene Bilder als Output generiert werden \cite{texttoimage}, oder 3D Daten erzeugt werden\cite{3dgan}. GANs finden Anwendung in unterschiedlichen Bereichen des Deep Learnings, da sie als Lösung des Problems angesehen werden, dass Neuronale Netzwerke eine hohe Menge an Trainingsdaten benötigen und GANs dieses Problem durch ihre Fähigkeit, neue Daten zu generieren, umgehen. GANs lernen eine Art "verstecke" Repräsentation von Klassen, was dazu beitragen kann auch Modelle von komplexen Prozessen zu erlernen. Es gibt erste Ansätze bei denen im Reinforcement Learning durch GANs versucht wird Modelle von der Umwelt eines Agenten zu erlernen, welche dann auf Grundlage dieser Modelle Vorhersagen über zukünftige Ereignisse treffen kann\cite{reinforcment}.
 \newpage
