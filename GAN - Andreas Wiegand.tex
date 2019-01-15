@@ -633,22 +633,9 @@ Insgesamt besteht der Trainingsdatensatz aus 450 unzerstörten Blättern sowie 1
 Der Aufbau besteht aus zwei unterschiedlichen Versuchen. Aufbau 1 ist der RAW - GAN Aufbau. Dabei wird auf den herkömmlichen Aufbau von GAN zurückgegriffen. Die Algemeinen Meta-Trainingsvariablen sind Learningrate mit 0,005 und einen AdamOptimizer, mit einem Beta1 von 0.5 und einem Beta2 von 0,5Der Discriminator besteht aus 4-Layern welche 1-Dimensionaler Convolutional Layer bestehen. Mit einer Kernel Größe von 1 und stride von 1. Die Aktivierungsfunktion sind Relus. Darauf folgt 3 fully connected Layer mit der Größe 128, 54 und 1 alle mit einer Relu Aktivierungsfunktion.
 \\
 Der Generator besteht auf 5 fully-connected Layern mit [64,128,512,1024,1536] neuronen jeweils mit einer Relu Aktivationsfunktion. Der Aufbau kann in Abbildung entnommen werden. Die Zielfunktion ist die Wasserstein Metric und die übliche GAN Zielfunktion. 
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.2\textwidth]{leaf1.png}
-	\caption{3D Punktwolke einer Tabakpflanze}
-	\label{fig:Bild2}
-\end{figure}
 
 Der Versuchsaufbau 2ist das Latent-GAN zunächst wird dabei der Autoencoder mit den Trainingsdaten trainiert. Der Encoder des Autoencoders wird mit einer Learning Rate von 0.0005 trainiert. und einer Batch Größe von 50. Der Encoder besteht dabei besteht dabei aus 4 1-D Convolutional Layern mit 64,128,246,1024] Filtern Stride von 1 und Size von 1. Die Activierungsfunktion ist relu. Der Letzte Layer ist ein Max Layer. Der Decoder besteht aus aus [256,256,[614]
 
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.2\textwidth]{leaf1.png}
-	\caption{3D Punktwolke einer Tabakpflanze}
-	\label{fig:Bild2}
-\end{figure}
 
 \subsubsection{Trainingsaufbau 2 - CGAN für Punktwolkenrekunstroktion }
 
@@ -662,14 +649,14 @@ Der Aufbau des C-GANS entspricht der in im 3.4 beschrieben C-GAN üblichen Aufba
 Als Zielfunktion wird wieder das W-GAN verwendet da es im Versuchsaufbau 1 die besseren Ergebnisse liefert. \section{Evaluation und Ergebnise}
 Es wird nun in diesen Kapitel auf die Ergebnisse von Versuchsaufbau 1 und 2 eingeganngen. Zunächst wird Versuchsaufbau 1 mit des erlernen von latenten Raum von Punktwolken gezeigt. Anschließend geht es um die Ergebnisse von Versuchsaufbau 2 für die Rekunstruntion von zerstörten Blättern. 
 
-\subsubsection{Ergebnisse - Versuchsaufbau 1}
+\subsection{Ergebnisse - Versuchsaufbau 1}
 
 Die Ergebnisse von RAW-GAN mit den Blattdaten welches nach 500 Epochen Training lassen sich in Abb. entnehmen. Wie zu sehen ist sind die Blätter nicht gut genug für eine Weiterverarbeitung. Die Daten erinnern eher an einen hohlen Ball als an Blättern. Auch lässt der Trainingsverlauf aus Abb. zu entnehmen darauf schließen das keine weitere Verbesserung möglich ist auch auf längere Epochen gesehen da es zu viele Sprünge in der Zielfunktion den Discriminator zu gut werden lässt und den Generator nicht verbessern lässt. 
 
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.2\textwidth]{raw_gan_leaf_result.png}
-	\caption{Traingsverlauf des RAW-GAN mit den Blattdaten}
+	\caption{Trainingsverlauf des RAW-GAN mit den Blattdaten}
 	\label{fig:Bild35}
 \end{figure}
 \begin{figure}[htbp] 
@@ -684,16 +671,70 @@ Die Ergebnisse von RAW-GAN mit den Blattdaten welches nach 500 Epochen Training 
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{raw_gan_leaf_result.png}
-	\caption{Traingsverlauf des RAW-GAN mit den Blattdaten}
+	\includegraphics[width=1.2\textwidth]{raw_gan_result_400_result.png}
+	\caption{Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}
+	\label{fig:Bild35}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{raw_gan_result_400_examples.png}
+	\caption{Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}
+	\label{fig:Bild36}
+\end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{raw_gan_chair_result.png}
+	\caption{Traingsverlauf des RAW-GAN mit den Stuhldaten}
 	\label{fig:Bild37}
 \end{figure}
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{raw_gan_leaf_example.png}
-	\caption{Traingsverlauf des RAW-GAN mit den Blattdaten}
+	\includegraphics[width=1.2\textwidth]{raw_gan_chair_example.png}
+	\caption{Traingsverlauf des RAW-GAN mit den Stuhldaten}
 	\label{fig:Bild38}
 \end{figure}
+Latent-GAN chair
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{latent_gan_chair_result.png}
+	\caption{Traingsverlauf des Latent-GAN mit den Stuhldaten}
+	\label{fig:Bild37}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{latent_gan_chair_example.png}
+	\caption{Traingsverlauf des Latent-GAN mit den Stuhldaten}
+	\label{fig:Bild38}
+\end{figure}
+Latent-GAN leaf
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{Latent_gan_training_result.png}
+	\caption{Trainingsverlauf des Latent-GAN mit den Blattdaten}
+	\label{fig:Bild37}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{latent_gan_leaf_example.png}
+	\caption{Trainingsverlauf des Latent-GAN mit den Blattdaten}
+	\label{fig:Bild38}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{raw_gan_latent_gan_chair_result_400_example.png}
+	\caption{Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}
+	\label{fig:Bild37}
+\end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.2\textwidth]{raw_gan_latent_gan_chair_example_400.png}
+	\caption{Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}
+	\label{fig:Bild37}
+\end{figure}
+\subsection{Ergebnisse - Versuchsaufbau 2}
+
 Die Ergebnisse für das Latent-GAN mit den Blattdaten welches zunächst für 500 Epochs mit den Autoencoder trainiert wurde können Input und Output Paare aus Abbildung entnommen werden in Abbildung sind die Loss jeweils mit EMD-Loss und Damfer Distanz aufgelistet.
 \\\\
 Die Ergebnisse für das Latent-GAN mit den Tischdaten welches zunächst für 500 Epochs mit den Autoencoder trainiert wurde können Input und Output Paare aus Abbildung entnommen werden in Abbildung sind die Loss jeweils mit EMD-Loss und Damfer Distanz aufgelistet.
@@ -703,7 +744,6 @@ Die Ergebnisse für das Latent-GAN mit den Tischdaten welches zunächst für 500
 	\caption{Trainingsverlauf des RAW-GAN mit den Blattdaten}
 	\label{fig:Bild42}
 \end{figure}
-\subsubsection{Ergebnisse - Versuchsaufbau 2}
 
 \begin{figure}[htbp] 
 	\centering
@@ -722,7 +762,7 @@ Die Ergebnisse für das Latent-GAN mit den Tischdaten welches zunächst für 500
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.2\textwidth]{autoencoder_training_bleatter_zer_result.png}
-	\caption{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten}
+	\caption{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten CD}
 	\label{fig:Bild43}
 \end{figure}
 

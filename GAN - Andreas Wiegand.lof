@@ -32,15 +32,21 @@
 \contentsline {figure}{\numberline {30}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{37}{figure.1.30}
 \contentsline {figure}{\numberline {31}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{38}{figure.1.31}
 \contentsline {figure}{\numberline {32}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{40}{figure.1.32}
-\contentsline {figure}{\numberline {33}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{41}{figure.1.33}
-\contentsline {figure}{\numberline {34}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{42}{figure.1.34}
-\contentsline {figure}{\numberline {35}{\ignorespaces Traingsverlauf des RAW-GAN mit den Blattdaten}}{44}{figure.1.35}
-\contentsline {figure}{\numberline {36}{\ignorespaces Traingsverlauf des RAW-GAN mit den Blattdaten}}{44}{figure.1.36}
-\contentsline {figure}{\numberline {37}{\ignorespaces Traingsverlauf des RAW-GAN mit den Blattdaten}}{45}{figure.1.37}
-\contentsline {figure}{\numberline {38}{\ignorespaces Traingsverlauf des RAW-GAN mit den Blattdaten}}{45}{figure.1.38}
-\contentsline {figure}{\numberline {39}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Blattdaten}}{46}{figure.1.39}
-\contentsline {figure}{\numberline {40}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD Output}}{46}{figure.1.40}
-\contentsline {figure}{\numberline {41}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD input }}{47}{figure.1.41}
-\contentsline {figure}{\numberline {42}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten}}{48}{figure.1.42}
-\contentsline {figure}{\numberline {43}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten EMD}}{49}{figure.1.43}
-\contentsline {figure}{\numberline {44}{\ignorespaces Trainingsbeispiele des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten EMD}}{49}{figure.1.44}
+\contentsline {figure}{\numberline {33}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Blattdaten}}{42}{figure.1.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces Traingsverlauf des RAW-GAN mit den Blattdaten}}{42}{figure.1.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}}{43}{figure.1.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}}{43}{figure.1.36}
+\contentsline {figure}{\numberline {37}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten}}{44}{figure.1.37}
+\contentsline {figure}{\numberline {38}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten}}{44}{figure.1.38}
+\contentsline {figure}{\numberline {39}{\ignorespaces Traingsverlauf des Latent-GAN mit den Stuhldaten}}{45}{figure.1.39}
+\contentsline {figure}{\numberline {40}{\ignorespaces Traingsverlauf des Latent-GAN mit den Stuhldaten}}{45}{figure.1.40}
+\contentsline {figure}{\numberline {41}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Blattdaten}}{46}{figure.1.41}
+\contentsline {figure}{\numberline {42}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Blattdaten}}{46}{figure.1.42}
+\contentsline {figure}{\numberline {43}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}}{47}{figure.1.43}
+\contentsline {figure}{\numberline {44}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}}{47}{figure.1.44}
+\contentsline {figure}{\numberline {45}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Blattdaten}}{48}{figure.1.45}
+\contentsline {figure}{\numberline {46}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD Output}}{48}{figure.1.46}
+\contentsline {figure}{\numberline {47}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD input }}{49}{figure.1.47}
+\contentsline {figure}{\numberline {48}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD}}{50}{figure.1.48}
+\contentsline {figure}{\numberline {49}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten EMD}}{51}{figure.1.49}
+\contentsline {figure}{\numberline {50}{\ignorespaces Trainingsbeispiele des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten EMD}}{51}{figure.1.50}
