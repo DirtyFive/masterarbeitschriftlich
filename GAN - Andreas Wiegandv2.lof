@@ -1,46 +1,45 @@
 \babel@toc {english}{}
 \babel@toc {german}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{6}{figure.1.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces k\IeC {\"u}nstliches neuronales Netzwerk}}{7}{figure.1.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Sigmoid Funktion}}{8}{figure.1.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Softmax}}{9}{figure.1.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Minimum Maximum Saddle Point}}{10}{figure.1.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces LossFunktion}}{10}{figure.1.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces aaaa}}{13}{figure.1.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Punktwolke eines Tabakblattes}}{15}{figure.1.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Polygon File Format}}{16}{figure.1.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces TERRA-REF Feld Scanner}}{16}{figure.1.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Scankopf}}{17}{figure.1.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Convolutional Neural Network}}{18}{figure.1.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Convolution Beispiel}}{19}{figure.1.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Deconvolution Beispiel}}{20}{figure.1.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces autoencoder}}{21}{figure.1.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Earth Mover Distance}}{22}{figure.1.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Chamfer Distance}}{23}{figure.1.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Generativ Adverserial Network}}{24}{figure.1.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Deep Convolutional GAN}}{26}{figure.1.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces KL Divergenz und JS Divergenz}}{26}{figure.1.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Conditional Adverserial Network}}{30}{figure.1.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Latent-GAN}}{31}{figure.1.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Bild Rekonstruktion eines Hundes welches durch ein Artefakt zerst\IeC {\"o}rt wurde}}{32}{figure.1.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{34}{figure.1.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{35}{figure.1.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{36}{figure.1.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Blattdaten}}{38}{figure.1.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces Traingsverlauf des RAW-GAN mit den Blattdaten}}{39}{figure.1.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}}{39}{figure.1.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}}{40}{figure.1.30}
-\contentsline {figure}{\numberline {31}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten}}{41}{figure.1.31}
-\contentsline {figure}{\numberline {32}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten}}{41}{figure.1.32}
-\contentsline {figure}{\numberline {33}{\ignorespaces Traingsverlauf des Latent-GAN mit den Stuhldaten}}{42}{figure.1.33}
-\contentsline {figure}{\numberline {34}{\ignorespaces Traingsverlauf des Latent-GAN mit den Stuhldaten}}{42}{figure.1.34}
-\contentsline {figure}{\numberline {35}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Blattdaten}}{43}{figure.1.35}
-\contentsline {figure}{\numberline {36}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Blattdaten}}{43}{figure.1.36}
-\contentsline {figure}{\numberline {37}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}}{44}{figure.1.37}
-\contentsline {figure}{\numberline {38}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}}{44}{figure.1.38}
-\contentsline {figure}{\numberline {39}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Blattdaten}}{45}{figure.1.39}
-\contentsline {figure}{\numberline {40}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD Output}}{46}{figure.1.40}
-\contentsline {figure}{\numberline {41}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD input }}{46}{figure.1.41}
-\contentsline {figure}{\numberline {42}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD}}{47}{figure.1.42}
-\contentsline {figure}{\numberline {43}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten EMD}}{48}{figure.1.43}
-\contentsline {figure}{\numberline {44}{\ignorespaces Trainingsbeispiele des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten EMD}}{48}{figure.1.44}
+\contentsline {figure}{\numberline {1}{\ignorespaces K\IeC {\"u}nstliches Neuronales Netzwerk}}{5}{figure.1.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{6}{figure.1.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Sigmoid Funktion}}{7}{figure.1.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Softmax}}{7}{figure.1.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces LossFunktion}}{8}{figure.1.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Minimum Maximum Saddle Point}}{9}{figure.1.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces aaaa}}{12}{figure.1.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Polygon File Format}}{13}{figure.1.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Punktwolke eines Tabakblattes}}{14}{figure.1.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces TERRA-REF Feld Scanner}}{14}{figure.1.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Scankopf}}{15}{figure.1.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Convolutional Neural Network}}{16}{figure.1.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Convolution Beispiel}}{17}{figure.1.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Deconvolution Beispiel}}{18}{figure.1.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces autoencoder}}{19}{figure.1.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Earth Mover Distance}}{20}{figure.1.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Chamfer Distance}}{20}{figure.1.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Generativ Adverserial Network}}{22}{figure.1.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Deep Convolutional GAN}}{24}{figure.1.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces KL Divergenz und JS Divergenz}}{24}{figure.1.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Latent-GAN}}{28}{figure.1.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Bild Rekonstruktion eines Hundes welches durch ein Artefakt zerst\IeC {\"o}rt wurde}}{29}{figure.1.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{30}{figure.1.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{31}{figure.1.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{32}{figure.1.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Blattdaten}}{35}{figure.1.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Traingsverlauf des RAW-GAN mit den Blattdaten}}{35}{figure.1.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}}{36}{figure.1.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}}{36}{figure.1.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten}}{37}{figure.1.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten}}{37}{figure.1.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Traingsverlauf des Latent-GAN mit den Stuhldaten}}{38}{figure.1.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces Traingsverlauf des Latent-GAN mit den Stuhldaten}}{38}{figure.1.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Blattdaten}}{39}{figure.1.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Blattdaten}}{39}{figure.1.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}}{40}{figure.1.36}
+\contentsline {figure}{\numberline {37}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}}{40}{figure.1.37}
+\contentsline {figure}{\numberline {38}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Blattdaten}}{41}{figure.1.38}
+\contentsline {figure}{\numberline {39}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD Output}}{41}{figure.1.39}
+\contentsline {figure}{\numberline {40}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD input }}{42}{figure.1.40}
+\contentsline {figure}{\numberline {41}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD}}{43}{figure.1.41}
+\contentsline {figure}{\numberline {42}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten EMD}}{44}{figure.1.42}
+\contentsline {figure}{\numberline {43}{\ignorespaces Trainingsbeispiele des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten EMD}}{44}{figure.1.43}

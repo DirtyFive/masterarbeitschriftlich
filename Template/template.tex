@@ -1,0 +1,70 @@
+\documentclass{llncs}
+\usepackage[utf8]{inputenc}				%% Für Umlaute in UTF-8-Kodierung
+\usepackage{amssymb}					%% Für alle denkbaren mathematischen Symbole
+\usepackage[german,english]{babel}		%% Für deutsche (und englische) Trennungsregeln und Bezeichnungen
+\usepackage{hyperref}					%% Für Hyperlinks im PDF zum Anklicken
+\usepackage{apacite}					%% Für Zitationsstil gem. APA
+
+\begin{document}
+\selectlanguage{german}
+\title{Hamiltonian Mechanics unter besonderer Ber\"ucksichtigung der h\"ohreren Lehranstalten}
+\author{Susanne Klickerklacker}
+\institute{Seminar KI: gestern, heute, morgen\\ Angewandte Informatik, Universität Bamberg}
+\maketitle								%% Titel setzen
+
+\begin{abstract}
+The abstract should summarize the contents of the paper.
+\keywords{Einordnung gemäß ACM + 1--2 weitere Schlüsselwörter} %% siehe http://delivery.acm.org/10.1145/2380000/2371137/ACMCCSTaxonomy.html
+\end{abstract}
+%
+\section{Einleitung}
+%
+Es beginnt mit der einfachen Differentialgleichung
+\begin{eqnarray}
+  \dot{x}&=&JH' (t,x)\label{gleichung} \\
+  x(0)   &=& x(T). \label{nebenbedingung}
+\end{eqnarray}
+
+Das Lösen dieser Gleichung ist ein wichtiger Baustein zum Verständnis der Mechanik \cite{mechanics}.
+Zunächst eine Definition.
+
+\begin{definition}
+Eine Zahl $x \in \mathbb{R}$ heißt \emph{groß}, falls $x>2$ gilt.
+\label{def:gross}
+\end{definition}
+
+Dieser Artikel ist eine Beschreibung eines algorithmischen Verfahrens zur Lösung von Gleichung~\ref{gleichung} unter Nebenbedingung~\ref{nebenbedingung}. 
+Ein Ablaufdiagramm des Verfahrens ist in Abb.~\ref{fig:diagramm}) dargestellt. 
+Der hier vorgestellte Ansatz ist nicht anwendbar für Zahlen die gross sind im Sinne von Definition~\ref{def:gross}, damit komplementiert er die von \citeA{bob} vorgestellten Techniken, die nur für im selbem Sinne grossen Zahlen anwendbar sind.
+
+
+\section{Hinweise}
+\begin{enumerate}
+	\item Verwendung der Stilvorgaben (diese Vorlage) ist \emph{obligatorisch} -- so üben Sie, für eine wissenschaftliche Konferenz Papiere vorzubereiten. Die hier verwendete Vorlage basiert auf der letzten KI-Tagung. 
+	
+	\item CitH-Studierende im ersten Semester dürfen mit Word o.ä. arbeiten, nutzen Sie dazu zwingenderweise\ldots
+	\begin{enumerate}
+		\item die Formatvorlage der KI ist die LLNCS-Vorlage\footnote{\scriptsize siehe \url{http://www.springer.com/de/it-informatik/lncs/conference-proceedings-guidelines}}
+		\item Zitationsstil gemäß der APA, siehe \url{http://www.apastyle.org/}
+		\item eine Software zum Generieren konsistenter Literaturreferenzen (z.B. EndNote, RefWorks, Citavi) die ein Plug-In für die von Ihnen verwendete Textverarbeitung bereitstellt
+	\end{enumerate}
+	
+	\item Ihre Ausarbeitung soll 15 Seiten \emph{nicht} überschreiten!
+	
+	\item Auch Latex und Bibtex garantieren keine Konsistenz und Vollständigkeit Ihren Angaben: beachten Sie beim Aufruf von Latex und Bibtex auftretende Warnungen.
+	
+	\item Beachten Sie die Möglichkeiten, die durch die Formatvorlagen definiert werden (siehe Dokumentation LLNCS bzw. apacite\footnote{\scriptsize siehe \url{ftp://ftp.dante.de/tex-archive/biblio/bibtex/contrib/apacite/apacite.pdf}}
+\end{enumerate}
+
+\begin{figure}
+\centering
+\framebox{\huge A} $\to$ \framebox{\huge B}
+\caption{\label{fig:diagramm}Ablaufdiagramm der betrachteten Architektur}
+\end{figure}
+
+\bibliographystyle{apacite}
+\bibliography{mybib.bib}
+\end{document}
+\end
+
+Alles was hinter \end steht wird von Latex ignoriert...

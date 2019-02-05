@@ -1,33 +1,8 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: GAN - Andreas Wiegand.aux
 The style file: apacite.bst
-I couldn't open database file mybib.bib.bib
----line 202 of file GAN - Andreas Wiegand.aux
- : \bibdata{mybib.bib
- :                   }
-I'm skipping whatever remains of this command
-I found no database files---while reading file GAN - Andreas Wiegand.aux
-Warning--I didn't find a database entry for "Grundlagen"
-Warning--I didn't find a database entry for "discrim"
-Warning--I didn't find a database entry for "goodfellow2014"
-Warning--I didn't find a database entry for "data"
-Warning--I didn't find a database entry for "backpro"
-Warning--I didn't find a database entry for "momentum"
-Warning--I didn't find a database entry for "batchnorm"
-Warning--I didn't find a database entry for "universal"
-Warning--I didn't find a database entry for "crossentropy"
-Warning--I didn't find a database entry for "infoth"
-Warning--I didn't find a database entry for "bottleneck"
-Warning--I didn't find a database entry for "conv"
-Warning--I didn't find a database entry for "improvingan"
-Warning--I didn't find a database entry for "dcgan"
-Warning--I didn't find a database entry for "sha"
-Warning--I didn't find a database entry for "wasserstein"
-Warning--I didn't find a database entry for "metrics"
-Warning--I didn't find a database entry for "cgan"
-Warning--I didn't find a database entry for "3d"
-Warning--I didn't find a database entry for "ende"
-Warning--I didn't find a database entry for "texttoimage"
-Warning--I didn't find a database entry for "3dgan"
-Warning--I didn't find a database entry for "reinforcment"
+Database file #1: mybib.bib
+Warning--I didn't find a database entry for "improving"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-(There were 2 error messages)
+Warning--No journal in 3dgan
+Warning--No journal in imagerecon
+(There were 3 warnings)

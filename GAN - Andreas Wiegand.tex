@@ -9,20 +9,16 @@
 \usepackage[linesnumbered,ruled]{algorithm2e}
 \usepackage[noend]{algpseudocode}
 \usepackage{acronym}
-\usepackage{tocbibind}
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
+
 
 \begin{document}
 \tableofcontents
 \begin{acronym}[Bash]
-	\acro{KDE}{K Desktop Environment}
-	\acro{SQL}{Structured Query Language}
-	\acro{Bash}{Bourne-again shell}
-	\acro{JDK}{Java Development Kit}
-	\acro{VM}{Virtuelle Maschine}
-	\acro{CGAN}Conditional Adversarial Networks
-	\acro{PIX2PIX} Image-to-Image GAN
+	\acro{C-GAN}Conditional Adversarial Networks
+	\acro{EMD} Earth Mover Distanze
+	\acro{KNN} Künstliches Neuronales Netzwerk
 \end{acronym}
 \selectlanguage{german}
 \title{3-D Datenrekonstruktion mit generative Adverserial Networks}
@@ -75,50 +71,96 @@ Im folgenden Kapitel wird auf theoretische Grundlagen eingegangen, welche zum Ve
 
 \subsection{Künstliche Neuronale Netzwerke}
 
-Künstliche Neuronale Netzwerke(KNN) ist eine Datenstruktur welche von biologischen neuronalen Netzen wie sie bei Lebewesen vorkommen inspiriert sind. KNN haben das Ziel ein Funktion f* zu approximieren. Dabei werden Parameter $\Theta$ eines Models so angepasst, um die Abbildung von y = f(x;$\Theta)$ zu approximieren. Die Modelle werden auch als feedforward Neuronale Netzwerke betitelt weil der Informationsfluss des Models von Input zu Output fließt und keine Rekursion von Output zu Input statt findet. Diese Approximation wird durch Machine Learning Ansätzen erlernt man spricht auch von einen Optimierungsproblem. KNN können aus mehreren Schichten sogenannten Hidden Layer n besteht welche als f\textsuperscript{(n)} dargestellt werden und n >=1 sein muss. Ein 2-Layer KNN ist dann definiert durch f(x)=f\textsuperscript{(2)}(f\textsuperscript{(1)}(x)). Es gibt einen Input Layer welche den Input in das Netzwerk aufnimmt. Der Input sind natürliche Zahlen. Hat man ein ANN mit mehreren Layern und wird dieses mit Maschine Learning trainiert spricht man auch von Deep Learning. Im vorherigen Beispiel ist dies f\textsuperscript{(1)} und der letzte Layer des Netzwerkes wird Output Layer genannt. Im vorherigen Beispiel wäre das f\textsuperscript{(2)}\cite{Grundlagen}. In \ref{fig:Bild1} sind ein ANN exemplarisch dargestellt. Es soll die Konnektivität der einzelnen Layer veranschaulichen und den Informationsfluss von Input zu Output. 
+Künstliche Neuronale Netzwerke(KNN) ist eine Datenstruktur welche von biologischen neuronalen Netzen wie sie bei Lebewesen vorkommen inspiriert sind. KNN haben das Ziel ein Funktion f* zu approximieren. Dabei werden Parameter $\Theta$ eines Models so angepasst, um die Abbildung von y = f(x;$\Theta)$ zu approximieren. Die Modelle werden auch als feedforward Neuronale Netzwerke betitelt weil der Informationsfluss des Models von Input zu Output fließt und keine Rekursion von Output zu Input statt findet. Diese Approximation wird durch Machine Learning Ansätzen erlernt man spricht auch von einen Optimierungsproblem. KNN können aus mehreren Schichten sogenannten Hidden Layer n besteht welche als f\textsuperscript{(n)} dargestellt werden wobei n $>$=1 sein muss. Ein 2-Layer KNN ist dann definiert durch f(x)=f\textsuperscript{(2)}(f\textsuperscript{(1)}(x)). Man spricht auch von Fully-Connected-Layer. Es gibt einen Input Layer welche den Input in das Netzwerk aufnimmt\cite{Grundlagen}. Ein ANN mit mehr als nur 1 Layer und wird dies mit Maschine Learning trainiert spricht man auch von Deep Learning. Im vorherigen Beispiel ist dies f\textsuperscript{(1)} und der letzte Layer des Netzwerkes wird Output Layer genannt. Im vorherigen Beispiel ist das f\textsuperscript{(2)}. In Abb. \ref{fig:KNN} sind ein KNN exemplarisch dargestellt. Es soll die Konnektivität der einzelnen Layer veranschaulichen und den Informationsfluss von Input zu Output. 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=1.0\textwidth]{Neuron.png}
-	\caption{künstliches Neuron}7
-	\label{fig:Bild1}
+	\includegraphics[width=0.5\textwidth]{neuronalesnetzwerk.jpg}
+	\caption{Künstliches Neuronales Netzwerk}
+	\label{fig:KNN}
 \end{figure}
 
-Jeder Layer besteht aus künstliche Neuronen diese haben ihren Namensgebung von aus der Natur stammende Neuron in Gehirnen von Lebewesen. Neuronen sind die Bausteine aus denen die Gehirne von Lebewesen, wie Fische, Vögel, Säugetiere zusammen gesetzt sind. Neuronen oder auch Nervenzellen bestehen in eine Zellkern der Zentrum der Zelle um sie herum sind Dendriten. Neuronen sind untereinander mit den Axon verbunden, diese haben an den enden Synapsen welche die grenze von Axon zur Nervenzelle einen Spalt bilden. Dieser Spalt kann überwunden werden indem von der Synapse Botenstoffe abgesendet werden welche sich dann an Rezeptor der gegenüberliegenden Synapse anhaften. Diese Übertragung findet statt wenn an der Synapse ein bestimmter Schwellenwert überschritten hat wurde von elektrischen reizen welche die Zelle abfeuert lässt. Künstliche Neuronen haben diese Schwellenwert durch sogenannte Gewichte w\textsubscript{ij} diese sind auf den Verbindungen zwischen den Neuronen in den unterschiedlichen Layern im Netzwerk.
+Jeder Layer besteht aus künstliche Neuronen diese haben ihren Namensgebung von aus der Natur stammende Neuron in Gehirnen von Lebewesen. Neuronen sind die Bausteine aus denen die Gehirne von Lebewesen, wie Fische, Vögel, Säugetiere zusammen gesetzt sind. Neuronen oder auch Nervenzellen bestehen in eine Zellkern der Zentrum der Zelle um sie herum sind Dendriten. Neuronen sind untereinander mit den Axon verbunden, diese haben an den enden Synapsen welche die grenze von Axon zur Nervenzelle einen Spalt bilden. Dieser Spalt kann überwunden werden indem von der Synapse Botenstoffe abgesendet werden welche sich dann an Rezeptor der gegenüberliegenden Synapse anhaften. Diese Übertragung findet statt wenn an der Synapse ein bestimmter Schwellenwert überschritten hat wurde von elektrischen reizen welche die Zelle abfeuert lässt. Künstliche Neuronen haben diese Schwellenwert durch sogenannte Gewichte w\textsubscript{ij} diese sind auf den Verbindungen zwischen den Neuronen in den unterschiedlichen Layern im ANN.Dabei steht i für die Layersposition im Netzwerk und j für das jeweilige Neuron im Netzwerk. 
+
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.0\textwidth]{neuronalesnetzwerk.jpg}
-	\caption{künstliches neuronales Netzwerk}
+	\includegraphics[width=0.5\textwidth]{Neuron.png}
+	\caption{künstliches Neuron}
 	\label{fig:Bild2}
 \end{figure}
-\\
-Jeder Layer eines KNN besteht aus mehreren Neuronen. Ein Neuron $\theta$ kann mehrere Input X\textsubscript{n} erhalten und produziert einen Output $\omega$\. Die Berechnungen welche von den Neuron durchgeführt wird ist zunächst jeden Input X\textsubscript{n} mit einen Gewicht w\textsubscript{ij} zu multiplizieren wobei. Anschließend wird die Summe von x*w gebildet. Das Ergebnis wird dann in eine Aktivierungsfunktion gegeben. Die Aufgabe dieser ist es eine nicht liniere Transformation des Inputs zu erzeugen. Damit kann das KNN nicht lineare Funktionen zu lernen und somit komplexe Aufgaben zu lösen. Es gibt unterschiedliche Aktivierungsfunktionen Beispiele sind Sigmoid oder Softmax welche aus Abb. \ref{fig:Bild3} und \ref{fig:Bild3} entnommen werden können als Aktivierungsfunktion geeignet. 
 
+Jeder Layer eines KNN besteht aus mehreren Neuronen. Ein Neuron $\theta$ kann mehrere Input X\textsubscript{n} erhalten und produziert einen Output $\omega$\. Die Berechnungen welche von den Neuron durchgeführt wird ist zunächst jeden Input X\textsubscript{n} mit einen Gewicht w\textsubscript{ij} zu multiplizieren. Anschließend wird die Summe von x*w gebildet. Das Ergebnis wird dann in eine Aktivierungsfunktion $\lambda$ gegeben. Ein Neuron ist definiert durch:
+\\\\
 \begin{math}
-y\textsubscript{k} = Aktivierungsfunktion(\sum_{j=0}^{m}(w\textsubscript{kj}+x\textsubscript{j})+b\textsubscript{k})                
+y\textsubscript{k} = \lambda(\sum_{j=0}^{m}(w\textsubscript{kj}+x\textsubscript{j})+b\textsubscript{k})                
 \end{math}
-
+\\\\
+Die Aufgabe der Aktivierungsfunktion $\lambda$  ist es eine nicht liniere Transformation des Inputs zu erzeugen. Damit kann das KNN nicht lineare Funktionen abbilden und somit komplexere Aufgaben lösen. Es gibt unterschiedliche Aktivierungsfunktionen im folgenden werden einige aufgezählt:
+\vspace{5 mm}
+\begin{description}
+	\item[Sigmoid-Funktion]		
+	
+	\begin{math}
+	\sigma(x)=\frac{1}{1+exp(-x)}
+	\end{math}
+	\vspace{5 mm}
+	\item[Softmax-Funktion]
+	
+	\begin{math}
+	\zeta(x)\textsubscript{j} = \frac{e\textsuperscript{x\textsubscript{j}}}{\sum_{k=1}^{K}e\textsuperscript{x\textsubscript{k}}}
+	\end{math}
+	\vspace{5 mm}
+	\item[Rectified Linear Unit (ReLU):]
+	
+	\begin{math}
+	f(x)=\max(0,x) 
+	\end{math}
+	\vspace{5 mm}
+	\item[Leacky Rectified Linear Unit(Leaky Relu):]
+	
+	\begin{math}
+	f(x) = \begin{cases}
+	x  	 & \quad \text{if } x > 0\\
+	0.01x & \quad \text{sonst} 
+	\end{cases}
+	\end{math}
+	\vspace{5 mm}
+\end{description}
+\vspace{5 mm}
+Der Funktionsplot von Sigmoid Funktion kann in  Abb.\ref{fig:Bild3} entnommen werden. Diese veranschaulichen den Wertebereich welcher von den Aktivierungsfunktion angenommen werden kann und ihren Verlauf. 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.0\textwidth]{sigmoid.png}
+	\includegraphics[width=0.8\textwidth]{sigmoid.png}
 	\caption{Sigmoid Funktion}
 	\label{fig:Bild3}
 \end{figure}
 
+\newpage
+\subsubsection{Ziel-Funktion}\label{sec:Zielfunktion}
+~\\\\
+Die Ziel-Funktion oder auch Loss-Funktion genannt J($\theta$) muss Differenzierbar sein. Das heißt unseren Funktion f: D $\to$ R ist differenzierbar an der Stelle x\textsubscript{0}. Wenn nun $f^\prime$: x $\to$ f(x) an jeden Punkt x\textsuperscript{n} ableitbar ist, ist f differenzierbar. Die Aufgabe der Ziel-Funktion ist es zu messen wie gut unsere Model $\theta$ f*(x) approximiert. Man verwendet auch gerne den Begriff Kosten, also wie viel Kosten unser Modell erzeugt bei den lösen der zugewiesenen Aufgabe. Die Wahl welche Funktion gewählt wird ergibt sich aus der Aufgabe des KNN. Diese kann beispielsweise für Klassifikation oder Regression Aufgaben hergenommen werden. Bei Regression soll eine kontinuierlicher Variablen von $\Theta$ als Output generiert werden wohin gegen bei Klassifikationsproblemen der Output Klassen-Labels darstellen\cite{Grundlagen}. Es gibt verschiedene Ziel Funktionen im folgenden wird die Cross Entropy Loss Function vorgestellt \cite{crossentropy}. Diese kann verwendet werden um Beispielsweiße Klassikationsprobleme zu lösen. Diese ist definiert als:
+\\\\
+\begin{math}
+\hat{q}(c\mid x)=\displaystyle\arg\min_{q(c\mid  x)}\{-\displaystyle\sum_{n}{\log q(c\textsubscript{n}\mid x\textsubscript{n})}\}
+\end{math}
+\\\\
+Wobei  x\textsubscript{n}:n=1,...,N die Trainingsdaten sind ist und c\textsubscript{n}:n=1,...,N die mögliche Klassen. Der Output ist die Wahrscheinlichkeit zwischen 0 und 1 ob  x\textsubscript{i} $\in$ der bestimmten Klasse enthalten ist. Auch kann sie hergenommen um zu messen wie hoch die Differenz zwischen zwei Wahrscheinlichkeitsverteilungen ist.
+
+
+\subsubsection{Backpropagation Algorithmus}\label{sec:test}
+~\\\\
+Um nun KNNs zu trainieren und den gewünschten Output y zu generieren wird der Backpropagation Algorithmus benutzt werden dieser zählt zu den Optimierungs Algorithmen für KNN. Er konnte zeigen das dieser Algorithmus schneller und effizienter auf Neuronalen Netzwerken arbeitet als andere Optimierungsalgorithmen vor ihm. Das mathematische Zugrundeliegende Konzept ist ein Optimierungsproblem der die Partitiellen Ableitung von  $\frac{\partial Z}{\partial w}$, wobei Z die Zielfunktion und w die Gewichte im zu optimierenden Neuronalen Netzwerk sind. Für eine Funktion $f$(x) = y ist die Ableitung definiert als $f^\prime$(x) oder $\frac{dy}{dx}$ und gibt die Steigung der Funktion an Punkt x an. Durch die Steigung an Punkt x ist man nun in der Lage einer Änderung von der Ableitung x dahin gehen optimieren \cite{Grundlagen}. Dieses Verfahren hilft dabei das KNN  dahingehen zu optimieren den gewünschten Output y zu erlangen. Dieses Ziel wird durch die Ziel-Funktion einen KNN beschrieben. Das Verfahren wird in \ref{fig:Bild6} veranschaulicht.   
+\\
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.0\textwidth]{softmax.png}
-	\caption{Softmax}
-	\label{fig:Bild4}
+	\includegraphics[width=0.5\textwidth]{gradient.png}
+	\caption{LossFunktion}
+	\label{fig:Bild6}
 \end{figure}
+\\
+Wenn nun $f^\prime$(x) = 0 haben wir keinerlei Information über die Steigung erreicht. Dies ist aber kein Indiz dafür sein das $f$ ein Optimum erreicht hat. Es könnten wie in Abbildung \ref{fig:Bild5} unten dargestellt ein lokales Minimum sein dass heißt das wir nur an diesen Punkt ein Minimum erreicht haben aber im Funktionsverlauf ein noch niedrigeres Minimum vorhanden ist. Oder einen Sattelpunkt welche ein Übergang zu einen anstieg der Funktion bildet.
+Ist nun die die Funktion $f$ definiert als $f$: $\mathbb{R}$\textsuperscript{n} $\rightarrow$  $\mathbb{R}$ und hat als Input mehrere Variablen. Die partielle Ableitung $\frac{\partial f(x)}{\partial x\textsubscript{i}}$ zeigt an wie sehr sich $f(x)$ ändert wenn wir x\textsubscript{i} ändern. Der Gradient $\nabla\textsubscript{x}f(x)$ ist ein Vektor welche alle partiellen Ableitungen von $f$ enthält. Nun kann man f optimieren in dem man in die Richtung des Gradienten geht welche negativ ist. Dieses Verfahren wird Gradient Descent genannt \cite{Grundlagen}.
 
-
-\subsubsection{Backpropagation Algorithmus}
-
-Um nun KNNs zu trainieren und den gewünschten Output y zu generieren wird der Backpropagation Algorithmus benutzt. Dieser wurde von Geofrey Hintion im Jahre 1989 entdeckt\cite{backpro} und zählt zu den Optimierungs Algorithmen für KNN Er konnte zeigen das sein Algorithmus schneller und effizienter auf Neuronalen Networks arbeitet als andere Optimierungsalgorithmen vor ihm. Das mathematische Zugrundeliegende Konzept ist ein Optimierungsproblem der die Partitiellen Ableitung von  $\frac{\partial Z}{\partial w}$, wobei Z die Zielfunktion und w die Gewichte im zu optimierenden Neuronalen Netzwerk sind. Für eine Funktion $f$(x) = y ist die Ableitung definiert als $f^\prime$(x) oder $\frac{dy}{dx}$ und gibt die Steigung der Funktion an Punkt x an. Dieses Verfahren kann dabei helfen Funktionen zu optimieren. Durch die Steigung an Punkt x ist man nun in der Lage einer Änderung von der Ableitung x dahin gehen optimieren \cite{Grundlagen}. \\
-
-Wenn nun $f^\prime$(x) = 0 haben wir keinerlei Information über die Steigung erreicht. Dies ist aber kein garant dafür das $f$ ein Optimum erreicht hat.  Es könnten wie in Abbildung unten dargstellt. Ein locales Minimum sein. Dass heißt das wir nur an diesen Punkt ein Minimum erreich thaben aber im Funktionsverlauf ein noch niedrigeres Minimum vorhanden ist. Oder einen Sattlepunkt welche ein Übergang zu einen anstieg der Funktion bildet.
-Ist nun die die Funktion $f$ definiert als $f$: $\mathbb{R}$\textsuperscript{n} $\rightarrow$  $\mathbb{R}$ und hat als Input mehrere Variablen. Die partielle Ableitung $\frac{\partial f(x)}{\partial x\textsubscript{i}}$ zeigt an wie sehr sich $f(x)$ ändert wenn wir x\textsubscript{i} ändern. Der Gradiant $\nabla\textsubscript{x}f(x)$ ist ein Vektor welche alle partiellen Ableitungen von $f$ enthält. Nun kann man f optimierne in dem man in die Richtung des Gradianten geht welche negativ ist dieses Verfahren wird gradient descent genannt \cite{Grundlagen}.
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.0\textwidth]{saddle.png}
@@ -126,184 +168,129 @@ Ist nun die die Funktion $f$ definiert als $f$: $\mathbb{R}$\textsuperscript{n} 
 	\label{fig:Bild5}
 \end{figure}
 
-Algorithmen die für Deep Learning eingesetzt werden, beinhalten eine Art von Optimierung, ohne diese ist eine Umsetzung des Lernprozesses nahezu unmöglich. Diese Minimierungs-funktionen oder auch cost function (welche in vielen Publikationen unterschiedlich bezeich-net wird „loss“- oder „error function“) wollen immer dasselbe Ziel: eine gewisse Target Funktion ermitteln, welche für einen Input den gewünschten Output ausgibt. Das Ziel ist in anderen Worten eine Menge an Gewichten und Biases zu finden, für welche, die quadrati-schen Kosten (C(w,b)) so gering wie möglich sind. Um dies zu erreichen, wird der Gradient Decient Algorithmus eingesetzt (Nielsen, 2017).
-Der Grund des Einsatzes dieses Algorithmus ist derer, dass zwar versucht werden könnte die Anzahl der richtig klassifizierten Bilder direkt zu erhöhen. Aber das Problem ist, den Per-formancegewinn bei Veränderungen der Gewichte festzustellen. Da meisten kleine Verän-derungen an den Gewichten und Baises führen zu keinerlei Veränderung bei der Klassifizie-rung. Somit liegt eine gewisse Schwierigkeit, bei der Ermittlung der richtigen Anpassung dieser Werte. Zuerst muss die quadratische cost function (C (w,b)) minimiert werden, bevor sich die Maximierung der Bestimmungsgenauigkeit des Netzwerkes als Ziel gesetzt kann (Nielsen, 2017).
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.0\textwidth]{gradient.png}
-	\caption{LossFunktion}
-	\label{fig:Bild6}
-\end{figure}
 
-Backpropagation Algorithmus wird das Verfahren genannt mit den ANN trainiert werden. Dabei wird der Gradiant der Ziel Funktion bestimmt.
-
-\subsubsection{Momentum}
-Momentum hat das Ziel das Gradientenverfahren zu beschleunigen  um eine effizienter Konfergierung der Zielfunktion herbei zu führen und ein schnelleres Lernen erzielt. 
-
-\begin{math}
+\subsubsection{Momentum}\label{sec:momentum}
+~\\\\
+Momentum hat das Ziel das Gradientenverfahren des Backpropagation Algorithmus \ref{sec:test} zu beschleunigen um eine effizienter Ergebnis herbei zu führen und ein schnelleres Lernen erzielt zu erreichen. Definiert ist dieses durch:
 \\\\
+\begin{math}
 v\textsubscript{t+1} =\mu v\textsubscript{t}-\epsilon\nabla$f$(\theta\textsubscript{t})
-\\
 \theta\textsubscript{t+1}= \theta\textsubscript{t}+v\textsubscript{t+1}
-\\\
 \end{math}
-wobei $\epsilon$ $>$ 0 die Lernrate ist und $\mu$ $\in$ [0,1] das Momentum ist und $\nabla$f$(\theta\textsubscript{t}$ der Gradiant von $\theta\textsubscript{t}$ ist. Je größter das Momentum desto schneller Bewegt sich der Gradient abwärts. Da am Anfang eines Lernphase der gradiant überlicherweiße recht hoch ist empfielt sich zunächst mit einen niedrigen Momentum zu Arbeiten da sonnst die Gefahr besteht über das globale Optimum hinüberzuschießen. Wenn nun das Training stagniert welches auf Gründe der Aufbau der Loss-Funktion zurückzuführen ist das zur nähe des globalen Optimums flache Täller entstehen welche das Trainings verlangsamen. und es zu keiner Verbesserung kommt kann man durch momentum erzwingen größere Gradianten sprünge einzugehen und sich somit schneller zu einen globalen Optimum zu bewegen oder aber aus einen localen Optimum hinaus richtung eines globalen Optimum\cite{momentum}. .
-\\\\\\
-Here’s a popular story about momentum gradient descent is a man walking down a hill. He follows the steepest path downwards; his progress is slow, but steady. Momentum is a heavy ball rolling down the same hill. The added inertia acts both as a smoother and an accelerator, dampening oscillations and causing us to barrel through narrow valleys, small humps and local minima. 
-This standard story isn’t wrong, but it fails to explain many important behaviors of momentum. In fact, momentum can be understood far more precisely if we study it on the right model. 
-One nice model is the convex quadratic. This model is rich enough to reproduce momentum’s local dynamics in real problems, and yet simple enough to be understood in closed form. This balance gives us powerful traction for understanding this algorithm\cite{momentum}. 
+\\\\
+wobei $\epsilon$ $>$ 0 die Lernrate ist und $\mu$ $\in$ [0,1] das Momentum ist und $\nabla$f$(\theta\textsubscript{t}$ der Gradient von $\theta\textsubscript{t}$ ist. Je größter das Momentum desto schneller bewegt sich der Gradient abwärts. Da am Anfang eines Lernphase der Gradient üblicherweise hoch ist empfiehlt sich zunächst mit einen niedrigen Momentum zu Arbeiten da sonnst die Gefahr besteht über das globale Optimum hinüber zuschießen. Wenn nun das Training stagniert welches aus Gründe der Aufbau der Loss-Funktion zurückzuführen ist das zur nähe des globalen Optimums flache Täler entstehen welche das Trainings verlangsamen und es zu keiner Verbesserung kommt, kann man durch Momentum erzwingen größere Gradienten Sprünge einzugehen  je länger das Training voran schreitet. Und sich somit schneller zu einen globalen Optimum zu bewegen oder aber aus einen lokalen Optimum hinaus Richtung eines globalen Optimum\cite{momentum}.
 
-For a step-size small enough, gradient descent makes a monotonic improvement at every iteration. It always converges, albeit to a local minimum. And under a few weak curvature conditions it can even get there at an exponential rate. 
 
-https://distill.pub/2017/momentum/
+\subsubsection{Regularization}
+~\\\\
+Ein Problem was alle Machine Learning Anwendungen Teilen ist das Problem wenn der Trainingsalgorithmus eine gutes Trainingsergebnis erzielt aber dann auf den Testdatensatz ein schlechtes Ergebnis erlangt dies wird Overfitting genannt. Es gibt einige Möglichkeiten welche eingesetzt werden können welche dann aber auch das Trainingsergebnis verschlechtern. Man spricht davon das diese Versuchen zu Regularizieren.
+
+\begin{description}
+\item[Data Argumentation]
+~\\\\
+Je mehr Daten beim Training verwendet werden desto mehr kann generalisiert werden. Data Argumentation heißt das man mehr Datensätze erstellt. Dies kann durch eine Veränderung der Trainingsdatensätze im Allgemein sein, wenn man Beispielweise 3D-Punktwolken rotiert um diese mehrfach zu nutzen. Eine weitere Möglichkeit ist es bestimmte Datenpunkte in einen Datensatz ändert indem man ein Objekt welches auf einen Bild dargestellt wird verkleinert oder vergrößert\cite{Grundlagen}. \\
+\item[Dropout]
+~\\\\
+Bei Dropout wird während des Lernprozess eine gewisser Prozentsatz der Neuronen in jeden Layer nicht verwendet. Dies zwingt das Netzwerk was sonnst auf die Abhängigkeiten zwischen den Neuronen lernt eine mehr generalisierte Lösung zu finden\cite{dropout}.\\
+\item[L2-Regularization]
+~\\\\
+Dabei wird das Gewicht des Neurons während des Trainings nähe zu seinen Ursprung, dass heißt den Wert seiner Initialisierung gedrängt. Dies passiert indem ein Regularisierungswert $\Omega$ = $\frac{1}{2}||w||\frac{1}{2}$ an den Zielfunktion gehängt wird. Dieses sorgt dafür das während dem Training der Gewichts Vektor welche durch das Gradienten Verfahren ermittelt wird schrumpft dieses sorgt für eine höhere Varianz während des Trainings was wiederum das ANN dazu zwingt mehr zu generalisieren\cite{Grundlagen}.\\ 
+\end{description}
 
 \subsubsection{Batch Normalisation}
-
-Wie in Kapitel backpropagation Algorithums gezeigt wurde wird durch den stochstischen Gradianten Vorteile gegenüber des normalen gradianten Verfahren ergeben. Durch das der Input in jeden Layern abhängig von den vorherigen Layern abhängig. Dadurch können änderungen in vorherigen Layern große Auswirkungen in tiefern Layern im Netzwerk haben. Dadurch resultiert dann das in trainingsläufen die Verteilung von jeden Layens input sich während des Trainings verändert die verlangsamt das Training erheblich \cite{batchnorm}. Dieses Problem wird als internal covariate shift definiert. Wenn sich die Input Verteilung von einen lernenden System verändert macht es einen covariate shift durch \cite{batchnorm}.Um dies zu verhindert zeigten Sergey Ioffe und Christian Szegedy \cite{batchnorm} eine Methode welche Batchnormalization genannt wird.Je mehr Layer das Netzwerk hat desto stärker wird der internal covariate shift. Batch normalization besteht aus zwei Algorithmen. Algortithmus 1 verändert den eigentlichen Input von Layer n zu einen normalisierten Input y und Algorithmus 2 verändert das eigentliche Training eine batch normalisierten Netzwerkes.
-
+~\\\\
+Wie in Kapitel \ref{sec:test} gezeigt das stochastischen Gradienten Verfahren Vorteile gegenüber des normalen Gradienten Ermittlung beim Training von KNN. Dadurch das der Input in jeden Layer abhängig von den vorherigen Layern ist können Änderungen von Werten in frühen Layern des KNN große Auswirkungen in tieferen Layern im Netzwerk haben.
+Dadurch resultiert das in Trainingsabläufen die Verteilung der Gewichte in den jeweiligen Layern verlangsamt wird. Batchnormalization soll die Werteänderung von Gewichten verringen. Dieses Problem wird auch Covariance Shift genannt. Um dies zu verhindert zeigten Sergey Ioffe und Christian Szegedy \cite{batchnorm} eine Methode welche Batch Normalisation genannt wird.Je mehr Layer das Netzwerk hat desto stärker ist der Covariance Shift. Batch Normalisation besteht aus zwei Algorithmen. Algortithmus 1 verändert den eigentlichen Input von Layer n zu einen normalisierten Input y und Algorithmus 2 verändert das eigentliche Training eines Batch normalisierten Netzwerkes\cite{batchnorm}.
+\\\\
 \begin{algorithm}[H]
-Input: Werte von x über einen Mini-Batch $B$ = \{$x\textsubscript{1},...,x\textsubscript{n}$\}\\
-\begin{math}
-\mu\textsubscript{$B$}\leftarrow\frac{1}{m}\displaystyle\sum_{i=1}^{m}$x$\textsuperscript{i}
-\end{math}\\
-\begin{math}
-\sigma\textsubscript{$B$}\leftarrow\frac{1}{m}\displaystyle\sum_{i=1}^{m}($x$\textsuperscript{i} - \mu\textsubscript{$B$})\textsuperscript{2}
-\end{math}\\
-\begin{math}
-\hat{x\textsubscript{i}}\textsubscript{$B$}\leftarrow\frac{x\textsubscript{i}-\mu\textsubscript{$B$}}{\sqrt{\sigma\textsubscript{$B$} + \epsilon}}
-\end{math}\\
-\begin{math}
-$y$\textsubscript{i}\leftarrow\gamma\hat{x\textsubscript{i}} + \beta \equiv BN\textsubscript{$\gamma$;$\beta$}($x$\textsubscript{i})
-\end{math}\\
-Output: \{$y$\textsubscript{i}=BN\textsubscript{$\gamma$;$\beta$}($x$\textsubscript{i})\}
-\caption{Batch Normalisierung angewand auf x über Input bei Mini-Batch  }	
+	Input: Werte von x über einen Mini-Batch $B$ = \{$x\textsubscript{1},...,x\textsubscript{n}$\}\\
+	\begin{math}
+	\mu\textsubscript{$B$}\leftarrow\frac{1}{m}\displaystyle\sum_{i=1}^{m}$x$\textsuperscript{i}
+	\end{math}\\
+	\begin{math}
+	\sigma\textsubscript{$B$}\leftarrow\frac{1}{m}\displaystyle\sum_{i=1}^{m}($x$\textsuperscript{i} - \mu\textsubscript{$B$})\textsuperscript{2}
+	\end{math}\\
+	\begin{math}
+	\hat{x\textsubscript{i}}\textsubscript{$B$}\leftarrow\frac{x\textsubscript{i}-\mu\textsubscript{$B$}}{\sqrt{\sigma\textsubscript{$B$} + \epsilon}}
+	\end{math}\\
+	\begin{math}
+	$y$\textsubscript{i}\leftarrow\gamma\hat{x\textsubscript{i}} + \beta \equiv BN\textsubscript{$\gamma$;$\beta$}($x$\textsubscript{i})
+	\end{math}\\
+	Output: \{$y$\textsubscript{i}=BN\textsubscript{$\gamma$;$\beta$}($x$\textsubscript{i})\}
+	\caption{Batch Normalisierung angewand auf x über Input bei Mini-Batch  }	
 \end{algorithm}
-
-In Schritt 2 des Algorithmus 1 wird der Erwartungswert für alle Input von Mini-Batch B berechnet. In Schritt 3 die Varianze. In Schritt 3 wird nun der der normalisierte x\textsubscript{i} berechnet welche dann mit denn $\beta$ und $\gamma$ multipliziert werden. Diese Werte sind neue gewichte im Neurnonalen Netzwerk welche während des Trainingsporcesses angepasst werden. $\epsilon$ in der Gleichung in Zeile 4 ist nur dafür da damit nicht durch 0 geteilt werden kann. In Zeile 8 - 11 werden die Inferrenz schritte beschrieben bei den der Minibatch des Trainings ersetzt wird. 
-
+~\\\\
+In Schritt 2 des Algorithmus 1 wird der Erwartungswert für alle Input von Mini-Batch B berechnet und In Schritt 3 die Varianze. In Schritt 3 wird nun der der normalisierte x\textsubscript{i} berechnet welche dann mit denn $\beta$ und $\gamma$ multipliziert werden. Diese Werte sind neue Gewichte im Neurnonalen Netzwerk welche während des Trainingsprozesses angepasst werden. $\epsilon$ in der Gleichung in Zeile 4 ist nur dafür da damit nicht durch 0 geteilt werden kann. In Zeile 8 - 11 werden die Inferenz Schritte beschrieben bei den der Minibatch des Trainings ersetzt wird. 
+~\\\\\
 \begin{algorithm}[H]
-	Input: Netzwerk N mit trainierbaren Parameter $\theta$;$\{x\textsuperscript{(k)}\}$k=1 bis 	
-	\\	
-	Ntr BN $\leftarrow$ N	
-	\\a\\a\\a\\a\\a\\a\\a\\a\\a\\a\\
-
+	Input: Netzwerk N mit trainierbaren Parameter $\theta$;$\{x\textsuperscript{(k)}\}$k=1\\
+	Output: Batchnormalisiertes Netzwerk 	\\
+	~\\
+	~\\	
+	~\\
+	~\\
+	~\\
+	~\\
+	~\\
+	~\\
+	~\\
+	~\\
+	
 	\caption{Training mit Batch-Normalisierungs Netzwerk}	
 \end{algorithm}
-
-Schritt 1 bis 5 des Algorithmus 2 baut eigentlich nur das neuronales Netzwerk durch die transformationen aus Algorithmus 1 um. In Schritt 6 und 7 geht es darum die Parameter $\gamma$ und $\beta$ zu trainieren. Dieses passiert mit den üblichen Backpropagation Algorithmus wären des Allgemeinen Training des Netzwerkes. 
-
-
-Je mehr Layer das Netzwerk hat desto stärker wird der internal covariate shift
+~\\\\
+Schritt 1 bis 5 des Algorithmus 2 baut das ANN durch die Transformationen aus Algorithmus 1 um. In Schritt 6 und 7 geht es darum die Parameter $\gamma$ und $\beta$ zu trainieren. Dieses passiert mit den üblichen Backpropagation Algorithmus wären des allgemeinen Training des Netzwerkes. 
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.0\textwidth]{batchnorm.png}
+	\includegraphics[width=0.3\textwidth]{batchnorm.png}
 	\caption[aaaa]{Neuronales Netzwerk mit Batch Normalication Layer}
-	\label{fig:Bild1}
+	\label{fig:Bild8}
 \end{figure}
 
-Neurnonale Netzwerke sind universelle Funktions approximierer \cite{universal}. Es sei erfohrzuheben das zwar Feedforward Neuronale Netzwerke mit hidden Layer unisversel sind. Aber nicht jede aktivierungsfunktion ist für alle probleme gleich effizient. \cite{universal}.
-In Kapital BLABLA wurde gezeigt das Neuronale Netzwerke durch Matrizen dargestellt werden können und das durch simple Matrixmultiplikation der Output von Layern berechnet werden können. Die Aktivierungsfunktion sorgen dafür das das ANN auch nicht lineare Funktionen erlernen kann. Also das unser Input X und unser Output Y immer proportional als Y = X$*$k. Wobei k eine Konstante ist.  Wie wir in Kapitel BLABLA gesehen habe möchten wir das unser Input linear Trennpaar ist damit wir unsere Input in Klassen einteilen können. Würde X nun aber nicht linear trennbar sein wie Beispielsweiße in Abbildung UNTEN gezeigt Könnten wir duch die lineare transformation des Inputs keine Trennung von X erreichen. http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/ Mit den einführen von nicht linearen Funktionen können der Raum der durch die Layer dargsetllt wird gedreht gewendet und gezogen werden. Aber es scheidet, zerbricht oder faltet in.  Mit den einführen von nicht linearen Funktionen können der Raum der durch die Layer dargsetllt wird gedreht gewendet und gezogen werden.
-
-Ein Neuron hat einen Input x\textsubscript{n} sowie ein Gewicht w\textsubscript{ij} und einen Bias b. der Output eines Neurons ist definieniert durch y = x\textsubscript{n} * w\textsubscript{ij} + b
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.0\textwidth]{lineartrennbar.png}
-	\caption{Nicht trennbar}
-	\label{fig:Bild1}
-\end{figure}
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.0\textwidth]{sigmoid.png}
-	\caption{Sigmoid Funktion}
-	\label{fig:Bild1}
-\end{figure}
-
-\begin{math}
-\sigma(x)=\frac{1}{1+exp(-x)}
-\end{math}
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.0\textwidth]{softmax.png}
-	\caption{Softmax}
-	\label{fig:Bild1}
-\end{figure}
-
-\begin{math}
-\zeta(x) = \log(1+exp(x))
-\end{math}
-\subsubsection{Ziel-Funktion}
-
-Die Ziel-Funktion muss Differenzierbar sein. Das heißt unseren Funktion f: D $\to$ R ist differenzierbar an der Stelle x\textsubscript{0} an der Stelle. Wenn nun $f^\prime$: x $\to$ f(x) an jeden Punkt x\textsuperscript{n} ableitbar ist, ist f differenzierbar. Die Aufgabe der Ziel-Funktion ist es zu messen wie gut unsere Model $\Theta$ f*(x) approximiert. Man verwendet auch gerne den Begriff Kosten, also wie viel Kosten unser Modell erzeugt. Daher wird die Ziel-Funktion auch Kost-Funktion genannt. Die Wahl welche Funktion gewählt wird ergibt sich aus der Aufgabe des KNN. Diese kann beispielsweise für Klassifikation oder Regression Aufgaben hergenommen werden. Bei Regression soll eine kontinuierlicher Variablen von $\Theta$ als Output generiert werden wohin gegen bei Klassifikationsproblemen der Output Klassen-Labels darstellen. Es gibt verschiedene Ziel Funktionen im folgenden wird die Categorical Cross Entropy Loss Function vorgestellt \cite{crossentropy}. Diese wird verwendet wenn man das Ziel hat ein Klassifikationsproblem zu Lösen und n $\geq$ 1 Klassen hat. Diese ist definiert als:
-\\\\
-\begin{math}
-\hat{q}(c\mid x)=\displaystyle\arg\min_{q(c\mid  x)}\{-\displaystyle\sum_{n}{\log q(c\textsubscript{n}\mid x\textsubscript{n})}\}
-\end{math}
-\\\\
-Wobei  x\textsubscript{n}:n=1,...,N die Traingsdaten sind ist und c\textsubscript{n}:n=1,...,N die mögliche Klassen.
 \newpage
+\subsection{Datenformat Punktwolken}\label{sec:punktwolken}
 
-
-
-\subsection{Datenformat}
-
-Punktwolken sind eine Menge von N Punkten welche im Vektorraum dargestellt werden können. Jeder Punkt n $\in$ N wird durch seine (x,y,z) Koordinaten im Euklidischen Raum dargestellt. Punkte können zusätzliche Features gegeben werden wie Farbe oder Material. Es gibt unterschiedliche Dateiformate welche für die Abspeicherung von Punktwolken herangezogen werden können bespiele dafür sind PLY,STL oder OBJ. Das Polygon File Format(PLY) speichert die einzelnen Koordinaten in einer Liste diese wird Vertex List genannt. In Abb. \ref{fig:Bild13} kann eine Beispieldatei entnommen werden in der dieser Aufbau dargestellt ist. Diese kann als Menge betrachtet werden die jeweiligen Punkte sind geordnet in dieser Listen gespeichert jedoch spielt es keine Rolle für den Punktwolkencompiler bei der Visualisierung der Liste an welcher Listenposition ein jeweiliger Punkt geführt wird, die Liste wird jedes mal gleich angezeigt egal welche Permutation der einzelnen Punkte in der Liste durchgeführt wird. In Abb. \ref{fig:Bild12} kann eine visualisierte Punktwolke eines Tabakblattes entnommen werden. 
-
+Punktwolken sind eine Menge von N Punkten welche im Vektorraum dargestellt werden können. Jeder Punkt n $\in$ N wird durch seine (x,y,z) Koordinaten im Euklidischen Raum dargestellt. Punkte können zusätzliche Features gegeben werden wie Farbe oder Material. Es gibt unterschiedliche Dateiformate welche für die Abspeicherung von Punktwolken herangezogen werden können bespiele dafür sind PLY, STL oder OBJ. Das Polygon File Format(PLY) speichert die einzelnen Koordinaten in einer Liste diese wird Vertex List genannt. In Abb. \ref{fig:Bild13} kann eine Beispieldatei entnommen werden in der dieser Aufbau dargestellt ist. 
+\\
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.0\textwidth]{datenformat.png}
-	\caption{Punktwolke eines Tabakblattes}
-	\label{fig:Bild12}
-\end{figure}
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.0\textwidth]{datenformat.png}
+	\includegraphics[width=0.3\textwidth]{plyexample.png}
 	\caption{Polygon File Format}
 	\label{fig:Bild13}
 \end{figure}
-
-\subsubsection{Woher stammen die Daten}
-Die Daten stammen von TERRA-REF Feld Scanner von der University von Arizona Maricopa Agricultural Center and USD Arid Land Researh Station in Maricopa. Es ist der größe Feld crop scnanner. In Abb. \ref{fig:Bild13} ist dieser abgebildet. In Abb. \ref{fig:Bild14} ist der Scankopf des TERRA-REF dargestellt mit den unterschiedlichen Scanmöglichkeiten für das du scannende Objekt. 
- 
+\\
+Diese kann als Menge betrachtet werden die jeweiligen Punkte sind geordnet in dieser Listen gespeichert jedoch spielt es keine Rolle für den Punktwolkencompiler bei der Visualisierung der Liste an welcher Listenposition ein jeweiliger Punkt geführt wird, die Liste wird jedes mal gleich angezeigt egal welche Permutation der einzelnen Punkte in der Liste durchgeführt wird. In Abb. \ref{fig:Bild12} kann eine visualisierte Punktwolke eines Tabakblattes entnommen werden. 
+\\
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.0\textwidth]{lematech_1.png}
-	\caption{TERRA-REF Feld Scanner}
-	\label{fig:Bild13}
+	\includegraphics[width=0.3\textwidth]{leaf1.png}
+	\caption{Punktwolke eines Tabakblattes}
+	\label{fig:Bild12}
 \end{figure}
+\newpage
+\subsubsection{Datenaufnahme von Tabakpflanzen}
+~\\\\
+Die Daten stammen von TERRA-REF Feld Scanner von der University von Arizona Maricopa Agricultural Center and USD Arid Land Researh Station in Maricopa. Es ist der größe Feld crop scnanner. In Abb. \ref{fig:Bild14} ist dieser abgebildet. In Abb. \ref{fig:Bild15} ist der Scankopf des TERRA-REF dargestellt mit den unterschiedlichen Scanmöglichkeiten für das du scannende Objekt. 
+ 
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.0\textwidth]{lematech_2.png}
+	\includegraphics[width=0.5\textwidth]{lematech_2.png}
 	\caption{Scankopf}
-	\label{fig:Bild14}
+	\label{fig:Bild15}
 \end{figure}
 
 Der 3D Laser Scanner erzeugt 3D Punktwolken. Dabei werden die Objekte durch den Scanner erfasst und eine 3D Repräsentation welche durch Punkte in einen 3 Dimensionalen Koordinaten System erfasst werden können dargestellt. Dabei wird ein Laser über das zu scannende Objekt gefahren durch reflektion des Laserstrahls auf der Oberfläche des Objektes können x,y,z Koordinaten des jeweiligen Punktes auf den Objekt bestimmt werden. Durch die Sammlung eizelner Scanpunkte entsteht eine 3D-Repräsentation eines Gegenstandes. 
+
+\newpage
 \subsubsection{Das Problem mit 3D-Data bei Machine Learning Ansätzen}
+~\\\\
 Vergleicht man 3D-Data auf ihre Dimensionalität mit anderen Datenformaten wie Bild,- , Audio ,- Textdateien steigt der Informationsgehalt und dadurch die Komplexität für das Anwenden von Maschine Learning Algorithmen enorm. Besonders bei Nicht-Euklidischen 3D-Daten wie Punktwolken deren keine Struktur zu Grunde liegt ist dieses gegeben \cite{3dprob}.
-\\
-Wie im Kapitel "Woher stammen die daten " gezeigt, sind Punktwolken als Menge gespeichert in denen keine Relation untereinander besteht, dass heißt es ist für den Punktwolkencompiler nicht von Relevanz auf welchen Platz die einzelnen Punkte abgespeichert werden, die Punktwolke wird egal in welcher Permutation der einzelnen Punkte abgespeichert, immer gleich angezeigt. Vergleicht man nun ein Bild mit 512 Pixeln und 3 RGB-Farbkanälen ist einer Dimension von 391680 erreicht. Vergleichen wir nun das mit einer Punktwolke in einen 125 cm \textsubscript{3} großen Bereich. Da die einzelen Koordianten eines Punktes als Rationale Zahlen dargestellt wird und rationalen Zahlen abzählbar Unendlich ist unser Suchraum "unendlichzeichen " groß. Dies führt zu einen erheblichen mehr Aufwand für Machine Learning Ansätzen wie Deep Learning für Punktwolken.
-\\
-Ein weitere Schwierigkeit die für Deep Learning mit Punktwolken ist, dass die aus Kapitel Convolutional Neural Network beschrieben Convolutionel-Layer einen großen Beitrag bei den Fortschritt von Deep Learning gebracht hat. Da sie helfen die Strukturen von strukturierten Daten zu lernen und den latenten Raum zu entdecken. Da jedoch Pointclouds unstrukturiert sind hilft es nicht diese Tools bei Punktwolken einzusetzen\cite{3dgan}. 
-
-
-\subsection{Deep Learning und Informationstheorie}
-Von Deep Learning wird gesprochen wird ANN mehr als 1 Layer besitzen und dadurch Komplexere Aufgaben lösen können. Der Trainingsalgorithmus ist immernoch mit den Backprobagation Algorithmus. 
-Um das Konzept von Deep Larning besser zu verstehen kann man diese aus den Informationstheoretischen Blickwinkel betrachten. Tischby and Schwarz-Ziv  \cite{infoth} untersuchten dabei Neuronale Netzwerke in Verbindung mit Deep Learning. 
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.0\textwidth]{markovdeep.png}
-	\caption{Neuronal Netzwork als Markov Chain}
-	\label{fig:Bild1}
-\end{figure}
-
-Das ins \ref{fig:Bild4} dargestelle Netzwerk kann als Markov kette betrachtet werden. Wobei jeder Layer h\textsuperscript{n}:1,...,N als ein Zustand einer Markov Kette betrachet werden kann. Wobei der Übergang durch von Informations als h\textsubscript{i} $\rightarrow$ h\textsubscript{i+1} dargestellt werden kann. Da es keine Rekursion gibt und die Information von Input Layer X durch h\textsubscript{arg} zu Output Layer Y durch fließt. Dabei untersuchten sie wie sich die Transinformation I(X;Y) von Input Variable X zu Output Variable Y verhält gegeben durch die Multivariate Verteilung p(X,Y). Dieses Prinzip wird Information Bottleneck Prinziple genannt \cite{bottleneck}. 
+\\\\
+Wie im Kapitel "Woher stammen die daten " gezeigt, sind Punktwolken als Menge gespeichert in denen keine Relation untereinander besteht, dass heißt es ist für den Punktwolkencompiler nicht von Relevanz auf welchen Platz die einzelnen Punkte abgespeichert werden, die Punktwolke wird egal in welcher Permutation der einzelnen Punkte abgespeichert, immer gleich angezeigt. Vergleicht man nun ein Bild mit 512 Pixeln und 3 RGB-Farbkanälen ist einer Dimension von 391680 erreicht. Vergleichen wir nun das mit einer Punktwolke in einen 125 cm \textsubscript{3} großen Bereich. Da die einzelen Koordianten eines Punktes als Rationale Zahlen dargestellt wird und rationalen Zahlen abzählbar Unendlich ist unser Suchraum Unendlich groß. Dies führt zu einen erheblichen mehr Aufwand für Machine Learning Ansätzen wie Deep Learning für Punktwolken.
+\\\\
+Ein weitere Schwierigkeit die für Deep Learning mit Punktwolken ist, dass die aus Kapitel Convolutional Neural Network beschrieben Convolutionel-Layer einen großen Beitrag bei den Fortschritt von Deep Learning gebracht hat. Da sie helfen die Strukturen von strukturierten Daten zu lernen und den latenten Raum zu entdecken. Da jedoch Pointclouds unstrukturiert sind hilft es nicht diese Tools bei Punktwolken einzusetzen\cite{3dgan}.  
 
 \subsection{Convolution Neural Networks}
 
@@ -348,81 +335,69 @@ Transposed Convolution, auch genannt Fractionally Strided Convolution oder Decon
 \end{figure}
 \newpage
 
-\subsection{Autoencoder}
+\subsection{Autoencoder}\label{sec:autoencoder}
 
-Autoencoder gehören zu den generativen Modellen im Bereich des Machine Learnings. Generative Modelle haben das Ziel eine Wahrscheinlichkeitsverteilungen zu erlernen. Anschließend kann diese als ein Modell genutzt werden und Samples aus dieser zu erzeugen. Die Modelle können dabei beispielsweise auf ANN oder Markov Chains trainiert werden\cite{Grundlagen}. Im folgenden liegt der Fokus auf ANNs. Allgemein gehalten können jegliche Typen von Daten wie Text, Bild oder Audiodateien für generative Modelle herangezogen werden. Es gibt unterschiedliche Typen von generativen Modellen, welche sich vom Aufbau des Neuronalen Netzwerk und der Zielfunktion unterscheiden. Beispiele dafür sind Boltzmann Maschine, Autoencoder oder Deep Belief Networks\cite{Grundlagen}. \\
-
-Autoencoder sind ein andere Art von Model aus den Bereich der generativen Modelle. Ihre Aufgabe besteht darin einen Input zu komprimieren und aus der komprimierten Information den Input wieder herzustellen. Die Technik auf welche Autoencoder zurückgreifen nennt sich Dimensionreduction. Dabei werden die Dimension der Daten so reduziert und Informationen bei zu behalten welche als relevant gelten. Diese Technik finden auch in anderen Machine Learning Anwendung wie in beispielsweise der Principale component anaysis(PCA) Anwendung.  Ein Autoencoder besteht aus 2 Bestandteilen. Erstens ein Encoder e parametrisiert mit $\phi$ welcher einen Input x $\in$ von $x\textsuperscript{i}$ wo x ein Vektor der länge i ist und damit die Input Dimension bestimmt. Dieser wird durch den Encoder auf einen Vektor $z\textsuperscript{k}$ abgebildet wobei k<i ist.  Zweitens der Decoder d parametrisiert durch  $\theta$ bekommt als Input t$z\textsuperscript{k}$ und bildet z auf $x\textsuperscript{l}$ ab wobei l = i. Und somit die gleiche Dimension wie der Input. Aufgabe ist es nun das der Encoder den Input z so gut komprimiert das der  Encoder es schafft das x $\thickapprox$ z. Eine grafische Darstellung kann aus Abb. $\ref{fig:Bild8}$ entnommen werden. 
+Autoencoder gehören zu den generativen Modellen im Bereich des Machine Learnings. Generative Modelle haben das Ziel eine Wahrscheinlichkeitsverteilungen zu erlernen. Anschließend kann diese als ein Modell genutzt werden und Samples aus dieser zu erzeugen. Die Modelle können dabei beispielsweise auf ANN oder Markov Chains trainiert werden\cite{Grundlagen}. Im folgenden liegt der Fokus auf ANNs. Allgemein gehalten können jegliche Typen von Daten wie Text, Bild oder Audiodateien für generative Modelle herangezogen werden. Es gibt unterschiedliche Typen von generativen Modellen, welche sich vom Aufbau des Neuronalen Netzwerk und der Zielfunktion unterscheiden. Beispiele dafür sind Boltzmann Maschine, Autoencoder oder Deep Belief Networks\cite{Grundlagen}. 
 \\\\
-Die Paramter $\phi$ und $\theta$ werden durch durch den in Kapitel "Backprobagation Algorithmus" erlernt. Und können beispielsweise durch Fully-Connected-Layer, Convolutional-Layer oder Deconvolutional-Layer modelliert werden. Eine Metrik um zu messen wie das Model seine Aufgabe erfüllt könnte Beispielsweiße Cross-Entropy Funktionen sein welche schon in Kapitel"" vorgestellt worden ist. Weitere spezifische Zielfunktionen für Autoencoder welche mit 3D-Daten arbeiten werden nun vorgestellt.
+Autoencoder sind ein andere Art von Model aus den Bereich der generativen Modelle. Ihre Aufgabe besteht darin einen Input zu komprimieren und aus der komprimierten Information den Input wieder herzustellen. Die Technik auf welche Autoencoder zurückgreifen nennt sich Dimensionreduktion. Dabei werden die Dimension der Daten so reduziert und Informationen bei zu behalten welche als relevant gelten. Diese Technik finden auch in anderen Machine Learning Anwendung wie in beispielsweise der Principale component anaysis(PCA) Anwendung\cite{dimreduction}.  Ein Autoencoder besteht aus 2 Bestandteilen. Erstens ein Encoder e parametrisiert mit $\phi$ welcher einen Input x $\in$ von $x\textsuperscript{i}$ wo x ein Vektor der Länge i ist und damit die Input Dimension bestimmt. Dieser wird durch den Encoder auf einen Vektor $z\textsuperscript{k}$ abgebildet wobei k<i ist. Zweitens der Decoder d parametrisiert durch  $\theta$ bekommt als Input $z\textsuperscript{k}$ und bildet z auf $x\textsuperscript{l}$ ab wobei l = i. Und somit die gleiche Dimension wie der Input. Aufgabe ist es nun das der Encoder den Input z so gut komprimiert das der Encoder es schafft das x $\thickapprox$ z. Eine grafische Darstellung kann aus Abb. $\ref{fig:Bild8}$ entnommen werden\cite{Grundlagen}. 
+\\\\
+Die Parameter $\phi$ und $\theta$ werden durch den in Kapitel \ref{sec:test} vorgestellten Algorithmus trainiert und erlernt. Und können beispielsweise durch Fully-Connected-Layer, Convolutional-Layer oder Deconvolutional-Layer modelliert werden. Eine Metrik um zu messen wie das Model seine Aufgabe erfüllt könnte Beispielsweiße die Cross-Entropy-Funktionen sein welche schon in Kapitel \ref{sec:Zielfunktion} vorgestellt worden ist. Weitere spezifische Zielfunktionen für Autoencoder welche mit 3D Punktwolken arbeiten und für die folgende Arbeit von belangen sind, werden nun vorgestellt.
 
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.0\textwidth]{autoencoder.png}
-	\caption{autoencoder}
+	\caption{Autoencoder}
 	\label{fig:Bild8}
 \end{figure}
-Bei Punktwolken als Datentyp erzielt die Cross-Entropy-Funktion keine gute Ergebnisse da diese invariant zu ihrer Permutation sind. Dies Da in der Arbeit der Input 3d Pointcloud sind und diese Sets  invariant zu ihren Permutationen sind\cite{3dgan}. Das heißt ändere ich die Anordnung meiner einzelnen Punkte in mein Set bleibt das Ergebnis unverändert.  Kann auf übliche Zielfunktionen welche für strukturierte Daten wie Bilder verwendet werden nicht zurück gegriffen. Das Problem dabei besteht das zwischen zwei unterschiedliche Sets von Punkten heraus zu finden wie hoch die Diskrepanz zwischen den beiden Sets ist. In Abbildung \ref{fig:Bild1} ist dieser Prozess dargestellt. Diese Modelle versuchen dann die diese Cost Funktion 
- http://graphics.stanford.edu/courses/cs468-17-spring/LectureSlides/L14%20-%203d%20deep%20learning%20on%20point%20cloud%20representation%20(analysis).pdf
 
-
-Eine weitere Möglichkeit speziell für Autoencoder welche mit Punktwolken arbeiten, ist die Earth Mover Distance(EMD). Bei dieser sind X\textsuperscript{1} und X\textsuperscript{2} zwei Punktwolken mit jeweils x\textsuperscript{n} definierten Punkten\cite{autoencoderloss}. Definiert ist sie durch die Funktion:
-
+Bei Punktwolken als Datentyp erzielt die Cross-Entropy-Funktion keine gute Ergebnisse da diese invariant zu ihrer Permutation sind. Dies Da in der Arbeit der Input 3d Pointcloud sind und diese Sets  invariant zu ihren Permutationen sind Das heißt ändere ich die Anordnung meiner einzelnen Punkte in mein Set bleibt das Ergebnis unverändert.  Kann auf übliche Zielfunktionen welche für strukturierte Daten wie Bilder verwendet werden nicht zurück gegriffen. Das Problem dabei besteht das zwischen zwei unterschiedliche Sets von Punkten heraus zu finden wie hoch die Diskrepanz zwischen den beiden Sets ist\cite{invariant}. 
+\\\\
+Eine Möglichkeit speziell für Autoencoder welche mit Punktwolken arbeiten, ist die Earth Mover Distance(EMD). Bei dieser sind X\textsubscript{1} und X\textsubscript{2} zwei Punktwolken mit jeweils x\textsubscript{n} definierten Punkten\cite{autoencoderloss}. Definiert ist sie durch die Funktion:
+\\\\
 \begin{math}
-d\textsuperscript{EMD}=\min_{\theta : X\textsubscript{1}\rightarrow X\textsubscript{2}}  \sum_{x\in X\textsubscript{1}} || x - \theta(x)\textsubscript{2} wobei \theta: X\textsubscript{1} \rightarrow X\textsubscript{2} bijektiv ist 
+d\textsuperscript{EMD}=\min_{\theta : X\textsubscript{1}\rightarrow X\textsubscript{2}}  \sum_{x\in X\textsubscript{1}}|| x - \theta(x)||\textsubscript{2} \;wobei\;\theta: X\textsubscript{1} \rightarrow X\textsubscript{2}\, bijektiv\, ist 
 \end{math}
-
-Grafisch kann man sich die Berechnung wie in Abb. \ref{fig:Bild9} darstellen. Ein Punkt von x\textsuperscript{n} $\in$ X\textsuperscript{1} wird den nähsten Punkt y\textsuperscript{n} $\in$  X\textsuperscript{2} zugewiesen. Wobei die Distanz durch die Euklidische Distanz der jeweiligen Punkte ermittelt wird.
+\\\\
+Grafisch kann man sich die Berechnung wie in Abb. \ref{fig:Bild9} darstellen. Ein Punkt von x\textsubscript{n} $\in$ X\textsubscript{1} wird den nähsten Punkt y\textsubscript{n} $\in$  X\textsubscript{2} zugewiesen. Wobei die Distanz durch die Euklidische Distanz der jeweiligen Punkte ermittelt wird.
  
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.0\textwidth]{emd.png}
+	\includegraphics[width=0.5\textwidth]{emd_distance.png}
 	\caption{Earth Mover Distance}
 	\label{fig:Bild9}
 \end{figure}
 		
-Eine weitere Möglichkeit ist die Chamfer Distance(CD). Wie auch zuvor sind  X\textsuperscript{1} und X\textsuperscript{2} zwei Punktwolken mit jeweils x\textsuperscript{n} definierten Punkten\cite{autoencoderloss}. Definiert ist sie durch die Funktion:
-
+Eine weitere Möglichkeit ist die Chamfer Distance(CD). Wie auch zuvor sind  X\textsubscript{1} und X\textsubscript{2} zwei Punktwolken mit jeweils x\textsubscript{n} definierten Punkten\cite{autoencoderloss}. Definiert ist sie durch die Funktion:
+\\\\
 \begin{math}
-d\textsuperscript{CD}(X\textsubscript{1},X\textsubscript{2})=\sum_{x\in X\textsuperscript{1}} \min_{y \in X\textsuperscript{2}}||x-y|| + \sum_{y\in X\textsuperscript{2}} \min_{x \in X\textsuperscript{2}}||x-y||
+d\textsuperscript{CD}(X\textsubscript{1},X\textsubscript{2})=\sum_{x\in X\textsubscript{1}} \min_{y \in X\textsubscript{2}}||x-y|| + \sum_{y\in X\textsubscript{2}} \min_{x \in X\textsubscript{2}}||x-y||
 \end{math}
-
+\\\\
 Der Unterschied ergibt sich zwischen den beiden das bei der EMD von der Ausgangswolke die Punkte zu der anderen jeweils optimiert werden. Wohingegen bei der CD die Distanzen von und zu der Ausgangspunktwolke berechnet werden. Dies geht aus den Abb. \ref{fig:Bild10} hinaus in welche die Distanzberechnung der einzelnen Punkte dargestellt wird\cite{autoencoderloss}.
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.0\textwidth]{chamfer.png}
+	\includegraphics[width=0.5\textwidth]{champfer.png}
 	\caption{Chamfer Distance}
 	\label{fig:Bild10}
 \end{figure} 
-
+\newpage
 \subsection{Generative Adversarial Network}
-
-In Abbildung \ref{fig:Bild1} ist dieser Prozess dargestellt. Diese Modelle versuchen dann die diese Cost Funktion  
-\\
-\\
+In den letzten Jahren konnte sich das GAN als best practice Ansatz bei den generativen Modellen herausarbeiten was Performancegründe bei der Trainierbarkeit und Qualität der generierbaren Daten zu Grunde liegt\cite{Grundlagen}. Die Modelle arbeiten nach der Maximum Likelihood Schätzverfahren(ML-Schätzer) in dem die Parameter $\theta$ dahingegen angepasst werden, dass die unsere beobachtetet Daten am ehesten passen. Man kann ML-Schätzer als Kulback-Leibler(KL) Divergenz darstellen und das generative Modelle das Ziel haben die KL Divergenz zwischen den Trainingsdaten P\textsubscript{r} und den generierten Daten P\textsubscript{g} zu minimieren.Diese ist definiert durch:
+\\\\
 \begin{math}
-KL(P\textsubscript{r}|| P\textsubscript{g}])=\int_x P\textsubscript{r}log\frac{P\textsubscript{r}}{P\textsubscript{g}}dx                     
+KL(P\textsubscript{r}||P\textsubscript{g})=\int_x P\textsubscript{r}log\frac{P\textsubscript{r}}{P\textsubscript{g}}dx                     
 \end{math}
-\\
-\\
-zu minimieren. Wenn nun beide Verteilungen P\textsubscript{r} = P\textsubscript{g} sind, hat das Model sein Minimum Loss erreicht und $\Theta$ muss nicht mehr angepasst werden. Interessant wird es, wenn P\textsubscript{r} $\ne$ P\textsubscript{g}.
-Wenn  P\textsubscript{r} $>$ P\textsubscript{g} führt, das dazu dass das Integral schnell gegen unendlich konvergiert. Was dazuführt, das hohe Kosten entstehen wenn die  Verteilung von generativen Modell erzeugt, nicht die Daten abdeckt. Wenn nun  P\textsubscript{r} $<$ P\textsubscript{g} ist, dann bedeutet das, dass x eine niedrige Wahrscheinlichkeit hat aus unseren Trainingsdaten zu kommen aber eine hohe Wahrscheinlichkeit von den Generator erzeugt zu werden. Dann würde sich die KL gegen 0 konvergieren. Was zur Folge hat, dass der Generator Falsch ausschauende Daten geniert aber keine Kosten dafür erzeugt werden und im Umkehrschluss es zu keinen Veränderungen unseren $\Theta$ kommt. Man vermutet das dies der Grund für die Problematiken von generativen Modellen wie Autoencoder und CO sind. Dies ist aber noch kein abgeschlossenen Problem und wird weiterhin erforscht\cite{improvingan}.
-Unter GAN werden wir auf dieses Problem erneut aufgreifen und es wird gezeigt inwiefern sich GAN dieses Problem angeht. Generative Modelle gehören zu einem Bereich des unüberwachten Lernens, da keine Labels für die Trainingsdaten gebraucht werden. Probleme welche diese Modelle haben sind beispielsweise, dass Autoencoder zwar mit wenig Trainingsaufwand trainiert werden können jedoch sind die generierten Bilder sehr trüb. Allgemein haben Autoencoder und Co. Vorteile  im Lernen des latenten Raums von Objektlassen, weisen aber Probleme beim Generieren von neuen Daten auf. Da gezeigt wurde das im Deep Learning Bereich die discrimativen Modelle mit Zunahme der Daten stark an Leistung zunehmen. Und GANs Stärke in der Datengeneration in guter Qualität liegt. Kann es seine Vorteil gegenüber den anderen Modellen ausspielen\cite{improving}
-
-
-In den letzten Jahren konnte sich das GAN als best practice Ansatz bei den generativen Modellen herausarbeiten was Performancegründe bei der Trainierbarkeit und Qualität der generierbaren Daten zu Grunde liegt\cite{Grundlagen}. 
-Die Modelle arbeiten nach der Maximum Likelihood Schätzverfahren(ML-Schätzer) in dem die Parameter $\theta$ dahingegen angepasst werden, dass die unsere beobachtetet Daten am ehesten passen. Man kann ML-Schätzer als Kulback-Leibler(KL) Divergenz darstellen und das generative Modelle das Ziel haben die KL Divergenz zwischen den Trainingsdaten P\textsubscript{r} und den generierten Daten P\textsubscript{g} zu minimieren.
-
+\\\\
 Ein GAN besteht besteht aus zwei KNN, dem Discriminator D und dem Generator G. Das Ziel des G ist es, Daten x zu erzeugen, welche nicht von Trainingsdaten y unterschieden werden können. Dabei wird eine vorangegangene Input Noise Variable p\textsubscript{z}(z) verwendet, welche eine Abbildung zum Datenraum G(z;$\Phi$\textsubscript{g}) herstellt. Dabei sind $\Phi$\textsubscript{g} die Gewichte des neuronalen Netzwerkes von G. Der Discriminator hat die Aufgabe zu unterscheiden, ob der jeweilige Datensatz von G erzeugt wurde und somit ein fake Datensatz ist, oder von Trainingsdaten y stammt\cite{goodfellow2014}. Die Zusammensetzung zwischen den beiden Netzwerken kann aus Abbildung \ref{fig:Bild20} entnommen werden.
 \\
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.0\textwidth]{GAN_GRUNDAUFBAU.png}
+	\includegraphics[width=0.5\textwidth]{GAN_GRUNDAUFBAU.png}
 	\caption{Generativ Adverserial Network}
 	\label{fig:Bild20}
 \end{figure}
-
+\\
 Der Discriminator ist definiert durch D(x;$\Phi$\textsubscript{d}). Wobei $\Phi$\textsubscript{d} die Gewichte des Descriminators sind und D(x) die Wahrscheinlichkeit ist, dass x von den Trainingsdaten stammt und nicht von p\textsubscript{g}. Die Wahrscheinlichkeitsverteilung für unsere Trainingsdaten ist p\textsubscript{r}.  Im Training werden dann $\Phi$\textsubscript{d} so angepasst, dass die Wahrscheinlichkeit Trainingsbeispiele richtig zu klassifizieren maximiert wird. Und $\Phi$\textsubscript{g} wird dahingehen trainiert die Wahrscheinlichkeit zu minimieren, so dass D erkennt dass Trainingsdatensatz x von G erzeugt wurde. Mathematisch ausgedrückt durch log(1 - D(G(z))). Die gesamte Loss-Funktion des vanilla GAN ist definiert als
 \\\\
 \begin{math}
@@ -455,12 +430,11 @@ Ein möglicher Aufbau von GAN wird in Abbildung \ref{fig:Bild21} dargestellt. Di
 	\label{fig:Bild21}
 \end{figure}
 
-Wie unter Generativen Modellen gezeigt wurde kann das asymmetrische Verhalten der KV Divergenz zu schlechten Trainingsergebnissen führen. Goodfellow \cite{goodfellow2014} zeigte, dass sich die MinMax Loss-Funktion des GAN auch als Jensen-Shannon Divergenz(JS Divergenz) darstellen lässt. Diese ist definiert als\\
-
+Wie unter Generativen Modellen gezeigt wurde kann das asymmetrische Verhalten der KV Divergenz zu schlechten Trainingsergebnissen führen. Goodfellow \cite{goodfellow2014} zeigte, dass sich die MinMax Loss-Funktion des GAN auch als Jensen-Shannon Divergenz(JS Divergenz) darstellen lässt. Diese ist definiert als
+\\\\
 \begin{math} D\textsubscript{JS}(P\textsubscript{r}|| P\textsubscript{g}])=\frac{1}{2}D\textsubscript{KL}(P\textsubscript{r}|| \frac{P\textsubscript{g}+P\textsubscript{r}}{2}])+D\textsubscript{KL}(P\textsubscript{q}|| \frac{P\textsubscript{g}+P\textsubscript{r}}{2}])  
 \end{math}
-\\
-
+\\\\
 wobei P\textsubscript{r} die Wahrscheinlichkeitsverteilung der Trainingsdaten ist und P\textsubscript{g} die des Generators. Huzár \cite{sha} zeigte, dass durch das symmetrische Verhalten der JS Divergenz ein potentiell besseres Trainingsergebnis entstehen kann, im Vergleich zu der KL Divergenz. Damit zeigte er weshalb GANs im Vorteil gegenüber anderen generativen Modellen sind. Abbildung \ref{fig:Bild21} veranschaulicht dieses Konzept. Der linke Graph zeigt 2 Normal Verteilungen. In der Mitte wird die KV Divergenz der beiden Normal Verteilungen dargestellt.  Rechts ist die JS Divergenz der Beiden dargestellt. Man sieht sehr gut das asymmetrische Verhalten der KV und das symmetrische der JS. Dadurch lassen sich aussagekräftigere Gradianten bestimmen, welche zum Optimieren von D und G benötigt werden\cite{sha}. 
  
 \begin{figure}
@@ -470,67 +444,73 @@ wobei P\textsubscript{r} die Wahrscheinlichkeitsverteilung der Trainingsdaten is
 	\label{fig:Bild21}
 \end{figure}
 
-\subsubsection{Probleme mit Generative Adverserial Networks}
-
+\subsubsection{Probleme mit Generative Adverserial Networks}\label{sec:problemegan}
+~\\\\
 Wie auch anderen generativen Modelle haben auch GANs noch Schwächen bezüglich der Trainingsabläufe und der Qualität der generierten Daten. Im Folgenden wird auf einige Probleme eingegangen welche im darauffolgenden Kapitel Lösungsansätze aufgezeigt werden. 
-
+\\
 \begin{description}	
 
 \item[Equilibrium]
+~\\
 D und G betreiben ein MinMax Spiel. Beide versuchen das Nash Equilibrium zu finden. Dies ist der bestmögliche Endpunkt in einen nicht kooperativen Spiel. Wie in dem Fall von GAN wäre das wenn  p\textsubscript{g} = p\textsubscript{r}. Es wurde gezeigt, dass das Erreichen dieses Punktes sehr schwierig ist, da durch die Updates der Gewichte mit den Gradianten der Loss-Funktion starke Schwingungen der Funktion enstehen können. Dies kann zur Instabilität für das laufende Training führen \cite{improvingan}.   
 \\
 \item[Vanishing gradient]
+~\\
 Dies beschreibt das Problem, wenn D perfekt trainiert ist mit  D(x) = 1, $\forall \in p\textsubscript{r}$ und D(x)=0 $\forall x \in p \textsubscript{g}$. Die Loss-Funktion würde in diesem Fall auf 0 fallen und es gäbe keinen Gradianten, für den die Gewichte von G angepasst werden können. Dies verlangsamt den Trainingsprozess bis hin zu einem kompletten Stopp des Trainings. Würde D zu schlechten trainiert mit  D(x) = 0, $\forall \in p\textsubscript{r}$ und D(x)=1 $\forall x \in p \textsubscript{g}$. Bekommt G kein Feedback über seine Leistung bei der Datengeneration hat er keine Möglichkeit p\textsubscript{r} zu erlernen \cite{improvingan}.
 \\
 \item[Mode Collapse]
+~\\
 Während des Trainings von GAN kann es dazu kommen, dass der Generator möglicherweise auf eine Einstellung seiner Gewichte fixiert wird und es zu einem sogenannten Mode Collapse führt. Was zur Folge hat, dass der Generator sehr ähnliche Samples produziert \cite{wasserstein}.
 \\
 \item[Keine aussagegräftigen Evaluations Metriken]
+~\\
 Die Loss Funktion der GANs liefert keine aussagekräftigen Evaluationsmöglichkeit über den Fortschritt des Trainings. Bei  discriminativen Modellen im üblichen Maschine Learning besteht die Möglichkeit Validierungsdatensätze zu verwenden und an diesen die Genauigkeit des Modells zu testen. Diese Möglichkeit besteht bei GANs nicht\cite{metrics}.
 \end{description}
-\newpage
 
 \subsubsection{Lösungsansätze für Generative Adverserial Networks Probleme}
-
+~\\\\
 Nun werden einige Techniken aufgezeigt, welche die unter Abschnitt Probleme mit GAN genannten Schwierigkeiten angehen und zu einem effizienteren Training führen, damit eine schnellere Konvergenz während des Trainings erreicht wird.
+\\
 \begin{description}
 \item[Feature matching]
+~\\
 Dies soll die Instabilität von GANS verbessern und gegen das Problem des Vanishing Gradient angehen. G bekommt eine neue Loss-Funktion und ersetzt die des üblichen Vanilla GAN. Diese soll G davon abhalten, sich an D über zu trainieren und sich zu sehr darauf zu fokussieren, D zu täuschen und gleichzeitig auch versuchen die Datenverteilung der Trainingsdaten abzudecken\cite{improvingan}.\\
 
-\item[Minibatch discrimination] Um das Problem des Mode Collapse zu umgehen, so dass es nicht zu einem Festfahren der Gewichten von G kommt, wird beim Trainieren die Nähe von den Trainingsdatenpunkten gemessen. Anschließend wird die Summe über der Differenz aller Trainingspunkte genommen und dem Discriminator als zusätzlicher Input beim Training hinzugegeben \cite{improvingan}.\\
+\item[Minibatch discrimination] 
+~\\
+Um das Problem des Mode Collapse zu umgehen, so dass es nicht zu einem Festfahren der Gewichten von G kommt, wird beim Trainieren die Nähe von den Trainingsdatenpunkten gemessen. Anschließend wird die Summe über der Differenz aller Trainingspunkte genommen und dem Discriminator als zusätzlicher Input beim Training hinzugegeben \cite{improvingan}.\\
 
-\item[Historical Averaging] 
+\item[Historical Averaging]
+~\\
 Beim Training werden die Gewichte von G und D aufgezeichnet und je Trainingsschritt i verglichen. Anschließend wird an die Lossfunktion je Trainingschritt die Veränderung zu i-1 an die Loss-Funktion addiert. Damit wird eine zu starke Veränderung bei den jeweiligen Trainingsschritten bestraft und soll gegen ein Model Collapse helfen \cite{improvingan}.\\
 
 \item[One-sided Label Smoothing]
+~\\
 Die üblichen Label für den Trainingsdurchlauf von 1 und 0 werden durch die Werte 0.9 und 0.1 ersetzt. Dies führt zu besseren Trainingsergebnissen. Es gibt derzeit nur empirische Belege für den Erfolg, jedoch nicht weshalb diese Technik besser funktioniert\cite{improvingan}.\\
 
-\item[Adding Noises] 
+\item[Adding Noises]
+~\\
 Noise an den Input von D zu hängen kann gegen das Problem des Vanishing gradienten helfen und das Training verbessern\cite{improvingan}.\\
 
-\item[Use Better Metric of Distribution Similarity] 
-Die JS Divergenz von vanilla GAN sorgt für bessere Trainingsergebnisse im Vergleich zu der KL Divergenz von anderen generativen Modelle. Jedoch weißt die JS immernoch Probleme auf.  Es wird vorgeschlagen diese durch die Wasserstein Metric zu ersetzen, da diese bessere Ergebnisse bei disjunkten Wahrscheinlichkeitsverteilungen liefern kann\cite{improvingan}.\\
-
 \item[Wasserstein-GAN]
-
-Die Wasserstein Metric oder auch Earth Mover Distance genannt mist die Minimum Kosten welche enstehen wenn man Daten von der Datenverteilung $/alpha$ zur Datenverteilung $/omega$ überträgt werden. Es wird oft auch von Masse oder Fläche gesprochen, welche von $/alpha$ zu $/omega$ getragen wird. 
-
+~\\
+Die Wasserstein Metric oder auch Earth Mover Distance(EMD) genannt misst die Minimum Kosten welche entstehen wenn man Daten von der Datenverteilungp p\textsubscript{r} zur Datenverteilung p\textsubscript{g} überträgt. Es wird oft auch von Masse oder Fläche gesprochen, welche von p\textsubscript{r} zu p\textsubscript{g} getragen wird. Definiert ist sie durch:
+\\\\
 \begin{math} 
 $
 W(p\textsubscript{r},p\textsubscript{g})=$\inf_{\gamma\sim\prod(P\textsubscript{r},P\textsubscript{g})}$E\textsubscript{(x,y)$\sim\gamma$}[$\parallel$x - y$\parallel$]
 $
 \end{math}
-
-p\textsubscript{r} steht für die reale Datenverteilung zu welcher uns Daten zur Verfügung stehen und p\textsubscript{g} steht die generierte Datenverteilung. Dabei wird nun das Infinum von allen Möglichen Transportplänen $\gamma$ welche in $\prod$ enthalten sind ausgewählt. Vorteile sind unter anderem, dass der Gradiant gleichmäßiger ist und das WGAN lernt besser auch wenn der Generator schlechtere Daten erzeugt im Vergleich zum üblichen GAN.
-Durch die Kantorovich-Rubinstein Methode kann die Wasserstein-Distanz umgeformt werden in:
+\\\\
+p\textsubscript{r} steht für die reale Datenverteilung zu welche uns Daten im Form von Trainingsdaten zur Verfügung stehen und p\textsubscript{g} steht für die generierte Datenverteilung welche von einen Model erzeugt wird. Dabei wird nun das Infinum von allen möglichen Transportplänen $\gamma$ welche in $\prod$ enthalten sind ausgewählt, welche der kostenkünstige Plan ist die Daten von p\textsubscript{g} zu p\textsubscript{r} zu übertragen. Vorteile sind unter anderem, dass der Gradient gleichmäßiger ist und das WGAN lernt besser auch wenn der Generator schlechtere Daten erzeugt im Vergleich zum üblichen GAN\cite{wasserstein}. Durch die Kantorovich-Rubinstein Methode kann die Wasserstein-Distanz umgeformt werden in zu:
+\\\\
 \begin{math} 
 $
 W(p\textsubscript{r},p\textsubscript{$\theta$})=$\sup_{\parallel f \parallel \textsubscript{L}\leq 1}$ E\textsubscript{x$\sim$P\textsubscript{r}}[f(x)] - E\textsubscript{x$\sim$P\textsubscript{$\theta$}}[f(x)]
 $
 \end{math}
-
-Durch diese Umformung ist es nun Möglich das GAN so zu gestalten durch die Funktion zu erlernen. Dabei übernimmt der Discriminator nun die Aufgabe eines Critic welcher nun nicht mehr 0 oder 1 für Fake oder Real ausgibt sondern einen Score welcher angibt wieviel Masse von der P\textsubscript{$\theta$} umverteilt werden muss damit der Generator bessere Ergebnisse liefert. 
-EVTL lern algortithmus hier:
+\\\\
+Durch diese Umformung ist es nun Möglich das GAN die EMD nutzt um die von G generierten Daten mit den realen Daten zu vergleichen. Dabei übernimmt der Discriminator nun die Aufgabe eines Critic welcher nun nicht mehr 0 oder 1 für Fake oder Real ausgibt sondern einen Score welcher angibt wieviel Masse von der P\textsubscript{$\theta$} umverteilt werden muss damit der Generator bessere Ergebnisse liefert. Das Wasserstein GAN liefert bis dahin die erfolgreichste Verbesserung zum üblichen Vanilla-GAN von Goodfellow und erlaubt es gegen die in Kapitel \ref{sec:problemegan} aufgezeigten Probleme Vanishing gradient und Model Collapse anzugehen\cite{wasserstein}. 
 \end{description}
 
 \subsection{Conditional-GAN}
@@ -538,85 +518,99 @@ EVTL lern algortithmus hier:
 Conditional-GAN(C-GAN) ist eine Modifikation des ursprünglichen GAN von Goodfellow, welches erlaubt bedingte Wahrscheinlichkeiten in Datensätze zu erlernen. Das heißt zusätzliche Informationen in den Lernprozess einzuspeisen um den Output zu modifizieren. Im ursprünglichen GAN gibt es keine Möglichkeit auf den Output des Generators Einfluss zu nehmen. Dabei wird das Modell so verändert das eine zusätzliche Information y als Input in den Discriminator und Generator zugefügt wird. Dabei kann y jegliche Information sein wie Label, Bilddaten oder 3D-Daten. Dem entsprechend muss die Zielfunktion dahin gehen angepasst werden bedingte Wahrscheinlichkeiten zu lernen
 \\\\
 \begin{math}
-min\textsubscript{G} max\textsubscript{D}V(D,G)=E\textsubscript{x$\sim$p\textsubscript{data}(x)}[logD(x|y)]  + E\textsubscript{z$\sim$p\textsubscript{z}(z)}[log(1-D(G(z|y))]
-\\\\             
+min\textsubscript{G} max\textsubscript{D}V(D,G)=E\textsubscript{x$\sim$p\textsubscript{data}(x)}[logD(x|y)]  + E\textsubscript{z$\sim$p\textsubscript{z}(z)}[log(1-D(G(z|y))]          
 \end{math}
-
-Im Abb. \ref{fig:Bild20} kann der Informationsfluss und die Konnektivät der einzelnen Module entnommen werden. Die Module Generator und Discriminator bleiben gleich und können von ihren Aufbau für die jeweiligen Datentyp verändert werden und Beispielsweiße durch Convolutional-Layer, Deconvolutional-Layer oder Fully-Connected-Layer bestehen.\cite{dcgan}.
+\\\\
+Im Abb. \ref{fig:Bild38} kann der Informationsfluss und die Konnektivät der einzelnen Module entnommen werden. Die Module Generator und Discriminator bleiben gleich und können von ihren Aufbau für die jeweiligen Datentyp verändert werden und Beispielsweiße durch Convolutional-Layer, Deconvolutional-Layer oder Fully-Connected-Layer bestehen.\cite{dcgan}.
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{cgan.png}
+	\includegraphics[width=0.5\textwidth]{cgan.png}
 	\caption{Conditional Adverserial Network}
-	\label{fig:Bild20}
+	\label{fig:Bild38}
 \end{figure}
 
-\subsection{3D-GAN}
+\subsection{3D-GAN}\label{sec:3dgan}
 
 Das besondere an den 3D Raum im Vergleich zu Normalen 2D Bildern ist die Steigerung der Dimension und zu gleich der hohe Informationsgehalt welcher in 3D Objekten steckt. Das Ziel von 3D-GAN ist es die Datenverteilung der zugrunde liegenden 3D-Modellen zu erlernen. Dabei wird der latente Objektraum erfasst und soll dadurch die Wahrscheinlichkeiten für einzelne Objektklassen enthalten. 
-\\
+\\\\
 Es wurden schon mehrere Versuche von generativen Modellen auf 3D Daten durchgeführt wie von Wu, Jiajun und Zhang \cite{3d} welche in ihren Modell mit mit 3D-Voxel Daten arbeiten und damit ein GAN trainiert haben oder Achlioptas, Panos und Diamanti\cite{3dgan} welche ein GAN auf Punktwolken trainiert. Da in folgender Arbeit die 3D-Daten durch Punktwolken dargestellt werden wird die Arbeit von Achlioptas, Panos und Diamanti näher beleuchtet.
-\\
-Die Architektur des typischen 3D-GAN in dieser Arbeit als RAW-GAN betitelt ist dem Vanilla GAN von Goodfellow ähnlich. Der Input Layer ist ein Fully-Connected Layer welcher der Anzahl der Punkte je Punktwolke * 3 entspricht. Dieser bekommt als Input einen Noise-Vektor welcher aus einer Gausischen Verteilung entnommen wird und durch mehrere Layern gereicht bis hin zum Output Layer welche die Anzahl der gewünschten Punkte besteht. Also Zielfunktion kann mit der KL-Zielfunktion gearbeitet werden oder mit der Wasserstein Metrik welche im Versuchsaufbau von Achlioptas, Panos und Diamanti besser Ergebnissee geliefert hat. Der Aufbau unterscheidet sich nicht von Vanilla-GAN. 
-\\
-Eine weitere Möglichkeit ist das Latent-GAN, dieses benutzt eine andere Aufbau gegenüber dem RAW-GAN, welches dabei helfen soll den latenten Raum der Objekte zu erlernen. Zunächst wird ein Autoencoder mit den vorhanden Trainingsdaten(siehe Autoencoder) trainiert. Der Aufbau ist der selbe einen üblichen Autoencoder beschrieben in Kapitel "Autoencoder". Ziel dabei ist den latenten Raum der Trainingsdaten zu erlernen und eine Kompression der Daten um den Suchraum zu  welcher beim RAW-GAN durch die Inputdimension gegeben ist zu verringern und dadurch das Training des GANs zu erleichtern. 
-\\
-Bevor das Training des Latent-GAN beginnen kann wird nun meine Trainingsdaten durch den vorher trainierten Encoder des 3D-Autoencoder auf die festgelegte Output-Dimension komprimiert. Anschließend werden diese komprimierten Daten verwendet um das GAN zu trainierten. Dabei erlernt das GAN komprimierte Code zu produzieren welche anschließend durch den Decoder des 3D-Autoencoder wieder auf die ursprüngliche Größe gebracht werden kann. Durch dieses Verfahren war es ihnen Möglich Daten in einer guten Qualität zu produzieren und eine Datenverteilung des zugrundeliegenden Models zu erlernen. Der gesamte Ablauf kann in \ref{fig:Bild30} entnommen werden. 
+\\\\
+Die Architektur des typischen 3D-GAN in dieser Arbeit als RAW-GAN betitelt ist dem Vanilla GAN von Goodfellow ähnlich. Der Input Layer ist ein Fully-Connected Layer welcher der Anzahl der Punkte je Punktwolke * 3 entspricht. Dieser bekommt als Input einen Noise-Vektor welcher aus einer Gausischen Verteilung entnommen wird und durch mehrere Layern gereicht bis hin zum Output Layer welche die Anzahl der gewünschten Punkte besteht. Also Zielfunktion kann mit der KL-Zielfunktion gearbeitet werden oder mit der Wasserstein Metrik welche im Versuchsaufbau von Achlioptas, Panos und Diamanti besser Ergebnissee geliefert hat. Der Aufbau unterscheidet sich nicht von Vanilla-GAN\cite{3dgan}. 
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{3dgan.png}
+	\includegraphics[width=0.5\textwidth]{latentgan.png}
 	\caption{Latent-GAN}
-	\label{fig:Bild30}
+	\label{fig:Bild39}
 \end{figure}
-\cite{3d}
 
-\subsection{Rekonstruktion von Daten}
+Eine weitere Möglichkeit ist das Latent-GAN, dieses benutzt eine andere Aufbau gegenüber dem RAW-GAN, welches dabei helfen soll den latenten Raum der Objekte zu erlernen. Zunächst wird ein Autoencoder mit den vorhanden Trainingsdaten(siehe Autoencoder) trainiert. Der Aufbau ist der selbe einen üblichen Autoencoder beschrieben in Kapitel \ref{sec:autoencoder}. Ziel dabei ist den latenten Raum der Trainingsdaten zu erlernen und eine Kompression der Daten um den Suchraum zu  welcher beim RAW-GAN durch die Inputdimension gegeben ist zu verringern und dadurch das Training des GANs zu erleichtern\cite{3dgan}. 
+\\\\
+Bevor das Training des Latent-GAN beginnen kann wird nun meine Trainingsdaten durch den vorher trainierten Encoder des 3D-Autoencoder auf die festgelegte Output-Dimension komprimiert. Anschließend werden diese komprimierten Daten verwendet um das GAN zu trainierten. Dabei erlernt das GAN komprimierte Code zu produzieren welche anschließend durch den Decoder des 3D-Autoencoder wieder auf die ursprüngliche Größe gebracht werden kann. Durch dieses Verfahren war es ihnen möglich Daten in einer guten Qualität zu produzieren und eine Datenverteilung des zugrundeliegenden Models zu erlernen. Der gesamte Ablauf kann in \ref{fig:Bild39} entnommen werden\cite{3dgan}. 
 
-Derzeit setzt Deep Learning neue Maßstäbe bei der Rekonstruktion von Daten wie Bildern oder Texte. Bei der Rekonstruktion geht es darum das Daten welche von ihren Urzustand verändert wurden, sei es durch Artefakte oder manuelle Bearbeitung wieder dahin zurück zu führen. In Abbildung ist eine Rekonstruktion eines Bildes dargestellt welches eine Umwandlung von DA NACH DA ZEIGT. Deep Learning hat in diesen Bereich besonders bei Bilder große Erfolge erlangt, dadurch das diese als Matrizen dargestellt werden können und dadurch eine hervorragende Datenstruktur liefern um damit durch ANN und Deep Learning zu arbeiten können dort in den letzten Jahren Erfolge erzielt werden. Auch durch Bearbeitung mit Convolutionen-Layer auf Bilddaten zählt als großer Erfolg für die Weiterverarbeitung\cite{imagerecon}. Durch die genannten Methoden werden bessere Strukturen für das jeweilige Ziel, in diesem Fall der Rekonstruktion gelernt und ermöglicht es wie in verschieden Papern gezeigt[HIER EIN PAAR AUFLIESTEN] Rekonstruktion von Bildern zu erstellen. Rekonstruktion auf 3D-Daten wurde von Yi, Li und Shao \cite{3d_recon} durchgeführt diese Arbeiteten beinhaltet jedoch die Rekonstruktion von 2D Bildern auf 3D Modellen. Bei wurde mit Hilfe von Autoencoder gearbeitet welche auf für die folgenden Arbeit von Bedeutung sind.\cite{3d_recon}. 
 
+
+\subsection{Rekonstruktion von Daten}\label{sec:rekdaten}
+
+Derzeit setzt Deep Learning neue Maßstäbe bei der Rekonstruktion von Daten wie Bildern oder Texte. Bei der Rekonstruktion geht es darum das Daten welche von ihren Urzustand verändert wurden, sei es durch Artefakte oder manuelle Bearbeitung wieder dahin zurück zu führen. In Abb. \ref{fig:Bild40} ist eine Rekonstruktion eines Bildes dargestellt welches eine Wiederherstellung eines Hundes zeigt. Deep Learning hat in diesen Bereich besonders bei Bilder große Erfolge erlangt, dadurch das diese als Matrizen dargestellt werden können liefern sie eine Datenstruktur auf welche KNN arbeiten können. Auch durch Bearbeitung mit Convolutionen-Layer auf Bilddaten zählt als Erfolg für die Weiterverarbeitung\cite{imagerecon}. Durch die genannten Methoden werden bessere Strukturen für das jeweilige Ziel, in diesem Fall der Rekonstruktion gelernt und ermöglicht es wie in verschieden Papern wie \cite{imagere1}  welche auf super-hochauflösenden Bildern Artefakte entfernt und das Bild wieder zum Urzustand zurück führt.
+\\\\
+Ebenso wie die Arbeit von Liu, Gulin und Reda \cite{imagere2} welche ähnliche Ergebnisse liefern konnte. Rekonstruktion auf 3D-Daten wurde von Yi, Li und Shao \cite{3d_recon} durchgeführt diese Arbeiteten beinhaltet jedoch die Rekonstruktion von 2D Bildern auf 3D Modellen. Bei wurde mit Hilfe von Autoencoder gearbeitet welche auf für die folgenden Arbeit von Bedeutung sind.\cite{3d_recon}. 
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.6\textwidth]{imagere.png}
+	\caption{Bild Rekonstruktion eines Hundes welches durch ein Artefakt zerstört wurde}
+	\label{fig:Bild40}
+\end{figure}
+\newpage
 \section{Methoden}
-In diesen Kapitel werden die Methoden für die Versuchsaufbauten aufgezeigt welche die Ziele 1 - 3 überprüfen sollen. Es wird zunächst ein generelle Struktur des Aufbaus besprochen und anschließend auf spezifische gegebeneingeganngen. Außerdem werden die spezifischen Datensätze für die jeweiligen Datensätze aufgezeigt und ihre enstehung erläutert. Alle Versuche wurden auf einen Computer mit Ubuntu 14.05 Betriebssystem mit einen IntelR CoreTM i7-7700k mit 4.50GHz einer Geforce GTX 1089 mit 8G Grafikspeicher. Training und Testen wurden mit CUDA 9.0 und cudNN 7.1.1.
+In diesen Kapitel werden die Methoden für die Versuchsaufbauten aufgezeigt welche die Ziele 1 und 2 überprüfen sollen. Dabei geht es darum ob mit hilfe von GAN der latente Objektraum eines Tabakblattes gelernt werden kann und anschließend durch den Generator des GAN Tabakblätter erzeugt werden können.Dieses Versuchsaufbau wird in Kapitel \ref{sec:versuch1-aufbau} behandelt. Die dazugehörigen Trainingsdaten werden in Kapitel \ref{sec:versuch1-traingsdaten} vorgestellt. Beim Ziel 2 soll überprüft werden ob mit Hilfe von GAN es möglich ist Artefakte von Tabakblätter zu entfernen und den Urzustand wieder her zustellen.  Dieses Verfahren wurde in Kapitel \ref{sec:rekdaten} beschrieben. Die Trainingsdaten für diesen Versuchsaufbau können aus Kapitel \ref{sec:versuch2_daten} entnommen werden. Alle Versuche wurden auf einen Computer mit Ubuntu 14.05 Betriebssystem mit einen IntelR CoreTM i7-7700k mit 4.50GHz einer Geforce GTX 1080 mit 8G Grafikspeicher. Training und Testen wurden mit CUDA 9.0 und cudNN 7.1.1. . Also Programmiersprache wurde Python 2.7 bzw. 3.5 für Datengenerierung. Also ANN Libary wurde Tensorflow 1.5 genutzt.
 
-\subsection{Aufbau}
-\subsubsection{Datensatz 1. Versuchsaufbau}
-Der erste Datensatz "Stühle" besteht aus 4014 Punktwolken mit je 2056 Punkten. Der Datensatz wurde aus von den Shapenet Datensatz entnommen. Ein Beispielpunktwolke kann aus Abbildung entnommen werden. Er ist als .ply Datenformat abgespeichert. 
+\subsection{Datensatz 1. Versuchsaufbau}\label{sec:versuch1-traingsdaten}
+~\\\\
+Der erste Datensatz "Stühle" besteht aus 4014 Punktwolken mit je 2056 Punkten. Der Datensatz wurde aus von den Shapenet Datensatz entnommen. Ein Beispielpunktwolke kann aus Abbildung entnommen werden. Er ist als .ply Datenformat abgespeichert. Dieser Datensatz wurde von \cite{3dgan} verwendet welches auch schon in Kapitel \ref{sec:3dgan} vorgestellt wurde dieser dient als Validierungsdatensatz um die Qualität der generierten Daten des GAN welches mit Tabakblättern trainiert wurde mit den welches die Stuhldaten bekommt zu vergleichen. 
 
- Die Daten für den zweiten Datensatz "Blätter" stammen vom Fraunhofer Institut. Der Grunddatensatz bestand aus mehreren 3D-Scans von Tabakpflanzen bei den die Blätter der Pflanze zu einen Datensatz zusammengefügt wurden sind. Der "Blätter" Datensatz besteht aus 420 Punktwolken mit je 2056 Punkten. Er ist als .ply Datenformat abgespeichert.
+Die Daten für den zweiten Datensatz "Blätter" stammen vom Fraunhofer Institut deren Gewinnung wurde in Kapitel \ref{sec:punktwolken} beschrieben. Der Grunddatensatz bestand aus mehreren 3D-Scans von Tabakpflanzen bei den die Blätter der Pflanze zu einen Datensatz zusammengefügt wurden sind. Der "Blätter" Datensatz besteht aus 420 Punktwolken welche dann durch ein Verfahren auf jeweils 2056 Punkten je Punktwolke reduziert wurden ist. Aus Komplexitätsgründen wurden die Farbchannels außen vor gehalten um den Informationsgehalt der Daten zu reducieren und ein Training zu vereinfachen. Außerdem spielen Farben bei den derzeitigen Ziel der Arbeit, Rekonstruktion von Tabakblättern keine rolle und nehmen keinen Einfluss auf die Verwendbarkeit des Ergebnisses. Abgespeichert werden die Daten im .ply Datenformat.
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{plant.png}
+	\includegraphics[width=0.5\textwidth]{plant.png}
 	\caption{3D Punktwolke einer Tabakpflanze}
-	\label{fig:Bild2}
+	\label{fig:Bild50}
 \end{figure}
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{leaf1.png}
+	\includegraphics[width=0.5\textwidth]{leaf1.png}
 	\caption{3D Punktwolke einer Tabakpflanze}
-	\label{fig:Bild2}
+	\label{fig:Bild51}
 \end{figure}
-
-\subsubsection{Datensatz 2. Versuchsaufbau}
-
+\newpage
+\subsection{Datensatz 2. Versuchsaufbau}\label{sec:versuch2_daten}
+~\\\\\
 Für den zweiten Versuchsaufbau wird auf den in Datensatz Versuchsaufbau 1. Blatt Datensatz "Blätter" zurück gegriffen. Dabei wird in den Blättern punkte heraus genommen welche das verdecken oder zerstört sein eines Blattes simulieren soll. Dies passiert indem eine Gäußverteilung auf einer 3D-Sphere erzeugt wird. Anschließend wird das Komplement zwischen einem 3D-Blatt und einer 3D-Sphere berechnet das Ergebnis sind zerstörte Blätter mit Kreisrunden Löchern auf der Oberfläche. Der Algrorithmus zum erzeugen der Trainingsdaten kann im Anhang entnommen werden. In Abbildung sind die 3 Abschnitte zu erkennen wie die Trainingsdaten erzeugt werden. 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{leaf1.png}
+	\includegraphics[width=0.5\textwidth]{leaf1.png}
 	\caption{3D Punktwolke einer Tabakpflanze}
 	\label{fig:Bild2}
 \end{figure}
 
 Insgesamt besteht der Trainingsdatensatz aus 450 unzerstörten Blättern sowie 1024 zerstörten paaren. 
-\subsubsection{Trainingsaufbau 1 - GAN}
-Der Aufbau besteht aus zwei unterschiedlichen Versuchen. Aufbau 1 ist der RAW - GAN Aufbau. Dabei wird auf den herkömmlichen Aufbau von GAN zurückgegriffen. Die Algemeinen Meta-Trainingsvariablen sind Learningrate mit 0,005 und einen AdamOptimizer, mit einem Beta1 von 0.5 und einem Beta2 von 0,5Der Discriminator besteht aus 4-Layern welche 1-Dimensionaler Convolutional Layer bestehen. Mit einer Kernel Größe von 1 und stride von 1. Die Aktivierungsfunktion sind Relus. Darauf folgt 3 fully connected Layer mit der Größe 128, 54 und 1 alle mit einer Relu Aktivierungsfunktion.
+
+\subsection{Trainingsaufbau 1 - GAN}\label{sec:versuch1-aufbau}
+
+Der Aufbau besteht aus zwei unterschiedlichen Versuchen. Aufbau 1 ist das RAW-GAN. Dabei wird auf den herkömmlichen Aufbau von GAN zurückgegriffen. Die Algemeinen Meta-Trainingsvariablen sind Learningrate mit 0,005 und einen Adam Optimizer welcher zu den stochastischen Gradient Descent Verfahren aus Kapitel \ref{sec:test} und dabei auf das aus Kapitel \ref{sec:momentum} zurückgreift, mit einem Beta1 von 0.5 und einem Beta2 von 0,5. Die Batchgröße beträgt 64. Der Discriminator besteht aus 4-Layern welche 1-Dimensionaler Convolutional Layer bestehen. Mit einer Kernel Größe von 1 und Stride von 1. Die Aktivierungsfunktion wird die ReLu-Funktion genutzt. Darauf folgen 3 fully connected Layer mit der Größe 128, 54 und 1 alle mit einer Relu Aktivierungsfunktion.
 \\
-Der Generator besteht auf 5 fully-connected Layern mit [64,128,512,1024,1536] neuronen jeweils mit einer Relu Aktivationsfunktion. Der Aufbau kann in Abbildung entnommen werden. Die Zielfunktion ist die Wasserstein Metric und die übliche GAN Zielfunktion. 
+Der Generator besteht auf 5 fully-connected Layern mit [64,128,512,1024,1536] Neuronen jeweils mit einer Relu Aktivationsfunktion. Der Aufbau kann in Abbildung entnommen werden. Die Zielfunktion ist die Wasserstein Metric und die Vanila-GAN Zielfunktion von Goodfellow verwendet\cite{goodfellow2014}. 
+\\
+Der Versuchsaufbau 2 ist das Latent-GAN welches kurz in Kapitel \ref{sec:3dgan} vorgestellt wurde. Zunächst wird dabei der Autoencoder mit den Trainingsdaten trainiert. Der Encoder des Autoencoders wird mit einer Learning Rate von 0.0005 trainiert und einer Batchgröße von 50. Der Encoder besteht dabei besteht dabei aus 4 1-D Convolutional Layern mit 64,128,246,1024] Filtern Stride von 1 und Size von 1. Die Activierungsfunktion ist relu. Der Letzte Layer ist ein Max Layer. Der Decoder besteht aus aus [256,256,[614]. 
 
-Der Versuchsaufbau 2ist das Latent-GAN zunächst wird dabei der Autoencoder mit den Trainingsdaten trainiert. Der Encoder des Autoencoders wird mit einer Learning Rate von 0.0005 trainiert. und einer Batch Größe von 50. Der Encoder besteht dabei besteht dabei aus 4 1-D Convolutional Layern mit 64,128,246,1024] Filtern Stride von 1 und Size von 1. Die Activierungsfunktion ist relu. Der Letzte Layer ist ein Max Layer. Der Decoder besteht aus aus [256,256,[614]
+Das GAN hat einen Generator mit [128,128] fully-connected Layer welche als Aktivierungsfunktion eine ReLu-Funktion benutzen. Der Discriminator besteht aus [128,64,1] Fully-Connected Layern welche ebenfalls ReLu-Funktion nutzen. 
 
 
-\subsubsection{Trainingsaufbau 2 - CGAN für Punktwolkenrekunstroktion }
+\subsection{Trainingsaufbau 2 - CGAN für Punktwolkenrekunstroktion }\label{sec:versuch2-aufbau}
+~\\\\
 
 Da sich im Trainingsaufbau 1 das L-GAN bessere Ergebnisse liefert bei erlernen von Punktwolken Daten. Wird der Aufbau von L-GAN übernommen und dahin gehen verändert, das Ziel zu erfüllen. Zunächst werden wie bei Trainingsaufbau 1 die Trainingsdaten(siehe Trainingsdaten Aufbau 2) trainiert. Der Aufbau des Autoencoder ist dabei gleich dem von Aufbau 1. Der Encoder des Autoencoders wird mit einer Learning Rate von 0.0005 trainiert. und einer Batch Größe von 50. Der Encoder besteht dabei besteht dabei aus 4 1-D Convolutional Layern mit 64,128,246,1024] Filtern Stride von 1 und Size von 1. Die Activierungsfunktion ist relu. Der Letzte Layer ist ein Max Layer. Der Decoder besteht aus aus [256,256,[614]. Die Zielfunktion ist die Champfer Disdance  da sie die besten Ergebnisse bei citiere PGAN besten geliefert hat.\\
 
@@ -625,7 +619,10 @@ Das selbe wird mit den unzerstörten Blattdaten x`gemacht welche mit den Encoder
 
 Der Aufbau des C-GANS entspricht der in im 3.4 beschrieben C-GAN üblichen Aufbau. der Generator bekommt als Input x' und x welches einen 128-D Vektor welcher aus einer Gausischen Verteilung gesamplet wird. Der Generator besteht aus 3 layern [256,128,128] der Diskriminator besteht aus 2 fully Connectected Layer mit der Größe [128,128]\\ Bei generator und Diskriminator wird beim Trainieren jeweils Batchnormalization eingesetzt. 
 
-Als Zielfunktion wird wieder das W-GAN verwendet da es im Versuchsaufbau 1 die besseren Ergebnisse liefert. \section{Evaluation und Ergebnise}
+Als Zielfunktion wird wieder das W-GAN verwendet da es im Versuchsaufbau 1 die besseren Ergebnisse liefert. 
+
+
+\section{Evaluation und Ergebnise}
 Es wird nun in diesen Kapitel auf die Ergebnisse von Versuchsaufbau 1 und 2 eingeganngen. Zunächst wird Versuchsaufbau 1 mit des erlernen von latenten Raum von Punktwolken gezeigt. Anschließend geht es um die Ergebnisse von Versuchsaufbau 2 für die Rekunstruntion von zerstörten Blättern. 
 
 \subsection{Ergebnisse - Versuchsaufbau 1}
@@ -758,8 +755,6 @@ Die Ergebnisse für das Latent-GAN mit den Tischdaten welches zunächst für 500
 	\label{fig:Bild44}
 \end{figure}
 
-
-
 \section{Zusammenfassung und Diskussion }
 Ein GAN besteht aus zwei ANN, dem Discriminator und dem Generator. Das Ziel des G ist es Daten zu erzeugen, welche nicht von Trainingsdaten unterschieden werden können. Der Discriminator hat die Aufgabe zu unterscheiden ob der jeweilige Datensatz von G erzeugt wurde und somit ein fake Datensatz ist, oder von den Trainingsdaten stammt\cite{goodfellow2014}. GANs werden derzeit noch erforscht. Es gibt noch einige offene Fragen, beispielsweise bezüglich der Performance hochauflösender Bilder\cite{ende}. Es wurden in diesem Paper einige Probleme, welche beim Trainieren von GAN auftreten können und mögliche Lösungsansätze, vorgestellt. Es gibt derzeit einige praktische Ansätze, welche in der Anwendung auf GANs zurück greifen. Beispielsweise durch Textbeschreibung eigene Bilder als Output generiert werden \cite{texttoimage}, oder 3D Daten erzeugt werden\cite{3dgan}. GANs finden Anwendung in unterschiedlichen Bereichen des Deep Learnings, da sie als Lösung des Problems angesehen werden, dass Neuronale Netzwerke eine hohe Menge an Trainingsdaten benötigen und GANs dieses Problem durch ihre Fähigkeit, neue Daten zu generieren, umgehen. GANs lernen eine Art "verstecke" Repräsentation von Klassen, was dazu beitragen kann auch Modelle von komplexen Prozessen zu erlernen. Es gibt erste Ansätze bei denen im Reinforcement Learning durch GANs versucht wird Modelle von der Umwelt eines Agenten zu erlernen, welche dann auf Grundlage dieser Modelle Vorhersagen über zukünftige Ereignisse treffen kann\cite{reinforcment}.
 \newpage
@@ -768,6 +763,5 @@ Ein GAN besteht aus zwei ANN, dem Discriminator und dem Generator. Das Ziel des 
 \listoftables
 \newpage
 \bibliographystyle{apacite}
-\bibliography{mybib.bib}
-
+\bibliography{mybib}
 \end{document}

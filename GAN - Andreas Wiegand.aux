@@ -20,19 +20,14 @@
 \AC@reset@newl@bel
 \providecommand \oddpage@label [2]{}
 \babel@aux{english}{}
-\@writefile{toc}{\contentsline {chapter}{Table of Contents}{1}{chapter*.1}}
-\newacro{KDE}[\AC@hyperlink{KDE}{KDE}]{K Desktop Environment}
-\newacro{SQL}[\AC@hyperlink{SQL}{SQL}]{Structured Query Language}
-\newacro{Bash}[\AC@hyperlink{Bash}{Bash}]{Bourne-again shell}
-\newacro{JDK}[\AC@hyperlink{JDK}{JDK}]{Java Development Kit}
-\newacro{VM}[\AC@hyperlink{VM}{VM}]{Virtuelle Maschine}
-\newacro{CGAN}[\AC@hyperlink{CGAN}{CGAN}]{C}
-\newacro{PIX2PIX}[\AC@hyperlink{PIX2PIX}{PIX2PIX}]{I}
+\newacro{C-GAN}[\AC@hyperlink{C-GAN}{C-GAN}]{C}
+\newacro{EMD}[\AC@hyperlink{EMD}{EMD}]{E}
+\newacro{KNN}[\AC@hyperlink{KNN}{KNN}]{K}
 \babel@aux{german}{}
-\@writefile{toc}{\contentsline {title}{3-D Datenrekonstruktion mit generative Adverserial Networks}{3}{chapter.1}}
+\@writefile{toc}{\contentsline {title}{3-D Datenrekonstruktion mit generative Adverserial Networks}{2}{chapter.1}}
 \@writefile{toc}{\authcount {1}}
-\@writefile{toc}{\contentsline {author}{Andreas Wiegand}{3}{chapter.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Einleitung}{3}{section.1.1}}
+\@writefile{toc}{\contentsline {author}{Andreas Wiegand}{2}{chapter.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Einleitung}{2}{section.1.1}}
 \citation{Grundlagen}
 \citation{discrim}
 \citation{discrim}
@@ -43,192 +38,251 @@
 \citation{discrim}
 \citation{goodfellow2014}
 \citation{data}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Objectives}{4}{subsection.1.1.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Outline}{5}{subsection.1.1.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Grundlagen und \IeC {\"a}hnliche Arbeiten}{5}{section.1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Objectives}{3}{subsection.1.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Outline}{4}{subsection.1.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Grundlagen und \IeC {\"a}hnliche Arbeiten}{4}{section.1.2}}
 \citation{Grundlagen}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}K\IeC {\"u}nstliche Neuronale Netzwerke}{6}{subsection.1.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{6}{figure.1.1}}
-\newlabel{fig:Bild1}{{1}{6}{künstliches Neuron}{figure.1.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces k\IeC {\"u}nstliches neuronales Netzwerk}}{7}{figure.1.2}}
-\newlabel{fig:Bild2}{{2}{7}{künstliches neuronales Netzwerk}{figure.1.2}{}}
-\citation{backpro}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}K\IeC {\"u}nstliche Neuronale Netzwerke}{5}{subsection.1.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces K\IeC {\"u}nstliches Neuronales Netzwerk}}{5}{figure.1.1}}
+\newlabel{fig:KNN}{{1}{5}{Künstliches Neuronales Netzwerk}{figure.1.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{6}{figure.1.2}}
+\newlabel{fig:Bild2}{{2}{6}{künstliches Neuron}{figure.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Sigmoid Funktion}}{7}{figure.1.3}}
+\newlabel{fig:Bild3}{{3}{7}{Sigmoid Funktion}{figure.1.3}{}}
+\citation{Grundlagen}
+\citation{crossentropy}
 \citation{Grundlagen}
 \citation{Grundlagen}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Sigmoid Funktion}}{8}{figure.1.3}}
-\newlabel{fig:Bild3}{{3}{8}{Sigmoid Funktion}{figure.1.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Backpropagation Algorithmus}{8}{subsubsection.1.2.1.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Softmax}}{9}{figure.1.4}}
-\newlabel{fig:Bild4}{{4}{9}{Softmax}{figure.1.4}{}}
+\newlabel{sec:Zielfunktion}{{2.1.1}{8}{Ziel-Funktion}{subsubsection.1.2.1.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Ziel-Funktion}{8}{subsubsection.1.2.1.1}}
+\newlabel{sec:test}{{2.1.2}{8}{Backpropagation Algorithmus}{subsubsection.1.2.1.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Backpropagation Algorithmus}{8}{subsubsection.1.2.1.2}}
+\citation{momentum}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces LossFunktion}}{9}{figure.1.4}}
+\newlabel{fig:Bild6}{{4}{9}{LossFunktion}{figure.1.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Minimum Maximum Saddle Point}}{9}{figure.1.5}}
 \newlabel{fig:Bild5}{{5}{9}{Minimum Maximum Saddle Point}{figure.1.5}{}}
-\citation{momentum}
-\citation{momentum}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces LossFunktion}}{10}{figure.1.6}}
-\newlabel{fig:Bild6}{{6}{10}{LossFunktion}{figure.1.6}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Momentum}{10}{subsubsection.1.2.1.2}}
+\newlabel{sec:momentum}{{2.1.3}{9}{Momentum}{subsubsection.1.2.1.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}Momentum}{9}{subsubsection.1.2.1.3}}
+\citation{Grundlagen}
+\citation{dropout}
+\citation{Grundlagen}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}Regularization}{10}{subsubsection.1.2.1.4}}
 \citation{batchnorm}
 \citation{batchnorm}
-\citation{batchnorm}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}Batch Normalisation}{11}{subsubsection.1.2.1.3}}
-\citation{universal}
-\citation{universal}
-\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Batch Normalisierung angewand auf x \IeC {\"u}ber Input bei Mini-Batch }}{12}{algocf.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.5}Batch Normalisation}{11}{subsubsection.1.2.1.5}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Batch Normalisierung angewand auf x \IeC {\"u}ber Input bei Mini-Batch }}{11}{algocf.1}}
 \@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Training mit Batch-Normalisierungs Netzwerk}}{12}{algocf.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces aaaa}}{13}{figure.1.7}}
-\newlabel{fig:Bild1}{{7}{13}{aaaa}{figure.1.7}{}}
-\citation{crossentropy}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}Ziel-Funktion}{14}{subsubsection.1.2.1.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Nicht trennbar}}{15}{figure.1.8}}
-\newlabel{fig:Bild1}{{8}{15}{Nicht trennbar}{figure.1.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Sigmoid Funktion}}{16}{figure.1.9}}
-\newlabel{fig:Bild1}{{9}{16}{Sigmoid Funktion}{figure.1.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Softmax}}{16}{figure.1.10}}
-\newlabel{fig:Bild1}{{10}{16}{Softmax}{figure.1.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Datenformat}{17}{subsection.1.2.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Woher stammen die Daten}{17}{subsubsection.1.2.2.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Das Problem mit 3D-Data bei Machine Learning Ans\IeC {\"a}tzen}{17}{subsubsection.1.2.2.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Punktwolke eines Tabakblattes}}{18}{figure.1.11}}
-\newlabel{fig:Bild12}{{11}{18}{Punktwolke eines Tabakblattes}{figure.1.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Polygon File Format}}{19}{figure.1.12}}
-\newlabel{fig:Bild13}{{12}{19}{Polygon File Format}{figure.1.12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces TERRA-REF Feld Scanner}}{19}{figure.1.13}}
-\newlabel{fig:Bild13}{{13}{19}{TERRA-REF Feld Scanner}{figure.1.13}{}}
-\citation{infoth}
-\citation{bottleneck}
-\citation{Grundlagen}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Scankopf}}{20}{figure.1.14}}
-\newlabel{fig:Bild14}{{14}{20}{Scankopf}{figure.1.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Deep Learning und Informationstheorie}{20}{subsection.1.2.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Convolution Neural Networks}{20}{subsection.1.2.4}}
-\citation{Grundlagen}
-\citation{conv}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Neuronal Netzwork als Markov Chain}}{21}{figure.1.15}}
-\newlabel{fig:Bild1}{{15}{21}{Neuronal Netzwork als Markov Chain}{figure.1.15}{}}
-\citation{conv}
-\citation{conv}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Convolutional Neural Network}}{22}{figure.1.16}}
-\newlabel{fig:Bild2}{{16}{22}{Convolutional Neural Network}{figure.1.16}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Convolution Beispiel}}{22}{figure.1.17}}
-\newlabel{fig:Bild3}{{17}{22}{Convolution Beispiel}{figure.1.17}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Deconvolution Beispiel}}{23}{figure.1.18}}
-\newlabel{fig:Bild4}{{18}{23}{Deconvolution Beispiel}{figure.1.18}{}}
-\citation{Grundlagen}
-\citation{Grundlagen}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces aaaa}}{12}{figure.1.6}}
+\newlabel{fig:Bild8}{{6}{12}{aaaa}{figure.1.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Datenformat Punktwolken}{13}{subsection.1.2.2}}
+\newlabel{sec:punktwolken}{{2.2}{13}{Datenformat Punktwolken}{subsection.1.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Polygon File Format}}{13}{figure.1.7}}
+\newlabel{fig:Bild13}{{7}{13}{Polygon File Format}{figure.1.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Punktwolke eines Tabakblattes}}{13}{figure.1.8}}
+\newlabel{fig:Bild12}{{8}{13}{Punktwolke eines Tabakblattes}{figure.1.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Datenaufnahme von Tabakpflanzen}{14}{subsubsection.1.2.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Scankopf}}{14}{figure.1.9}}
+\newlabel{fig:Bild15}{{9}{14}{Scankopf}{figure.1.9}{}}
+\citation{3dprob}
 \citation{3dgan}
+\citation{Grundlagen}
+\citation{Grundlagen}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Das Problem mit 3D-Data bei Machine Learning Ans\IeC {\"a}tzen}{15}{subsubsection.1.2.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Convolution Neural Networks}{15}{subsection.1.2.3}}
+\citation{conv}
+\citation{conv}
+\citation{conv}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Convolutional Neural Network}}{16}{figure.1.10}}
+\newlabel{fig:Bild2}{{10}{16}{Convolutional Neural Network}{figure.1.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Convolution Beispiel}}{17}{figure.1.11}}
+\newlabel{fig:Bild3}{{11}{17}{Convolution Beispiel}{figure.1.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Deconvolution Beispiel}}{17}{figure.1.12}}
+\newlabel{fig:Bild4}{{12}{17}{Deconvolution Beispiel}{figure.1.12}{}}
+\citation{Grundlagen}
+\citation{Grundlagen}
+\citation{dimreduction}
+\citation{Grundlagen}
+\citation{invariant}
 \citation{autoencoderloss}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Autoencoder}{24}{subsection.1.2.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Autoencoder}{18}{subsection.1.2.4}}
+\newlabel{sec:autoencoder}{{2.4}{18}{Autoencoder}{subsection.1.2.4}{}}
 \citation{autoencoderloss}
 \citation{autoencoderloss}
-\citation{improvingan}
-\citation{improving}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces autoencoder}}{25}{figure.1.19}}
-\newlabel{fig:Bild8}{{19}{25}{autoencoder}{figure.1.19}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Generative Adversarial Network}{25}{subsection.1.2.6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Earth Mover Distance}}{26}{figure.1.20}}
-\newlabel{fig:Bild9}{{20}{26}{Earth Mover Distance}{figure.1.20}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Chamfer Distance}}{26}{figure.1.21}}
-\newlabel{fig:Bild10}{{21}{26}{Chamfer Distance}{figure.1.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Autoencoder}}{19}{figure.1.13}}
+\newlabel{fig:Bild8}{{13}{19}{Autoencoder}{figure.1.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Earth Mover Distance}}{20}{figure.1.14}}
+\newlabel{fig:Bild9}{{14}{20}{Earth Mover Distance}{figure.1.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Chamfer Distance}}{20}{figure.1.15}}
+\newlabel{fig:Bild10}{{15}{20}{Chamfer Distance}{figure.1.15}{}}
 \citation{Grundlagen}
 \citation{goodfellow2014}
 \citation{goodfellow2014}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Generativ Adverserial Network}}{28}{figure.1.22}}
-\newlabel{fig:Bild20}{{22}{28}{Generativ Adverserial Network}{figure.1.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Generative Adversarial Network}{21}{subsection.1.2.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Generativ Adverserial Network}}{21}{figure.1.16}}
+\newlabel{fig:Bild20}{{16}{21}{Generativ Adverserial Network}{figure.1.16}{}}
 \citation{improvingan}
 \citation{dcgan}
 \citation{goodfellow2014}
 \citation{sha}
 \citation{sha}
-\@writefile{loa}{\contentsline {algocf}{\numberline {3}{\ignorespaces Minibatch stochastic gradient descent Training f\IeC {\"u}r Generative Adversarial Networks. Die Anzahl der Schritte welche auf den Discriminator angewendet wird ist k }}{29}{algocf.3}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {3}{\ignorespaces Minibatch stochastic gradient descent Training f\IeC {\"u}r Generative Adversarial Networks. Die Anzahl der Schritte welche auf den Discriminator angewendet wird ist k }}{22}{algocf.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Deep Convolutional GAN}}{23}{figure.1.17}}
+\newlabel{fig:Bild21}{{17}{23}{Deep Convolutional GAN}{figure.1.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces KL Divergenz und JS Divergenz}}{23}{figure.1.18}}
+\newlabel{fig:Bild21}{{18}{23}{KL Divergenz und JS Divergenz}{figure.1.18}{}}
+\newlabel{sec:problemegan}{{2.5.1}{23}{Probleme mit Generative Adverserial Networks}{subsubsection.1.2.5.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}Probleme mit Generative Adverserial Networks}{23}{subsubsection.1.2.5.1}}
 \citation{improvingan}
 \citation{improvingan}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Deep Convolutional GAN}}{30}{figure.1.23}}
-\newlabel{fig:Bild21}{{23}{30}{Deep Convolutional GAN}{figure.1.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces KL Divergenz und JS Divergenz}}{30}{figure.1.24}}
-\newlabel{fig:Bild21}{{24}{30}{KL Divergenz und JS Divergenz}{figure.1.24}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1}Probleme mit Generative Adverserial Networks}{30}{subsubsection.1.2.6.1}}
 \citation{wasserstein}
 \citation{metrics}
 \citation{improvingan}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}L\IeC {\"o}sungsans\IeC {\"a}tze f\IeC {\"u}r Generative Adverserial Networks Probleme}{24}{subsubsection.1.2.5.2}}
 \citation{improvingan}
 \citation{improvingan}
 \citation{improvingan}
 \citation{improvingan}
-\citation{improvingan}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2}L\IeC {\"o}sungsans\IeC {\"a}tze f\IeC {\"u}r Generative Adverserial Networks Probleme}{32}{subsubsection.1.2.6.2}}
+\citation{wasserstein}
+\citation{wasserstein}
 \citation{dcgan}
 \citation{3d}
 \citation{3dgan}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Conditional-GAN}{33}{subsection.1.2.7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.8}3D-GAN}{33}{subsection.1.2.8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Conditional Adverserial Network}}{34}{figure.1.25}}
-\newlabel{fig:Bild20}{{25}{34}{Conditional Adverserial Network}{figure.1.25}{}}
-\citation{3d}
-\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Latent-GAN}}{35}{figure.1.26}}
-\newlabel{fig:Bild30}{{26}{35}{Latent-GAN}{figure.1.26}{}}
+\citation{3dgan}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Conditional-GAN}{26}{subsection.1.2.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}3D-GAN}{26}{subsection.1.2.7}}
+\newlabel{sec:3dgan}{{2.7}{26}{3D-GAN}{subsection.1.2.7}{}}
+\citation{3dgan}
+\citation{3dgan}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Conditional Adverserial Network}}{27}{figure.1.19}}
+\newlabel{fig:Bild38}{{19}{27}{Conditional Adverserial Network}{figure.1.19}{}}
 \citation{imagerecon}
+\citation{imagere1}
+\citation{imagere2}
 \citation{3d_recon}
 \citation{3d_recon}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.9}Rekonstruktion von Daten}{36}{subsection.1.2.9}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Methoden}{36}{section.1.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Aufbau}{36}{subsection.1.3.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Datensatz 1. Versuchsaufbau}{36}{subsubsection.1.3.1.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{37}{figure.1.27}}
-\newlabel{fig:Bild2}{{27}{37}{3D Punktwolke einer Tabakpflanze}{figure.1.27}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{38}{figure.1.28}}
-\newlabel{fig:Bild2}{{28}{38}{3D Punktwolke einer Tabakpflanze}{figure.1.28}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Datensatz 2. Versuchsaufbau}{39}{subsubsection.1.3.1.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}Trainingsaufbau 1 - GAN}{39}{subsubsection.1.3.1.3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}Trainingsaufbau 2 - CGAN f\IeC {\"u}r Punktwolkenrekunstroktion }{39}{subsubsection.1.3.1.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{40}{figure.1.29}}
-\newlabel{fig:Bild2}{{29}{40}{3D Punktwolke einer Tabakpflanze}{figure.1.29}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Evaluation und Ergebnise}{41}{section.1.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Ergebnisse - Versuchsaufbau 1}{41}{subsection.1.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Ergebnisse - Versuchsaufbau 2}{41}{subsection.1.4.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Blattdaten}}{42}{figure.1.30}}
-\newlabel{fig:Bild35}{{30}{42}{Trainingsverlauf des RAW-GAN mit den Blattdaten}{figure.1.30}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Traingsverlauf des RAW-GAN mit den Blattdaten}}{42}{figure.1.31}}
-\newlabel{fig:Bild36}{{31}{42}{Traingsverlauf des RAW-GAN mit den Blattdaten}{figure.1.31}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}}{43}{figure.1.32}}
-\newlabel{fig:Bild35}{{32}{43}{Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}{figure.1.32}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}}{43}{figure.1.33}}
-\newlabel{fig:Bild36}{{33}{43}{Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}{figure.1.33}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten}}{44}{figure.1.34}}
-\newlabel{fig:Bild37}{{34}{44}{Traingsverlauf des RAW-GAN mit den Stuhldaten}{figure.1.34}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten}}{44}{figure.1.35}}
-\newlabel{fig:Bild38}{{35}{44}{Traingsverlauf des RAW-GAN mit den Stuhldaten}{figure.1.35}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces Traingsverlauf des Latent-GAN mit den Stuhldaten}}{45}{figure.1.36}}
-\newlabel{fig:Bild37}{{36}{45}{Traingsverlauf des Latent-GAN mit den Stuhldaten}{figure.1.36}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {37}{\ignorespaces Traingsverlauf des Latent-GAN mit den Stuhldaten}}{45}{figure.1.37}}
-\newlabel{fig:Bild38}{{37}{45}{Traingsverlauf des Latent-GAN mit den Stuhldaten}{figure.1.37}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {38}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Blattdaten}}{46}{figure.1.38}}
-\newlabel{fig:Bild37}{{38}{46}{Trainingsverlauf des Latent-GAN mit den Blattdaten}{figure.1.38}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {39}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Blattdaten}}{46}{figure.1.39}}
-\newlabel{fig:Bild38}{{39}{46}{Trainingsverlauf des Latent-GAN mit den Blattdaten}{figure.1.39}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}}{47}{figure.1.40}}
-\newlabel{fig:Bild37}{{40}{47}{Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}{figure.1.40}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {41}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}}{47}{figure.1.41}}
-\newlabel{fig:Bild37}{{41}{47}{Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}{figure.1.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Latent-GAN}}{28}{figure.1.20}}
+\newlabel{fig:Bild39}{{20}{28}{Latent-GAN}{figure.1.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8}Rekonstruktion von Daten}{28}{subsection.1.2.8}}
+\newlabel{sec:rekdaten}{{2.8}{28}{Rekonstruktion von Daten}{subsection.1.2.8}{}}
+\citation{3dgan}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Bild Rekonstruktion eines Hundes welches durch ein Artefakt zerst\IeC {\"o}rt wurde}}{29}{figure.1.21}}
+\newlabel{fig:Bild40}{{21}{29}{Bild Rekonstruktion eines Hundes welches durch ein Artefakt zerstört wurde}{figure.1.21}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methoden}{29}{section.1.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Datensatz 1. Versuchsaufbau}{29}{subsection.1.3.1}}
+\newlabel{sec:versuch1-traingsdaten}{{3.1}{29}{Datensatz 1. Versuchsaufbau}{subsection.1.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{30}{figure.1.22}}
+\newlabel{fig:Bild50}{{22}{30}{3D Punktwolke einer Tabakpflanze}{figure.1.22}{}}
+\citation{goodfellow2014}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{31}{figure.1.23}}
+\newlabel{fig:Bild51}{{23}{31}{3D Punktwolke einer Tabakpflanze}{figure.1.23}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Datensatz 2. Versuchsaufbau}{31}{subsection.1.3.2}}
+\newlabel{sec:versuch2_daten}{{3.2}{31}{Datensatz 2. Versuchsaufbau}{subsection.1.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Trainingsaufbau 1 - GAN}{31}{subsection.1.3.3}}
+\newlabel{sec:versuch1-aufbau}{{3.3}{31}{Trainingsaufbau 1 - GAN}{subsection.1.3.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces 3D Punktwolke einer Tabakpflanze}}{32}{figure.1.24}}
+\newlabel{fig:Bild2}{{24}{32}{3D Punktwolke einer Tabakpflanze}{figure.1.24}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Trainingsaufbau 2 - CGAN f\IeC {\"u}r Punktwolkenrekunstroktion }{32}{subsection.1.3.4}}
+\newlabel{sec:versuch2-aufbau}{{3.4}{32}{Trainingsaufbau 2 - CGAN für Punktwolkenrekunstroktion}{subsection.1.3.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Evaluation und Ergebnise}{33}{section.1.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Ergebnisse - Versuchsaufbau 1}{33}{subsection.1.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Ergebnisse - Versuchsaufbau 2}{33}{subsection.1.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Blattdaten}}{34}{figure.1.25}}
+\newlabel{fig:Bild35}{{25}{34}{Trainingsverlauf des RAW-GAN mit den Blattdaten}{figure.1.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Traingsverlauf des RAW-GAN mit den Blattdaten}}{34}{figure.1.26}}
+\newlabel{fig:Bild36}{{26}{34}{Traingsverlauf des RAW-GAN mit den Blattdaten}{figure.1.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}}{35}{figure.1.27}}
+\newlabel{fig:Bild35}{{27}{35}{Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}{figure.1.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}}{35}{figure.1.28}}
+\newlabel{fig:Bild36}{{28}{35}{Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}{figure.1.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten}}{36}{figure.1.29}}
+\newlabel{fig:Bild37}{{29}{36}{Traingsverlauf des RAW-GAN mit den Stuhldaten}{figure.1.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Traingsverlauf des RAW-GAN mit den Stuhldaten}}{36}{figure.1.30}}
+\newlabel{fig:Bild38}{{30}{36}{Traingsverlauf des RAW-GAN mit den Stuhldaten}{figure.1.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Traingsverlauf des Latent-GAN mit den Stuhldaten}}{37}{figure.1.31}}
+\newlabel{fig:Bild37}{{31}{37}{Traingsverlauf des Latent-GAN mit den Stuhldaten}{figure.1.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces Traingsverlauf des Latent-GAN mit den Stuhldaten}}{37}{figure.1.32}}
+\newlabel{fig:Bild38}{{32}{37}{Traingsverlauf des Latent-GAN mit den Stuhldaten}{figure.1.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Blattdaten}}{38}{figure.1.33}}
+\newlabel{fig:Bild37}{{33}{38}{Trainingsverlauf des Latent-GAN mit den Blattdaten}{figure.1.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Blattdaten}}{38}{figure.1.34}}
+\newlabel{fig:Bild38}{{34}{38}{Trainingsverlauf des Latent-GAN mit den Blattdaten}{figure.1.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}}{39}{figure.1.35}}
+\newlabel{fig:Bild37}{{35}{39}{Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}{figure.1.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}}{39}{figure.1.36}}
+\newlabel{fig:Bild37}{{36}{39}{Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}{figure.1.36}{}}
 \citation{goodfellow2014}
 \citation{ende}
 \citation{texttoimage}
 \citation{3dgan}
 \citation{reinforcment}
-\@writefile{lof}{\contentsline {figure}{\numberline {42}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Blattdaten}}{48}{figure.1.42}}
-\newlabel{fig:Bild42}{{42}{48}{Trainingsverlauf des RAW-GAN mit den Blattdaten}{figure.1.42}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Zusammenfassung und Diskussion }{48}{section.1.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {43}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD Output}}{49}{figure.1.43}}
-\newlabel{fig:Bild43}{{43}{49}{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten CD Output}{figure.1.43}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {44}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD input }}{49}{figure.1.44}}
-\newlabel{fig:Bild43}{{44}{49}{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten CD input}{figure.1.44}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {45}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD}}{50}{figure.1.45}}
-\newlabel{fig:Bild43}{{45}{50}{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten CD}{figure.1.45}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {46}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten EMD}}{51}{figure.1.46}}
-\newlabel{fig:Bild44}{{46}{51}{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten EMD}{figure.1.46}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {47}{\ignorespaces Trainingsbeispiele des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten EMD}}{51}{figure.1.47}}
-\newlabel{fig:Bild44}{{47}{51}{Trainingsbeispiele des Autoencoders mit den zerstörten Blattdaten EMD}{figure.1.47}{}}
-\@writefile{toc}{\contentsline {chapter}{Abbildungsverzeichnis}{53}{chapter*.3}}
-\@writefile{toc}{\contentsline {chapter}{Tabellenverzeichnis}{55}{chapter*.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {37}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Blattdaten}}{40}{figure.1.37}}
+\newlabel{fig:Bild42}{{37}{40}{Trainingsverlauf des RAW-GAN mit den Blattdaten}{figure.1.37}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Zusammenfassung und Diskussion }{40}{section.1.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {38}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD Output}}{41}{figure.1.38}}
+\newlabel{fig:Bild43}{{38}{41}{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten CD Output}{figure.1.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {39}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD input }}{41}{figure.1.39}}
+\newlabel{fig:Bild43}{{39}{41}{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten CD input}{figure.1.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten CD}}{42}{figure.1.40}}
+\newlabel{fig:Bild43}{{40}{42}{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten CD}{figure.1.40}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {41}{\ignorespaces Trainingsverlauf des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten EMD}}{43}{figure.1.41}}
+\newlabel{fig:Bild44}{{41}{43}{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten EMD}{figure.1.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {42}{\ignorespaces Trainingsbeispiele des Autoencoders mit den zerst\IeC {\"o}rten Blattdaten EMD}}{43}{figure.1.42}}
+\newlabel{fig:Bild44}{{42}{43}{Trainingsbeispiele des Autoencoders mit den zerstörten Blattdaten EMD}{figure.1.42}{}}
 \bibstyle{apacite}
-\bibdata{mybib.bib}
-\@writefile{toc}{\contentsline {chapter}{Literaturverzeichnis}{56}{chapter*.5}}
+\bibdata{mybib}
+\bibcite{3dgan}{\citeauthoryear {Achlioptas, Diamanti, Mitliagkas,{}\ \BBA{} Guibas}{Achlioptas\ \BOthers {.}}{{\APACyear {2018}}}}
+\APACbibcite{3dgan}{\citeauthoryear {Achlioptas, Diamanti, Mitliagkas,{}\ \BBA{} Guibas}{Achlioptas\ \BOthers {.}}{{\APACyear {2018}}}}
+\bibcite{3dprob}{\citeauthoryear {Ahmed\ \BOthers {.}}{Ahmed\ \BOthers {.}}{{\APACyear {2018}}}}
+\APACbibcite{3dprob}{\citeauthoryear {Ahmed\ \BOthers {.}}{Ahmed\ \BOthers {.}}{{\APACyear {2018}}}}
+\bibcite{wasserstein}{\citeauthoryear {Arjovsky, Chintala,{}\ \BBA{} Bottou}{Arjovsky\ \BOthers {.}}{{\APACyear {2017}}}}
+\APACbibcite{wasserstein}{\citeauthoryear {Arjovsky, Chintala,{}\ \BBA{} Bottou}{Arjovsky\ \BOthers {.}}{{\APACyear {2017}}}}
+\bibcite{imagerecon}{\citeauthoryear {Dong, Loy, He,{}\ \BBA{} Tang}{Dong\ \BOthers {.}}{{\APACyear {2016}}{\APACexlab {{\BCnt {1}}}}}}
+\APACbibcite{imagerecon}{\citeauthoryear {Dong, Loy, He,{}\ \BBA{} Tang}{Dong\ \BOthers {.}}{{\APACyear {2016}}{\APACexlab {{\BCnt {1}}}}}}
+\bibcite{imagere1}{\citeauthoryear {Dong, Loy, He,{}\ \BBA{} Tang}{Dong\ \BOthers {.}}{{\APACyear {2016}}{\APACexlab {{\BCnt {2}}}}}}
+\APACbibcite{imagere1}{\citeauthoryear {Dong, Loy, He,{}\ \BBA{} Tang}{Dong\ \BOthers {.}}{{\APACyear {2016}}{\APACexlab {{\BCnt {2}}}}}}
+\bibcite{conv}{\citeauthoryear {Dumoulin\ \BBA{} Visin}{Dumoulin\ \BBA{} Visin}{{\APACyear {2016}}}}
+\APACbibcite{conv}{\citeauthoryear {Dumoulin\ \BBA{} Visin}{Dumoulin\ \BBA{} Visin}{{\APACyear {2016}}}}
+\bibcite{autoencoderloss}{\citeauthoryear {Fan, Su,{}\ \BBA{} Guibas}{Fan\ \BOthers {.}}{{\APACyear {2017}}}}
+\APACbibcite{autoencoderloss}{\citeauthoryear {Fan, Su,{}\ \BBA{} Guibas}{Fan\ \BOthers {.}}{{\APACyear {2017}}}}
+\bibcite{crossentropy}{\citeauthoryear {Golik, Doetsch,{}\ \BBA{} Ney}{Golik\ \BOthers {.}}{{\APACyear {2013}}}}
+\APACbibcite{crossentropy}{\citeauthoryear {Golik, Doetsch,{}\ \BBA{} Ney}{Golik\ \BOthers {.}}{{\APACyear {2013}}}}
+\bibcite{Grundlagen}{\citeauthoryear {Goodfellow, Bengio, Courville,{}\ \BBA{} Bengio}{Goodfellow\ \BOthers {.}}{{\APACyear {2016}}}}
+\APACbibcite{Grundlagen}{\citeauthoryear {Goodfellow, Bengio, Courville,{}\ \BBA{} Bengio}{Goodfellow\ \BOthers {.}}{{\APACyear {2016}}}}
+\bibcite{goodfellow2014}{\citeauthoryear {Goodfellow\ \BOthers {.}}{Goodfellow\ \BOthers {.}}{{\APACyear {2014}}}}
+\APACbibcite{goodfellow2014}{\citeauthoryear {Goodfellow\ \BOthers {.}}{Goodfellow\ \BOthers {.}}{{\APACyear {2014}}}}
+\bibcite{data}{\citeauthoryear {Halevy, Norvig,{}\ \BBA{} Pereira}{Halevy\ \BOthers {.}}{{\APACyear {2009}}}}
+\APACbibcite{data}{\citeauthoryear {Halevy, Norvig,{}\ \BBA{} Pereira}{Halevy\ \BOthers {.}}{{\APACyear {2009}}}}
+\bibcite{dimreduction}{\citeauthoryear {Hinton\ \BBA{} Salakhutdinov}{Hinton\ \BBA{} Salakhutdinov}{{\APACyear {2006}}}}
+\APACbibcite{dimreduction}{\citeauthoryear {Hinton\ \BBA{} Salakhutdinov}{Hinton\ \BBA{} Salakhutdinov}{{\APACyear {2006}}}}
+\bibcite{metrics}{\citeauthoryear {Huang\ \BOthers {.}}{Huang\ \BOthers {.}}{{\APACyear {2018}}}}
+\APACbibcite{metrics}{\citeauthoryear {Huang\ \BOthers {.}}{Huang\ \BOthers {.}}{{\APACyear {2018}}}}
+\bibcite{sha}{\citeauthoryear {Husz{\'a}r}{Husz{\'a}r}{{\APACyear {2015}}}}
+\APACbibcite{sha}{\citeauthoryear {Husz{\'a}r}{Husz{\'a}r}{{\APACyear {2015}}}}
+\bibcite{batchnorm}{\citeauthoryear {Ioffe\ \BBA{} Szegedy}{Ioffe\ \BBA{} Szegedy}{{\APACyear {2015}}}}
+\APACbibcite{batchnorm}{\citeauthoryear {Ioffe\ \BBA{} Szegedy}{Ioffe\ \BBA{} Szegedy}{{\APACyear {2015}}}}
+\bibcite{imagere2}{\citeauthoryear {Liu\ \BOthers {.}}{Liu\ \BOthers {.}}{{\APACyear {2018}}}}
+\APACbibcite{imagere2}{\citeauthoryear {Liu\ \BOthers {.}}{Liu\ \BOthers {.}}{{\APACyear {2018}}}}
+\bibcite{discrim}{\citeauthoryear {Ng\ \BBA{} Jordan}{Ng\ \BBA{} Jordan}{{\APACyear {2002}}}}
+\APACbibcite{discrim}{\citeauthoryear {Ng\ \BBA{} Jordan}{Ng\ \BBA{} Jordan}{{\APACyear {2002}}}}
+\bibcite{reinforcment}{\citeauthoryear {Pinto, Davidson, Sukthankar,{}\ \BBA{} Gupta}{Pinto\ \BOthers {.}}{{\APACyear {2017}}}}
+\APACbibcite{reinforcment}{\citeauthoryear {Pinto, Davidson, Sukthankar,{}\ \BBA{} Gupta}{Pinto\ \BOthers {.}}{{\APACyear {2017}}}}
+\@writefile{toc}{\contentsline {section}{Literatur}{48}{section*.5}}
+\bibcite{dcgan}{\citeauthoryear {Radford, Metz,{}\ \BBA{} Chintala}{Radford\ \BOthers {.}}{{\APACyear {2015}}}}
+\APACbibcite{dcgan}{\citeauthoryear {Radford, Metz,{}\ \BBA{} Chintala}{Radford\ \BOthers {.}}{{\APACyear {2015}}}}
+\bibcite{invariant}{\citeauthoryear {Ravanbakhsh, Schneider,{}\ \BBA{} Poczos}{Ravanbakhsh\ \BOthers {.}}{{\APACyear {2016}}}}
+\APACbibcite{invariant}{\citeauthoryear {Ravanbakhsh, Schneider,{}\ \BBA{} Poczos}{Ravanbakhsh\ \BOthers {.}}{{\APACyear {2016}}}}
+\bibcite{texttoimage}{\citeauthoryear {Reed\ \BOthers {.}}{Reed\ \BOthers {.}}{{\APACyear {2016}}}}
+\APACbibcite{texttoimage}{\citeauthoryear {Reed\ \BOthers {.}}{Reed\ \BOthers {.}}{{\APACyear {2016}}}}
+\bibcite{improvingan}{\citeauthoryear {Salimans\ \BOthers {.}}{Salimans\ \BOthers {.}}{{\APACyear {2016}}}}
+\APACbibcite{improvingan}{\citeauthoryear {Salimans\ \BOthers {.}}{Salimans\ \BOthers {.}}{{\APACyear {2016}}}}
+\bibcite{dropout}{\citeauthoryear {Srivastava, Hinton, Krizhevsky, Sutskever,{}\ \BBA{} Salakhutdinov}{Srivastava\ \BOthers {.}}{{\APACyear {2014}}}}
+\APACbibcite{dropout}{\citeauthoryear {Srivastava, Hinton, Krizhevsky, Sutskever,{}\ \BBA{} Salakhutdinov}{Srivastava\ \BOthers {.}}{{\APACyear {2014}}}}
+\bibcite{momentum}{\citeauthoryear {Sutskever, Martens, Dahl,{}\ \BBA{} Hinton}{Sutskever\ \BOthers {.}}{{\APACyear {2013}}}}
+\APACbibcite{momentum}{\citeauthoryear {Sutskever, Martens, Dahl,{}\ \BBA{} Hinton}{Sutskever\ \BOthers {.}}{{\APACyear {2013}}}}
+\bibcite{ende}{\citeauthoryear {Wang\ \BOthers {.}}{Wang\ \BOthers {.}}{{\APACyear {2017}}}}
+\APACbibcite{ende}{\citeauthoryear {Wang\ \BOthers {.}}{Wang\ \BOthers {.}}{{\APACyear {2017}}}}
+\bibcite{3d}{\citeauthoryear {Wu, Zhang, Xue, Freeman,{}\ \BBA{} Tenenbaum}{Wu\ \BOthers {.}}{{\APACyear {2016}}}}
+\APACbibcite{3d}{\citeauthoryear {Wu, Zhang, Xue, Freeman,{}\ \BBA{} Tenenbaum}{Wu\ \BOthers {.}}{{\APACyear {2016}}}}
+\bibcite{3d_recon}{\citeauthoryear {Yi\ \BOthers {.}}{Yi\ \BOthers {.}}{{\APACyear {2017}}}}
+\APACbibcite{3d_recon}{\citeauthoryear {Yi\ \BOthers {.}}{Yi\ \BOthers {.}}{{\APACyear {2017}}}}

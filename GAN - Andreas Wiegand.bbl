@@ -1,3 +1,781 @@
 \begin{thebibliography}{}
 
+\bibitem [\protect \citeauthoryear {%
+Achlioptas%
+, Diamanti%
+, Mitliagkas%
+\BCBL {}\ \BBA {} Guibas%
+}{%
+Achlioptas%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+3dgan}
+\APACinsertmetastar {%
+3dgan}%
+\begin{APACrefauthors}%
+Achlioptas, P.%
+, Diamanti, O.%
+, Mitliagkas, I.%
+\BCBL {}\ \BBA {} Guibas, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning Representations and Generative Models for 3D
+  Point Clouds} {Learning representations and generative models for 3d point
+  clouds}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ahmed%
+\ \protect \BOthers {.}}{%
+Ahmed%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+3dprob}
+\APACinsertmetastar {%
+3dprob}%
+\begin{APACrefauthors}%
+Ahmed, E.%
+, Saint, A.%
+, Shabayek, A\BPBI E\BPBI R.%
+, Cherenkova, K.%
+, Das, R.%
+, Gusev, G.%
+\BDBL {}Ottersten, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep learning advances on different 3D data
+  representations: A survey} {Deep learning advances on different 3d data
+  representations: A survey}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1808.01462}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Arjovsky%
+, Chintala%
+\BCBL {}\ \BBA {} Bottou%
+}{%
+Arjovsky%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+wasserstein}
+\APACinsertmetastar {%
+wasserstein}%
+\begin{APACrefauthors}%
+Arjovsky, M.%
+, Chintala, S.%
+\BCBL {}\ \BBA {} Bottou, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Wasserstein gan} {Wasserstein gan}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1701.07875}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dong%
+, Loy%
+, He%
+\BCBL {}\ \BBA {} Tang%
+}{%
+Dong%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+{\protect \APACexlab {{\protect \BCnt {1}}}}}]{%
+imagerecon}
+\APACinsertmetastar {%
+imagerecon}%
+\begin{APACrefauthors}%
+Dong, C.%
+, Loy, C\BPBI C.%
+, He, K.%
+\BCBL {}\ \BBA {} Tang, X.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016{\protect \BCnt {1}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Image super-resolution using deep convolutional
+  networks} {Image super-resolution using deep convolutional networks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{}{38}{2}{295--307}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dong%
+, Loy%
+, He%
+\BCBL {}\ \BBA {} Tang%
+}{%
+Dong%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+{\protect \APACexlab {{\protect \BCnt {2}}}}}]{%
+imagere1}
+\APACinsertmetastar {%
+imagere1}%
+\begin{APACrefauthors}%
+Dong, C.%
+, Loy, C\BPBI C.%
+, He, K.%
+\BCBL {}\ \BBA {} Tang, X.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016{\protect \BCnt {2}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Image super-resolution using deep convolutional
+  networks} {Image super-resolution using deep convolutional networks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE transactions on pattern analysis and machine
+  intelligence}{38}{2}{295--307}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dumoulin%
+\ \BBA {} Visin%
+}{%
+Dumoulin%
+\ \BBA {} Visin%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+conv}
+\APACinsertmetastar {%
+conv}%
+\begin{APACrefauthors}%
+Dumoulin, V.%
+\BCBT {}\ \BBA {} Visin, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A guide to convolution arithmetic for deep learning} {A
+  guide to convolution arithmetic for deep learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1603.07285}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Fan%
+, Su%
+\BCBL {}\ \BBA {} Guibas%
+}{%
+Fan%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+autoencoderloss}
+\APACinsertmetastar {%
+autoencoderloss}%
+\begin{APACrefauthors}%
+Fan, H.%
+, Su, H.%
+\BCBL {}\ \BBA {} Guibas, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A point set generation network for 3d object
+  reconstruction from a single image} {A point set generation network for 3d
+  object reconstruction from a single image}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2017 IEEE Cosnference on Computer Vision and Pattern
+  Recognition (CVPR)} {2017 ieee cosnference on computer vision and pattern
+  recognition (cvpr)}\ (\BPGS\ 2463--2471).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Golik%
+, Doetsch%
+\BCBL {}\ \BBA {} Ney%
+}{%
+Golik%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+crossentropy}
+\APACinsertmetastar {%
+crossentropy}%
+\begin{APACrefauthors}%
+Golik, P.%
+, Doetsch, P.%
+\BCBL {}\ \BBA {} Ney, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Cross-entropy vs. squared error training: a theoretical
+  and experimental comparison.} {Cross-entropy vs. squared error training: a
+  theoretical and experimental comparison.}{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Interspeech} {Interspeech}\ (\BVOL~13, \BPGS\
+  1756--1760).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Goodfellow%
+, Bengio%
+, Courville%
+\BCBL {}\ \BBA {} Bengio%
+}{%
+Goodfellow%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+Grundlagen}
+\APACinsertmetastar {%
+Grundlagen}%
+\begin{APACrefauthors}%
+Goodfellow, I.%
+, Bengio, Y.%
+, Courville, A.%
+\BCBL {}\ \BBA {} Bengio, Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2016}.
+\newblock
+\APACrefbtitle {Deep learning} {Deep learning}\ (\BVOL~1).
+\newblock
+\APACaddressPublisher{}{MIT press Cambridge}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Goodfellow%
+\ \protect \BOthers {.}}{%
+Goodfellow%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+goodfellow2014}
+\APACinsertmetastar {%
+goodfellow2014}%
+\begin{APACrefauthors}%
+Goodfellow, I.%
+, Pouget-Abadie, J.%
+, Mirza, M.%
+, Xu, B.%
+, Warde-Farley, D.%
+, Ozair, S.%
+\BDBL {}Bengio, Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Generative adversarial nets} {Generative adversarial
+  nets}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Advances in neural information processing systems}
+  {Advances in neural information processing systems}\ (\BPGS\ 2672--2680).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Halevy%
+, Norvig%
+\BCBL {}\ \BBA {} Pereira%
+}{%
+Halevy%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+data}
+\APACinsertmetastar {%
+data}%
+\begin{APACrefauthors}%
+Halevy, A.%
+, Norvig, P.%
+\BCBL {}\ \BBA {} Pereira, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The unreasonable effectiveness of data} {The
+  unreasonable effectiveness of data}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Intelligent Systems}{24}{2}{8--12}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hinton%
+\ \BBA {} Salakhutdinov%
+}{%
+Hinton%
+\ \BBA {} Salakhutdinov%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+dimreduction}
+\APACinsertmetastar {%
+dimreduction}%
+\begin{APACrefauthors}%
+Hinton, G\BPBI E.%
+\BCBT {}\ \BBA {} Salakhutdinov, R\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Reducing the dimensionality of data with neural
+  networks} {Reducing the dimensionality of data with neural networks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{science}{313}{5786}{504--507}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Huang%
+\ \protect \BOthers {.}}{%
+Huang%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+metrics}
+\APACinsertmetastar {%
+metrics}%
+\begin{APACrefauthors}%
+Huang, G.%
+, Yuan, Y.%
+, Xu, Q.%
+, Guo, C.%
+, Sun, Y.%
+, Wu, F.%
+\BCBL {}\ \BBA {} Weinberger, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+\APACrefbtitle {An empirical study on evaluation metrics of generative
+  adversarial networks.} {An empirical study on evaluation metrics of
+  generative adversarial networks.}
+\newblock
+\begin{APACrefURL} \url{https://openreview.net/forum?id=Sy1f0e-R-}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Husz{\'a}r%
+}{%
+Husz{\'a}r%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+sha}
+\APACinsertmetastar {%
+sha}%
+\begin{APACrefauthors}%
+Husz{\'a}r, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {How (not) to train your generative model: Scheduled
+  sampling, likelihood, adversary?} {How (not) to train your generative model:
+  Scheduled sampling, likelihood, adversary?}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1511.05101}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ioffe%
+\ \BBA {} Szegedy%
+}{%
+Ioffe%
+\ \BBA {} Szegedy%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+batchnorm}
+\APACinsertmetastar {%
+batchnorm}%
+\begin{APACrefauthors}%
+Ioffe, S.%
+\BCBT {}\ \BBA {} Szegedy, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Batch normalization: Accelerating deep network training
+  by reducing internal covariate shift} {Batch normalization: Accelerating deep
+  network training by reducing internal covariate shift}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1502.03167}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Liu%
+\ \protect \BOthers {.}}{%
+Liu%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+imagere2}
+\APACinsertmetastar {%
+imagere2}%
+\begin{APACrefauthors}%
+Liu, G.%
+, Reda, F\BPBI A.%
+, Shih, K\BPBI J.%
+, Wang, T\BHBI C.%
+, Tao, A.%
+\BCBL {}\ \BBA {} Catanzaro, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Image inpainting for irregular holes using partial
+  convolutions} {Image inpainting for irregular holes using partial
+  convolutions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1804.07723}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ng%
+\ \BBA {} Jordan%
+}{%
+Ng%
+\ \BBA {} Jordan%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+discrim}
+\APACinsertmetastar {%
+discrim}%
+\begin{APACrefauthors}%
+Ng, A\BPBI Y.%
+\BCBT {}\ \BBA {} Jordan, M\BPBI I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {On discriminative vs. generative classifiers: A
+  comparison of logistic regression and naive bayes} {On discriminative vs.
+  generative classifiers: A comparison of logistic regression and naive
+  bayes}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Advances in neural information processing systems}
+  {Advances in neural information processing systems}\ (\BPGS\ 841--848).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pinto%
+, Davidson%
+, Sukthankar%
+\BCBL {}\ \BBA {} Gupta%
+}{%
+Pinto%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+reinforcment}
+\APACinsertmetastar {%
+reinforcment}%
+\begin{APACrefauthors}%
+Pinto, L.%
+, Davidson, J.%
+, Sukthankar, R.%
+\BCBL {}\ \BBA {} Gupta, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Robust adversarial reinforcement learning} {Robust
+  adversarial reinforcement learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1703.02702}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Radford%
+, Metz%
+\BCBL {}\ \BBA {} Chintala%
+}{%
+Radford%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+dcgan}
+\APACinsertmetastar {%
+dcgan}%
+\begin{APACrefauthors}%
+Radford, A.%
+, Metz, L.%
+\BCBL {}\ \BBA {} Chintala, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Unsupervised representation learning with deep
+  convolutional generative adversarial networks} {Unsupervised representation
+  learning with deep convolutional generative adversarial networks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1511.06434}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ravanbakhsh%
+, Schneider%
+\BCBL {}\ \BBA {} Poczos%
+}{%
+Ravanbakhsh%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+invariant}
+\APACinsertmetastar {%
+invariant}%
+\begin{APACrefauthors}%
+Ravanbakhsh, S.%
+, Schneider, J.%
+\BCBL {}\ \BBA {} Poczos, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep learning with sets and point clouds} {Deep learning
+  with sets and point clouds}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1611.04500}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Reed%
+\ \protect \BOthers {.}}{%
+Reed%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+texttoimage}
+\APACinsertmetastar {%
+texttoimage}%
+\begin{APACrefauthors}%
+Reed, S.%
+, Akata, Z.%
+, Yan, X.%
+, Logeswaran, L.%
+, Schiele, B.%
+\BCBL {}\ \BBA {} Lee, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Generative adversarial text to image synthesis}
+  {Generative adversarial text to image synthesis}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1605.05396}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Salimans%
+\ \protect \BOthers {.}}{%
+Salimans%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+improvingan}
+\APACinsertmetastar {%
+improvingan}%
+\begin{APACrefauthors}%
+Salimans, T.%
+, Goodfellow, I.%
+, Zaremba, W.%
+, Cheung, V.%
+, Radford, A.%
+\BCBL {}\ \BBA {} Chen, X.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Improved techniques for training gans} {Improved
+  techniques for training gans}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Advances in Neural Information Processing Systems}
+  {Advances in neural information processing systems}\ (\BPGS\ 2234--2242).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Srivastava%
+, Hinton%
+, Krizhevsky%
+, Sutskever%
+\BCBL {}\ \BBA {} Salakhutdinov%
+}{%
+Srivastava%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+dropout}
+\APACinsertmetastar {%
+dropout}%
+\begin{APACrefauthors}%
+Srivastava, N.%
+, Hinton, G.%
+, Krizhevsky, A.%
+, Sutskever, I.%
+\BCBL {}\ \BBA {} Salakhutdinov, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Dropout: a simple way to prevent neural networks form
+  overfitting} {Dropout: a simple way to prevent neural networks form
+  overfitting}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The Journal of Machine Learning
+  Research}{15}{1}{1929--1958}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sutskever%
+, Martens%
+, Dahl%
+\BCBL {}\ \BBA {} Hinton%
+}{%
+Sutskever%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+momentum}
+\APACinsertmetastar {%
+momentum}%
+\begin{APACrefauthors}%
+Sutskever, I.%
+, Martens, J.%
+, Dahl, G.%
+\BCBL {}\ \BBA {} Hinton, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {On the importance of initialization and momentum in deep
+  learning} {On the importance of initialization and momentum in deep
+  learning}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {International conference on machine learning}
+  {International conference on machine learning}\ (\BPGS\ 1139--1147).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wang%
+\ \protect \BOthers {.}}{%
+Wang%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+ende}
+\APACinsertmetastar {%
+ende}%
+\begin{APACrefauthors}%
+Wang, T\BHBI C.%
+, Liu, M\BHBI Y.%
+, Zhu, J\BHBI Y.%
+, Tao, A.%
+, Kautz, J.%
+\BCBL {}\ \BBA {} Catanzaro, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {High-Resolution Image Synthesis and Semantic
+  Manipulation with Conditional GANs} {High-resolution image synthesis and
+  semantic manipulation with conditional gans}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1711.11585}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wu%
+, Zhang%
+, Xue%
+, Freeman%
+\BCBL {}\ \BBA {} Tenenbaum%
+}{%
+Wu%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+3d}
+\APACinsertmetastar {%
+3d}%
+\begin{APACrefauthors}%
+Wu, J.%
+, Zhang, C.%
+, Xue, T.%
+, Freeman, B.%
+\BCBL {}\ \BBA {} Tenenbaum, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning a probabilistic latent space of object shapes
+  via 3d generative-adversarial modeling} {Learning a probabilistic latent
+  space of object shapes via 3d generative-adversarial modeling}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Advances in Neural Information Processing Systems}
+  {Advances in neural information processing systems}\ (\BPGS\ 82--90).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Yi%
+\ \protect \BOthers {.}}{%
+Yi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+3d_recon}
+\APACinsertmetastar {%
+3d_recon}%
+\begin{APACrefauthors}%
+Yi, L.%
+, Shao, L.%
+, Savva, M.%
+, Huang, H.%
+, Zhou, Y.%
+, Wang, Q.%
+\BDBL {}others%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Large-scale 3d shape reconstruction and segmentation
+  from shapenet core55} {Large-scale 3d shape reconstruction and segmentation
+  from shapenet core55}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1710.06104}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
 \end{thebibliography}
