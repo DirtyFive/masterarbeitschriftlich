@@ -16,9 +16,11 @@
 \begin{document}
 \tableofcontents
 \begin{acronym}[Bash]
+	\acro{Abb.} Abbildung
 	\acro{C-GAN}Conditional Adversarial Networks
 	\acro{EMD} Earth Mover Distanze
 	\acro{KNN} Künstliches Neuronales Netzwerk
+	\acro{GAN} Generativ Adverserial Network
 \end{acronym}
 \selectlanguage{german}
 \title{3-D Datenrekonstruktion mit generative Adverserial Networks}
@@ -565,13 +567,15 @@ Ebenso wie die Arbeit von Liu, Gulin und Reda \cite{imagere2} welche ähnliche E
 \end{figure}
 \newpage
 \section{Methoden}
-In diesen Kapitel werden die Methoden für die Versuchsaufbauten aufgezeigt welche die Ziele 1 und 2 überprüfen sollen. Dabei geht es darum ob mit hilfe von GAN der latente Objektraum eines Tabakblattes gelernt werden kann und anschließend durch den Generator des GAN Tabakblätter erzeugt werden können.Dieses Versuchsaufbau wird in Kapitel \ref{sec:versuch1-aufbau} behandelt. Die dazugehörigen Trainingsdaten werden in Kapitel \ref{sec:versuch1-traingsdaten} vorgestellt. Beim Ziel 2 soll überprüft werden ob mit Hilfe von GAN es möglich ist Artefakte von Tabakblätter zu entfernen und den Urzustand wieder her zustellen.  Dieses Verfahren wurde in Kapitel \ref{sec:rekdaten} beschrieben. Die Trainingsdaten für diesen Versuchsaufbau können aus Kapitel \ref{sec:versuch2_daten} entnommen werden. Alle Versuche wurden auf einen Computer mit Ubuntu 14.05 Betriebssystem mit einen IntelR CoreTM i7-7700k mit 4.50GHz einer Geforce GTX 1080 mit 8G Grafikspeicher. Training und Testen wurden mit CUDA 9.0 und cudNN 7.1.1. . Also Programmiersprache wurde Python 2.7 bzw. 3.5 für Datengenerierung. Also ANN Libary wurde Tensorflow 1.5 genutzt.
+
+In diesen Kapitel werden die Methoden für die Versuchsaufbauten aufgezeigt welche die Ziele 1 und 2 überprüfen sollen. Dabei geht es darum ob mit hilfe von GAN der latente Objektraum eines Tabakblattes gelernt werden kann und anschließend durch den Generator des GAN Tabakblätter erzeugt werden können.Dieses Versuchsaufbau wird in Kapitel \ref{sec:versuch1-aufbau} behandelt. Die dazugehörigen Trainingsdaten werden in Kapitel \ref{sec:versuch1-traingsdaten} vorgestellt. Beim Ziel 2 soll überprüft werden ob mit Hilfe von GAN es möglich ist Artefakte von Tabakblätter zu entfernen und den Urzustand wieder her zustellen.  Dieses Verfahren wurde in Kapitel \ref{sec:rekdaten} beschrieben. Die Trainingsdaten für diesen Versuchsaufbau können aus Kapitel \ref{sec:versuch2_daten} entnommen werden. Alle Versuche wurden auf einen Computer mit Ubuntu 14.05 Betriebssystem mit einen IntelR CoreTM i7-7700k mit 4.50GHz einer Geforce GTX 1080 mit 8G Grafikspeicher. Training und Testen wurden mit CUDA 9.0 und cudNN 7.1.1. . Also Programmiersprache wurde Python 2.7 bzw. 3.5 für Datengenerierung. Also ANN Libary wurde Tensorflow 1.5 genutzt und TFlearn 0.3.2. Für die EMD und Chamfer loss für den Autoencoder wurde die Implementierung von fanqgme (https://github.com/fanhqme/PointSetGeneration).
+
 
 \subsection{Datensatz 1. Versuchsaufbau}\label{sec:versuch1-traingsdaten}
 ~\\\\
-Der erste Datensatz "Stühle" besteht aus 4014 Punktwolken mit je 2056 Punkten. Der Datensatz wurde aus von den Shapenet Datensatz entnommen. Ein Beispielpunktwolke kann aus Abbildung entnommen werden. Er ist als .ply Datenformat abgespeichert. Dieser Datensatz wurde von \cite{3dgan} verwendet welches auch schon in Kapitel \ref{sec:3dgan} vorgestellt wurde dieser dient als Validierungsdatensatz um die Qualität der generierten Daten des GAN welches mit Tabakblättern trainiert wurde mit den welches die Stuhldaten bekommt zu vergleichen. 
+Der erste Datensatz "Stühle" besteht aus 4014 Punktwolken mit je 2056 Punkten. Der Datensatz wurde aus von den Shapenet Datensatz(www.shapenet.org) entnommen dieser ist als .ply Datenformat abgespeichert. Ein Beispielpunktwolke kann aus Abbildung entnommen werden. Dieser Datensatz wurde von  in der Arbeit von Achlioptas, Diamanti, Mitliagkas und Guibas\cite{3dgan} verwendet welches auch in Kapitel \ref{sec:3dgan} vorgestellt wurde ist, dieser dient als Validierungsdatensatz um die Qualität der generierten Daten des GAN welches mit Tabakblättern trainiert wurde mit den welches die Stuhldaten bekommt zu vergleichen. 
 
-Die Daten für den zweiten Datensatz "Blätter" stammen vom Fraunhofer Institut deren Gewinnung wurde in Kapitel \ref{sec:punktwolken} beschrieben. Der Grunddatensatz bestand aus mehreren 3D-Scans von Tabakpflanzen bei den die Blätter der Pflanze zu einen Datensatz zusammengefügt wurden sind. Der "Blätter" Datensatz besteht aus 420 Punktwolken welche dann durch ein Verfahren auf jeweils 2056 Punkten je Punktwolke reduziert wurden ist. Aus Komplexitätsgründen wurden die Farbchannels außen vor gehalten um den Informationsgehalt der Daten zu reducieren und ein Training zu vereinfachen. Außerdem spielen Farben bei den derzeitigen Ziel der Arbeit, Rekonstruktion von Tabakblättern keine rolle und nehmen keinen Einfluss auf die Verwendbarkeit des Ergebnisses. Abgespeichert werden die Daten im .ply Datenformat.
+Die Daten für den zweiten Datensatz "Blätter" stammen vom Fraunhofer Institut deren Gewinnung wurde in Kapitel \ref{sec:punktwolken} beschrieben. Der Grunddatensatz bestand aus mehreren 3D-Scans von Tabakpflanzen bei den die Blätter der Pflanze zu einen Datensatz zusammengefügt wurden sind. Der "Blätter" Datensatz besteht aus 420 Punktwolken welche dann durch ein Punktreduktionsverfahren auf jeweils 2056 Punkten je Punktwolke reduziert wurden ist. Aus Komplexitätsgründen wurden der Farbchannel außen vor gehalten um den Informationsgehalt der Daten zu reduzieren und ein Training zu vereinfachen. Außerdem spielen Farben bei den derzeitigen Ziel der Arbeit, Rekonstruktion von Tabakblättern keine Rolle und nehmen keinen Einfluss auf die Verwendbarkeit des Ergebnisses. Abgespeichert werden die Daten im .ply Datenformat.
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=0.5\textwidth]{plant.png}
@@ -587,32 +591,49 @@ Die Daten für den zweiten Datensatz "Blätter" stammen vom Fraunhofer Institut 
 \end{figure}
 \newpage
 \subsection{Datensatz 2. Versuchsaufbau}\label{sec:versuch2_daten}
-~\\\\\
-Für den zweiten Versuchsaufbau wird auf den in Datensatz Versuchsaufbau 1. Blatt Datensatz "Blätter" zurück gegriffen. Dabei wird in den Blättern punkte heraus genommen welche das verdecken oder zerstört sein eines Blattes simulieren soll. Dies passiert indem eine Gäußverteilung auf einer 3D-Sphere erzeugt wird. Anschließend wird das Komplement zwischen einem 3D-Blatt und einer 3D-Sphere berechnet das Ergebnis sind zerstörte Blätter mit Kreisrunden Löchern auf der Oberfläche. Der Algrorithmus zum erzeugen der Trainingsdaten kann im Anhang entnommen werden. In Abbildung sind die 3 Abschnitte zu erkennen wie die Trainingsdaten erzeugt werden. 
+
+Für den zweiten Versuchsaufbau wird auf den in Datensatz Versuchsaufbau 1. Blatt Datensatz "Blätter" zurück gegriffen. Das heißt der Grunddatensatz besteht aus 420 unterschiedlichen Blättern. Welche nun durch einen Algorithmus dahin gehen verändert werden um dann Simulieren von verdecken des Blattes durch andere Objekte zu beschädigen. Dies Simuliert das Verdecken das Blattes durch Artefakte. Dabei werden 3D-Spheren erzeugt wie in Abb. \ref{fig52} Rot dargestellt. Die Spheren bestehen aus 100 000 Punkte welche alle einen maximalen Radius von 10 mm haben und welcher jeder Punkt aus einer Normalverteilung entnommen wird um  eine gleichmäßige Verteilung der Punkte zu gewährleisten. Die Spheren werden nun in euklidischen Raum bewegt das sich 46 unterschiedlichen Spheren ergeben diese sollen von unseren 420 Blättern mögliche Differenzmengen Bildern um Schnittmengen mit möglichst allen Bereich des Blattes zu haben. In Abb  \ref{fig:Bild52} sind alle Sphären symbolisch eingefügt werden um dieses Vorgehen zu Veranschaulichen. Dabei wird die Differenzmenge der beiden Punkte genommen wobei je Punkt der Euklidische Raum in einen Radius von 30 mm nach Nachbarn gesucht wird welche dann als Differenzmenge gelten. Anschließend werden alle erzeugten "zerstörten" Blätter nach der Anzahl ihrer übrig geblieben Punkte gefiltert um zu gewährleisten das genügen Punkte aus dem Urblatt entfernt wurden sind und eine visuelle Diskrepanz zwischen den Blätter vorhanden ist. Was letztendlich zu 2047 zerstörten Blättern geführt hat mit jeweils mit 2056 Punkten. In Abbildung \ref{fig:Bild54} können Beispieltrainingsdatensätze entnommen werden.
+
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.5\textwidth]{leaf1.png}
+	\includegraphics[width=1.0\textwidth]{sphere1.png}
 	\caption{3D Punktwolke einer Tabakpflanze}
-	\label{fig:Bild2}
+	\label{fig:Bild52}
 \end{figure}
 
-Insgesamt besteht der Trainingsdatensatz aus 450 unzerstörten Blättern sowie 1024 zerstörten paaren. 
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.0\textwidth]{allsphere.png}
+	\caption{3D Punktwolke einer Tabakpflanze}
+	\label{fig:Bild53}
+\end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.0\textwidth]{training_destroyed.png}
+	\caption{3D Punktwolke einer Tabakpflanze}
+	\label{fig:Bild54}
+\end{figure}
+\newpage
+
 
 \subsection{Trainingsaufbau 1 - GAN}\label{sec:versuch1-aufbau}
 
-Der Aufbau besteht aus zwei unterschiedlichen Versuchen. Aufbau 1 ist das RAW-GAN. Dabei wird auf den herkömmlichen Aufbau von GAN zurückgegriffen. Die Algemeinen Meta-Trainingsvariablen sind Learningrate mit 0,005 und einen Adam Optimizer welcher zu den stochastischen Gradient Descent Verfahren aus Kapitel \ref{sec:test} und dabei auf das aus Kapitel \ref{sec:momentum} zurückgreift, mit einem Beta1 von 0.5 und einem Beta2 von 0,5. Die Batchgröße beträgt 64. Der Discriminator besteht aus 4-Layern welche 1-Dimensionaler Convolutional Layer bestehen. Mit einer Kernel Größe von 1 und Stride von 1. Die Aktivierungsfunktion wird die ReLu-Funktion genutzt. Darauf folgen 3 fully connected Layer mit der Größe 128, 54 und 1 alle mit einer Relu Aktivierungsfunktion.
-\\
-Der Generator besteht auf 5 fully-connected Layern mit [64,128,512,1024,1536] Neuronen jeweils mit einer Relu Aktivationsfunktion. Der Aufbau kann in Abbildung entnommen werden. Die Zielfunktion ist die Wasserstein Metric und die Vanila-GAN Zielfunktion von Goodfellow verwendet\cite{goodfellow2014}. 
-\\
-Der Versuchsaufbau 2 ist das Latent-GAN welches kurz in Kapitel \ref{sec:3dgan} vorgestellt wurde. Zunächst wird dabei der Autoencoder mit den Trainingsdaten trainiert. Der Encoder des Autoencoders wird mit einer Learning Rate von 0.0005 trainiert und einer Batchgröße von 50. Der Encoder besteht dabei besteht dabei aus 4 1-D Convolutional Layern mit 64,128,246,1024] Filtern Stride von 1 und Size von 1. Die Activierungsfunktion ist relu. Der Letzte Layer ist ein Max Layer. Der Decoder besteht aus aus [256,256,[614]. 
+Der Trainingsaufaufbau besteht aus zwei unterschiedlichen Versuchen. Aufbau 1.1 ist das RAW-GAN. Dabei wird auf den herkömmlichen Aufbau von GAN zurückgegriffen. Die Algemeinen Meta-Trainingsvariablen sind Learningrate mit 0,005 und einen Adam Optimizer welcher zu den stochastischen Gradient Descent Verfahren aus Kapitel \ref{sec:test} und dabei auf das aus Kapitel \ref{sec:momentum} zurückgreift, mit einem Beta1 von 0.5 und einem Beta2 von 0,5. Die Batchgröße beträgt 64. Der Discriminator besteht aus 4-Layern welche 1-Dimensionaler Convolutional Layer bestehen[64, 128, 256, 256, 512]. Mit einer Kernel Größe von 1 und Stride von 1. Die Aktivierungsfunktion wird die ReLu-Funktion genutzt. Darauf folgen 3 fully-connected-Layer mit der Größe [128, 64, 1] alle mit einer Relu-Aktivierungsfunktion. Dropout and Batchnormalisation wird auch angewendet. Das Training erfolgt jeweils mit den den Datensätze "Stuhl" und "Tabakblätter" beschrieben in Kapitel \ref{sec:versuch1-traingsdaten}.
+\\\\
+Der Generator besteht auf 5 fully-connected Layern mit [64,128,512,1024,1536] Neuronen jeweils mit einer Relu Aktivationsfunktion.  Der Noisevektor z wird aus einer 128-D Gaussischen Verteilung entnommen mit $\mu$ =  0 und $\sigma$ =  0.2. Der Aufbau kann in Abbildung entnommen werden. Die Zielfunktion ist die Wasserstein Metric und die Vanila-GAN Zielfunktion von Goodfellow verwendet\cite{goodfellow2014}. Das Training erfolgt jeweils mit den den Datensätze "Stuhl" und "Tabakblätter" beschrieben in Kapitel \ref{sec:versuch1-traingsdaten} und wurde auf 500 Epochen durchgeführt.
+\\\\
+Der Versuchsaufbau 1.2 ist das Latent-GAN welches kurz in Kapitel \ref{sec:3dgan} vorgestellt wurde. Es wurde die Implementierung von \cite{3dgan} benutzt(www.github/3d) Zunächst wird dabei der Autoencoder mit den Trainingsdaten trainiert. Der Encoder des Autoencoders wird mit einer Learning Rate von 0.0005 trainiert und einer Batchgröße von 50. Der Encoder besteht dabei besteht dabei aus 4 1-D Convolutional Layern mit 64,128,246,1024] Filtern Stride von 1 und Size von 1. Die Activierungsfunktion ist relu. Der Letzte Layer ist ein Max Layer. Der Decoder besteht aus aus [256,256,[614]. Das Training erfolgt jeweils mit den den Datensätze "Stuhl" und "Tabakblätter" beschrieben in Kapitel \ref{sec:versuch1-traingsdaten} und wurde auf 500 Epochen durchgeführt.  
 
-Das GAN hat einen Generator mit [128,128] fully-connected Layer welche als Aktivierungsfunktion eine ReLu-Funktion benutzen. Der Discriminator besteht aus [128,64,1] Fully-Connected Layern welche ebenfalls ReLu-Funktion nutzen. 
+Das GAN hat einen Generator mit [128,128] fully-connected Layer welche als Aktivierungsfunktion eine ReLu-Funktion benutzen. Der Noisevektor z wird aus einer 128-D Gaussischen Verteilung entnommen mit $\mu$ =  0 und $\sigma$ =  0.2. Der Discriminator besteht aus [128,64,1] Fully-Connected Layern welche ebenfalls ReLu-Funktion nutzen. 
 
 
 \subsection{Trainingsaufbau 2 - CGAN für Punktwolkenrekunstroktion }\label{sec:versuch2-aufbau}
 ~\\\\
 
-Da sich im Trainingsaufbau 1 das L-GAN bessere Ergebnisse liefert bei erlernen von Punktwolken Daten. Wird der Aufbau von L-GAN übernommen und dahin gehen verändert, das Ziel zu erfüllen. Zunächst werden wie bei Trainingsaufbau 1 die Trainingsdaten(siehe Trainingsdaten Aufbau 2) trainiert. Der Aufbau des Autoencoder ist dabei gleich dem von Aufbau 1. Der Encoder des Autoencoders wird mit einer Learning Rate von 0.0005 trainiert. und einer Batch Größe von 50. Der Encoder besteht dabei besteht dabei aus 4 1-D Convolutional Layern mit 64,128,246,1024] Filtern Stride von 1 und Size von 1. Die Activierungsfunktion ist relu. Der Letzte Layer ist ein Max Layer. Der Decoder besteht aus aus [256,256,[614]. Die Zielfunktion ist die Champfer Disdance  da sie die besten Ergebnisse bei citiere PGAN besten geliefert hat.\\
+Da sich im Trainingsaufbau 1 das L-GAN bessere Ergebnisse liefert bei erlernen von Punktwolken Daten. Wird der Aufbau von L-GAN übernommen und dahin gehen verändert, das Ziel zu erfüllen. Zunächst werden wie bei Trainingsaufbau 1 die Trainingsdaten(siehe Trainingsdaten Aufbau 2) trainiert. Der Aufbau des Autoencoder ist dabei gleich dem von Aufbau 1. Der Encoder des Autoencoders wird mit einer Learning Rate von 0.0005 trainiert. und einer Batch Größe von 50. Der Encoder besteht dabei besteht dabei aus 4 1-D Convolutional Layern mit 64,128,246,1024] Filtern Stride von 1 und Size von 1. Die Activierungsfunktion ist relu. Der Letzte Layer ist ein Max Layer. Der Decoder besteht aus aus [256,256,[614]. Die Zielfunktion ist die Champfer Disdance  da sie die besten Ergebnisse bei citiere PGAN besten geliefert hat. Für den Autoencoder wurde die Implementierung von \cite{3dgan} benutzt(www.github/3d). 
+\\\\
+Für das C-GAN wurde als Der Noisevektor z wird aus einer 128-D Gaussischen Verteilung entnommen mit $\mu$ =  0 und $\sigma$ =  0.2. y sind von Autoencoder codierten 128-D komprimierten "zerstörte" Tabakblätter das Netzwerk wird nun lernen zu den passenden komprimierten zerstörten Blättern die unzerstörten kodierten Blätter zu erlernen.
 
 Anschließend werden zerstörten BlatDaten x mit den trainierten Encoder zu den latenten Code y komprimiert, der einen Vektor von 128-D entspricht.
 Das selbe wird mit den unzerstörten Blattdaten x`gemacht welche mit den Encoder zu dem latenten Code y`komprimiert werden welcher einen Vektor von 128-D entspricht. Wobei es jeweils (x,x`) paare Gibt welche den 
@@ -627,133 +648,154 @@ Es wird nun in diesen Kapitel auf die Ergebnisse von Versuchsaufbau 1 und 2 eing
 
 \subsection{Ergebnisse - Versuchsaufbau 1}
 
-Die Ergebnisse von RAW-GAN mit den Blattdaten welches nach 500 Epochen Training lassen sich in Abb. entnehmen. Wie zu sehen ist sind die Blätter nicht gut genug für eine Weiterverarbeitung. Die Daten erinnern eher an einen hohlen Ball als an Blättern. Auch lässt der Trainingsverlauf aus Abb. zu entnehmen darauf schließen das keine weitere Verbesserung möglich ist auch auf längere Epochen gesehen da es zu viele Sprünge in der Zielfunktion den Discriminator zu gut werden lässt und den Generator nicht verbessern lässt. 
-
+Die Ergebnisse von RAW-GAN mit den Blattdaten welches nach 500 Epochen Training lassen sich in Abb.\ref{fig:Bild56} entnehmen. Wie zu sehen ist sind die Blätter nicht gut genug für eine Weiterverarbeitung. Der Latente Raum welcher von den GAN gelernt wurde und am Ende durch den Generator produziert wurde Zeit keine Ähnlichkeit mit normalen Blättern. Der WGAN Loss für den Generator und Discriminator können in Abbildung \ref{fig:Bild55} entnommen werden.  Die Daten erinnern eher an einen hohlen Ball als an Blättern. Es Formen sich Punktansammlungen nähe des Koordinatenursprungs und es lässt keine Anzeichen von Bilden einer Fläche da. 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{raw_gan_leaf_result.png}
+	\includegraphics[width=0.5\textwidth]{raw_gan_leaf_result.png}
 	\caption{Trainingsverlauf des RAW-GAN mit den Blattdaten}
-	\label{fig:Bild35}
+	\label{fig:Bild55}
 \end{figure}
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{raw_gan_leaf_example.png}
+	\includegraphics[width=0.5\textwidth]{raw_gan_leaf_example.png}
 	\caption{Traingsverlauf des RAW-GAN mit den Blattdaten}
-	\label{fig:Bild36}
+	\label{fig:Bild56}
 \end{figure}
 
-Ähnliche Ergebnisse sind auch mit den Stuhldaten zu beobachten in Abb. jeweils die Ergebnisse dafür. Es sind besser die Strukturen zu erkennen als bei den Blättern ebenfalls nicht obtimale Ergebnisse. In Abb. der Trainingsverlauf. 
-\\\\
-
+Ähnliche Ergebnisse sind auch mit den Stuhldaten zu beobachten. Wobei die Qualität der Stühle mehr an Stühlen erinnert. Es zeichnen sich Lehne und Stuhlbeine von dem GAN trainierten Generator erzeugten Daten ab. Der Trainingsverlauf ist in Abb. \ref{fig:Bild57} zu entnehmen. Dabei ist zu sehen das der Discriminator sich nicht mehr verbessert und der Generator keine besseren Ergebnisse liefern kann. Die Ergebnisse decksen sich mit den von \cite{3dgan} festgestellten Ergebnissen in den das RAW-GAN keine gut aussehenden Stuhldaten erzeugen kann. 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{raw_gan_result_400_result.png}
-	\caption{Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}
-	\label{fig:Bild35}
-\end{figure}
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.2\textwidth]{raw_gan_result_400_examples.png}
-	\caption{Traingsverlauf des RAW-GAN mit den Stuhldaten mit 422 Trainingsdaten}
-	\label{fig:Bild36}
-\end{figure}
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.2\textwidth]{raw_gan_chair_result.png}
+	\includegraphics[width=0.5\textwidth]{raw_gan_chair_result.png}
 	\caption{Traingsverlauf des RAW-GAN mit den Stuhldaten}
-	\label{fig:Bild37}
+	\label{fig:Bild57}
 \end{figure}
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{raw_gan_chair_example.png}
+	\includegraphics[width=0.5\textwidth]{raw_gan_chair_example.png}
 	\caption{Traingsverlauf des RAW-GAN mit den Stuhldaten}
-	\label{fig:Bild38}
+	\label{fig:Bild58}
 \end{figure}
-Latent-GAN chair
+Um nun die Ursache für die unterschiede in der Qualität auszumachen und festzustellen ob durch mehr Blattdaten bessere Ergebnisse erzeugt werden können, da es einen Qualitätiven Unterschied zwischen den beiden erzeugten Daten gibt. Wurden  die Stuhldaten auf 422 Trainingsdaten reduziert und ein erneutes Training des RAW-GAN durchgeführt.  Erzeugte Beispieldaten können aus Abb. \ref{fig:59} entnommen werden. Vergleicht man nun die Qualität von den RAW-GAN mit 42 Stuhldaten Trainingsdaten und 
+4014 Stuhldaten ist eine Steigerung der Qualität klar festzustellen. Der Trainingsverlauf in Abb. \ref{fig:Bild60} ähnelt der von Abb \ref{fig:56}.
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{latent_gan_chair_result.png}
-	\caption{Traingsverlauf des Latent-GAN mit den Stuhldaten}
-	\label{fig:Bild37}
-\end{figure}
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.2\textwidth]{latent_gan_chair_example.png}
-	\caption{Traingsverlauf des Latent-GAN mit den Stuhldaten}
-	\label{fig:Bild38}
-\end{figure}
-Latent-GAN leaf
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.2\textwidth]{Latent_gan_training_result.png}
-	\caption{Trainingsverlauf des Latent-GAN mit den Blattdaten}
-	\label{fig:Bild37}
-\end{figure}
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.2\textwidth]{latent_gan_leaf_example.png}
-	\caption{Trainingsverlauf des Latent-GAN mit den Blattdaten}
-	\label{fig:Bild38}
-\end{figure}
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.2\textwidth]{raw_gan_latent_gan_chair_result_400_example.png}
-	\caption{Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}
-	\label{fig:Bild37}
+	\includegraphics[width=0.5\textwidth]{raw_gan_result_400_result.png}
+	\caption{Trainingsverlauf des RAW-GAN mit den 422 Stuhldaten}
+	\label{fig:Bild59}
 \end{figure}
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{raw_gan_latent_gan_chair_example_400.png}
-	\caption{Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}
-	\label{fig:Bild37}
+	\includegraphics[width=0.5\textwidth]{raw_gan_result_400_examples.png}
+	\caption{Trainingsbeispiele des RAW-GAN mit den 422 Stuhldaten}
+	\label{fig:Bild60}
 \end{figure}
+
+Die Ergebnisse des Versuchsaufbau 1.2 Latent-GAN für Stühle kann aus Abb. \ref{fig:Bild61} und Trainingsverlauf von Generator \ref{fig:Bild62}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.5\textwidth]{latent_gan_chair_result.png}
+	\caption{Traingsverlauf des Latent-GAN mit den Stuhldaten}
+	\label{fig:Bild61}
+\end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.5\textwidth]{latent_gan_chair_example.png}
+	\caption{Traingsverlauf des Latent-GAN mit den Stuhldaten}
+	\label{fig:Bild62}
+\end{figure}
+
+
+Das Latent-GAN welches mit den Blattdaten trainier wurde können exemplare welche vom generator erzeugt wurde sind aus Abb. \ref{fig:Bild64} entnommen werden. Der Trainingsverlauf ist ins Abb. \ref{fig:Bild64} zu entnehmen.
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.5\textwidth]{Latent_gan_training_result.png}
+	\caption{Trainingsverlauf des Latent-GAN mit den Blattdaten}
+	\label{fig:Bild63}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.5\textwidth]{latent_gan_leaf_example.png}
+	\caption{Trainingsverlauf des Latent-GAN mit den Blattdaten}
+	\label{fig:Bild64}
+\end{figure}
+
+Um die Vorherige Ergebnisse besser zu Vergleichen und um ersichtlich zu machen ob eine erhöhung der Anzahl der Tabakblätter Daten zu einen besseren ergebnisse führen. Wurden 420 Stuhldaten genommen um das Latent-GAN zu trainieren. In Abb \ref{fig:Bild65} sind die exemplarische erzeugte Daten von Generator zu entnehmen. Der Trainingsverlauf kann aus Abb. \ref{fig:Bild65} entnommen werden. 
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.5\textwidth]{raw_gan_latent_gan_chair_result_400_example.png}
+	\caption{Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}
+	\label{fig:Bild65}
+\end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.5\textwidth]{raw_gan_latent_gan_chair_example_400.png}
+	\caption{Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}
+	\label{fig:Bild66}
+\end{figure}
+
+
 \subsection{Ergebnisse - Versuchsaufbau 2}
 
-Die Ergebnisse für das Latent-GAN mit den Blattdaten welches zunächst für 500 Epochs mit den Autoencoder trainiert wurde können Input und Output Paare aus Abbildung entnommen werden in Abbildung sind die Loss jeweils mit EMD-Loss und Damfer Distanz aufgelistet.
-\\\\
-Die Ergebnisse für das Latent-GAN mit den Tischdaten welches zunächst für 500 Epochs mit den Autoencoder trainiert wurde können Input und Output Paare aus Abbildung entnommen werden in Abbildung sind die Loss jeweils mit EMD-Loss und Damfer Distanz aufgelistet.
+
+Für Versuchsaufbau 2.1 wurde zunächst der Autoencoder mit den zerstörten Blattdaten auf 500 trainiert. Um eine komprimierte Version auf 128-D zu erlernen. Dabei wurde jeweils die in Kapitel \ref{sec:autoencoder} vorgestellte Chamfer Distanz als Distanzmass genommen. Beispiel Trainingsinput Trainingsdatensätze können  Abb. \ref{fig:Bild69} entnommen werden mit ihren den jeweiligen erzeugten Output des Decoders in Abb. \ref{fig:Bild68} entnommen werden. Wie zu erkennen ist vervollständigt der Autoencoder mit der Chamfer Zielfunktion die Blätter selbstständig obwohl das nicht als Ziel in diesen Bearbeitungsschritt herbeizuführen ist. Es ist zu erkennen das die Dichte in welche die Punkte beim Output auf der Höhe der Löcher angeordnet ist stark von den üblichen Bereichen auf den Blatt ist. Auch lässt der Trainingsverlauf in Abb. \ref{fig:Bild67} darauf schließend das selbst beim weiteren Training nicht die Löcher welche in den Blättern sind herzustellen sind, da seit Epoche 300 das Training stagniert. Außerdem lassen das durch die Chamfer Distanz berechnete Distanz zwischen den beiden Punktwolken keine starke Verbesserung mehr zu da die durchschnittliche Diskrepanz zwischen den Input x und den von Decoder erzeugten Output x` nur noch im 0.0005 cm Bereich liegt wie in Abb.\ref{fig:Bild67} in Epoche 500 abzulesen ist. Der keine Vernünftigte Trainingsdaten für den Latenten C-GAN aufbau generiert werden können kann an dieser Stelle der Versuchsaufbau 2.1 Latent C-GAN nicht weiter geführt werden. 
+
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{autoencoder_training_blaetter_result.png}
-	\caption{Trainingsverlauf des RAW-GAN mit den Blattdaten}
-	\label{fig:Bild42}
+	\includegraphics[width=0.6\textwidth]{autoencoder_training_blaetter_result.png}
+	\caption{Trainingsverlauf des Autoencoder mit CD-Distanz für zerstörte Blattdaten}
+	\label{fig:Bild67}
 \end{figure}
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{autoencoder_destroyed_example_chamfer_fake.png}
-	\caption{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten CD Output}
-	\label{fig:Bild43}
+	\includegraphics[width=1.0\textwidth]{autoencoder_destroyed_example_chamfer_fake.png}
+	\caption{Trainingsbeispiele des Autoencoder mit CD-Distanz für zerstörte Blattdaten - Output}
+	\label{fig:Bild68}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.0\textwidth]{autoencoder_destroyed_example_chamfer_real.png}
+	\caption{Trainingsbeispiele des Autoencoder mit CD-Distanz für zerstörte Blattdaten - Input}
+	\label{fig:Bild69}
+\end{figure}
+\newpage
+
+Um nun bessere Validierungsergebnisse zu erlangen wurde Versuchaufbau 2.1 latent-CGAN nun noch mit EMD-Distanc für Autoencoder getestet. Es wurden 800 Epochen trainiert. Die Ergebnisse sind recht ähnlich zu der mit der CD-Distanc(vgl.\ref{sec:autoencoder}). Beispiel Trainingsinput Trainingsdatensätze können  Abb. \ref{fig:Bild71} entnommen werden mit ihren den jeweiligen erzeugten Output des Decoders in Abb. \ref{fig:Bild72} entnommen werden. 
+Wie zu erkennen ist vervollständigt der Autoencoder mit der EMD die Blätter selbstständig obwohl das nicht als Ziel in diesen Bearbeitungsschritt herbeizuführen ist. Im Vergleich dazu sind die Blätter aber an der Stelle des loches gleichmäßiger Verteilt und es gibt keine höhre Punktansammmlungen auf der Blattfläche. Wenn man die Ergebnisse mit der Hinsicht der Zielfunktion berücksichtigt liefert die CD ein besseres ERgebniss. Insgesamt sind die Distanzen niedriger und die Dichte an den Löchern nimmt ab. Jedoch liefert die EMD bessere den besseren nebeneffekt das die Blätter realistischer Rekonstruiert werden. \ref{fig:Bild67} darauf schließend das selbst beim weiteren Training nicht die Löcher welche in den Blättern sind herzustellen sind, da seit Epoche 300 das Training stagniert. Außerdem lassen das durch die Chamfer Distanz berechnete Distanz zwischen den beiden Punktwolken keine starke Verbesserung mehr zu da die durchschnittliche Diskrepanz zwischen den Input x und den von Decoder erzeugten Output x` nur noch im 0.03 cm Bereich liegt wie in Abb.\ref{fig:Bild67} in Epoche 500 abzulesen ist. Das Training entwickelt sich jedoch seit mehren Epochen nicht mehr und stagniert. Auch mit dieser Anwendung kann das lantent C-GAN nicht weitergeführt werden da keine erfolgreichen Trainingsdaten erzeugt werden konnten.
+NOCH INPUT EINFÜGEN
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.0\textwidth]{autoencoder_training_bleatter_zer_result_emd.png}
+	\caption{Trainingsbeispiele des Autoencoder mit CD-Distanz für zerstörte Blattdaten - Output}
+	\label{fig:Bild71}
+\end{figure}
+
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.0\textwidth]{autoencoder_destroyed_example.png}
+	\caption{Trainingsbeispiele des Autoencoder mit EMD für zerstörte Blattdaten - Output}
+	\label{fig:Bild72}
 \end{figure}
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.2\textwidth]{autoencoder_destroyed_example_chamfer_real.png}
-	\caption{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten CD input }
-	\label{fig:Bild43}
+	\includegraphics[width=1.0\textwidth]{autoencoder_destroyed_example_chamfer_real.png}
+	\caption{Trainingsbeispiele des Autoencoder mit CD-Distanz für zerstörte Blattdaten - Input}
+	\label{fig:Bild69}
 \end{figure}
 
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.2\textwidth]{autoencoder_training_bleatter_zer_result.png}
-	\caption{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten CD}
-	\label{fig:Bild43}
-\end{figure}
+\newpage
+Zuletzt erfolgen die Ergebnisse von Testaufbau 1.2 RAW-CGAN welches mit den nicht komprimierten Daten trainiert wird. Dass heißt wie in \ref{sec:versuch2_daten} beschrieben Blattdaten. 
 
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.2\textwidth]{autoencoder_training_bleatter_zer_result_emd.png}
-	\caption{Trainingsverlauf des Autoencoders mit den zerstörten Blattdaten EMD}
-	\label{fig:Bild44}
-\end{figure}
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=1.2\textwidth]{autoencoder_destroyed_example.png}
-	\caption{Trainingsbeispiele des Autoencoders mit den zerstörten Blattdaten EMD}
-	\label{fig:Bild44}
-\end{figure}
+
+
 
 \section{Zusammenfassung und Diskussion }
 Ein GAN besteht aus zwei ANN, dem Discriminator und dem Generator. Das Ziel des G ist es Daten zu erzeugen, welche nicht von Trainingsdaten unterschieden werden können. Der Discriminator hat die Aufgabe zu unterscheiden ob der jeweilige Datensatz von G erzeugt wurde und somit ein fake Datensatz ist, oder von den Trainingsdaten stammt\cite{goodfellow2014}. GANs werden derzeit noch erforscht. Es gibt noch einige offene Fragen, beispielsweise bezüglich der Performance hochauflösender Bilder\cite{ende}. Es wurden in diesem Paper einige Probleme, welche beim Trainieren von GAN auftreten können und mögliche Lösungsansätze, vorgestellt. Es gibt derzeit einige praktische Ansätze, welche in der Anwendung auf GANs zurück greifen. Beispielsweise durch Textbeschreibung eigene Bilder als Output generiert werden \cite{texttoimage}, oder 3D Daten erzeugt werden\cite{3dgan}. GANs finden Anwendung in unterschiedlichen Bereichen des Deep Learnings, da sie als Lösung des Problems angesehen werden, dass Neuronale Netzwerke eine hohe Menge an Trainingsdaten benötigen und GANs dieses Problem durch ihre Fähigkeit, neue Daten zu generieren, umgehen. GANs lernen eine Art "verstecke" Repräsentation von Klassen, was dazu beitragen kann auch Modelle von komplexen Prozessen zu erlernen. Es gibt erste Ansätze bei denen im Reinforcement Learning durch GANs versucht wird Modelle von der Umwelt eines Agenten zu erlernen, welche dann auf Grundlage dieser Modelle Vorhersagen über zukünftige Ereignisse treffen kann\cite{reinforcment}.
