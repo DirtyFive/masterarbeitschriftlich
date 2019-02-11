@@ -27,10 +27,10 @@
 \contentsline {section}{\numberline {3}Methoden}{29}{section.1.3}
 \contentsline {subsection}{\numberline {3.1}Datensatz 1. Versuchsaufbau}{29}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {3.2}Datensatz 2. Versuchsaufbau}{31}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {3.3}Trainingsaufbau 1 - GAN}{33}{subsection.1.3.3}
-\contentsline {subsection}{\numberline {3.4}Trainingsaufbau 2 - CGAN f\IeC {\"u}r Punktwolkenrekunstroktion }{33}{subsection.1.3.4}
-\contentsline {section}{\numberline {4}Evaluation und Ergebnise}{34}{section.1.4}
-\contentsline {subsection}{\numberline {4.1}Ergebnisse - Versuchsaufbau 1}{34}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {4.2}Ergebnisse - Versuchsaufbau 2}{39}{subsection.1.4.2}
-\contentsline {section}{\numberline {5}Zusammenfassung und Diskussion }{43}{section.1.5}
-\contentsline {section}{Literatur}{47}{section*.5}
+\contentsline {subsection}{\numberline {3.3}Versuchsaufbau 1 - GAN}{33}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {3.4}Versuchsaufbau 2 - CGAN f\IeC {\"u}r Punktwolkenrekonstruktio }{34}{subsection.1.3.4}
+\contentsline {section}{\numberline {4}Evaluation und Ergebnisse}{36}{section.1.4}
+\contentsline {subsection}{\numberline {4.1}Ergebnisse - Versuchsaufbau 1}{36}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {4.2}Ergebnisse - Versuchsaufbau 2}{41}{subsection.1.4.2}
+\contentsline {section}{\numberline {5}Zusammenfassung und Diskussion }{47}{section.1.5}
+\contentsline {section}{Literatur}{50}{section*.4}
