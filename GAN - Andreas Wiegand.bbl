@@ -87,6 +87,34 @@ Arjovsky, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Cai%
+, Yu%
+\BCBL {}\ \BBA {} Pham%
+}{%
+Cai%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+3d-conv}
+\APACinsertmetastar {%
+3d-conv}%
+\begin{APACrefauthors}%
+Cai, Z.%
+, Yu, C.%
+\BCBL {}\ \BBA {} Pham, Q\BHBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {3D Convolution on RGB-D Point Clouds for Accurate
+  Model-free Object Pose Estimation} {3d convolution on rgb-d point clouds for
+  accurate model-free object pose estimation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1812.11284}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Dong%
 , Loy%
 , He%
