@@ -87,6 +87,23 @@ Arjovsky, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+\APACcitebtitle {batchnorm Chun}}{%
+\APACcitebtitle {batchnorm Chun}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+batchnormweb}
+\APACinsertmetastar {%
+batchnormweb}%
+\APACrefbtitle {batchnorm Chun.} {batchnorm chun.}
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+\APAChowpublished {\url{http://sanghyukchun.github.io/88/}}.
+\newblock
+\APACrefnote{Accessed: 2019-02-16}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Cai%
 , Yu%
 \BCBL {}\ \BBA {} Pham%
@@ -344,6 +361,42 @@ Halevy, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Haque%
+, Islam%
+, Iqbal%
+, Reza%
+\BCBL {}\ \BBA {} Hasan%
+}{%
+Haque%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+annpic}
+\APACinsertmetastar {%
+annpic}%
+\begin{APACrefauthors}%
+Haque, M\BPBI R.%
+, Islam, M\BPBI M.%
+, Iqbal, H.%
+, Reza, M\BPBI S.%
+\BCBL {}\ \BBA {} Hasan, M\BPBI K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Performance Evaluation of Random Forests and Artificial
+  Neural Networks for the Classification of Liver Disorder} {Performance
+  evaluation of random forests and artificial neural networks for the
+  classification of liver disorder}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2018 International Conference on Computer,
+  Communication, Chemical, Material and Electronic Engineering (IC4ME2)} {2018
+  international conference on computer, communication, chemical, material and
+  electronic engineering (ic4me2)}\ (\BPGS\ 1--5).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Hinton%
 \ \BBA {} Salakhutdinov%
 }{%
@@ -481,6 +534,35 @@ Liu, G.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Morabbi%
+, Keyvanpour%
+\BCBL {}\ \BBA {} Shojaedini%
+}{%
+Morabbi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+saddleimage}
+\APACinsertmetastar {%
+saddleimage}%
+\begin{APACrefauthors}%
+Morabbi, S.%
+, Keyvanpour, M.%
+\BCBL {}\ \BBA {} Shojaedini, S\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A new method for P300 detection in deep belief networks:
+  Nesterov momentum and drop based learning rate} {A new method for p300
+  detection in deep belief networks: Nesterov momentum and drop based learning
+  rate}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Health and Technology}{}{}{1--16}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Ng%
 \ \BBA {} Jordan%
 }{%
@@ -507,35 +589,6 @@ Ng, A\BPBI Y.%
 \newblock
 \BIn{} \APACrefbtitle {Advances in neural information processing systems}
   {Advances in neural information processing systems}\ (\BPGS\ 841--848).
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Pinto%
-, Davidson%
-, Sukthankar%
-\BCBL {}\ \BBA {} Gupta%
-}{%
-Pinto%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2017}}%
-}]{%
-reinforcment}
-\APACinsertmetastar {%
-reinforcment}%
-\begin{APACrefauthors}%
-Pinto, L.%
-, Davidson, J.%
-, Sukthankar, R.%
-\BCBL {}\ \BBA {} Gupta, A.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2017}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Robust adversarial reinforcement learning} {Robust
-  adversarial reinforcement learning}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{arXiv preprint arXiv:1703.02702}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -591,34 +644,6 @@ Ravanbakhsh, S.%
   with sets and point clouds}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{arXiv preprint arXiv:1611.04500}{}{}{}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Reed%
-\ \protect \BOthers {.}}{%
-Reed%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2016}}%
-}]{%
-texttoimage}
-\APACinsertmetastar {%
-texttoimage}%
-\begin{APACrefauthors}%
-Reed, S.%
-, Akata, Z.%
-, Yan, X.%
-, Logeswaran, L.%
-, Schiele, B.%
-\BCBL {}\ \BBA {} Lee, H.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2016}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Generative adversarial text to image synthesis}
-  {Generative adversarial text to image synthesis}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{arXiv preprint arXiv:1605.05396}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -715,35 +740,6 @@ Sutskever, I.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Wang%
-\ \protect \BOthers {.}}{%
-Wang%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2017}}%
-}]{%
-ende}
-\APACinsertmetastar {%
-ende}%
-\begin{APACrefauthors}%
-Wang, T\BHBI C.%
-, Liu, M\BHBI Y.%
-, Zhu, J\BHBI Y.%
-, Tao, A.%
-, Kautz, J.%
-\BCBL {}\ \BBA {} Catanzaro, B.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2017}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {High-Resolution Image Synthesis and Semantic
-  Manipulation with Conditional GANs} {High-resolution image synthesis and
-  semantic manipulation with conditional gans}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{arXiv preprint arXiv:1711.11585}{}{}{}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Wu%
 , Zhang%
 , Xue%
@@ -804,6 +800,36 @@ Yi, L.%
   from shapenet core55}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{arXiv preprint arXiv:1710.06104}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Zhu%
+, Park%
+, Isola%
+\BCBL {}\ \BBA {} Efros%
+}{%
+Zhu%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+pix2pix}
+\APACinsertmetastar {%
+pix2pix}%
+\begin{APACrefauthors}%
+Zhu, J\BHBI Y.%
+, Park, T.%
+, Isola, P.%
+\BCBL {}\ \BBA {} Efros, A\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Unpaired image-to-image translation using
+  cycle-consistent adversarial networks} {Unpaired image-to-image translation
+  using cycle-consistent adversarial networks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

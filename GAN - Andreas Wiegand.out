@@ -11,7 +11,7 @@
 \BOOKMARK [3][-]{subsubsection.1.2.1.5}{Batch Normalisation}{subsection.1.2.1}% 11
 \BOOKMARK [2][-]{subsection.1.2.2}{Datenformat Punktwolken}{section.1.2}% 12
 \BOOKMARK [3][-]{subsubsection.1.2.2.1}{Datenaufnahme von Tabakpflanzen}{subsection.1.2.2}% 13
-\BOOKMARK [3][-]{subsubsection.1.2.2.2}{Das Problem mit 3D-Data bei Machine Learning Ans\344tzen}{subsection.1.2.2}% 14
+\BOOKMARK [3][-]{subsubsection.1.2.2.2}{Die Schwierigkeit bei mit 3D-Data bei Machine Learning Ans\344tzen}{subsection.1.2.2}% 14
 \BOOKMARK [2][-]{subsection.1.2.3}{Convolution Neural Networks}{section.1.2}% 15
 \BOOKMARK [2][-]{subsection.1.2.4}{Autoencoder}{section.1.2}% 16
 \BOOKMARK [2][-]{subsection.1.2.5}{Generative Adversarial Network}{section.1.2}% 17
