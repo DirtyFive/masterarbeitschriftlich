@@ -132,6 +132,24 @@ Cai, Z.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+\APACcitebtitle {dc-gan online book}}{%
+\APACcitebtitle {dc-gan online book}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+dc-gan_book}
+\APACinsertmetastar {%
+dc-gan_book}%
+\APACrefbtitle {dc-gan online book.} {dc-gan online book.}
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+\APAChowpublished
+  {\url{https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html}}.
+\newblock
+\APACrefnote{Accessed: 2019-02-16}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Dong%
 , Loy%
 , He%
@@ -244,6 +262,24 @@ Fan, H.%
 \BIn{} \APACrefbtitle {2017 IEEE Cosnference on Computer Vision and Pattern
   Recognition (CVPR)} {2017 ieee cosnference on computer vision and pattern
   recognition (cvpr)}\ (\BPGS\ 2463--2471).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+\APACcitebtitle {gan lilian weng}}{%
+\APACcitebtitle {gan lilian weng}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+gan_prob}
+\APACinsertmetastar {%
+gan_prob}%
+\APACrefbtitle {gan lilian weng.} {gan lilian weng.}
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+\APAChowpublished
+  {\url{https://lilianweng.github.io/lil-log/2017/08/20/from-GAN-to-WGAN.html}}.
+\newblock
+\APACrefnote{Accessed: 2019-02-16}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

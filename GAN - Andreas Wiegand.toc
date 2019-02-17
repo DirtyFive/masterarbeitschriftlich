@@ -1,12 +1,12 @@
 \babel@toc {english}{}
 \babel@toc {german}{}
-\contentsline {title}{3-D Datenrekonstruktion mit generative Adverserial Networks}{2}{chapter.1}
+\contentsline {title}{Rekonstruktion von 3D-Modellen mit Generative Adversarial Networks}{2}{chapter.1}
 \authcount {1}
-\contentsline {author}{Andreas Wiegand}{2}{chapter.1}
-\contentsline {section}{\numberline {1}Einleitung}{2}{section.1.1}
-\contentsline {subsection}{\numberline {1.1}Objectives}{3}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.2}Outline}{4}{subsection.1.1.2}
-\contentsline {section}{\numberline {2}Grundlagen und \IeC {\"a}hnliche Arbeiten}{4}{section.1.2}
+\contentsline {author}{von Andreas Wiegand}{2}{chapter.1}
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1}Zielsetzung}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.2}\IeC {\"U}berlick}{4}{subsection.1.1.2}
+\contentsline {section}{\numberline {2}Grundlagen und \IeC {\"a}hnliche Arbeiten}{5}{section.1.2}
 \contentsline {subsection}{\numberline {2.1}K\IeC {\"u}nstliche Neuronale Netzwerke}{5}{subsection.1.2.1}
 \contentsline {subsubsection}{\numberline {2.1.1}Ziel-Funktion}{8}{subsubsection.1.2.1.1}
 \contentsline {subsubsection}{\numberline {2.1.2}Backpropagation Algorithmus}{8}{subsubsection.1.2.1.2}

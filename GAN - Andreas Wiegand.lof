@@ -1,6 +1,6 @@
 \babel@toc {english}{}
 \babel@toc {german}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces K\IeC {\"u}nstliches Neuronales Netzwerk\cite {annpic}}}{5}{figure.1.1}
+\contentsline {figure}{\numberline {1}{\ignorespaces K\IeC {\"u}nstliches Neuronales Netzwerk\cite {annpic}}}{6}{figure.1.1}
 \contentsline {figure}{\numberline {2}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{6}{figure.1.2}
 \contentsline {figure}{\numberline {3}{\ignorespaces Sigmoid Funktion}}{7}{figure.1.3}
 \contentsline {figure}{\numberline {4}{\ignorespaces Optimierung einer Zielfunktion}}{9}{figure.1.4}
@@ -16,8 +16,8 @@
 \contentsline {figure}{\numberline {14}{\ignorespaces Earth Mover Distance}}{19}{figure.1.14}
 \contentsline {figure}{\numberline {15}{\ignorespaces Chamfer Distance}}{20}{figure.1.15}
 \contentsline {figure}{\numberline {16}{\ignorespaces Generativ Adverserial Network}}{21}{figure.1.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Deep Convolutional GAN}}{22}{figure.1.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces KL Divergenz und JS Divergenz}}{23}{figure.1.18}
+\contentsline {figure}{\numberline {17}{\ignorespaces Deep Convolutional GAN\cite {dc-gan_book}}}{22}{figure.1.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces KL Divergenz und JS Divergenz \cite {gan_prob}}}{23}{figure.1.18}
 \contentsline {figure}{\numberline {19}{\ignorespaces Conditional Adverserial Network}}{26}{figure.1.19}
 \contentsline {figure}{\numberline {20}{\ignorespaces Latent-GAN}}{27}{figure.1.20}
 \contentsline {figure}{\numberline {21}{\ignorespaces Bild Rekonstruktion eines Hundes welches durch ein Artefakt zerst\IeC {\"o}rt wurde}}{28}{figure.1.21}

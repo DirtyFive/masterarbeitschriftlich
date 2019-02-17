@@ -25,31 +25,28 @@
 \newacro{EMD}[\AC@hyperlink{EMD}{EMD}]{E}
 \newacro{KNN}[\AC@hyperlink{KNN}{KNN}]{K}
 \newacro{GAN}[\AC@hyperlink{GAN}{GAN}]{G}
+\newacro{DC GAN}[\AC@hyperlink{DC GAN}{DC GAN}]{D}
+\citation{3dgan}
 \babel@aux{german}{}
-\@writefile{toc}{\contentsline {title}{3-D Datenrekonstruktion mit generative Adverserial Networks}{2}{chapter.1}}
+\@writefile{toc}{\contentsline {title}{Rekonstruktion von 3D-Modellen mit Generative Adversarial Networks}{2}{chapter.1}}
 \@writefile{toc}{\authcount {1}}
-\@writefile{toc}{\contentsline {author}{Andreas Wiegand}{2}{chapter.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Einleitung}{2}{section.1.1}}
+\@writefile{toc}{\contentsline {author}{von Andreas Wiegand}{2}{chapter.1}}
 \citation{Grundlagen}
 \citation{discrim}
 \citation{discrim}
 \citation{goodfellow2014}
-\citation{data}
-\citation{Grundlagen}
-\citation{discrim}
-\citation{discrim}
-\citation{goodfellow2014}
-\citation{data}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Objectives}{3}{subsection.1.1.1}}
-\newlabel{ref:objective}{{1.1}{3}{Objectives}{subsection.1.1.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Outline}{4}{subsection.1.1.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Grundlagen und \IeC {\"a}hnliche Arbeiten}{4}{section.1.2}}
+\citation{imagere1}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Einleitung}{3}{section.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Zielsetzung}{4}{subsection.1.1.1}}
+\newlabel{ref:objective}{{1.1}{4}{Zielsetzung}{subsection.1.1.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}\IeC {\"U}berlick}{4}{subsection.1.1.2}}
 \citation{Grundlagen}
 \citation{annpic}
 \citation{annpic}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Grundlagen und \IeC {\"a}hnliche Arbeiten}{5}{section.1.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}K\IeC {\"u}nstliche Neuronale Netzwerke}{5}{subsection.1.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces K\IeC {\"u}nstliches Neuronales Netzwerk\cite {annpic}}}{5}{figure.1.1}}
-\newlabel{fig:Bild1}{{1}{5}{Künstliches Neuronales Netzwerk\protect \cite {annpic}}{figure.1.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces K\IeC {\"u}nstliches Neuronales Netzwerk\cite {annpic}}}{6}{figure.1.1}}
+\newlabel{fig:Bild1}{{1}{6}{Künstliches Neuronales Netzwerk\protect \cite {annpic}}{figure.1.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces k\IeC {\"u}nstliches Neuron}}{6}{figure.1.2}}
 \newlabel{fig:Bild2}{{2}{6}{künstliches Neuron}{figure.1.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Sigmoid Funktion}}{7}{figure.1.3}}
@@ -136,18 +133,20 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Generativ Adverserial Network}}{21}{figure.1.16}}
 \newlabel{fig:Bild20}{{16}{21}{Generativ Adverserial Network}{figure.1.16}{}}
 \@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Minibatch stochastic gradient descent Training f\IeC {\"u}r Generative Adversarial Networks. Die Anzahl der Schritte welche auf den Discriminator angewendet wird ist k }}{21}{algocf.2}}
+\citation{dc-gan_book}
 \citation{goodfellow2014}
 \citation{sha}
 \citation{sha}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Deep Convolutional GAN}}{22}{figure.1.17}}
-\newlabel{fig:Bild21}{{17}{22}{Deep Convolutional GAN}{figure.1.17}{}}
+\citation{gan_prob}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Deep Convolutional GAN\cite {dc-gan_book}}}{22}{figure.1.17}}
+\newlabel{fig:Bild21}{{17}{22}{Deep Convolutional GAN\protect \cite {dc-gan_book}}{figure.1.17}{}}
+\newlabel{sec:problemegan}{{2.5.1}{22}{Probleme mit Generative Adverserial Networks}{subsubsection.1.2.5.1}{}}
 \citation{improvingan}
 \citation{improvingan}
 \citation{wasserstein}
 \citation{metrics}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces KL Divergenz und JS Divergenz}}{23}{figure.1.18}}
-\newlabel{fig:Bild21}{{18}{23}{KL Divergenz und JS Divergenz}{figure.1.18}{}}
-\newlabel{sec:problemegan}{{2.5.1}{23}{Probleme mit Generative Adverserial Networks}{subsubsection.1.2.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces KL Divergenz und JS Divergenz \cite {gan_prob}}}{23}{figure.1.18}}
+\newlabel{fig:Bild21}{{18}{23}{KL Divergenz und JS Divergenz \protect \cite {gan_prob}}{figure.1.18}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}Probleme mit Generative Adverserial Networks}{23}{subsubsection.1.2.5.1}}
 \citation{improvingan}
 \citation{improvingan}
@@ -283,6 +282,8 @@
 \citation{batchnormweb}
 \citation{conv}
 \citation{conv}
+\citation{dc-gan_book}
+\citation{gan_prob}
 \bibstyle{apacite}
 \bibdata{mybib}
 \bibcite{3dgan}{\citeauthoryear {Achlioptas, Diamanti, Mitliagkas,{}\ \BBA{} Guibas}{Achlioptas\ \BOthers {.}}{{\APACyear {2018}}}}
@@ -295,6 +296,8 @@
 \APACbibcite{batchnormweb}{\citeauthoryear {{\em  batchnorm Chun\/}}{{\em  batchnorm Chun\/}}{{\APACyear {{\bibnodate {}}}}}}
 \bibcite{3d-conv}{\citeauthoryear {Cai, Yu,{}\ \BBA{} Pham}{Cai\ \BOthers {.}}{{\APACyear {2018}}}}
 \APACbibcite{3d-conv}{\citeauthoryear {Cai, Yu,{}\ \BBA{} Pham}{Cai\ \BOthers {.}}{{\APACyear {2018}}}}
+\bibcite{dc-gan_book}{\citeauthoryear {{\em  dc-gan online book\/}}{{\em  dc-gan online book\/}}{{\APACyear {{\bibnodate {}}}}}}
+\APACbibcite{dc-gan_book}{\citeauthoryear {{\em  dc-gan online book\/}}{{\em  dc-gan online book\/}}{{\APACyear {{\bibnodate {}}}}}}
 \bibcite{imagerecon}{\citeauthoryear {Dong, Loy, He,{}\ \BBA{} Tang}{Dong\ \BOthers {.}}{{\APACyear {2016}}{\APACexlab {{\BCnt {1}}}}}}
 \APACbibcite{imagerecon}{\citeauthoryear {Dong, Loy, He,{}\ \BBA{} Tang}{Dong\ \BOthers {.}}{{\APACyear {2016}}{\APACexlab {{\BCnt {1}}}}}}
 \bibcite{imagere1}{\citeauthoryear {Dong, Loy, He,{}\ \BBA{} Tang}{Dong\ \BOthers {.}}{{\APACyear {2016}}{\APACexlab {{\BCnt {2}}}}}}
@@ -303,6 +306,8 @@
 \APACbibcite{conv}{\citeauthoryear {Dumoulin\ \BBA{} Visin}{Dumoulin\ \BBA{} Visin}{{\APACyear {2016}}}}
 \bibcite{autoencoderloss}{\citeauthoryear {Fan, Su,{}\ \BBA{} Guibas}{Fan\ \BOthers {.}}{{\APACyear {2017}}}}
 \APACbibcite{autoencoderloss}{\citeauthoryear {Fan, Su,{}\ \BBA{} Guibas}{Fan\ \BOthers {.}}{{\APACyear {2017}}}}
+\bibcite{gan_prob}{\citeauthoryear {{\em  gan lilian weng\/}}{{\em  gan lilian weng\/}}{{\APACyear {{\bibnodate {}}}}}}
+\APACbibcite{gan_prob}{\citeauthoryear {{\em  gan lilian weng\/}}{{\em  gan lilian weng\/}}{{\APACyear {{\bibnodate {}}}}}}
 \bibcite{crossentropy}{\citeauthoryear {Golik, Doetsch,{}\ \BBA{} Ney}{Golik\ \BOthers {.}}{{\APACyear {2013}}}}
 \APACbibcite{crossentropy}{\citeauthoryear {Golik, Doetsch,{}\ \BBA{} Ney}{Golik\ \BOthers {.}}{{\APACyear {2013}}}}
 \bibcite{Grundlagen}{\citeauthoryear {Goodfellow, Bengio, Courville,{}\ \BBA{} Bengio}{Goodfellow\ \BOthers {.}}{{\APACyear {2016}}}}
@@ -317,9 +322,9 @@
 \APACbibcite{dimreduction}{\citeauthoryear {Hinton\ \BBA{} Salakhutdinov}{Hinton\ \BBA{} Salakhutdinov}{{\APACyear {2006}}}}
 \bibcite{metrics}{\citeauthoryear {Huang\ \BOthers {.}}{Huang\ \BOthers {.}}{{\APACyear {2018}}}}
 \APACbibcite{metrics}{\citeauthoryear {Huang\ \BOthers {.}}{Huang\ \BOthers {.}}{{\APACyear {2018}}}}
+\@writefile{toc}{\contentsline {section}{Literatur}{55}{section*.4}}
 \bibcite{sha}{\citeauthoryear {Husz{\'a}r}{Husz{\'a}r}{{\APACyear {2015}}}}
 \APACbibcite{sha}{\citeauthoryear {Husz{\'a}r}{Husz{\'a}r}{{\APACyear {2015}}}}
-\@writefile{toc}{\contentsline {section}{Literatur}{55}{section*.4}}
 \bibcite{batchnorm}{\citeauthoryear {Ioffe\ \BBA{} Szegedy}{Ioffe\ \BBA{} Szegedy}{{\APACyear {2015}}}}
 \APACbibcite{batchnorm}{\citeauthoryear {Ioffe\ \BBA{} Szegedy}{Ioffe\ \BBA{} Szegedy}{{\APACyear {2015}}}}
 \bibcite{imagere2}{\citeauthoryear {Liu\ \BOthers {.}}{Liu\ \BOthers {.}}{{\APACyear {2018}}}}
