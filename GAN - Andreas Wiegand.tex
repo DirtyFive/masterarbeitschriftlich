@@ -12,6 +12,7 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 \pagestyle{plain}
+\usepackage[justification=centering]{caption}
 \begin{document}
 \tableofcontents
 \newpage
@@ -39,9 +40,10 @@
 		Masterthesis im Bereich künstliche Intelligenz \\
 		\vspace{1.5cm}
 		\includegraphics[width=0.4\textwidth]{bamberg_logo.png}
-		\vspace{1.5cm}~\\\\
+		\vspace{1.5cm}
 		\textbf{Gutachterin: Prof. Dr. Ute Schmid\\ }
-		\vspace{1.5cm}~\\\\
+
+		\vspace{1.5cm}
 		in Zusammenarbeit mit\\
 		Fraunhofer-Institut für Integrierte Schaltungen IIS/EZRT\\
 		betreut von Oliver Scholz und Franz Uhrmann\\
@@ -69,12 +71,12 @@ Generative Adverserial Network(GAN) ist ein kün-stliches neuronales Netzwerk(AN
 Um exaktere Prognosen über Ernteerträge zu treffen und die Früherkennung von Krankheiten an Pflanzen zu verbessern, werden 3D-Scanverfahren eingesetzt. Diese Verfahren scannen Pflanzen und nutzen die gewonnenen Daten um aussagekräftige Faktoren und Probleme zu ermitteln, die mit Hilfe der Daten behoben werden können. Um phentypische Eigenschaften von Pflanzen heraus zu finden, können Machine Learning Ansätze verwendet werden. Diese können dazu beitragen, Korrelationen zwischen Input-Daten und Eigenschaften der Pflanze, wie Ertrag, Krankheitsresistenz oder Nährstoffverbrauch, heraus zu finden. 
 \\\\
 Jedoch kommt es bei den Scanverfahren zu Verdeckung von Pflanzen, so dass nicht die komplette Pflanze also Datenmodel generiert wird. Dies ist ein Informationsverlust, den man verhindern möchte. Um diesem Verlust von Daten entgegen zu wirken, muss die Möglichkeit geprüft werden, ob die Daten vervollständigt und rekonstruiert werden können. In der hier vorliegenden Arbeit soll ein Ansatz überprüft werden, welcher es ermöglichen soll 3D-Modelle, die als Punktwolken vorhanden sind, zu rekonstruieren. Ein Ansatz der dafür herangezogen werden kann, ist Deep Learning. Deep Lerarning kann dabei helfen den latenten Raum der 3D-Modelle zu erlernen und eine Rekonstruktion von nicht vollständigen Datensätzen zu erhalten. 
-\\
+\\\\
 In den letzten Jahren haben sich im Deep Learning Bereich besonders die discriminativen Modelle hervorgehoben, welche Input Daten wie Bilder, Audio oder Text bestimmten Klassen zuordnen. Der Grund für das wachsende Interesse liegt in der niedrigen Fehlerrate bei discriminativen Aufgaben, im Vergleich zu anderen Maschine Learning Ansätzen, wie Desicion Trees oder Markov Chains\cite{Grundlagen}. Die Modelle lernen eine Funktion, welche Input Daten X auf ein Klassen Label Y abbildet. Die Modelle werden dabei von künstlichen Neuralen Netzwerken repräsentiert. Man kann auch sagen, das Model lernt die bedingte Wahrscheinlichkeitsverteilung $P(Y|X)$ \cite{discrim}. Generative Modelle haben die Aufgabe die Wahrscheinlichkeitsverteilung von Trainingsdatendaten zu erlernen. Diese generativen Modelle lernen eine multivariate Verteilung $P(X,Y)$, was dank der Bayes Regel auch zu $P(Y|X)$ umgeformt werden kann. Somit kann dieses Modell auch für discriminative Aufgaben herangezogen werden. Gleichzeitig können aber neue (x,y) Paare erzeugt werden, was zu dem Ergebnis von neuen Datensätzen führt, welche nicht Teil der Trainingssample sind \cite{discrim}. In dieser Arbeit wird speziell auf GAN, aus der Vielzahl von generativen Modellen, eingegangen. Diese wurden von Goodfellow\cite{goodfellow2014} entwickelt und ebneten den Weg für Variationen, welche auf der Grundidee von GANs aufbauen. GANs wurden bereits verwendet um 2D-Daten, wie Bilder, zu rekonstruieren, wie beispielsweise im Paper \cite{imagere1} gezeigt wurde, in welchem auf super-hochauflösenden Bildern Artefakte entfernt und das Bild so wieder zu seinem Urzustand zurück geführt wurde.
 
 \subsection{Zielsetzung}\label{ref:objective}
 
-In dieser Arbeit wird versucht die derzeitig bestehende Forschungslücke anzugehen, welche in der Verarbeitung von Punktwolken durch künstliche Neuronale Netzwerke besteht. Der Bereich, zu dem noch keine Lösung gefunden werden konnte, ist die vollständige Rekonstruktion von Punktwolken. Bei der Rekonstruktion wird eine Punktwolke, welche von ihrem Urzustand abweicht, transformiert und wieder in diesen gebracht. Dieser Zustand kann durch Artefakte entstehen, welche beim Erfassen der Punktwolke im Scanverfahren den Blickwinkel verdecken. Ein Vorverarbeitungschnritt ist es zu prüfen, ob es möglich ist den latenten Raum des Urzustandes dieser Punktwolke zu erlernen. Die Forschungsfragen der hier vorliegenden Arbeit lassen sich definieren als:
+In dieser Arbeit wird versucht die derzeitig bestehende Forschungslücke anzugehen, welche in der Verarbeitung von Punktwolken durch künstliche Neuronale Netzwerke besteht. Der Bereich, zu dem noch keine Lösung gefunden werden konnte, ist die vollständige Rekonstruktion von Punktwolken. Bei der Rekonstruktion wird eine Punktwolke, welche von ihrem Urzustand abweicht, transformiert und wieder in diesen gebracht. Dieser Zustand kann durch Artefakte entstehen, welche beim Erfassen der Punktwolke im Scanverfahren den Blickwinkel verdecken. Ein Vorverarbeitungschnritt ist es zu prüfen, ob es möglich ist den latenten Raum des Urzustandes dieser Punktwolke zu erlernen. Die Forschungsfragen der hier vorliegenden Arbeit lassen sich definieren als:\\
 
 
 \begin{description}
@@ -87,13 +89,11 @@ Können durch GANs 3D-Punktwolken der latente Raum von Tabakblättern erlernt we
 \subsection{Überlick}
 
 Diese Arbeit ist folgender Maßen strukturiert. In Kapitel 2 "Grundlagen und ähnliche Arbeiten" werden theoretische Grundlagen welche für diese Arbeit benötigt werden. genauer beleuchtet. Außerdem sollen vorrangegeganngen Arbeiten welche einfluß auf diese Ausüben vorgestellt werden um zu veranschaulichen aus welchen Gründen diese Funktioneren kann.
-\\\\
+\\
 \begin{description}
-\item[Kapitel 1 - Grundlage und ähnliche Arbeiten] Zunächst wird auf die fundamentalen Grundlagen zu dieser Arbeit eingegangen, wie beispielsweise auf künstliche Neuronale Netzwerken, welche für das Verständnis von Generativ Adverserial Networks obligatorisch sind. Daraufhin werden GANs genauer spezifiziert, auf welchen Theorien sie aufbauen und aus welchen Modulen sie zusammen gesetzt sind. Auch werden Punktwolken genauer spezifiziert und aufgezeigt, auf welche Probleme Maschine Learning Ansätze bei diesen stoßen. Zuletzt wird in diesem Kapitel auf die bisherigen Ergebnisse bei der Rekonstruktion von Daten eingegangen. 
-
-\item[Kapitel 2 - Methoden] In diesen Kapitel werden die einzelnen Versuchsaufbauten definiert, welche versuchen die Ziele der Datenverteilung von Tabakblättern zu erlernen, sowie die Rekonstruktion von Tabakblätter zu prüfen.
-\item[Kapitel 3 - Evaluation und Ergebnisse] Es werden die Ergebnisse aus den Versuchsaufbauten 1 und 2 evaluiert und auf ihre Verwendbarkeit in der Praxis hingewiesen. 
-
+\item[Kapitel 1 - Grundlage und ähnliche Arbeiten] Zunächst wird auf die fundamentalen Grundlagen zu dieser Arbeit eingegangen, wie beispielsweise auf künstliche Neuronale Netzwerken, welche für das Verständnis von Generativ Adverserial Networks obligatorisch sind. Daraufhin werden GANs genauer spezifiziert, auf welchen Theorien sie aufbauen und aus welchen Modulen sie zusammen gesetzt sind. Auch werden Punktwolken genauer spezifiziert und aufgezeigt, auf welche Probleme Maschine Learning Ansätze bei diesen stoßen. Zuletzt wird in diesem Kapitel auf die bisherigen Ergebnisse bei der Rekonstruktion von Daten eingegangen.\\
+\item[Kapitel 2 - Methoden] In diesen Kapitel werden die einzelnen Versuchsaufbauten definiert, welche versuchen die Ziele der Datenverteilung von Tabakblättern zu erlernen, sowie die Rekonstruktion von Tabakblätter zu prüfen.\\
+\item[Kapitel 3 - Evaluation und Ergebnisse] Es werden die Ergebnisse aus den Versuchsaufbauten 1 und 2 evaluiert und auf ihre Verwendbarkeit in der Praxis hingewiesen.\\
 \item[Kapitel 4 - Zusammenfassung und Diskussion] Gibt eine Konklusion über die Arbeit und diskutiert die Ergebnisse kritisch. Des weiteren wird ein Ausblick drauf gegeben, inwiefern das Ergebnis für zukünftige Arbeiten von Relevanz ist. 
 \end{description}
 
@@ -103,25 +103,26 @@ Im folgenden Kapitel wird auf theoretische Grundlagen eingegangen, welche zum Ve
 
 \subsection{Künstliche Neuronale Netzwerke}
 
-Künstliche Neuronale Netzwerke(KNN) sind Datenstrukturen, welche von biologischen neuronalen Netzen wie sie bei Lebewesen vorkommen, inspiriert sind. KNN haben das Ziel ein Funktion f* zu approximieren. Dabei werden Parameter $\Theta$ eines Modelsangepasst, um die Abbildung von y = f(x;$\Theta)$ zu approximieren. Die Modelle werden auch als feedforward Neuronale Netzwerke betitelt weil der Informationsfluss des Models von Input zu Output fließt und keine Rekursion von Output zu Input statt findet. Diese Approximation wird durch Machine Learning Ansätzen erlernt, man spricht auch von einem Optimierungsproblem. KNN können aus mehreren Schichten, sogenannten Hidden Layer n, bestehen, welche als f\textsuperscript{(n)} dargestellt werden wobei, n $>$=1 sein muss. Ein 2-Layer KNN ist dann definiert durch f(x)=f\textsuperscript{(2)}(f\textsuperscript{(1)}(x)). Man spricht auch von Fully-Connected-Layer. Es gibt einen Input Layer, welcher den Input in das Netzwerk aufnimmt\cite{Grundlagen}. Wird ein KNN mit mehr als nur 1 Layer mit Maschine Learning trainiert spricht man auch von Deep Learning. Im vorherigen Beispiel ist dies f\textsuperscript{(1)} und der letzte Layer des Netzwerkes wird Output Layer genannt. Im vorherigen Beispiel ist das f\textsuperscript{(2)}. In Abb. \ref{fig:Bild1} sind ein KNN exemplarisch dargestellt. Es soll die Konnektivität der einzelnen Layer veranschaulichen und den Informationsfluss von Input zu Output. 
-
+Künstliche Neuronale Netzwerke(KNN) sind Datenstrukturen, welche von biologischen neuronalen Netzen wie sie bei Lebewesen vorkommen, inspiriert sind. KNN haben das Ziel ein Funktion f* zu approximieren. Dabei werden Parameter $\Theta$ eines Modelsangepasst, um die Abbildung von y = f(x;$\Theta)$ zu approximieren. Die Modelle werden auch als feedforward Neuronale Netzwerke betitelt weil der Informationsfluss des Models von Input zu Output fließt und keine Rekursion von Output zu Input statt findet. Diese Approximation wird durch Machine Learning Ansätzen erlernt, man spricht auch von einem Optimierungsproblem. KNN können aus mehreren Schichten, sogenannten Hidden Layer n, bestehen, welche als f\textsuperscript{(n)} dargestellt werden wobei, n $>$=1 sein muss. Ein 2-Layer KNN ist dann definiert durch f(x)=f\textsuperscript{(2)}(f\textsuperscript{(1)}(x)). Man spricht auch von Fully-Connected-Layer. Es gibt einen Input Layer, welcher den Input in das Netzwerk aufnimmt\cite{Grundlagen}. Wird ein KNN mit mehr als nur 1 Layer mit Maschine Learning trainiert spricht man auch von Deep Learning. Im vorherigen Beispiel ist dies f\textsuperscript{(1)} und der letzte Layer des Netzwerkes wird Output Layer genannt. Im vorherigen Beispiel ist das f\textsuperscript{(2)}. In Abb. \ref{fig:Bild1} sind ein KNN exemplarisch dargestellt. Es soll die Konnektivität der einzelnen Layer veranschaulichen und den Informationsfluss von Input zu Output.
+\newpage
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{neuronalesnetzwerk.png}
+	\includegraphics[width=0.7\textwidth]{neuronalesnetzwerk.png}
 	\caption{Künstliches Neuronales Netzwerk\protect\cite{annpic}}
 	\label{fig:Bild1}
 \end{figure}
 
 Jeder Layer besteht aus künstliche Neuronen. Diese haben ihre Namensgebung von aus der Natur stammende Neuron in Gehirnen von Lebewesen. Neuronen sind die Bausteine, aus denen die Gehirne von Lebewesen wie Fischen, Vögeln und Säugetiere zusammen gesetzt sind. Neuronen, oder auch Nervenzellen haben einen Zellkern der Zentrum der Zelle ist. Um sie herum sind Dendriten welche die Verbindung zu anderen Neuronen her stellt. Neuronen sind untereinander mit dem Axonen verbunden, welche an den enden Synapsen haben die Grenze von Axon zur Nervenzelle einen Spalt bilden. Dieser Spalt kann überwunden werden indem von der Synapse Botenstoffe abgesendet werden, die sich dann an den Rezeptor der gegenüberliegenden Synapse anhaften. Diese Übertragung findet statt wenn an der Synapse ein bestimmter Schwellenwert überschritten wurde von elektrischen Reizen, welche die Zelle abfeuert lässt. Künstliche Neuronen haben diesen Schwellenwert durch sogenannte Gewichte w\textsubscript{ij} diese sind auf den Verbindungen zwischen den Neuronen in den unterschiedlichen Layern im KNN (vgl. \ref{fig:Bild2}). Dabei steht i für die Position im Layer und j in welchen Layer sich das Neuron befindet.
 
+
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.5\textwidth]{Neuron.png}
+	\includegraphics[width=0.7\textwidth]{Neuron.png}
 	\caption{künstliches Neuron}
 	\label{fig:Bild2}
 \end{figure}
 
-~\\
+
 Jeder Layer eines KNN besteht aus mehreren Neuronen. Ein Neuron $\theta$ kann mehrere Inputs X\textsubscript{n} erhalten und produziert einen Output $\omega$\. Die Berechnungen, welche von den Neuron durchgeführt werden sind zunächst jeden Input X\textsubscript{n} mit einen Gewicht w\textsubscript{ij} zu multiplizieren. Anschließend wird die Summe von x*w gebildet. Das Ergebnis wird dann in eine Aktivierungsfunktion $\lambda$ gegeben. Ein Neuron ist definiert durch:
 \\\\
 \begin{math}
@@ -163,7 +164,7 @@ Die Aufgabe der Aktivierungsfunktion $\lambda$  ist es eine nicht lineare Transf
 Der Funktionsplot von Sigmoid Funktion kann Abb.\ref{fig:Bild3} entnommen werden. Dieser veranschaulichen den Wertebereich, welcher von den Aktivierungsfunktion angenommen werden kann und ihren Verlauf. 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.8\textwidth]{sigmoid.png}
+	\includegraphics[width=0.5\textwidth]{sigmoid.png}
 	\caption{Sigmoid Funktion}
 	\label{fig:Bild3}
 \end{figure}
@@ -211,7 +212,7 @@ v\textsubscript{t+1} =\mu v\textsubscript{t}-\epsilon\nabla$f$(\theta\textsubscr
 \theta\textsubscript{t+1}= \theta\textsubscript{t}+v\textsubscript{t+1}
 \end{math}
 \\\\
-wobei $\epsilon$ $>$ 0 die Lernrate ist,  $\mu$ $\in$ [0,1] das Momentum und $\nabla$f$(\theta\textsubscript{t}$ der Gradient von $\theta\textsubscript{t}$. Je größter das Momentum, desto schneller bewegt sich der Gradient abwärts. Da dieser am Anfang einer Lernphase der üblicherweise hoch ist empfiehlt sich zunächst mit einen niedrigen Momentum zu Arbeiten da sonnst die Gefahr besteht über das globale Optimum hinaus zuschießen. Wenn nun das Training stagniert, was aus Gründe der Aufbau der Zielfunktion zurückzuführen ist das zur nähe des globalen Optimums flache Täler entstehen welche das Trainings verlangsamen und es zu keiner Verbesserung kommt, kann man durch Momentum erzwingen größere Gradienten Sprünge einzugehen. Und sich somit schneller zu einen globalen Optimum zu bewegen oder aber aus einen lokalen Optimum hinaus Richtung eines globalen Optimum zu bewegen kann Momentum benutzt werden\cite{momentum}.
+wobei $\epsilon$ $>$ 0 die Lernrate ist,  $\mu$ $\in$ [0,1] das Momentum und $\nabla$f($\theta\textsubscript{t}$) der Gradient von $\theta\textsubscript{t}$ ist. Je größter das Momentum, desto schneller bewegt sich der Gradient abwärts. Da dieser am Anfang einer Lernphase der üblicherweise hoch ist empfiehlt sich zunächst mit einen niedrigen Momentum zu Arbeiten da sonnst die Gefahr besteht über das globale Optimum hinaus zuschießen. Wenn nun das Training stagniert, was aus Gründe der Aufbau der Zielfunktion zurückzuführen ist das zur nähe des globalen Optimums flache Täler entstehen welche das Trainings verlangsamen und es zu keiner Verbesserung kommt, kann man durch Momentum erzwingen größere Gradienten Sprünge einzugehen. Und sich somit schneller zu einen globalen Optimum zu bewegen oder aber aus einen lokalen Optimum hinaus Richtung eines globalen Optimum zu bewegen kann Momentum benutzt werden\cite{momentum}.
 
 \subsubsection{Regularization}
 ~\\\\
@@ -256,7 +257,7 @@ In Schritt 2 des Algorithmus 1 wird der Erwartungswert für alle Inputs von Mini
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.3\textwidth]{batchnorm.png}
+	\includegraphics[width=0.5\textwidth]{batchnorm.png}
 	\caption{Neuronales Netzwerk mit Batch-Normalization-Layer\protect\cite{batchnormweb}}
 	\label{fig:Bild6}
 \end{figure}
@@ -267,7 +268,7 @@ Punktwolken sind eine Menge von N Punkten, welche im Vektorraum dargestellt werd
 \\
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.3\textwidth]{plyexample.png}
+	\includegraphics[width=0.4\textwidth]{plyexample.png}
 	\caption{Polygon File Format}
 	\label{fig:Bild7}
 \end{figure}
@@ -276,8 +277,8 @@ Punktwolken können als Menge betrachtet werden. Die jeweiligen Punkte sind geor
 \\
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.3\textwidth]{leaf1.png}
-	\caption{Punktwolke eines Tabakblattes}
+	\includegraphics[width=0.5\textwidth]{leaf1.png}
+	\caption{Visualisierte Punktwolke eines Tabakblattes}
 	\label{fig:Bild8}
 \end{figure}
 \newpage
@@ -327,14 +328,14 @@ $
 Die Kernels, also die einzelnen Filter, von denen jeder N-Layer k besitzt sind K\textsuperscript{n$\cdot$n} Matrizen jedes k\textsubscript{ij} in einem Filter einspricht einen, aus den üblichen Neuronalen Netzwerk Architektur bekannten Gewichte. Diese Gewichte werden dann durch den Backprobagation-Algorithmus in der Trainingsphase des Netzwerkes angepasst um den Verlust der Ziel-Funktion durch bestimmten des Gradianten zu minimieren. Das in Abb. \ref{fig:Bild10} dargestellte Subsampling ist der Output aus den Convolutional Layern\cite{Grundlagen}. 
 \\\\
 Da Input und Kernel unterschiedliche Größen haben und man den gesamten Input mit den Kernel abdecken möchte, bewegt sich der Filter um s Position auf den Input und führt erneut einen Berechnungschritt durch. Dieser Vorgang wird Stride genannt. An jeder Position wird das Produkt von jeden x\textsubscript{ij} des Input und k\textsubscript{ij} des Kernel durchgeführt.  Anschließend werden alle Produkte aufsummiert. In Abbildung \ref{fig:Bild11} ist dieser Vorgang verdeutlicht. Zusätzlich gibt es die Möglichkeit für das sogenannte Zero Padding P. Dabei werden mehrere 0 um die Input Feature Map, am Anfang und Ende der Axen anfügt. Dies ist notwendig wenn Kernel und Input Größe nicht kompatible zueinander sind. Die Anzahl der möglichen Positionen ergeben sich aus der Kernel Größe und den Input des jeweiligen Kernel sowie des Strides. Die Output Größ W kann berechnet werden durch W = (W-F+2P)/s+1 berechnet werden. Wobei F für die Größe des Kernel steht \cite{conv}.
-
+\newpage
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{conv.png}
 	\caption{Convolution Beispiel\protect\cite{conv}}
 	\label{fig:Bild11}
 \end{figure}
-~\\\\
+
 Um  besser zu verstehen welche Auswirkungen die Anzahl der Kernels in Layer n auf die Größe des Outputs von n und die Anzahl der Kernels in Layer n+1 für den nächsten Layer haben, wird ein Beispiel aufgezeigt. Der erste Layer hat 20 Kernels mit der Größe 7x7 und Stride 1. Der Input A für einen Kernel K ist ein 28x28 Matrix. Der Output aus diesen Filter sind 20 22x22 Feature Maps. Wäre der Input ein 28x28x3 Bild mit 3 RGB Channels sein, der Output 60 22x22 Feature Maps. Allgemein kann Convolution Layer als Supsampling gesehen werden und Stride gibt an wieviele Dimensionen bei diesen Prozess pro Convolution Layer entfernt werden soll. Der letzte Layer ist ein Fully-Connected Layer welcher den typischen Anforderungen von ANN entspricht \cite{conv}.  
 \\\\
 Transposed Convolution, auch genannt Fractionally Strided Convolution oder Deconvolution, ist eine Umkehrfunktion von der üblichen Convolution. Es verwendet die gleichen Variablen wie Convolution. Dabei wird ein Kernel K mit der Größe N x N definiert der Input I mit der Größe N x N und Stride s = 1. Deconvolution kann wie Convolution angesehen werden mit  Zero Padding auf dem Input.  Das in Abbildung \ref{fig:Bild12} gezeigte Beispiel zeigt einen deconvolution Vorgang mit eine 3x3 Kernel über einen 4x4 Input. Dies ist gleich mit einen Convolution Schritt mit einen 3x3 kernel auf einen 2x2 Input und einer 2x2 Zero Padding Grenze. Convolution ist Supsampling und mit Deconvolution wird Upsampling betrieben. Durch diesen Schritt kommt es zu einer Dimensionserhöhung des Inputs. Die Gewichte der Kernels bestimmen wie der Input transfomiert wird. Durch mehrere Schichten von Deconvolution Layer kann von einer Input Größe NxN auf eine Output Größe KxK, wobei K $>$ N mit Abhängigkeit von Kernel und Stride abgebildet werden\cite{conv}. 
@@ -357,7 +358,7 @@ Die Parameter $\phi$ und $\theta$ werden durch den in Kapitel \ref{sec:test} vor
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=1.0\textwidth]{autoencoder.png}
+	\includegraphics[width=0.5\textwidth]{autoencoder.png}
 	\caption{Autoencoder}
 	\label{fig:Bild13}
 \end{figure}
@@ -524,7 +525,7 @@ $
 \\\\
 Durch diese Umformung ist es nun Möglich das GAN die EMD nutzt um die von G generierten Daten mit den realen Daten zu vergleichen. Dabei übernimmt der Discriminator nun die Aufgabe eines Critic welcher nun nicht mehr 0 oder 1 für Fake oder Real ausgibt sondern einen Score welcher angibt wieviel Masse von der P\textsubscript{$\theta$} umverteilt werden muss damit der Generator bessere Ergebnisse liefert. Das Wasserstein GAN liefert bis dahin die erfolgreichste Verbesserung zum üblichen Vanilla-GAN von Goodfellow und erlaubt es gegen die in Kapitel \ref{sec:problemegan} aufgezeigten Probleme Vanishing gradient und Model Collapse anzugehen\cite{wasserstein}. 
 \end{description}
-
+\newpage
 \subsection{Conditional-GAN}
 
 Conditional-GAN(C-GAN) ist eine Modifikation des ursprünglichen GAN von Goodfellow, welches erlaubt bedingte Wahrscheinlichkeiten in Datensätze zu erlernen. Das heißt zusätzliche Informationen in den Lernprozess einzuspeisen um den Output zu modifizieren. Im ursprünglichen GAN gibt es keine Möglichkeit auf den Output des Generators Einfluss zu nehmen. Dabei wird das Modell so verändert das eine zusätzliche Information y als Input in den Discriminator und Generator zugefügt wird. Dabei kann y jegliche Information sein wie Label, Bilddaten oder 3D-Daten. Dementsprechend muss die Zielfunktion dahin gehend angepasst werden bedingte Wahrscheinlichkeiten zu lernen
@@ -533,15 +534,15 @@ Conditional-GAN(C-GAN) ist eine Modifikation des ursprünglichen GAN von Goodfel
 min\textsubscript{G} max\textsubscript{D}V(D,G)=E\textsubscript{x$\sim$p\textsubscript{data}(x)}[logD(x|y)]  + E\textsubscript{z$\sim$p\textsubscript{z}(z)}[log(1-D(G(z|y))]          
 \end{math}
 \\\\
-Im Abb. \ref{fig:Bild38} kann der Informationsfluss und die Konnektivät der einzelnen Module entnommen werden. Die Module Generator und Discriminator bleiben gleich und können von ihrem Aufbau für die jeweiligen Datentyp verändert werden und Beispielsweiße durch Convolutional-Layer, Deconvolutional-Layer oder Fully-Connected-Layer bestehen.\cite{dcgan}.
 
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=0.5\textwidth]{cgan.png}
-	\caption{Conditional Adverserial Network}
+	\caption{Conditional Adverserial Network\protect\cite{cgan}}
 	\label{fig:Bild38}
 \end{figure}
-
+Im Abb. \ref{fig:Bild38} kann der Informationsfluss und die Konnektivät der einzelnen Module entnommen werden. Die Module Generator und Discriminator bleiben gleich und können von ihrem Aufbau für die jeweiligen Datentyp verändert werden und Beispielsweiße durch Convolutional-Layer, Deconvolutional-Layer oder Fully-Connected-Layer bestehen.\cite{cgan}.
+\newpage
 \subsection{3D-GAN}\label{sec:3dgan}
 
 Das besondere am 3D Raum im Vergleich zu normalen 2D Bildern ist die Steigerung der Dimension und zu gleich der hohe Informationsgehalt welcher in 3D Objekten steckt. Das Ziel von 3D-GAN ist es die Datenverteilung der zugrunde liegenden 3D-Modellen zu erlernen. Dabei wird der latente Objektraum erfasst und soll dadurch die Wahrscheinlichkeiten für einzelne Objektklassen enthalten. 
@@ -559,7 +560,7 @@ Die Architektur des typischen 3D-GAN oder auch RAW-GAN betitelt ist dem Vanilla 
 ~\\\\
 Eine weitere Möglichkeit ist das Latent-GAN, dieses benutzt eine andere Aufbau gegenüber dem RAW-GAN, welches dabei helfen soll den latenten Raum der Objekte zu erlernen. Zunächst wird ein Autoencoder mit den vorhanden Trainingsdaten(vgl. \ref{sec:autoencoder}) trainiert. Der Aufbau ist der selbe einen üblichen 3D-Autoencoder beschrieben in Kapitel \ref{sec:autoencoder}. Ziel dabei ist den latenten Raum der Trainingsdaten zu erlernen und eine Kompression der Daten um den Suchraum zu  welcher beim RAW-GAN durch die Inputdimension gegeben ist, zu verringern und dadurch das Training des GANs zu erleichtern\cite{3dgan}. 
 \\\\
-Bevor das Training des Latent-GAN beginnen kann werden nun die Trainingsdaten durch den vorher trainierten Encoder des 3D-Autoencoder auf die festgelegte Output-Dimension komprimiert. Anschließend werden diese komprimierten Daten verwendet um das GAN zu trainierten. Dabei erlernt das GAN komprimierten Code zu produzieren, welcher anschließend durch den Decoder des 3D-Autoencoder wieder auf die ursprüngliche Größe gebracht werden kann. Durch dieses Verfahren war es möglich Daten in einer guten Qualität zu produzieren und eine Datenverteilung des zugrundeliegenden Models zu erlernen. Der gesamte Ablauf kann in \ref{fig:Bild39} entnommen werden\cite{3dgan}. 
+Bevor das Training des Latent-GAN beginnen kann werden nun die Trainingsdaten durch den vorher trainierten Encoder des 3D-Autoencoder auf die festgelegte Output-Dimension komprimiert. Anschließend werden diese komprimierten Daten verwendet um das GAN zu trainierten. Dabei erlernt das GAN komprimierten Code zu produzieren, welcher anschließend durch den Decoder des 3D-Autoencoder wieder auf die ursprüngliche Größe gebracht werden kann. Durch dieses Verfahren war es möglich Daten in einer guten Qualität zu produzieren und eine Datenverteilung des zugrundeliegenden Models zu erlernen. Der gesamte Ablauf kann in Abb. \ref{fig:Bild39} entnommen werden\cite{3dgan}. 
 
 \subsection{Rekonstruktion von Daten}\label{sec:rekdaten}
 

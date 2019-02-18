@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.21)  17 FEB 2019 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.21)  17 FEB 2019 19:19
 entering extended mode
 **"./GAN - Andreas Wiegand.tex"
 ("GAN - Andreas Wiegand.tex"
@@ -478,7 +478,35 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 \AC@clearlist=\toks27
 )
-("GAN - Andreas Wiegand.aux"
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen147
+\captionmargin@=\dimen148
+\captionwidth=\dimen149
+\caption@tempdima=\dimen150
+\caption@indent=\dimen151
+\caption@parindent=\dimen152
+\caption@hangindent=\dimen153
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\small \vskip \abovecap
+tionskip \sbox \@tempboxa {{\bfseries #1.} #2}\ifdim \wd \@tempboxa >\hsize {\b
+fseries #1.} #2\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@
+tempboxa \hfil }\fi \vskip \belowcaptionskip .
+\c@caption@flags=\count156
+\c@ContinuedFloat=\count157
+Package caption Info: hyperref package is loaded.
+) ("GAN - Andreas Wiegand.aux"
 
 LaTeX Warning: Label `fig:Bild21' multiply defined.
 
@@ -494,39 +522,39 @@ LaTeX Warning: Label `fig:Bild81' multiply defined.
 )
 \openout1 = `"GAN - Andreas Wiegand.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 \AtBeginShipoutBox=\box64
-Package hyperref Info: Link coloring OFF on input line 15.
+Package hyperref Info: Link coloring OFF on input line 16.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count156
+\c@section@level=\count158
 )
-LaTeX Info: Redefining \ref on input line 15.
-LaTeX Info: Redefining \pageref on input line 15.
-LaTeX Info: Redefining \nameref on input line 15.
+LaTeX Info: Redefining \ref on input line 16.
+LaTeX Info: Redefining \pageref on input line 16.
+LaTeX Info: Redefining \nameref on input line 16.
 
 ("GAN - Andreas Wiegand.out") ("GAN - Andreas Wiegand.out")
 \@outlinefile=\write4
 \openout4 = `"GAN - Andreas Wiegand.out"'.
 
-\c@maskedRefs=\count157
+\c@maskedRefs=\count159
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\apacite\english.apc"
 File: english.apc 2013/07/21 v6.03 apacite language file
@@ -535,16 +563,16 @@ LaTeX Info: Redefining \BHBI on input line 130.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count158
-\scratchdimen=\dimen147
+\scratchcounter=\count160
+\scratchdimen=\dimen154
 \scratchbox=\box65
-\nofMPsegments=\count159
-\nofMParguments=\count160
+\nofMPsegments=\count161
+\nofMParguments=\count162
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count161
-\MPscratchDim=\dimen148
-\MPnumerator=\count162
-\makeMPintoPDFobject=\count163
+\MPscratchCnt=\count163
+\MPscratchDim=\dimen155
+\MPnumerator=\count164
+\makeMPintoPDFobject=\count165
 \everyMPtoPDFconversion=\toks29
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -559,6 +587,9 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
 ("GAN - Andreas Wiegand.toc"
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
@@ -580,42 +611,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <bamberg_logo.png, id=187, 180.675pt x 180.675pt>
 File: bamberg_logo.png Graphic file (type png)
 <use bamberg_logo.png>
-Package pdftex.def Info: bamberg_logo.png  used on input line 41.
+Package pdftex.def Info: bamberg_logo.png  used on input line 42.
 (pdftex.def)             Requested size: 138.84729pt x 138.84723pt.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 		\vspace{1.5cm}~\\\\
-                          
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 		\vspace{1.5cm}~\\\\
-                          
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.55 \end{titlepage}
+l.57 \end{titlepage}
                      [1 <./bamberg_logo.png (PNG copy)>]
-Overfull \hbox (3.86139pt too wide) in paragraph at lines 64--65
+Overfull \hbox (3.86139pt too wide) in paragraph at lines 66--67
 []\OT1/cmr/m/n/9 Generative Ad-ver-se-ri-al Net-work(GAN) ist ein k[]un-
  []
 
@@ -623,33 +627,53 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.67 \newpage
+l.69 \newpage
               [2]
-Underfull \hbox (badness 10000) in paragraph at lines 69--74
+Underfull \hbox (badness 10000) in paragraph at lines 71--76
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 71--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+
+Underfull \vbox (badness 1102) has occurred while \output is active []
 
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
 
-Overfull \hbox (10.72424pt too wide) in paragraph at lines 89--91
+Overfull \hbox (10.72424pt too wide) in paragraph at lines 91--93
 []\OT1/cmr/m/n/10 ahnliche Ar-bei-ten"werden theo-re-ti-sche Grund-la-gen wel-c
 he f[]ur die-se Ar-beit ben[]otigt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
@@ -658,56 +682,58 @@ Overfull \hbox (0.33505pt too wide) in paragraph at lines 97--98
 []\OT1/cmr/m/n/10 Gibt ei-ne Kon-klu-si-on []uber
  []
 
-[4]
-<neuronalesnetzwerk.png, id=227, 1011.78pt x 592.2125pt>
+[4] [5]
+<neuronalesnetzwerk.png, id=235, 1011.78pt x 592.2125pt>
 File: neuronalesnetzwerk.png Graphic file (type png)
 <use neuronalesnetzwerk.png>
 Package pdftex.def Info: neuronalesnetzwerk.png  used on input line 110.
-(pdftex.def)             Requested size: 173.56177pt x 101.58746pt.
- [5]
+(pdftex.def)             Requested size: 242.98541pt x 142.22426pt.
 <Neuron.png, id=242, 1688.3075pt x 801.99625pt>
 File: Neuron.png Graphic file (type png)
 <use Neuron.png>
-Package pdftex.def Info: Neuron.png  used on input line 119.
-(pdftex.def)             Requested size: 173.56177pt x 82.44377pt.
+Package pdftex.def Info: Neuron.png  used on input line 120.
+(pdftex.def)             Requested size: 242.98541pt x 115.42374pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--133
+Underfull \hbox (badness 10000) in paragraph at lines 126--134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--134
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--133
+Underfull \vbox (badness 1540) has occurred while \output is active []
 
- []
-
-[6 <./neuronalesnetzwerk.png> <./Neuron.png>]
-<sigmoid.png, id=255, 343.2825pt x 188.95593pt>
+ [6 <./neuronalesnetzwerk.png> <./Neuron.png>]
+<sigmoid.png, id=252, 343.2825pt x 188.95593pt>
 File: sigmoid.png Graphic file (type png)
 <use sigmoid.png>
-Package pdftex.def Info: sigmoid.png  used on input line 166.
-(pdftex.def)             Requested size: 277.69987pt x 152.8545pt.
+Package pdftex.def Info: sigmoid.png  used on input line 167.
+(pdftex.def)             Requested size: 173.56177pt x 95.53299pt.
  [7 <./sigmoid.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 173--181
+Underfull \hbox (badness 10000) in paragraph at lines 174--182
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--181
+Underfull \hbox (badness 10000) in paragraph at lines 174--182
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--181
+Underfull \hbox (badness 10000) in paragraph at lines 174--182
 
  []
 
 <gradient.png, id=273, 306.14375pt x 165.61874pt>
 File: gradient.png Graphic file (type png)
 <use gradient.png>
-Package pdftex.def Info: gradient.png  used on input line 189.
+Package pdftex.def Info: gradient.png  used on input line 190.
 (pdftex.def)             Requested size: 173.56177pt x 93.89317pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--196
+Underfull \hbox (badness 10000) in paragraph at lines 185--197
 
  []
 
@@ -715,812 +741,796 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--196
 <saddle.png, id=284, 362.85562pt x 121.95563pt>
 File: saddle.png Graphic file (type png)
 <use saddle.png>
-Package pdftex.def Info: saddle.png  used on input line 199.
+Package pdftex.def Info: saddle.png  used on input line 200.
 (pdftex.def)             Requested size: 347.12354pt x 116.67036pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--215
+Underfull \hbox (badness 10000) in paragraph at lines 207--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--215
+Underfull \hbox (badness 10000) in paragraph at lines 207--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--215
+Underfull \hbox (badness 10000) in paragraph at lines 207--216
 
  []
 
 [9 <./gradient.png> <./saddle.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 217--219
+Underfull \hbox (badness 10000) in paragraph at lines 218--220
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--224
+Underfull \hbox (badness 10000) in paragraph at lines 223--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--224
+Underfull \hbox (badness 10000) in paragraph at lines 223--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--227
+Underfull \hbox (badness 10000) in paragraph at lines 226--228
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--227
+Underfull \hbox (badness 10000) in paragraph at lines 226--228
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--230
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--230
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
 
  []
 
 [10]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 238.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 239.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 238.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 239.
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--253
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 233--253
+Underfull \hbox (badness 10000) in paragraph at lines 234--254
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--256
+Underfull \hbox (badness 10000) in paragraph at lines 234--254
 
  []
 
-<batchnorm.png, id=324, 209.28188pt x 219.82124pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--257
+
+ []
+
+<batchnorm.png, id=325, 209.28188pt x 219.82124pt>
 File: batchnorm.png Graphic file (type png)
 <use batchnorm.png>
-Package pdftex.def Info: batchnorm.png  used on input line 259.
-(pdftex.def)             Requested size: 104.1381pt x 109.38037pt.
-<plyexample.png, id=328, 251.13824pt x 242.1045pt>
+Package pdftex.def Info: batchnorm.png  used on input line 260.
+(pdftex.def)             Requested size: 173.56177pt x 182.30063pt.
+<plyexample.png, id=331, 251.13824pt x 242.1045pt>
 File: plyexample.png Graphic file (type png)
 <use plyexample.png>
-Package pdftex.def Info: plyexample.png  used on input line 270.
-(pdftex.def)             Requested size: 104.1381pt x 100.3939pt.
-<leaf1.png, id=330, 408.02437pt x 406.51875pt>
+Package pdftex.def Info: plyexample.png  used on input line 271.
+(pdftex.def)             Requested size: 138.84729pt x 133.8561pt.
+<leaf1.png, id=333, 408.02437pt x 406.51875pt>
 File: leaf1.png Graphic file (type png)
 <use leaf1.png>
-Package pdftex.def Info: leaf1.png  used on input line 279.
-(pdftex.def)             Requested size: 104.1381pt x 103.75084pt.
-
-Underfull \vbox (badness 3098) has occurred while \output is active []
-
- [11]
-[12 <./batchnorm.png> <./plyexample.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 285--287
+Package pdftex.def Info: leaf1.png  used on input line 280.
+(pdftex.def)             Requested size: 173.56177pt x 172.92015pt.
+[11] [12 <./batchnorm.png> <./plyexample.png>] [13 <./leaf1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 286--288
 
  []
 
-<lematech_2.png, id=360, 624.08156pt x 249.18094pt>
+<lematech_2.png, id=366, 624.08156pt x 249.18094pt>
 File: lematech_2.png Graphic file (type png)
 <use lematech_2.png>
-Package pdftex.def Info: lematech_2.png  used on input line 291.
+Package pdftex.def Info: lematech_2.png  used on input line 292.
 (pdftex.def)             Requested size: 173.56177pt x 69.2987pt.
-[13 <./leaf1.png> <./lematech_2.png>]
-Overfull \hbox (15.83421pt too wide) in paragraph at lines 300--306
+[14 <./lematech_2.png>]
+Overfull \hbox (15.83421pt too wide) in paragraph at lines 301--307
  \OT1/cmr/bx/n/10 2.2.2 Die Schwie-rig-keit bei mit 3D-Data bei Ma-chi-ne Lear-
 ning Ans[]atzen[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--306
+Underfull \hbox (badness 10000) in paragraph at lines 301--307
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--306
+Underfull \hbox (badness 10000) in paragraph at lines 301--307
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--306
+Underfull \hbox (badness 10000) in paragraph at lines 301--307
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--306
+Underfull \hbox (badness 10000) in paragraph at lines 301--307
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--319
+Underfull \hbox (badness 10000) in paragraph at lines 310--320
 
  []
 
-<convol.png, id=376, 1043.9pt x 321.2pt>
+<convol.png, id=382, 1043.9pt x 321.2pt>
 File: convol.png Graphic file (type png)
 <use convol.png>
-Package pdftex.def Info: convol.png  used on input line 322.
+Package pdftex.def Info: convol.png  used on input line 323.
 (pdftex.def)             Requested size: 347.12354pt x 106.80501pt.
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 327--330
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 328--331
 
  []
 
-<conv.png, id=388, 307.1475pt x 188.20313pt>
+[16 <./convol.png>]
+<conv.png, id=402, 307.1475pt x 188.20313pt>
 File: conv.png Graphic file (type png)
 <use conv.png>
-Package pdftex.def Info: conv.png  used on input line 333.
+Package pdftex.def Info: conv.png  used on input line 334.
 (pdftex.def)             Requested size: 277.69987pt x 170.17096pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--341
+Underfull \hbox (badness 10000) in paragraph at lines 339--342
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 337--341
-
- []
-
-[15 <./convol.png>]
-<decon.png, id=404, 333.49594pt x 110.66344pt>
+<decon.png, id=412, 333.49594pt x 110.66344pt>
 File: decon.png Graphic file (type png)
 <use decon.png>
-Package pdftex.def Info: decon.png  used on input line 344.
+Package pdftex.def Info: decon.png  used on input line 345.
 (pdftex.def)             Requested size: 347.12354pt x 115.19362pt.
- [16 <./conv.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 352--357
+[17 <./conv.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 353--358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--357
+Underfull \hbox (badness 10000) in paragraph at lines 353--358
 
  []
 
-[17 <./decon.png>]
-<autoencoder.png, id=434, 394.47375pt x 220.4235pt>
+[18 <./decon.png>]
+<autoencoder.png, id=444, 394.47375pt x 220.4235pt>
 File: autoencoder.png Graphic file (type png)
 <use autoencoder.png>
-Package pdftex.def Info: autoencoder.png  used on input line 360.
-(pdftex.def)             Requested size: 347.12354pt x 193.96654pt.
+Package pdftex.def Info: autoencoder.png  used on input line 361.
+(pdftex.def)             Requested size: 173.56177pt x 96.98326pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--374
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--374
+Underfull \hbox (badness 10000) in paragraph at lines 365--375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--374
+Underfull \hbox (badness 10000) in paragraph at lines 365--375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--374
+Underfull \hbox (badness 10000) in paragraph at lines 365--375
 
  []
 
-[18 <./autoencoder.png>]
-<emd_distance.png, id=447, 377.0085pt x 298.11375pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--375
+
+ []
+
+<emd_distance.png, id=450, 377.0085pt x 298.11375pt>
 File: emd_distance.png Graphic file (type png)
 <use emd_distance.png>
-Package pdftex.def Info: emd_distance.png  used on input line 377.
+Package pdftex.def Info: emd_distance.png  used on input line 378.
 (pdftex.def)             Requested size: 173.56177pt x 137.24315pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--389
+Underfull \hbox (badness 10000) in paragraph at lines 383--390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--389
+Underfull \hbox (badness 10000) in paragraph at lines 383--390
 
  []
 
-<champfer.png, id=453, 361.35pt x 301.72725pt>
+[19 <./autoencoder.png>]
+<champfer.png, id=464, 361.35pt x 301.72725pt>
 File: champfer.png Graphic file (type png)
 <use champfer.png>
-Package pdftex.def Info: champfer.png  used on input line 392.
+Package pdftex.def Info: champfer.png  used on input line 393.
 (pdftex.def)             Requested size: 173.56177pt x 144.9241pt.
-[19 <./emd_distance.png>]
-<GAN_GRUNDAUFBAU.png, id=466, 343.2825pt x 244.66406pt>
+ [20 <./emd_distance.png> <./champfer.png>]
+<GAN_GRUNDAUFBAU.png, id=477, 343.2825pt x 244.66406pt>
 File: GAN_GRUNDAUFBAU.png Graphic file (type png)
 <use GAN_GRUNDAUFBAU.png>
-Package pdftex.def Info: GAN_GRUNDAUFBAU.png  used on input line 408.
+Package pdftex.def Info: GAN_GRUNDAUFBAU.png  used on input line 409.
 (pdftex.def)             Requested size: 173.56177pt x 123.69809pt.
 
-Overfull \hbox (15.07161pt too wide) in paragraph at lines 398--432
+Overfull \hbox (15.07161pt too wide) in paragraph at lines 399--433
 \OT1/cmr/m/n/10 Die Mo-del-le ar-bei-ten nach dem Ma-xi-mum Li-ke-lihood Sch[]a
 tzverfahren(ML-Sch[]atzer)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--432
+Underfull \hbox (badness 10000) in paragraph at lines 399--433
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--432
+Underfull \hbox (badness 10000) in paragraph at lines 399--433
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--432
+Underfull \hbox (badness 10000) in paragraph at lines 399--433
 
  []
 
-[20 <./champfer.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 434--437
+[21 <./GAN_GRUNDAUFBAU.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 435--438
 
  []
 
-
-Underfull \vbox (badness 1584) has occurred while \output is active []
-
- [21 <./GAN_GRUNDAUFBAU.png>]
-<dcgan1.png, id=498, 779.16093pt x 188.95593pt>
+<dcgan1.png, id=491, 779.16093pt x 188.95593pt>
 File: dcgan1.png Graphic file (type png)
 <use dcgan1.png>
-Package pdftex.def Info: dcgan1.png  used on input line 440.
+Package pdftex.def Info: dcgan1.png  used on input line 441.
 (pdftex.def)             Requested size: 347.12354pt x 84.1817pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 445--451
+Underfull \hbox (badness 10000) in paragraph at lines 446--452
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 445--451
+Underfull \hbox (badness 10000) in paragraph at lines 446--452
 
  []
 
-<KLdiv.png, id=508, 716.6775pt x 173.89969pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+<KLdiv.png, id=523, 716.6775pt x 173.89969pt>
 File: KLdiv.png Graphic file (type png)
 <use KLdiv.png>
-Package pdftex.def Info: KLdiv.png  used on input line 454.
+Package pdftex.def Info: KLdiv.png  used on input line 455.
 (pdftex.def)             Requested size: 347.12354pt x 84.22978pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--463
+Underfull \hbox (badness 10000) in paragraph at lines 461--464
 
  []
 
 
-Overfull \hbox (13.33536pt too wide) in paragraph at lines 460--463
+Overfull \hbox (13.33536pt too wide) in paragraph at lines 461--464
 \OT1/cmr/m/n/10 Wie auch an-de-ren ge-ne-ra-ti-ven Mo-del-le ha-ben auch GANs n
 och Schw[]achen bez[]uglich
  []
 
 
-Overfull \hbox (11.71046pt too wide) in paragraph at lines 460--463
+Overfull \hbox (11.71046pt too wide) in paragraph at lines 461--464
 \OT1/cmr/m/n/10 auf ei-ni-ge Pro-ble-me ein-ge-gan-gen wel-che im dar-auf-fol-g
 en-den Ka-pi-tel L[]osungsans[]atze
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--463
+Underfull \hbox (badness 10000) in paragraph at lines 461--464
 
  []
 
-[22 <./dcgan1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 466--469
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 470--473
+[23 <./dcgan1.png> <./KLdiv.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 467--470
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 474--477
+Underfull \hbox (badness 10000) in paragraph at lines 471--474
 
  []
 
 
-Overfull \hbox (21.75214pt too wide) in paragraph at lines 478--480
+Underfull \hbox (badness 10000) in paragraph at lines 475--478
+
+ []
+
+
+Overfull \hbox (21.75214pt too wide) in paragraph at lines 479--481
 \OT1/cmr/m/n/10 Die Loss Funk-ti-on der GANs lie-fert kei-ne aus-sa-ge-kr[]afti
 gen Eva-lua-ti-onsm[]oglichkeit
  []
 
 
-Overfull \hbox (6.47417pt too wide) in paragraph at lines 478--480
+Overfull \hbox (6.47417pt too wide) in paragraph at lines 479--481
 \OT1/cmr/m/n/10 wen-den und an die-sen die Ge-nau-ig-keit des Mo-dells zu te-st
 en. Die-se M[]oglichkeit
  []
 
-[23 <./KLdiv.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 483--486
+
+Underfull \hbox (badness 10000) in paragraph at lines 484--487
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--486
+Underfull \hbox (badness 10000) in paragraph at lines 484--487
 
  []
 
 
-Overfull \hbox (50.57155pt too wide) in paragraph at lines 488--490
+Overfull \hbox (50.57155pt too wide) in paragraph at lines 489--491
 \OT1/cmr/m/n/10 gleich-zei-tig auch ver-su-chen die Da-ten-ver-tei-lung der Tra
 i-nings-da-ten abzudecken[][]Salimans
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--490
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 492--494
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 496--498
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 500--502
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 504--506
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 508--526
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 508--526
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 508--526
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 508--526
+Underfull \hbox (badness 10000) in paragraph at lines 489--491
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 530--537
+Underfull \hbox (badness 10000) in paragraph at lines 493--495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 530--537
+Underfull \hbox (badness 10000) in paragraph at lines 497--499
 
  []
 
 
-Overfull \hbox (33.23825pt too wide) in paragraph at lines 530--537
-\OT1/cmr/m/n/10 Bei-spiels-wei-e durch Convolutional-Layer, Deconvolutional-La
-yer oder Fully-Connected-
+Underfull \hbox (badness 10000) in paragraph at lines 501--503
+
  []
 
-[25]
-<cgan.png, id=566, 338.76563pt x 263.48438pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 505--507
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--527
+
+ []
+
+[25] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 531--537
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 531--537
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 531--537
+
+ []
+
+<cgan.png, id=577, 338.76563pt x 263.48438pt>
 File: cgan.png Graphic file (type png)
 <use cgan.png>
 Package pdftex.def Info: cgan.png  used on input line 540.
 (pdftex.def)             Requested size: 173.56177pt x 134.99438pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 547--552
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 547--552
+[27 <./cgan.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 548--553
 
  []
 
-[26 <./cgan.png>]
-<latentgan.png, id=582, 500.46976pt x 389.65575pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 548--553
+
+ []
+
+<latentgan.png, id=598, 500.46976pt x 389.65575pt>
 File: latentgan.png Graphic file (type png)
 <use latentgan.png>
-Package pdftex.def Info: latentgan.png  used on input line 555.
+Package pdftex.def Info: latentgan.png  used on input line 556.
 (pdftex.def)             Requested size: 173.56177pt x 135.13295pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--563
+Underfull \hbox (badness 10000) in paragraph at lines 560--564
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--563
+Underfull \hbox (badness 10000) in paragraph at lines 560--564
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 566--569
+[28 <./latentgan.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 567--570
 
  []
 
-[27 <./latentgan.png>]
-<imagere.png, id=608, 729.927pt x 221.628pt>
+<imagere.png, id=627, 729.927pt x 221.628pt>
 File: imagere.png Graphic file (type png)
 <use imagere.png>
-Package pdftex.def Info: imagere.png  used on input line 572.
+Package pdftex.def Info: imagere.png  used on input line 573.
 (pdftex.def)             Requested size: 208.27623pt x 63.23903pt.
- [28 <./imagere.png>]
+[29]
 
-LaTeX Warning: Reference `sec:objective' on page 29 undefined on input line 578
+LaTeX Warning: Reference `sec:objective' on page 30 undefined on input line 579
 .
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
+Underfull \hbox (badness 10000) in paragraph at lines 583--584
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--592
+Underfull \hbox (badness 10000) in paragraph at lines 588--593
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--592
+Underfull \hbox (badness 10000) in paragraph at lines 588--593
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 595--599
+Underfull \hbox (badness 10000) in paragraph at lines 596--600
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 595--599
+Underfull \hbox (badness 10000) in paragraph at lines 596--600
 
  []
 
-[29]
-<plant.png, id=631, 487.8225pt x 446.41782pt>
+[30 <./imagere.png>]
+<plant.png, id=650, 487.8225pt x 446.41782pt>
 File: plant.png Graphic file (type png)
 <use plant.png>
-Package pdftex.def Info: plant.png  used on input line 602.
+Package pdftex.def Info: plant.png  used on input line 603.
 (pdftex.def)             Requested size: 173.56177pt x 158.83023pt.
 File: leaf1.png Graphic file (type png)
 <use leaf1.png>
-Package pdftex.def Info: leaf1.png  used on input line 609.
+Package pdftex.def Info: leaf1.png  used on input line 610.
 (pdftex.def)             Requested size: 173.56177pt x 172.92015pt.
- [30 <./plant.png>]
+ [31 <./plant.png>]
 
-LaTeX Warning: Reference `fig52' on page 31 undefined on input line 616.
+LaTeX Warning: Reference `fig52' on page 32 undefined on input line 617.
 
 
-LaTeX Warning: Reference `fig:54' on page 31 undefined on input line 616.
+LaTeX Warning: Reference `fig:54' on page 32 undefined on input line 617.
 
-<sphere1.png, id=638, 1113.56026pt x 331.2375pt>
+<sphere1.png, id=657, 1113.56026pt x 331.2375pt>
 File: sphere1.png Graphic file (type png)
 <use sphere1.png>
-Package pdftex.def Info: sphere1.png  used on input line 620.
+Package pdftex.def Info: sphere1.png  used on input line 621.
 (pdftex.def)             Requested size: 347.12354pt x 103.2537pt.
-<allsphere.png, id=639, 1113.56026pt x 354.72525pt>
+<allsphere.png, id=658, 1113.56026pt x 354.72525pt>
 File: allsphere.png Graphic file (type png)
 <use allsphere.png>
-Package pdftex.def Info: allsphere.png  used on input line 627.
+Package pdftex.def Info: allsphere.png  used on input line 628.
 (pdftex.def)             Requested size: 347.12354pt x 110.57532pt.
-<training_destroyed.png, id=640, 1113.56026pt x 320.397pt>
+<training_destroyed.png, id=659, 1113.56026pt x 320.397pt>
 File: training_destroyed.png Graphic file (type png)
 <use training_destroyed.png>
-Package pdftex.def Info: training_destroyed.png  used on input line 634.
+Package pdftex.def Info: training_destroyed.png  used on input line 635.
 (pdftex.def)             Requested size: 347.12354pt x 99.87448pt.
-[31] [32 <./sphere1.png> <./allsphere.png> <./training_destroyed.png>]
-Overfull \hbox (3.40485pt too wide) in paragraph at lines 643--648
+[32] [33 <./sphere1.png> <./allsphere.png> <./training_destroyed.png>]
+Overfull \hbox (3.40485pt too wide) in paragraph at lines 644--649
 \OT1/cmr/m/n/10 et al.[][], []2018[]) er-zielt hat. Das Trai-ning er-folgt je-w
 eils mit den Da-tens[]atze SStuhl[]und
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 643--648
+Underfull \hbox (badness 10000) in paragraph at lines 644--649
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 643--648
+Underfull \hbox (badness 10000) in paragraph at lines 644--649
 
  []
 
 
 Underfull \vbox (badness 2772) has occurred while \output is active []
 
- [33]
-Underfull \hbox (badness 10000) in paragraph at lines 651--660
+ [34]
+Underfull \hbox (badness 10000) in paragraph at lines 652--661
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 651--660
+Underfull \hbox (badness 10000) in paragraph at lines 652--661
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 651--660
+Underfull \hbox (badness 10000) in paragraph at lines 652--661
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 651--660
+Underfull \hbox (badness 10000) in paragraph at lines 652--661
 
  []
 
-[34]
-<point-cgan.png, id=680, 438.13687pt x 455.45157pt>
+[35]
+<point-cgan.png, id=700, 438.13687pt x 455.45157pt>
 File: point-cgan.png Graphic file (type png)
 <use point-cgan.png>
-Package pdftex.def Info: point-cgan.png  used on input line 663.
+Package pdftex.def Info: point-cgan.png  used on input line 664.
 (pdftex.def)             Requested size: 208.27623pt x 216.50853pt.
- [35 <./point-cgan.png>]
+ [36 <./point-cgan.png>]
 
-LaTeX Warning: Reference `Bild56' on page 36 undefined on input line 675.
+LaTeX Warning: Reference `Bild56' on page 37 undefined on input line 676.
 
-<raw_gan_leaf_result.png, id=693, 439.6425pt x 284.06125pt>
+<raw_gan_leaf_result.png, id=712, 439.6425pt x 284.06125pt>
 File: raw_gan_leaf_result.png Graphic file (type png)
 <use raw_gan_leaf_result.png>
-Package pdftex.def Info: raw_gan_leaf_result.png  used on input line 679.
+Package pdftex.def Info: raw_gan_leaf_result.png  used on input line 680.
 (pdftex.def)             Requested size: 173.56177pt x 112.1401pt.
-<raw_gan_leaf_example.png, id=694, 1153.30875pt x 371.58826pt>
+<raw_gan_leaf_example.png, id=713, 1153.30875pt x 371.58826pt>
 File: raw_gan_leaf_example.png Graphic file (type png)
 <use raw_gan_leaf_example.png>
-Package pdftex.def Info: raw_gan_leaf_example.png  used on input line 685.
+Package pdftex.def Info: raw_gan_leaf_example.png  used on input line 686.
 (pdftex.def)             Requested size: 173.56177pt x 55.91727pt.
-<ansammlung.png, id=695, 622.7265pt x 184.2885pt>
+<ansammlung.png, id=714, 622.7265pt x 184.2885pt>
 File: ansammlung.png Graphic file (type png)
 <use ansammlung.png>
-Package pdftex.def Info: ansammlung.png  used on input line 691.
+Package pdftex.def Info: ansammlung.png  used on input line 692.
 (pdftex.def)             Requested size: 173.56177pt x 51.3614pt.
-<raw_gan_chair_result.png, id=699, 462.528pt x 346.896pt>
+<raw_gan_chair_result.png, id=718, 462.528pt x 346.896pt>
 File: raw_gan_chair_result.png Graphic file (type png)
 <use raw_gan_chair_result.png>
-Package pdftex.def Info: raw_gan_chair_result.png  used on input line 700.
+Package pdftex.def Info: raw_gan_chair_result.png  used on input line 701.
 (pdftex.def)             Requested size: 173.56177pt x 130.17036pt.
-[36] [37 <./raw_gan_leaf_result.png> <./raw_gan_leaf_example.png> <./ansammlung
+[37] [38 <./raw_gan_leaf_result.png> <./raw_gan_leaf_example.png> <./ansammlung
 .png>]
-<raw_gan_chair_example.png, id=714, 1160.53575pt x 342.078pt>
+<raw_gan_chair_example.png, id=733, 1160.53575pt x 342.078pt>
 File: raw_gan_chair_example.png Graphic file (type png)
 <use raw_gan_chair_example.png>
-Package pdftex.def Info: raw_gan_chair_example.png  used on input line 707.
+Package pdftex.def Info: raw_gan_chair_example.png  used on input line 708.
 (pdftex.def)             Requested size: 173.56177pt x 51.15811pt.
-<raw_gan_result_400_result.png, id=719, 1153.30875pt x 371.58826pt>
+<raw_gan_result_400_result.png, id=738, 1153.30875pt x 371.58826pt>
 File: raw_gan_result_400_result.png Graphic file (type png)
 <use raw_gan_result_400_result.png>
-Package pdftex.def Info: raw_gan_result_400_result.png  used on input line 717.
+Package pdftex.def Info: raw_gan_result_400_result.png  used on input line 718.
 
 (pdftex.def)             Requested size: 173.56177pt x 55.91727pt.
-<raw_gan_result_400_examples.png, id=720, 410.53375pt x 277.035pt>
+<raw_gan_result_400_examples.png, id=739, 410.53375pt x 277.035pt>
 File: raw_gan_result_400_examples.png Graphic file (type png)
 <use raw_gan_result_400_examples.png>
 Package pdftex.def Info: raw_gan_result_400_examples.png  used on input line 72
-4.
+5.
 (pdftex.def)             Requested size: 173.56177pt x 117.11902pt.
- [38 <./raw_gan_chair_result.png> <./raw_gan_chair_example.png>]
-<latent_gan_chair_result.png, id=734, 403.5075pt x 270.00874pt>
+ [39 <./raw_gan_chair_result.png> <./raw_gan_chair_example.png>]
+<latent_gan_chair_result.png, id=753, 403.5075pt x 270.00874pt>
 File: latent_gan_chair_result.png Graphic file (type png)
 <use latent_gan_chair_result.png>
-Package pdftex.def Info: latent_gan_chair_result.png  used on input line 733.
+Package pdftex.def Info: latent_gan_chair_result.png  used on input line 734.
 (pdftex.def)             Requested size: 173.56177pt x 116.13857pt.
-<latent_gan_chair_example.png, id=735, 1113.56026pt x 308.95425pt>
+<latent_gan_chair_example.png, id=754, 1113.56026pt x 308.95425pt>
 File: latent_gan_chair_example.png Graphic file (type png)
 <use latent_gan_chair_example.png>
-Package pdftex.def Info: latent_gan_chair_example.png  used on input line 740.
+Package pdftex.def Info: latent_gan_chair_example.png  used on input line 741.
 (pdftex.def)             Requested size: 173.56177pt x 48.1514pt.
-<Latent_gan_training_result.png, id=739, 427.5975pt x 275.0275pt>
+<Latent_gan_training_result.png, id=758, 427.5975pt x 275.0275pt>
 File: Latent_gan_training_result.png Graphic file (type png)
 <use Latent_gan_training_result.png>
-Package pdftex.def Info: Latent_gan_training_result.png  used on input line 748
+Package pdftex.def Info: Latent_gan_training_result.png  used on input line 749
 .
 (pdftex.def)             Requested size: 173.56177pt x 111.63312pt.
-<latent_gan_leaf_example.png, id=740, 1113.56026pt x 289.68225pt>
+<latent_gan_leaf_example.png, id=759, 1113.56026pt x 289.68225pt>
 File: latent_gan_leaf_example.png Graphic file (type png)
 <use latent_gan_leaf_example.png>
-Package pdftex.def Info: latent_gan_leaf_example.png  used on input line 754.
+Package pdftex.def Info: latent_gan_leaf_example.png  used on input line 755.
 (pdftex.def)             Requested size: 173.56177pt x 45.14781pt.
- [39 <./raw_gan_result_400_result.png> <./raw_gan_result_400_examples.png> <./l
-atent_gan_chair_result.png>]
-<raw_gan_latent_gan_chair_result_400_example.png, id=749, 411.5375pt x 282.0537
+ [40 <./raw_gan_result_400_result.png> <./raw_gan_result_400_examples.png> <./l
+atent_gan_chair_result.png>] [41 <./latent_gan_chair_example.png> <./Latent_gan
+_training_result.png> <./latent_gan_leaf_example.png>]
+<raw_gan_latent_gan_chair_result_400_example.png, id=776, 411.5375pt x 282.0537
 6pt>
 File: raw_gan_latent_gan_chair_result_400_example.png Graphic file (type png)
 <use raw_gan_latent_gan_chair_result_400_example.png>
 Package pdftex.def Info: raw_gan_latent_gan_chair_result_400_example.png  used 
-on input line 763.
+on input line 764.
 (pdftex.def)             Requested size: 173.56177pt x 118.9524pt.
- [40 <./latent_gan_chair_example.png> <./Latent_gan_training_result.png> <./lat
-ent_gan_leaf_example.png>]
-<raw_gan_latent_gan_chair_example_400.png, id=757, 1153.30875pt x 371.58826pt>
+<raw_gan_latent_gan_chair_example_400.png, id=777, 1153.30875pt x 371.58826pt>
 File: raw_gan_latent_gan_chair_example_400.png Graphic file (type png)
 <use raw_gan_latent_gan_chair_example_400.png>
 Package pdftex.def Info: raw_gan_latent_gan_chair_example_400.png  used on inpu
-t line 770.
+t line 771.
 (pdftex.def)             Requested size: 173.56177pt x 55.91727pt.
- [41 <./raw_gan_latent_gan_chair_result_400_example.png> <./raw_gan_latent_gan_
+ [42 <./raw_gan_latent_gan_chair_result_400_example.png> <./raw_gan_latent_gan_
 chair_example_400.png>]
-<chair_all.png, id=773, 811.833pt x 221.628pt>
+<chair_all.png, id=792, 811.833pt x 221.628pt>
 File: chair_all.png Graphic file (type png)
 <use chair_all.png>
-Package pdftex.def Info: chair_all.png  used on input line 779.
+Package pdftex.def Info: chair_all.png  used on input line 780.
 (pdftex.def)             Requested size: 277.69987pt x 75.81244pt.
- [42 <./chair_all.png>]
-Overfull \hbox (11.2104pt too wide) in paragraph at lines 787--788
+ [43 <./chair_all.png>]
+Overfull \hbox (11.2104pt too wide) in paragraph at lines 788--789
 \OT1/cmr/m/n/10 F[]ur Ver-suchsauf-bau 2.1 vgl. []3.4[] wur-de zun[]achst der A
 u-to-en-co-der mit den zerst[]orten
  []
 
-<autoencoder_training_blaetter_result.png, id=785, 462.528pt x 346.896pt>
+<autoencoder_training_blaetter_result.png, id=804, 462.528pt x 346.896pt>
 File: autoencoder_training_blaetter_result.png Graphic file (type png)
 <use autoencoder_training_blaetter_result.png>
 Package pdftex.def Info: autoencoder_training_blaetter_result.png  used on inpu
-t line 791.
+t line 792.
 (pdftex.def)             Requested size: 208.27623pt x 156.20761pt.
-<autoencoder_destroyed_example_chamfer_fake.png, id=786, 1153.30875pt x 371.588
+<autoencoder_destroyed_example_chamfer_fake.png, id=805, 1153.30875pt x 371.588
 26pt>
 File: autoencoder_destroyed_example_chamfer_fake.png Graphic file (type png)
 <use autoencoder_destroyed_example_chamfer_fake.png>
 Package pdftex.def Info: autoencoder_destroyed_example_chamfer_fake.png  used o
-n input line 798.
+n input line 799.
 (pdftex.def)             Requested size: 347.12354pt x 111.84021pt.
-<autoencoder_destroyed_example_chamfer_real.png, id=787, 1153.30875pt x 540.820
+<autoencoder_destroyed_example_chamfer_real.png, id=806, 1153.30875pt x 540.820
 5pt>
 File: autoencoder_destroyed_example_chamfer_real.png Graphic file (type png)
 <use autoencoder_destroyed_example_chamfer_real.png>
 Package pdftex.def Info: autoencoder_destroyed_example_chamfer_real.png  used o
-n input line 805.
+n input line 806.
 (pdftex.def)             Requested size: 347.12354pt x 162.77554pt.
-[43 <./autoencoder_training_blaetter_result.png>] [44 <./autoencoder_destroyed_
+[44 <./autoencoder_training_blaetter_result.png>] [45 <./autoencoder_destroyed_
 example_chamfer_fake.png> <./autoencoder_destroyed_example_chamfer_real.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 811--814
+Underfull \hbox (badness 10000) in paragraph at lines 812--815
 
  []
 
-<autoencoder_training_bleatter_zer_result_emd.png, id=806, 462.528pt x 346.896p
+<autoencoder_training_bleatter_zer_result_emd.png, id=825, 462.528pt x 346.896p
 t>
 File: autoencoder_training_bleatter_zer_result_emd.png Graphic file (type png)
 <use autoencoder_training_bleatter_zer_result_emd.png>
 Package pdftex.def Info: autoencoder_training_bleatter_zer_result_emd.png  used
- on input line 817.
+ on input line 818.
 (pdftex.def)             Requested size: 347.12354pt x 260.35661pt.
-<repairded_emd.png, id=807, 1155.1155pt x 334.24875pt>
+<repairded_emd.png, id=826, 1155.1155pt x 334.24875pt>
 File: repairded_emd.png Graphic file (type png)
 <use repairded_emd.png>
-Package pdftex.def Info: repairded_emd.png  used on input line 823.
+Package pdftex.def Info: repairded_emd.png  used on input line 824.
 (pdftex.def)             Requested size: 347.12354pt x 100.4437pt.
-<input_emd.png, id=808, 1208.1135pt x 328.8285pt>
+<input_emd.png, id=827, 1208.1135pt x 328.8285pt>
 File: input_emd.png Graphic file (type png)
 <use input_emd.png>
-Package pdftex.def Info: input_emd.png  used on input line 829.
+Package pdftex.def Info: input_emd.png  used on input line 830.
 (pdftex.def)             Requested size: 347.12354pt x 94.47975pt.
-[45] [46 <./autoencoder_training_bleatter_zer_result_emd.png> <./repairded_emd.
+[46] [47 <./autoencoder_training_bleatter_zer_result_emd.png> <./repairded_emd.
 png>]
-<wasserstein_fully_connected_rawcgan_loss.png, id=823, 420.3705pt x 147.55125pt
+<wasserstein_fully_connected_rawcgan_loss.png, id=843, 420.3705pt x 147.55125pt
 >
 File: wasserstein_fully_connected_rawcgan_loss.png Graphic file (type png)
 <use wasserstein_fully_connected_rawcgan_loss.png>
 Package pdftex.def Info: wasserstein_fully_connected_rawcgan_loss.png  used on 
-input line 839.
+input line 840.
 (pdftex.def)             Requested size: 347.12354pt x 121.84834pt.
-<reaf_fully_connected_wgan_.png, id=824, 1056.94875pt x 324.0105pt>
+<reaf_fully_connected_wgan_.png, id=844, 1056.94875pt x 324.0105pt>
 File: reaf_fully_connected_wgan_.png Graphic file (type png)
 <use reaf_fully_connected_wgan_.png>
-Package pdftex.def Info: reaf_fully_connected_wgan_.png  used on input line 846
+Package pdftex.def Info: reaf_fully_connected_wgan_.png  used on input line 847
 .
 (pdftex.def)             Requested size: 173.56177pt x 53.20233pt.
-<fake_wgan_fully_rawcgan.png, id=825, 1158.729pt x 314.3745pt>
+<fake_wgan_fully_rawcgan.png, id=845, 1158.729pt x 314.3745pt>
 File: fake_wgan_fully_rawcgan.png Graphic file (type png)
 <use fake_wgan_fully_rawcgan.png>
-Package pdftex.def Info: fake_wgan_fully_rawcgan.png  used on input line 853.
+Package pdftex.def Info: fake_wgan_fully_rawcgan.png  used on input line 854.
 (pdftex.def)             Requested size: 173.56177pt x 47.08698pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 857--859
+Underfull \hbox (badness 10000) in paragraph at lines 858--860
 
  []
 
-[47 <./input_emd.png> <./wasserstein_fully_connected_rawcgan_loss.png> <./reaf_
-fully_connected_wgan_.png>]
-<cgan_loss_vanilla.png, id=839, 471.56175pt x 143.3355pt>
+[48 <./input_emd.png> <./wasserstein_fully_connected_rawcgan_loss.png>]
+<cgan_loss_vanilla.png, id=859, 471.56175pt x 143.3355pt>
 File: cgan_loss_vanilla.png Graphic file (type png)
 <use cgan_loss_vanilla.png>
-Package pdftex.def Info: cgan_loss_vanilla.png  used on input line 862.
+Package pdftex.def Info: cgan_loss_vanilla.png  used on input line 863.
 (pdftex.def)             Requested size: 173.56177pt x 52.75552pt.
-<dcpgan_ws_fake.png, id=840, 746.03719pt x 233.37187pt>
+<dcpgan_ws_fake.png, id=860, 746.03719pt x 233.37187pt>
 File: dcpgan_ws_fake.png Graphic file (type png)
 <use dcpgan_ws_fake.png>
-Package pdftex.def Info: dcpgan_ws_fake.png  used on input line 869.
+Package pdftex.def Info: dcpgan_ws_fake.png  used on input line 870.
 (pdftex.def)             Requested size: 173.56177pt x 54.29044pt.
-<dc_pgan_ws_real.png, id=841, 923.70094pt x 236.38312pt>
+<dc_pgan_ws_real.png, id=861, 923.70094pt x 236.38312pt>
 File: dc_pgan_ws_real.png Graphic file (type png)
 <use dc_pgan_ws_real.png>
-Package pdftex.def Info: dc_pgan_ws_real.png  used on input line 876.
+Package pdftex.def Info: dc_pgan_ws_real.png  used on input line 877.
 (pdftex.def)             Requested size: 173.56177pt x 44.4155pt.
 
-Overfull \hbox (34.97319pt too wide) in paragraph at lines 881--882
+Overfull \hbox (34.97319pt too wide) in paragraph at lines 882--883
 []\OT1/cmr/m/n/10 Zuletzt er-fol-gen die Er-geb-nis-se von Test-auf-bau 1.2 RAW
 -CGAN mit Deconvolutional-
  []
 
-[48 <./fake_wgan_fully_rawcgan.png> <./cgan_loss_vanilla.png> <./dcpgan_ws_fake
-.png>]
-<cgan_ws_loss.png, id=854, 436.63126pt x 145.7445pt>
+<cgan_ws_loss.png, id=866, 436.63126pt x 145.7445pt>
 File: cgan_ws_loss.png Graphic file (type png)
 <use cgan_ws_loss.png>
-Package pdftex.def Info: cgan_ws_loss.png  used on input line 885.
+Package pdftex.def Info: cgan_ws_loss.png  used on input line 886.
 (pdftex.def)             Requested size: 173.56177pt x 57.93427pt.
-<raw_cgan_ws_fake.png, id=855, 963.6pt x 322.806pt>
+<raw_cgan_ws_fake.png, id=867, 963.6pt x 322.806pt>
 File: raw_cgan_ws_fake.png Graphic file (type png)
 <use raw_cgan_ws_fake.png>
-Package pdftex.def Info: raw_cgan_ws_fake.png  used on input line 892.
+Package pdftex.def Info: raw_cgan_ws_fake.png  used on input line 893.
 (pdftex.def)             Requested size: 173.56177pt x 58.14197pt.
-<raw_cgan_ws_real.png, id=856, 1159.9335pt x 317.988pt>
+<raw_cgan_ws_real.png, id=868, 1159.9335pt x 317.988pt>
 File: raw_cgan_ws_real.png Graphic file (type png)
 <use raw_cgan_ws_real.png>
-Package pdftex.def Info: raw_cgan_ws_real.png  used on input line 899.
+Package pdftex.def Info: raw_cgan_ws_real.png  used on input line 900.
 (pdftex.def)             Requested size: 173.56177pt x 47.57968pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 905--908
+Underfull \hbox (badness 10000) in paragraph at lines 906--909
 
  []
 
 
-Overfull \hbox (32.29369pt too wide) in paragraph at lines 905--908
+Overfull \hbox (32.29369pt too wide) in paragraph at lines 906--909
 \OT1/cmr/m/n/10 oder Was-ser-stein Me-trik l[]asst sich nicht fest-stel-len. Je
 -doch l[]asst durch die Convolutional-
  []
 
-[49 <./dc_pgan_ws_real.png> <./cgan_ws_loss.png> <./raw_cgan_ws_fake.png>]
-[50 <./raw_cgan_ws_real.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 916--917
+[49 <./reaf_fully_connected_wgan_.png> <./fake_wgan_fully_rawcgan.png> <./cgan_
+loss_vanilla.png>] [50 <./dcpgan_ws_fake.png> <./dc_pgan_ws_real.png> <./cgan_w
+s_loss.png> <./raw_cgan_ws_fake.png> <./raw_cgan_ws_real.png>] [51]
+Underfull \hbox (badness 10000) in paragraph at lines 917--918
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--925
+Underfull \hbox (badness 10000) in paragraph at lines 923--926
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 932--935
+Underfull \hbox (badness 10000) in paragraph at lines 933--936
 
  []
 
 
-Overfull \hbox (32.29369pt too wide) in paragraph at lines 932--935
+Overfull \hbox (32.29369pt too wide) in paragraph at lines 933--936
 \OT1/cmr/m/n/10 oder Was-ser-stein Me-trik l[]asst sich nicht fest-stel-len. Je
 -doch l[]asst durch die Convolutional-
  []
 
-[51] [52] ("GAN - Andreas Wiegand.lof" [53])
+[52] [53] ("GAN - Andreas Wiegand.lof" [54])
 \tf@lof=\write6
 \openout6 = `"GAN - Andreas Wiegand.lof"'.
 
- [54] ("GAN - Andreas Wiegand.bbl"
-[55])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 941.
- [56]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 941.
+ [55] ("GAN - Andreas Wiegand.bbl"
+[56])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 942.
+ [57]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 942.
  ("GAN - Andreas Wiegand.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 941.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 941.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 942.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 942.
 Package rerunfilecheck Info: File `"GAN - Andreas Wiegand".out' has not changed
 .
-(rerunfilecheck)             Checksum: 0CAC9F40C59680836B77DEEDE4EB1685;2636.
+(rerunfilecheck)             Checksum: 388F1974AE3CC52B3B56B8F58BE123A4;2637.
 
 
 LaTeX Warning: There were undefined references.
@@ -1528,16 +1538,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 941.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 942.
  ) 
 Here is how much of TeX's memory you used:
- 9888 strings out of 492970
- 143834 string characters out of 3135854
- 270459 words of memory out of 3000000
- 13362 multiletter control sequences out of 15000+200000
- 9276 words of font info for 36 fonts, out of 3000000 for 9000
+ 10953 strings out of 492970
+ 163590 string characters out of 3135854
+ 293226 words of memory out of 3000000
+ 14421 multiletter control sequences out of 15000+200000
+ 8931 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,20n,30p,2403b,560s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,20n,40p,2403b,560s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Program Files/MiKTe
@@ -1553,12 +1563,11 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmti9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb>
-Output written on "GAN - Andreas Wiegand.pdf" (58 pages, 3241337 bytes).
+s/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
+s/msbm10.pfb>
+Output written on "GAN - Andreas Wiegand.pdf" (59 pages, 3226670 bytes).
 PDF statistics:
- 1112 PDF objects out of 1200 (max. 8388607)
- 206 named destinations out of 1000 (max. 500000)
+ 1129 PDF objects out of 1200 (max. 8388607)
+ 207 named destinations out of 1000 (max. 500000)
  537 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -159,9 +159,9 @@ Dong%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2016}}%
 {\protect \APACexlab {{\protect \BCnt {1}}}}}]{%
-imagerecon}
+imagere1}
 \APACinsertmetastar {%
-imagerecon}%
+imagere1}%
 \begin{APACrefauthors}%
 Dong, C.%
 , Loy, C\BPBI C.%
@@ -175,7 +175,8 @@ Dong, C.%
 {\BBOQ}\APACrefatitle {Image super-resolution using deep convolutional
   networks} {Image super-resolution using deep convolutional networks}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{}{38}{2}{295--307}.
+\APACjournalVolNumPages{IEEE transactions on pattern analysis and machine
+  intelligence}{38}{2}{295--307}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -188,9 +189,9 @@ Dong%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2016}}%
 {\protect \APACexlab {{\protect \BCnt {2}}}}}]{%
-imagere1}
+imagerecon}
 \APACinsertmetastar {%
-imagere1}%
+imagerecon}%
 \begin{APACrefauthors}%
 Dong, C.%
 , Loy, C\BPBI C.%
@@ -204,8 +205,7 @@ Dong, C.%
 {\BBOQ}\APACrefatitle {Image super-resolution using deep convolutional
   networks} {Image super-resolution using deep convolutional networks}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{IEEE transactions on pattern analysis and machine
-  intelligence}{38}{2}{295--307}.
+\APACjournalVolNumPages{}{38}{2}{295--307}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -367,33 +367,6 @@ Goodfellow, I.%
 \newblock
 \BIn{} \APACrefbtitle {Advances in neural information processing systems}
   {Advances in neural information processing systems}\ (\BPGS\ 2672--2680).
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Halevy%
-, Norvig%
-\BCBL {}\ \BBA {} Pereira%
-}{%
-Halevy%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2009}}%
-}]{%
-data}
-\APACinsertmetastar {%
-data}%
-\begin{APACrefauthors}%
-Halevy, A.%
-, Norvig, P.%
-\BCBL {}\ \BBA {} Pereira, F.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2009}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {The unreasonable effectiveness of data} {The
-  unreasonable effectiveness of data}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{IEEE Intelligent Systems}{24}{2}{8--12}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -567,6 +540,32 @@ Liu, G.%
   convolutions}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{arXiv preprint arXiv:1804.07723}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mirza%
+\ \BBA {} Osindero%
+}{%
+Mirza%
+\ \BBA {} Osindero%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+cgan}
+\APACinsertmetastar {%
+cgan}%
+\begin{APACrefauthors}%
+Mirza, M.%
+\BCBT {}\ \BBA {} Osindero, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Conditional generative adversarial nets} {Conditional
+  generative adversarial nets}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1411.1784}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
