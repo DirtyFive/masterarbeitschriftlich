@@ -14,16 +14,6 @@
 \pagestyle{plain}
 \usepackage[justification=centering]{caption}
 \begin{document}
-\tableofcontents
-\newpage
-\begin{acronym}[Bash]
-	\acro{Abb.} Abbildung
-	\acro{C-GAN}Conditional Adversarial Networks
-	\acro{EMD} Earth Mover Distanze
-	\acro{KNN} Künstliches Neuronales Netzwerk
-	\acro{GAN} Generativ Adverserial Network
-	\acro{DC GAN}Deep Convolution Generative Adverserial Network
-	\end{acronym}
 \begin{titlepage}
 	\begin{center}
 		\vspace{3cm}
@@ -41,7 +31,7 @@
 		\vspace{1.5cm}
 		\includegraphics[width=0.4\textwidth]{bamberg_logo.png}
 		\vspace{1.5cm}
-		\textbf{Gutachterin: Prof. Dr. Ute Schmid\\ }
+		Gutachterin: Prof. Dr. Ute Schmid
 
 		\vspace{1.5cm}
 		in Zusammenarbeit mit\\
@@ -55,6 +45,19 @@
 		
 	\end{center}
 \end{titlepage}
+\tableofcontents
+\newpage
+\begin{acronym}[Bash]
+	\acro{Abb.} Abbildung
+	\acro{C-GAN}Conditional Adversarial Networks
+	\acro{CD} Chamfer Distance
+	\acro{EMD} Earth Mover Distance
+	\acro{KNN} Künstliches Neuronales Netzwerk
+	\acro{GAN} Generativ Adverserial Network
+	\acro{DC GAN}Deep Convolution Generative Adverserial Network
+	\acro{CNN} Convolutional Neural Network
+	\acro{KL} Kulback-Leibler Divergenz
+\end{acronym}
 \selectlanguage{german}
 \title{Rekonstruktion von 3D-Modellen mit Generative Adversarial Networks}
 \author{von Andreas Wiegand}
@@ -77,15 +80,12 @@ In den letzten Jahren haben sich im Deep Learning Bereich besonders die discrimi
 \subsection{Zielsetzung}\label{ref:objective}
 
 In dieser Arbeit wird versucht die derzeitig bestehende Forschungslücke anzugehen, welche in der Verarbeitung von Punktwolken durch künstliche Neuronale Netzwerke besteht. Der Bereich, zu dem noch keine Lösung gefunden werden konnte, ist die vollständige Rekonstruktion von Punktwolken. Bei der Rekonstruktion wird eine Punktwolke, welche von ihrem Urzustand abweicht, transformiert und wieder in diesen gebracht. Dieser Zustand kann durch Artefakte entstehen, welche beim Erfassen der Punktwolke im Scanverfahren den Blickwinkel verdecken. Ein Vorverarbeitungschnritt ist es zu prüfen, ob es möglich ist den latenten Raum des Urzustandes dieser Punktwolke zu erlernen. Die Forschungsfragen der hier vorliegenden Arbeit lassen sich definieren als:\\
-
-
 \begin{description}
-\item[Ziel 1]
-Können durch GANs 3D-Punktwolken der latente Raum von Tabakblättern erlernt werden um neue Datensätze zu generieren?\\
- 	
-\item[Ziel2] Können durch GANs 3D-Punktwolken von Tabakblättern welche von Tabakblättern von ihren Urzustand abgebracht wurden rekonstruiert werden? 
+	\item[Fragestellung 1]
+	Können durch GANs 3D-Punktwolken von Tabakblättern erlernt werden um neue Datensätze zu generieren?\\
+	
+	\item[Fragestellung 2] Können durch GANs 3D-Punktwolken von Tabakblättern, die von ihrem Urzustand abgebracht wurden, rekonstruiert werden? 
 \end{description}
-
 \subsection{Überlick}
 
 Diese Arbeit ist folgender Maßen strukturiert. In Kapitel 2 "Grundlagen und ähnliche Arbeiten" werden theoretische Grundlagen welche für diese Arbeit benötigt werden. genauer beleuchtet. Außerdem sollen vorrangegeganngen Arbeiten welche einfluß auf diese Ausüben vorgestellt werden um zu veranschaulichen aus welchen Gründen diese Funktioneren kann.
@@ -111,18 +111,14 @@ Künstliche Neuronale Netzwerke(KNN) sind Datenstrukturen, welche von biologisch
 	\caption{Künstliches Neuronales Netzwerk\protect\cite{annpic}}
 	\label{fig:Bild1}
 \end{figure}
-
+~\\\\
 Jeder Layer besteht aus künstliche Neuronen. Diese haben ihre Namensgebung von aus der Natur stammende Neuron in Gehirnen von Lebewesen. Neuronen sind die Bausteine, aus denen die Gehirne von Lebewesen wie Fischen, Vögeln und Säugetiere zusammen gesetzt sind. Neuronen, oder auch Nervenzellen haben einen Zellkern der Zentrum der Zelle ist. Um sie herum sind Dendriten welche die Verbindung zu anderen Neuronen her stellt. Neuronen sind untereinander mit dem Axonen verbunden, welche an den enden Synapsen haben die Grenze von Axon zur Nervenzelle einen Spalt bilden. Dieser Spalt kann überwunden werden indem von der Synapse Botenstoffe abgesendet werden, die sich dann an den Rezeptor der gegenüberliegenden Synapse anhaften. Diese Übertragung findet statt wenn an der Synapse ein bestimmter Schwellenwert überschritten wurde von elektrischen Reizen, welche die Zelle abfeuert lässt. Künstliche Neuronen haben diesen Schwellenwert durch sogenannte Gewichte w\textsubscript{ij} diese sind auf den Verbindungen zwischen den Neuronen in den unterschiedlichen Layern im KNN (vgl. \ref{fig:Bild2}). Dabei steht i für die Position im Layer und j in welchen Layer sich das Neuron befindet.
-
-
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=0.7\textwidth]{Neuron.png}
 	\caption{künstliches Neuron}
 	\label{fig:Bild2}
 \end{figure}
-
-
 Jeder Layer eines KNN besteht aus mehreren Neuronen. Ein Neuron $\theta$ kann mehrere Inputs X\textsubscript{n} erhalten und produziert einen Output $\omega$\. Die Berechnungen, welche von den Neuron durchgeführt werden sind zunächst jeden Input X\textsubscript{n} mit einen Gewicht w\textsubscript{ij} zu multiplizieren. Anschließend wird die Summe von x*w gebildet. Das Ergebnis wird dann in eine Aktivierungsfunktion $\lambda$ gegeben. Ein Neuron ist definiert durch:
 \\\\
 \begin{math}
@@ -192,13 +188,13 @@ Um nun KNNs zu trainieren und den gewünschten Output y zu generieren wird der B
 	\label{fig:Bild4}
 \end{figure}
 \\
-Wenn nun $f^\prime$(x) = 0 gibt es keinerlei Information über die Steigung. Dies ist aber kein Indiz dafür,dass $f$ ein Optimum erreicht hat. Es könnte, wie in Abbildung \ref{fig:Bild5} unten dargestellt ein lokales Minimum sein, was bedeutet, dass an diesen Punkt ein Minimum erreicht ist aber im Funktionsverlauf ein noch niedrigeres Minimum vorhanden ist. Oder einen Sattelpunkt welche einen Übergang zu einen anstieg der Funktion bildet.
-Ist nun die die Funktion $f$ definiert als $f$: $\mathbb{R}$\textsuperscript{n} $\rightarrow$  $\mathbb{R}$ hat sie als Input mehrere Variablen. Die partielle Ableitung $\frac{\partial f(x)}{\partial x\textsubscript{i}}$ zeigt an wie sehr sich $f(x)$ ändert wenn x\textsubscript{i} geändert wird. Der Gradient $\nabla\textsubscript{x}f(x)$ ist ein Vektor, welcher alle partiellen Ableitungen von $f$ enthält. Nun kann f optimieren  werden, in dem, in die Richtung die Gewichte w\textsubscript{ij} von $\theta$ dahin gehen verändert werden in dem das Gradientenverfahren absteigend zu $f^\prime$(x) = 0 optimiert wird. Dieses Verfahren wird Gradient Descent genannt \cite{Grundlagen}.
+Wenn nun $f^\prime$(x) = 0 gibt es keinerlei Information über die Steigung. Dies ist aber kein Indiz dafür,dass $f$ ein Optimum erreicht hat. Es könnte, wie in Abb. \ref{fig:Bild5} unten dargestellt ein lokales Minimum sein, was bedeutet, dass an diesen Punkt ein Minimum erreicht ist aber im Funktionsverlauf ein noch niedrigeres Minimum vorhanden ist. Oder einen Sattelpunkt welche einen Übergang zu einen anstieg der Funktion bildet.
+Ist nun die die Funktion $f$ definiert als $f$: $\mathbb{R}$\textsuperscript{n} $\rightarrow$  $\mathbb{R}$ hat sie als Input mehrere Variablen. Die partielle Ableitung $\frac{\partial f(x)}{\partial x\textsubscript{i}}$ zeigt an wie sehr sich $f(x)$ ändert wenn x\textsubscript{i} geändert wird. Der Gradient $\nabla\textsubscript{x}f(x)$ ist ein Vektor, welcher alle partiellen Ableitungen von $f$ enthält. Nun kann f optimieren  werden, in dem, in die Richtung die Gewichte w\textsubscript{ij} von $\theta$ dahin gehen verändert werden in dem das Gradientenverfahren absteigend zu $f^\prime$(x) = 0 optimiert wird. Dieses Verfahren wird Gradient Descent genannt \cite{Grundlagen}. Beim Mini-batch Gradient Descent wird die Anpassung der Gewichte während des Trainings in n Batches unterteilt. Die Batches bestehen aus jeweils i Datensätze welche aus dem Trainingsdatensatz enthalten sind. Nach dem der Gradient für die i Datensätze des jeweiligen Batch berechnet wurden, werden die Gewichte $\theta$ des ANN angepasst und der nächste Batch wird zum trainieren verwendet. Solange bis e Epochen wobei e die Durchläufe des kompletten Trainingdatensatzes stehen, passiert sind. Dieses Verfahren führt zu stabileren Trainingsergebnisse \cite{batchgradeint}.
 
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.0\textwidth]{saddle.png}
-	\caption{Minimum,Maximum und Sattelpunkt einer Zielfunktion \protect\cite{saddleimage}}
+	\caption{Minimum,Maximum und Sattelpunkt einer Zielfunktion\protect\cite{saddleimage}}
 	\label{fig:Bild5}
 \end{figure}
 
@@ -284,18 +280,20 @@ Punktwolken können als Menge betrachtet werden. Die jeweiligen Punkte sind geor
 \newpage
 \subsubsection{Datenaufnahme von Tabakpflanzen}
 ~\\\\
-Die Punktwolken können Beispielsweise von den TERRA-REF Feld Scanner von der University von Arizona Maricopa Agricultural Center and USD Arid Land Researh Station in Maricopa aufgenommen werden. In Abb. \ref{fig:Bild9} ist  Recht eine Skizze dargestellt. In Abb. \ref{fig:Bild9} Links ist der Scankopf des TERRA-REF dar gestellt. 
- 
-
+Die Punktwolken können Beispielsweise von den TERRA-REF Feld Scanner von der University von Arizona Maricopa Agricultural Center and USD Arid Land Researh Station in Maricopa aufgenommen werden. In Abb. \ref{fig:Bild9} ist  Recht eine Skizze dargestellt. In Abb. \ref{fig:Bild9} Links ist der Scankopf des TERRA-REF dar gestellt.
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=0.5\textwidth]{lematech_2.png}
 	\caption{Scankopf und Scanaufbau für die 3D-Punktwolken Gewinnung}
 	\label{fig:Bild9}
 \end{figure}
-
-Der 3D Laser Scanner erzeugt 3D Punktwolken. Dabei werden die Objekte durch den Scanner erfasst und eine 3D Repräsentation, welche durch Punkte in einen 3 Dimensionalen Koordinaten System erfasst werden können, dargestellt. Dabei wird ein Laser über das zu scannende Objekt gefahren durch reflektion des Laserstrahls auf der Oberfläche des Objektes können x,y,z Koordinaten des jeweiligen Punktes auf den Objekt bestimmt werden. Da nun beim Scannen eines Objektes durch andere Objekte die Oberfläche verdeckt sein können. Wie beispielsweise beim Scannen von Tabakpflanzen, Blätter den Scankopf es nicht Möglich macht Objekte unterhalb dieses zu erreichen. Können Scans unvollständig sein. Dieses Problem für zu den Ziel dieser Arbeit, eine Möglichkeit zu Prüfen diese unvollständigen Punktwolken zu vervollständigen. Genaueres zum diesen Thema in Kapitel \ref{sec:rekdaten}. 
-
+Der 3D Laser Scanner erzeugt 3D Punktwolken. Dabei werden die Objekte durch den Scanner erfasst und eine 3D Repräsentation, welche durch Punkte in einen 3 Dimensionalen Koordinaten System erfasst werden können, dargestellt. Dabei wird ein Laser über das zu scannende Objekt gefahren durch reflektion des Laserstrahls auf der Oberfläche des Objektes können x,y,z Koordinaten des jeweiligen Punktes auf den Objekt bestimmt werden. Eine 3D-Scan einer Tabakpflanze kann in Abb.\ref{fig:Bild100} entnommen werden. Diese wurden in dieser Arbeit von Fraunhofer-Institut für Integrierte Schaltungen zur Verfügung gestellt. Da nun beim Scannen eines Objektes durch andere Objekte die Oberfläche verdeckt sein können. Wie beispielsweise beim Scannen von Tabakpflanzen, Blätter den Scankopf es nicht Möglich macht Objekte unterhalb dieses zu erreichen. Können Scans unvollständig sein. Dieses Problem für zu den Ziel dieser Arbeit, eine Möglichkeit zu Prüfen diese unvollständigen Punktwolken zu vervollständigen. Genaueres zum diesen Thema in Kapitel \ref{sec:rekdaten}. 
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.0\textwidth]{plant.png}
+	\caption{3D Punktwolke einer Tabakpflanze}
+	\label{fig:Bild100}
+\end{figure}
 \newpage
 \subsubsection{Die Schwierigkeit bei mit 3D-Data bei Machine Learning Ansätzen}\label{sec:3dprobleme}
 ~\\\\
@@ -316,18 +314,16 @@ b_1	& b_2 	& \dots  & b_n	  \\
 x_1 	& x_2 & x_3	 & x_n
 \end{bmatrix}
 $
-\\\\dargestellt werden. Jedes Element x\textsubscript{ij} stellt einen Pixel eines Bildes da, wobei x\textsubscript{n} $\in$ [0,255] . Die Matrix A\textsuperscript{w$\cdot$b$\cdot$c} stellt w$\cdot$b$\cdot$c = N dimensionale Matrix da. Wobei w die Länge und b Breite des Bildes entspricht. c sind die Farbspektren eines Bildes und sind in einen RGB-Farbraum 3 beziehungsweiße in einen schwarz-weiß Bild 1. Nachdem  der Input eines CNN definiert ist kommt nun der Aufbau. CNN setzen sich aus mehrere Schichten von Convolution Layern zusammen. Ein Netzwerk kann mehrere N-Layer haben. Wobei jeder Layer aus mehreren Convolution oder auch Kernels genannt, zusammengesetzt ist. Ein Aufbau kann aus Abbildung \ref{fig:Bild10} entnommen werden\cite{Grundlagen}.
-
+\\\\dargestellt werden. Jedes Element x\textsubscript{ij} stellt einen Pixel eines Bildes da, wobei x\textsubscript{n} $\in$ [0,255] . Die Matrix A\textsuperscript{w$\cdot$b$\cdot$c} stellt w$\cdot$b$\cdot$c = N dimensionale Matrix da. Wobei w die Länge und b Breite des Bildes entspricht. c sind die Farbspektren eines Bildes und sind in einen RGB-Farbraum 3 beziehungsweiße in einen schwarz-weiß Bild 1. Nachdem  der Input eines CNN definiert ist kommt nun der Aufbau. CNN setzen sich aus mehrere Schichten von Convolution Layern zusammen. Ein Netzwerk kann mehrere N-Layer haben. Wobei jeder Layer aus mehreren Convolution oder auch Kernels genannt, zusammengesetzt ist. Ein Aufbau kann aus Abb. \ref{fig:Bild10} entnommen werden\cite{Grundlagen}.
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.0\textwidth]{convol.png}
 	\caption{Convolutional Neural Network}
 	\label{fig:Bild10}
 \end{figure}
-
 Die Kernels, also die einzelnen Filter, von denen jeder N-Layer k besitzt sind K\textsuperscript{n$\cdot$n} Matrizen jedes k\textsubscript{ij} in einem Filter einspricht einen, aus den üblichen Neuronalen Netzwerk Architektur bekannten Gewichte. Diese Gewichte werden dann durch den Backprobagation-Algorithmus in der Trainingsphase des Netzwerkes angepasst um den Verlust der Ziel-Funktion durch bestimmten des Gradianten zu minimieren. Das in Abb. \ref{fig:Bild10} dargestellte Subsampling ist der Output aus den Convolutional Layern\cite{Grundlagen}. 
 \\\\
-Da Input und Kernel unterschiedliche Größen haben und man den gesamten Input mit den Kernel abdecken möchte, bewegt sich der Filter um s Position auf den Input und führt erneut einen Berechnungschritt durch. Dieser Vorgang wird Stride genannt. An jeder Position wird das Produkt von jeden x\textsubscript{ij} des Input und k\textsubscript{ij} des Kernel durchgeführt.  Anschließend werden alle Produkte aufsummiert. In Abbildung \ref{fig:Bild11} ist dieser Vorgang verdeutlicht. Zusätzlich gibt es die Möglichkeit für das sogenannte Zero Padding P. Dabei werden mehrere 0 um die Input Feature Map, am Anfang und Ende der Axen anfügt. Dies ist notwendig wenn Kernel und Input Größe nicht kompatible zueinander sind. Die Anzahl der möglichen Positionen ergeben sich aus der Kernel Größe und den Input des jeweiligen Kernel sowie des Strides. Die Output Größ W kann berechnet werden durch W = (W-F+2P)/s+1 berechnet werden. Wobei F für die Größe des Kernel steht \cite{conv}.
+Da Input und Kernel unterschiedliche Größen haben und man den gesamten Input mit den Kernel abdecken möchte, bewegt sich der Filter um s Position auf den Input und führt erneut einen Berechnungschritt durch. Dieser Vorgang wird Stride genannt. An jeder Position wird das Produkt von jeden x\textsubscript{ij} des Input und k\textsubscript{ij} des Kernel durchgeführt.  Anschließend werden alle Produkte aufsummiert. In Abb. \ref{fig:Bild11} ist dieser Vorgang verdeutlicht. Zusätzlich gibt es die Möglichkeit für das sogenannte Zero Padding P. Dabei werden mehrere 0 um die Input Feature Map, am Anfang und Ende der Axen anfügt. Dies ist notwendig wenn Kernel und Input Größe nicht kompatible zueinander sind. Die Anzahl der möglichen Positionen ergeben sich aus der Kernel Größe und den Input des jeweiligen Kernel sowie des Strides. Die Output Größ W kann berechnet werden durch W = (W-F+2P)/s+1 berechnet werden. Wobei F für die Größe des Kernel steht \cite{conv}.
 \newpage
 \begin{figure}
 	\centering
@@ -335,10 +331,9 @@ Da Input und Kernel unterschiedliche Größen haben und man den gesamten Input m
 	\caption{Convolution Beispiel\protect\cite{conv}}
 	\label{fig:Bild11}
 \end{figure}
-
 Um  besser zu verstehen welche Auswirkungen die Anzahl der Kernels in Layer n auf die Größe des Outputs von n und die Anzahl der Kernels in Layer n+1 für den nächsten Layer haben, wird ein Beispiel aufgezeigt. Der erste Layer hat 20 Kernels mit der Größe 7x7 und Stride 1. Der Input A für einen Kernel K ist ein 28x28 Matrix. Der Output aus diesen Filter sind 20 22x22 Feature Maps. Wäre der Input ein 28x28x3 Bild mit 3 RGB Channels sein, der Output 60 22x22 Feature Maps. Allgemein kann Convolution Layer als Supsampling gesehen werden und Stride gibt an wieviele Dimensionen bei diesen Prozess pro Convolution Layer entfernt werden soll. Der letzte Layer ist ein Fully-Connected Layer welcher den typischen Anforderungen von ANN entspricht \cite{conv}.  
 \\\\
-Transposed Convolution, auch genannt Fractionally Strided Convolution oder Deconvolution, ist eine Umkehrfunktion von der üblichen Convolution. Es verwendet die gleichen Variablen wie Convolution. Dabei wird ein Kernel K mit der Größe N x N definiert der Input I mit der Größe N x N und Stride s = 1. Deconvolution kann wie Convolution angesehen werden mit  Zero Padding auf dem Input.  Das in Abbildung \ref{fig:Bild12} gezeigte Beispiel zeigt einen deconvolution Vorgang mit eine 3x3 Kernel über einen 4x4 Input. Dies ist gleich mit einen Convolution Schritt mit einen 3x3 kernel auf einen 2x2 Input und einer 2x2 Zero Padding Grenze. Convolution ist Supsampling und mit Deconvolution wird Upsampling betrieben. Durch diesen Schritt kommt es zu einer Dimensionserhöhung des Inputs. Die Gewichte der Kernels bestimmen wie der Input transfomiert wird. Durch mehrere Schichten von Deconvolution Layer kann von einer Input Größe NxN auf eine Output Größe KxK, wobei K $>$ N mit Abhängigkeit von Kernel und Stride abgebildet werden\cite{conv}. 
+Transposed Convolution, auch genannt Fractionally Strided Convolution oder Deconvolution, ist eine Umkehrfunktion von der üblichen Convolution. Es verwendet die gleichen Variablen wie Convolution. Dabei wird ein Kernel K mit der Größe N x N definiert der Input I mit der Größe N x N und Stride s = 1. Deconvolution kann wie Convolution angesehen werden mit  Zero Padding auf dem Input.  Das in Abb. \ref{fig:Bild12} gezeigte Beispiel zeigt einen deconvolution Vorgang mit eine 3x3 Kernel über einen 4x4 Input. Dies ist gleich mit einen Convolution Schritt mit einen 3x3 kernel auf einen 2x2 Input und einer 2x2 Zero Padding Grenze. Convolution ist Supsampling und mit Deconvolution wird Upsampling betrieben. Durch diesen Schritt kommt es zu einer Dimensionserhöhung des Inputs. Die Gewichte der Kernels bestimmen wie der Input transfomiert wird. Durch mehrere Schichten von Deconvolution Layer kann von einer Input Größe NxN auf eine Output Größe KxK, wobei K $>$ N mit Abhängigkeit von Kernel und Stride abgebildet werden\cite{conv}. 
 
 \begin{figure}[htbp] 
 	\centering
@@ -347,18 +342,16 @@ Transposed Convolution, auch genannt Fractionally Strided Convolution oder Decon
 	\label{fig:Bild12}
 \end{figure}
 \newpage
-
 \subsection{Autoencoder}\label{sec:autoencoder}
 
 Autoencoder gehören zu den generativen Modellen im Bereich des Machine Learnings. Generative Modelle haben das Ziel eine Wahrscheinlichkeitsverteilungen zu erlernen. Anschließend kann diese als ein Modell genutzt werden um Samples aus dieser zu erzeugen. Die Modelle können dabei beispielsweise auf ANN oder Markov Chains trainiert werden\cite{Grundlagen}. Im folgenden liegt der Fokus auf ANNs. Allgemein gehalten können jegliche Typen von Daten wie Text, Bild oder Audiodateien für generative Modelle herangezogen werden. Es gibt unterschiedliche Typen von generativen Modellen, welche sich vom Aufbau des Neuronalen Netzwerk und der Zielfunktion unterscheiden. Beispiele dafür sind Boltzmann Maschine, Autoencoder oder Deep Belief Networks\cite{Grundlagen}. 
 \\\\
-Autoencoder sind eine andere Art von Model aus den Bereich der generativen Modelle. Ihre Aufgabe besteht darin einen Input zu komprimieren und aus der komprimierten Information den Input wieder herzustellen. Die Technik auf welche Autoencoder zurückgreifen, nennt sich Dimensionreduktion. Dabei wird die Dimension der Daten so reduziert um Informationen bei zu behalten, welche als relevant gelten. Diese Technik findet auch in anderen Machine Learning Anwendung, wie beispielsweise der Principale component anaysis(PCA) Anwendung\cite{dimreduction}.  Ein Autoencoder besteht aus 2 Bestandteilen. Erstens einen Encoder e parametrisiert mit $\phi$ welcher einen Input x $\in$ von $x\textsuperscript{i}$ wo x ein Vektor der Länge i ist und damit die Input Dimension bestimmt. Dieser wird durch den Encoder auf einen Vektor $z\textsuperscript{k}$ abgebildet wobei k<i ist. Zweitens der Decoder d parametrisiert durch  $\theta$, bekommt als Input $z\textsuperscript{k}$ und bildet z auf $x\textsuperscript{l}$ ab wobei l = i. Und somit die gleiche Dimension wie der Input. Aufgabe ist es nun, dass der Encoder den Input z so gut komprimiert, dass der Encoder es schafft das x $\thickapprox$ z. Eine grafische Darstellung kann aus Abb. $\ref{fig:Bild13}$ entnommen werden\cite{Grundlagen}. 
+Autoencoder sind eine andere Art von Model aus den Bereich der generativen Modelle. Ihre Aufgabe besteht darin einen Input zu komprimieren und aus der komprimierten Information den Input wieder herzustellen. Die Technik auf welche Autoencoder zurückgreifen, nennt sich Dimensionreduktion. Dabei wird die Dimension der Daten so reduziert um Informationen bei zu behalten, welche als relevant gelten. Diese Technik findet auch in anderen Machine Learning Anwendung, wie beispielsweise der Principale component anaysis(PCA) Anwendung\cite{dimreduction}.  Ein Autoencoder besteht aus 2 Bestandteilen. Erstens einen Encoder e dargestellt als z=$f$(x) welcher einen Input x $\in$ von $x\textsuperscript{i}$ wo x ein Vektor der Länge i ist und damit die Input Dimension bestimmt. Dieser wird durch den Encoder auf einen Vektor $z\textsuperscript{k}$ abgebildet wobei k$<$i ist. Zweitens der Decoder d dargestellt als x`=g(z), bekommt als Input $z\textsuperscript{k}$ und bildet z auf $r\textsuperscript{l}$ ab wobei l = i. Und somit die gleiche Dimension wie der Input. Aufgabe ist es nun, dass der Encoder den Input x so gut komprimiert, dass der Decoder es schafft das x $\thickapprox$ x`. Eine grafische Darstellung kann aus Abb. $\ref{fig:Bild13}$ entnommen werden\cite{Grundlagen}. 
 \\\\
-Die Parameter $\phi$ und $\theta$ werden durch den in Kapitel \ref{sec:test} vorgestellten Algorithmus trainiert und erlernt so können beispielsweise durch Fully-Connected-Layer, Convolutional-Layer oder Deconvolutional-Layer modelliert werden. Eine Metrik um zu messen wie das Model seine Aufgabe erfüllt, könnte beispielsweiße die Cross-Entropy-Funktionen sein welche schon in Kapitel \ref{sec:Zielfunktion} vorgestellt worden ist. Weitere spezifische Zielfunktionen für Autoencoder welche mit 3D Punktwolken arbeiten und für die folgende Arbeit von belangen sind, werden nun vorgestellt.
-
+Der Autoencoder wird durch den in Kapitel \ref{sec:test} vorgestellten Algorithmus trainiert und erlernt so können beispielsweise durch Fully-Connected-Layer,  Convo-lutional-Layer oder Deconvolutional-Layer modelliert werden. Eine Metrik um zu messen wie das Model seine Aufgabe erfüllt, könnte beispielsweiße die Cross-Entropy-Funktionen sein welche schon in Kapitel \ref{sec:Zielfunktion} vorgestellt worden ist. Weitere spezifische Zielfunktionen für Autoencoder welche mit 3D Punktwolken arbeiten und für die folgende Arbeit von belangen sind, werden nun vorgestellt.
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.5\textwidth]{autoencoder.png}
+	\includegraphics[width=1.0\textwidth]{autoencoder2.png}
 	\caption{Autoencoder}
 	\label{fig:Bild13}
 \end{figure}
@@ -371,15 +364,13 @@ Eine Möglichkeit, speziell für Autoencoder, welche mit Punktwolken arbeiten, i
 d\textsubscript{EMD}=\min_{\theta : X\textsubscript{1}\rightarrow X\textsubscript{2}}  \sum_{x\in X\textsubscript{1}}|| x - \theta(x)||\textsubscript{2};wobei\;\theta: X\textsubscript{1} \rightarrow X\textsubscript{2}\, bijektiv\, ist 
 \end{math}
 \\\\
-Grafisch kann man sich die Berechnung wie in Abb. \ref{fig:Bild14} darstellen. Ein Punkt von x\textsubscript{n} $\in$ X\textsubscript{1} wird den nähsten Punkt y\textsubscript{n} $\in$  X\textsubscript{2} zugewiesen. Wobei die Distanz durch die Euklidische Distanz der jeweiligen Punkte ermittelt wird.
- 
+Grafisch kann man sich die Berechnung wie in Abb. \ref{fig:Bild14} darstellen. Ein Punkt von x\textsubscript{n} $\in$ X\textsubscript{1} wird den nähsten Punkt y\textsubscript{n} $\in$  X\textsubscript{2} zugewiesen. Wobei die Distanz durch die Euklidische Distanz der jeweiligen Punkte ermittelt wird. 
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=0.5\textwidth]{emd_distance.png}
 	\caption{Earth Mover Distance}
 	\label{fig:Bild14}
-\end{figure}
-		
+\end{figure}		
 Eine weitere Möglichkeit ist die Chamfer Distance(CD). Wie auch zuvor sind  X\textsubscript{1} und X\textsubscript{2} zwei Punktwolken mit jeweils x\textsubscript{n} definierten Punkten\cite{autoencoderloss}. Definiert ist sie durch die Funktion:
 \\\\
 \begin{math}
@@ -396,13 +387,13 @@ Der Unterschied ergibt sich zwischen den beiden Metriken, dass bei der EMD von d
 \end{figure} 
 \newpage
 \subsection{Generative Adversarial Network}
-In den letzten Jahren konnte sich das GAN als best practice Ansatz bei den generativen Modellen herausarbeiten was Performancegründe bei der Trainierbarkeit und Qualität der generierbaren Daten zu Grunde liegt\cite{Grundlagen}. Die Modelle arbeiten nach dem Maximum Likelihood Schätzverfahren(ML-Schätzer) in dem die Parameter $\theta$ dahingegen angepasst werden, dass die unsere beobachtetet Daten am ehesten passen. Man kann ML-Schätzer als Kulback-Leibler(KL) Divergenz darstellen und das generative Modelle das Ziel haben die KL Divergenz zwischen den Trainingsdaten P\textsubscript{r} und den generierten Daten P\textsubscript{g} zu minimieren.Diese ist definiert durch:
+GAN arbeiten nach dem Maximum Likelihood Schätzverfahren (ML-Schätzer) in dem die Parameter $\theta$ dahingegen angepasst werden, dass die unsere beobachtetet Daten am ehesten passen. Man kann ML-Schätzer als Kulback-Leibler(KL) Divergenz darstellen und das generative Modelle das Ziel haben die KL Divergenz zwischen den Trainingsdaten P\textsubscript{r} und den generierten Daten P\textsubscript{g} zu minimieren. Diese ist definiert durch:
 \\\\
 \begin{math}
 KL(P\textsubscript{r}||P\textsubscript{g})=\int_x P\textsubscript{r}log\frac{P\textsubscript{r}}{P\textsubscript{g}}dx                     
 \end{math}
 \\\\
-Ein GAN besteht besteht aus zwei KNN, dem Discriminator D und dem Generator G. Das Ziel des G ist es, Daten x zu erzeugen, welche nicht von Trainingsdaten y unterschieden werden können. Dabei wird eine vorangegangene Input Noise Variable p\textsubscript{z}(z) verwendet, welche eine Abbildung zum Datenraum G(z;$\Phi$\textsubscript{g}) herstellt. Dabei sind $\Phi$\textsubscript{g} die Gewichte des neuronalen Netzwerkes von G. Der Discriminator hat die Aufgabe zu unterscheiden, ob der jeweilige Datensatz von G erzeugt wurde und somit ein fake Datensatz ist, oder von Trainingsdaten y stammt\cite{goodfellow2014}. Die Zusammensetzung zwischen den beiden Netzwerken kann aus Abbildung \ref{fig:Bild20} entnommen werden.
+Ein GAN besteht besteht aus zwei KNN, dem Discriminator D und dem Generator G. Das Ziel des G ist es, Daten x zu erzeugen, welche nicht von Trainingsdaten y unterschieden werden können. Dabei wird eine vorangegangene Input Noise Variable p\textsubscript{z}(z) verwendet, welche eine Abbildung zum Datenraum G(z;$\Phi$\textsubscript{g}) herstellt. Dabei sind $\Phi$\textsubscript{g} die Gewichte des neuronalen Netzwerkes von G. Der Discriminator hat die Aufgabe zu unterscheiden, ob der jeweilige Datensatz von G erzeugt wurde und somit ein fake Datensatz ist, oder von Trainingsdaten y stammt\cite{goodfellow2014}. Die Zusammensetzung zwischen den beiden Netzwerken kann aus Abb. \ref{fig:Bild20} entnommen werden.
 \\
 \begin{figure}[htbp] 
 	\centering
@@ -411,7 +402,7 @@ Ein GAN besteht besteht aus zwei KNN, dem Discriminator D und dem Generator G. D
 	\label{fig:Bild20}
 \end{figure}
 \\
-Der Discriminator ist definiert durch D(x;$\Phi$\textsubscript{d}). Wobei $\Phi$\textsubscript{d} die Gewichte des Descriminators sind und D(x) die Wahrscheinlichkeit ist, dass x von den Trainingsdaten stammt und nicht von p\textsubscript{g}. Die Wahrscheinlichkeitsverteilung für unsere Trainingsdaten ist p\textsubscript{r}.  Im Training werden dann $\Phi$\textsubscript{d} so angepasst, dass die Wahrscheinlichkeit Trainingsbeispiele richtig zu klassifizieren maximiert wird. Und $\Phi$\textsubscript{g} wird dahingehen trainiert die Wahrscheinlichkeit zu minimieren, so dass D erkennt dass Trainingsdatensatz x von G erzeugt wurde. Mathematisch ausgedrückt durch log(1 - D(G(z))). Die gesamte Loss-Funktion des vanilla GAN ist definiert als
+Der Discriminator ist definiert durch D(x;$\Phi$\textsubscript{d}). Wobei $\Phi$\textsubscript{d} die Gewichte des Descriminators sind und D(x) die Wahrscheinlichkeit ist, dass x von den Trainingsdaten stammt und nicht von p\textsubscript{g}. Die Wahrscheinlichkeitsverteilung für unsere Trainingsdaten ist p\textsubscript{r}.  Im Training werden dann $\Phi$\textsubscript{d} so angepasst, dass die Wahrscheinlichkeit Trainingsbeispiele richtig zu klassifizieren maximiert wird. Und $\Phi$\textsubscript{g} wird dahingehen trainiert die Wahrscheinlichkeit zu minimieren, so dass D erkennt dass Trainingsdatensatz x von G erzeugt wurde. Mathematisch ausgedrückt durch log(1 - D(G(z))). Die gesamte Loss-Funktion des vanilla GAN ist definiert als:
 \\\\
 \begin{math}
 min\textsubscript{G} max\textsubscript{D}V(D,G)=E\textsubscript{x$\sim$p\textsubscript{data}(x)}[logD(x)]  + E\textsubscript{z$\sim$p\textsubscript{z}(z)}[log(1-D(G(z))]
@@ -434,7 +425,7 @@ diese beschreibt ein Minmax Spiel zwischen G und D. Welches das globale Optimum 
 
 Beim Training wird ein stochastischer Minibatch von mehren Trainingsdaten gleichzeitig erstellt. Dies soll dabei helfen, dass der Generator sich nicht auf bestimmte Gewichte fest fährt und auf Trainingssätze kollabiert. So weisen die erzeugten Daten mehr Variationen auf \cite{improvingan}. D wird zunächst in einer inneren Schleife auf n Trainingsätzen trainiert, womit man Overfitting von D vermeiden will, was zur Folge hätte, dass D nur den Trainingsdatensatz kopieren würde. Deshalb wird k mal D optimiert und ein mal G in der äußeren Schleife. 
 \\\\
-Ein möglicher Aufbau von GAN wird in Abbildung \ref{fig:Bild21} dargestellt. Dies ist das sogenannte Deep Convolution GAN(DC GAN), welches dafür konzipiert wurde auf Bilddaten zu arbeiten. Dabei besteht der Generator aus mehren Schichten von Deconvolution Layern. Welche den Input Noise Variable p\textsubscript{z}(z) auf y abbildet. D besteht aus mehren Schichten von Convolution Layern und bekommt als Input die Trainingsdaten, oder die von G erzeugten Y, und entscheidet über die Klassifikation\cite{dcgan}.
+Ein möglicher Aufbau von GAN wird in Abb. \ref{fig:Bild21} dargestellt. Dies ist das sogenannte Deep Convolution GAN(DC GAN), welches dafür konzipiert wurde auf Bilddaten zu arbeiten. Dabei besteht der Generator aus mehren Schichten von Deconvolution-Layern. Welche den Input Noise Variable p\textsubscript{z}(z) auf y abbildet. D besteht aus mehren Schichten von Convolution-Layern und bekommt als Input die Trainingsdaten, oder die von G erzeugten Y, und entscheidet über die Klassifikation\cite{dcgan}.
 
 \begin{figure}[htbp] 
 	\centering
@@ -448,18 +439,11 @@ Das asymmetrische Verhalten der KV Divergenz zu schlechten Trainingsergebnissen 
 \begin{math} D\textsubscript{JS}(P\textsubscript{r}|| P\textsubscript{g}])=\frac{1}{2}D\textsubscript{KL}(P\textsubscript{r}|| \frac{P\textsubscript{g}+P\textsubscript{r}}{2}])+D\textsubscript{KL}(P\textsubscript{q}|| \frac{P\textsubscript{g}+P\textsubscript{r}}{2}])  
 \end{math}
 \\\\
-wobei P\textsubscript{r} die Wahrscheinlichkeitsverteilung der Trainingsdaten ist und P\textsubscript{g} die des Generators. Huzár \cite{sha} zeigte, dass durch das symmetrische Verhalten der JS Divergenz ein potentiell besseres Trainingsergebnis entstehen kann, im Vergleich zu der KL Divergenz. Damit zeigte er weshalb GANs im Vorteil gegenüber anderen generativen Modellen sind. Abbildung \ref{fig:Bild21} veranschaulicht dieses Konzept. Der linke Graph zeigt 2 Normal Verteilungen. In der Mitte wird die KV Divergenz der beiden Normal Verteilungen dargestellt.  Rechts ist die JS Divergenz der Beiden dargestellt. Man sieht sehr gut das asymmetrische Verhalten der KV und das symmetrische der JS. Dadurch lassen sich aussagekräftigere Gradianten bestimmen, welche zum Optimieren von D und G benötigt werden\cite{sha}. 
- 
-\begin{figure}
-	\centering
-	\includegraphics[width=1.0\linewidth]{KLdiv}
-	\caption{KL Divergenz und JS Divergenz \protect\cite{gan_prob}}
-	\label{fig:Bild21}
-\end{figure}
-
+wobei P\textsubscript{r} die Wahrscheinlichkeitsverteilung der Trainingsdaten ist und P\textsubscript{g} die des Generators. Huzár \cite{sha} zeigte, dass durch das symmetrische Verhalten der JS Divergenz ein potentiell besseres Trainingsergebnis entstehen kann, im Vergleich zu der KL Divergenz. Damit zeigte er weshalb GANs im Vorteil gegenüber anderen generativen Modellen sind.
+\newpage
 \subsubsection{Probleme mit Generative Adverserial Networks}\label{sec:problemegan}
 ~\\\\
-Wie auch anderen generativen Modelle haben auch GANs noch Schwächen bezüglich der Trainingsabläufe und der Qualität der generierten Daten. Im Folgenden wird auf einige Probleme eingegangen welche im darauffolgenden Kapitel Lösungsansätze aufgezeigt werden. 
+Wie auch andere generative Modelle haben auch GANs noch Schwächen bezüglich der Trainingsabläufe und der Qualität ihrer generierten Daten. Im Folgenden wird auf einige Probleme eingegangen welche im darauffolgenden Kapitel Lösungs-ansätze aufgezeigt werden. 
 \\
 \begin{description}	
 
@@ -469,15 +453,11 @@ D und G betreiben ein MinMax Spiel. Beide versuchen das Nash Equilibrium zu find
 \\
 \item[Vanishing gradient]
 ~\\
-Dies beschreibt das Problem, wenn D perfekt trainiert ist mit  D(x) = 1, $\forall \in p\textsubscript{r}$ und D(x)=0 $\forall x \in p \textsubscript{g}$. Die Loss-Funktion würde in diesem Fall auf 0 fallen und es gäbe keinen Gradianten, für den die Gewichte von G angepasst werden können. Dies verlangsamt den Trainingsprozess bis hin zu einem kompletten Stopp des Trainings. Würde D zu schlechten trainiert mit  D(x) = 0, $\forall \in p\textsubscript{r}$ und D(x)=1 $\forall x \in p \textsubscript{g}$. Bekommt G kein Feedback über seine Leistung bei der Datengeneration hat er keine Möglichkeit p\textsubscript{r} zu erlernen \cite{Wasserstein}.
+Dies beschreibt das Problem, wenn D perfekt trainiert ist mit  D(x) = 1, $\forall \in p\textsubscript{r}$ und D(x)=0 $\forall x \in p \textsubscript{g}$. Die Loss-Funktion würde in diesem Fall auf 0 fallen und es gäbe keinen Gradianten, für den die Gewichte von G angepasst werden können. Dies verlangsamt den Trainingsprozess bis hin zu einem kompletten Stopp des Trainings. Würde D zu schlechten trainiert mit  D(x) = 0, $\forall \in p\textsubscript{r}$ und D(x)=1 $\forall x \in p \textsubscript{g}$. Bekommt G kein Feedback über seine Leistung bei der Datengeneration hat er keine Möglichkeit p\textsubscript{r} zu erlernen \cite{wasser}.
 \\
 \item[Mode Collapse]
 ~\\
-Während des Trainings von GAN kann es dazu kommen, dass der Generator möglicherweise auf eine Einstellung seiner Gewichte fixiert wird und es zu einem sogenannten Mode Collapse führt. Was zur Folge hat, dass der Generator sehr ähnliche Samples produziert \cite{wasserstein}.
-\\
-\item[Keine aussagegräftigen Evaluations Metriken]
-~\\
-Die Loss Funktion der GANs liefert keine aussagekräftigen Evaluationsmöglichkeit über den Fortschritt des Trainings. Bei  discriminativen Modellen im üblichen Maschine Learning besteht die Möglichkeit Validierungsdatensätze zu verwenden und an diesen die Genauigkeit des Modells zu testen. Diese Möglichkeit besteht bei GANs nicht\cite{metrics}.
+Während des Trainings von GAN kann es dazu kommen, dass der Generator möglicherweise auf eine Einstellung seiner Gewichte fixiert wird und es zu einem sogenannten Mode Collapse führt. Was zur Folge hat, dass der Generator sehr ähnliche Samples produziert \cite{wasser}.
 \end{description}
 
 \subsubsection{Lösungsansätze für Generative Adverserial Networks Probleme}
@@ -487,7 +467,7 @@ Nun werden einige Techniken aufgezeigt, welche die unter Abschnitt Probleme mit 
 \begin{description}
 \item[Feature matching]
 ~\\
-Dies soll die Instabilität von GANS verbessern und gegen das Problem des Vanishing Gradient angehen. G bekommt eine neue Loss-Funktion und ersetzt die des üblichen Vanilla GAN. Diese soll G davon abhalten, sich an D über zu trainieren und sich zu sehr darauf zu fokussieren, D zu täuschen und gleichzeitig auch versuchen die Datenverteilung der Trainingsdaten abzudecken\cite{improvingan}.\\
+Dies soll die Instabilität von GANS verbessern und gegen das Problem des Vanishing Gradient angehen. G bekommt eine neue Loss-Funktion und ersetzt die des üblichen Vanilla GAN. Diese soll G davon abhalten, sich an D über zu trainieren und sich zu sehr darauf zu fokussieren, D zu täuschen und gleichzeitig auch versuchen die Datenverteilung der Trainingsdaten abzudecken \cite{improvingan}.\\
 
 \item[Minibatch discrimination] 
 ~\\
@@ -495,19 +475,15 @@ Um das Problem des Mode Collapse zu umgehen, so dass es nicht zu einem Festfahre
 
 \item[Historical Averaging]
 ~\\
-Beim Training werden die Gewichte von G und D aufgezeichnet und je Trainingsschritt i verglichen. Anschließend wird an die Lossfunktion je Trainingschritt die Veränderung zu i-1 an die Loss-Funktion addiert. Damit wird eine zu starke Veränderung bei den jeweiligen Trainingsschritten bestraft und soll gegen ein Model Collapse helfen \cite{improvingan}.\\
+Beim Training werden die Gewichte von G und D aufgezeichnet und je Trainingsschritt verglichen. Anschließend wird an die Lossfunktion je Trainingschritt die Veränderung zu dem Trainingschritt davor an die Loss-Funktion addiert. Damit soll verhindert werden dann das Model sich zu sehr von seinen vorherigen Zustand der Gewichte entfernt. \cite{improvingan}.\\
 
 \item[One-sided Label Smoothing]
 ~\\
 Die üblichen Label für den Trainingsdurchlauf von 1 und 0 werden durch die Werte 0.9 und 0.1 ersetzt. Dies führt zu besseren Trainingsergebnissen. Es gibt derzeit nur empirische Belege für den Erfolg, jedoch nicht weshalb diese Technik besser funktioniert\cite{improvingan}.\\
 
-\item[Adding Noises]
-~\\
-Noise an den Input von D zu hängen kann gegen das Problem des Vanishing gradienten helfen und das Training verbessern\cite{improvingan}.\\
-
 \item[Wasserstein-GAN]
 ~\\
-Die Wasserstein Metric oder auch Earth Mover Distance(EMD) genannt misst die Minimum Kosten welche entstehen wenn man Daten von der Datenverteilungp p\textsubscript{r} zur Datenverteilung p\textsubscript{g} überträgt. Es wird oft auch von Masse oder Fläche gesprochen, welche von p\textsubscript{r} zu p\textsubscript{g} getragen wird. Definiert ist sie durch:
+Die Wasserstein Metrik, oder auch Earth Mover Distance(EMD) genannt misst die Minimum Kosten welche entstehen wenn man Daten von der Datenverteilungp p\textsubscript{r} zur Datenverteilung p\textsubscript{g} überträgt. Es wird oft auch von Masse oder Fläche gesprochen, welche von p\textsubscript{r} zu p\textsubscript{g} getragen wird. Definiert ist sie durch:
 \\\\
 \begin{math} 
 $
@@ -515,7 +491,7 @@ W(p\textsubscript{r},p\textsubscript{g})=$\inf_{\gamma\sim\prod(P\textsubscript{
 $
 \end{math}
 \\\\
-p\textsubscript{r} steht für die reale Datenverteilung zu welche uns Daten im Form von Trainingsdaten zur Verfügung stehen und p\textsubscript{g} steht für die generierte Datenverteilung welche von einen Model erzeugt wird. Dabei wird nun das Infinum von allen möglichen Transportplänen $\gamma$ welche in $\prod$ enthalten sind ausgewählt, welche der kostenkünstige Plan ist die Daten von p\textsubscript{g} zu p\textsubscript{r} zu übertragen. Vorteile sind unter anderem, dass der Gradient gleichmäßiger ist und das WGAN lernt besser auch wenn der Generator schlechtere Daten erzeugt im Vergleich zum üblichen GAN\cite{wasserstein}. Durch die Kantorovich-Rubinstein Methode kann die Wasserstein-Distanz umgeformt werden in zu:
+p\textsubscript{r} steht für die reale Datenverteilung zu welche uns Daten im Form von Trainingsdaten zur Verfügung stellen und p\textsubscript{g} steht für die generierte Datenverteilung, welche von einem Model erzeugt wird. Dabei wird nun das Infinum von allen möglichen Transportplänen $\gamma$, welche in $\prod$ enthalten sind ausgewählt, was der kostengünstigste Plan ist, die Daten von p\textsubscript{g} zu p\textsubscript{r} zu übertragen. Vorteile sind unter anderem, dass der Gradient gleichmäßiger ist und das WGAN lernt besser auch wenn der Generator schlechtere Daten erzeugt im Vergleich zum üblichen GAN\cite{wasser}. Durch die Kantorovich-Rubinstein Methode kann die Wasserstein-Distanz umgeformt werden in zu:
 \\\\
 \begin{math} 
 $
@@ -523,7 +499,7 @@ W(p\textsubscript{r},p\textsubscript{$\theta$})=$\sup_{\parallel f \parallel \te
 $
 \end{math}
 \\\\
-Durch diese Umformung ist es nun Möglich das GAN die EMD nutzt um die von G generierten Daten mit den realen Daten zu vergleichen. Dabei übernimmt der Discriminator nun die Aufgabe eines Critic welcher nun nicht mehr 0 oder 1 für Fake oder Real ausgibt sondern einen Score welcher angibt wieviel Masse von der P\textsubscript{$\theta$} umverteilt werden muss damit der Generator bessere Ergebnisse liefert. Das Wasserstein GAN liefert bis dahin die erfolgreichste Verbesserung zum üblichen Vanilla-GAN von Goodfellow und erlaubt es gegen die in Kapitel \ref{sec:problemegan} aufgezeigten Probleme Vanishing gradient und Model Collapse anzugehen\cite{wasserstein}. 
+Durch diese Umformung ist es nun möglich, dass GAN die EMD nutzt um die von G generierten Daten mit den realen Daten zu vergleichen. Dabei übernimmt der Discriminator nun die Aufgabe eines Critic, welcher nun nicht mehr 0 oder 1 für Fake oder Real ausgibt sondern, einen Score, welcher angibt wieviel Masse von der P\textsubscript{$\theta$} umverteilt werden muss damit der Generator bessere Ergebnisse liefert. Das Wasserstein GAN liefert bis dahin die erfolgreichste Verbesserung zum üblichen Vanilla-GAN von Goodfellow und erlaubt es, gegen die in Kapitel \ref{sec:problemegan} aufgezeigten Probleme Vanishing gradient und Model Collapse anzugehen\cite{wasser}. 
 \end{description}
 \newpage
 \subsection{Conditional-GAN}
@@ -576,31 +552,29 @@ Auch wie die Arbeit von Liu, Gulin und Reda \cite{imagere2} konnte ähnliche Erg
 \end{figure}
 \newpage
 \section{Methoden}
-In diesen Kapitel werden die Methoden für die Versuchsaufbauten 1 und 2 aufgezeigt welche die Ziele 1 und 2 überprüfen sollen, diese wurden in \ref{sec:objective} festgehalten.
-
+In diesem Kapitel werden die Methoden für die Versuchsaufbauten 1 und 2 aufgezeigt, welche die Fragestellungen 1 und 2 überprüfen sollen, die unten festgehalten wurden.
 \begin{description}
-	\item[Ziel 1]
+	\item[Fragestellung 1]
 	Können durch GANs 3D-Punktwolken von Tabakblättern erlernt werden um neue Datensätze zu generieren?\\
 	
-	\item[Ziel2] Können durch GANs 3D-Punktwolken von Tabakblättern welche von Tabakblättern von ihren Urzustand abgebracht wurden rekonstruiert werden? 
+	\item[Fragestellung 2] Können durch GANs 3D-Punktwolken von Tabakblättern, die von ihrem Urzustand abgebracht wurden, rekonstruiert werden? 
 \end{description}
-
-Dabei geht es darum ob mit Hilfe von GANs der latente Objektraum eines Tabakblattes gelernt werden kann und anschließend durch den Generator des GAN Tabakblätter erzeugt werden können. Dieses Versuchsaufbau wird in Kapitel \ref{sec:versuch1-aufbau} behandelt. Die dazugehörigen Trainingsdaten werden in Kapitel \ref{sec:versuch1-traingsdaten} vorgestellt. Beim Ziel 2 soll überprüft werden ob mit Hilfe von GAN es möglich ist Artefakte von Tabakblätter zu entfernen und den Urzustand wieder her zustellen ist.  Dieses Verfahren wurde in Kapitel \ref{sec:rekdaten} beschrieben. Die Trainingsdaten für diesen Versuchsaufbau können aus Kapitel \ref{sec:versuch2_daten} entnommen werden. 
+Die Fragestellung beinhaltet ob mit Hilfe von GANs der latente Objektraum eines Tabakblattes gelernt werden kann und anschließend durch den Generator des GAN Tabakblätter erzeugt werden können. Dieser Versuchsaufbau wird in Kapitel \ref{sec:versuch1-aufbau} behandelt. Die dazugehörigen Trainingsdaten werden in Kapitel \ref{sec:versuch1-traingsdaten} vorgestellt. Bei Fragestellung 2 soll überprüft werden, ob es mit Hilfe von GAN möglich ist Artefakte, von Tabakblätter zu entfernen und den Urzustand wieder her zustellen.  Dieses Verfahren wurde in Kapitel \ref{sec:rekdaten} beschrieben. Die Trainingsdaten für diesen Versuchsaufbau können Kapitel \ref{sec:versuch2_daten} entnommen werden. 
 \\\\
-Versuchsaufbau 1.2 und 2.1 wurden auf einen Computer mit Ubuntu 14.05 Betriebssystem mit einen IntelR CoreTM i7-7700k mit 4.50GHz einer Geforce GTX 1080 mit 8G Grafikspeicher. Training und Testen wurden mit CUDA 9.0 und cudNN 7.1.1. Also Programmiersprache wurde Python 2.7 bzw. 3.5 für Datengenerierung. Als ANN Libary wurde Tensorflow 1.5 genutzt und TFlearn 0.3.2. Für die EMD und Chamfer loss für den Autoencoder wurde die Implementierung von  fanqgme (https://github.com/fanhqme/PointSetGeneration) benutzt.
+Versuchsaufbau 1.2 und 2.1 wurden auf einem Computer mit Ubuntu 14.05 Betriebssystem mit einen IntelR CoreTM i7-7700k mit 4.50GHz einer Geforce GTX 1080 mit 8G Grafikspeicher durchgeführt. Training und Test  wurden mit CUDA 9.0 und cudNN 7.1.1. Als Programmiersprache wurde Python 2.7 bzw. 3.5 für Datengenerierung verwendet. Als ANN Libary wurde Tensorflow 1.5 genutzt und TFlearn 0.3.2. Für die EMD und Chamfer Loss des Autoencoder wurde die Implementierung von dfanhqme (https://github.com/fanhqme/PointSetGeneration) benutzt.
 \\\\
-Versuchsaufbau 1.1 und 2.2  wurden auf einen Computer mit Windows Betriebssystem mit einen IntelR CoreTM i7-7700k mit 4.50GHz einer Geforce GTX 1080 mit 8G Grafikspeicher. Training und Testen wurden mit CUDA 9.0 und cudNN 7.1.1. Also Programmiersprache wurde Python 3.5 verwendet. Als ANN Libary wurde Tensorflow 1.10 genutzt.
-
+Versuchsaufbau 1.1 und 2.2  wurden auf einen Computer mit Windows Betriebssystem mit einen IntelR CoreTM i7-7700k mit 4.50GHz einer Geforce GTX 1080 mit 8G Grafikspeicher durchgeführt. Training und Test wurden mit CUDA 9.0 und cudNN 7.1.1 durchgeführt. Also Programmiersprache wurde Python 3.5 verwendet. Als ANN Libary wurde Tensorflow 1.10 genutzt.
+\newpage
 
 \subsection{Datensatz 1. Versuchsaufbau}\label{sec:versuch1-traingsdaten}
 ~\\\\
-Der erste Datensatz "Stühle" besteht aus 6778 Punktwolken mit je 2048 Punkten. Dieser wurde aus den Shapenet Datensatz(www.shapenet.org) entnommen. Die Daten sind PLY Datenformat abgespeichert. Ein Beispielpunktwolke kann aus Abbildung entnommen werden. Der Datensatz wurde in der Arbeit von Achlioptas, Diamanti, Mitliagkas und Guibas\cite{3dgan} verwendet welches auch in Kapitel \ref{sec:3dgan} vorgestellt wurde ist. In dieser Arbeit dient er als Validierungsdatensatz um die Qualität der generierten Daten des GAN welches mit Tabakblättern trainiert wurde zu vergleichen.
+Der erste Datensatz ``Stühle`` besteht aus 6778 Punktwolken, mit jeweils 2048 Punkten. Dieser wurde dem Shapenet Datensatz(www.shapenet.org) entnommen. Die Daten sind im PLY Datenformat abgespeichert. Ein Beispielpunktwolke kann aus Abb. \ref{fig:Bild50} entnommen werden. Der Datensatz wurde auch in der Arbeit von Achlioptas, Diamanti, Mitliagkas und Guibas\cite{3dgan} verwendet, was Kapitel \ref{sec:3dgan} bereits vorgestellt wurde ist. In der hier liegenden Arbeit dient er als Validierungsdatensatz, um die Qualität der generierten Daten des GAN, welches mit Tabakblättern trainiert wurde, zu vergleichen.
 \\\\
-Die Daten für den zweiten Datensatz Blätter stammen vom Fraunhofer Institut deren Gewinnung wurde in Kapitel \ref{sec:punktwolken} beschrieben. Der Grunddatensatz bestand aus mehreren 3D-Scans von Tabakpflanzen bei den die Blätter der Pflanze zu einen Datensatz zusammengefügt wurden sind. Der Blätter Datensatz besteht aus 422 Punktwolken welche dann durch ein Punktreduktionsverfahren auf jeweils 2048 Punkten je Punktwolke reduziert wurden ist. Aus Komplexitätsgründen wurden der Farbchannel außen vor gehalten um den Informationsgehalt der Daten zu reduzieren und ein Training zu vereinfachen. Außerdem spielen Farben bei den derzeitigen Ziel der Arbeit, Rekonstruktion von Tabakblättern keine Rolle und nehmen keinen Einfluss auf die Verwendbarkeit des Ergebnisses. Abgespeichert werden die Daten im .ply Datenformat.
+Die Daten für den zweiten Datensatz ``Blätter`` stammen vom Fraunhofer-Institut und deren Gewinnung wurde in Kapitel \ref{sec:punktwolken} beschrieben. Der Grunddatensatz bestand aus mehreren 3D-Scans von Tabakpflanzen, bei den die Blätter der Pflanze zu einem Datensatz zusammengefügt wurden. Der "Blätter" Datensatz besteht aus 422 Punktwolken welche, dann durch ein Punktreduktionsverfahren auf jeweils 2048 Punkten je Punktwolke reduziert worden ist. Aus Komplexitätsgründen wurden der Farbchannel in dieser Arbeit außen vor gelassen, um den Informationsgehalt der Daten zu reduzieren und ein Training zu vereinfachen. Außerdem spielen Farben beim derzeitigen Ziel der Arbeit, Rekonstruktion von Tabakblättern keine Rolle und nehmen keinen Einfluss auf die Verwendbarkeit des Ergebnisses. Abgespeichert werden die Daten im PLY-Datenformat.
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.5\textwidth]{plant.png}
+	\includegraphics[width=0.6\textwidth]{plant.png}
 	\caption{3D Punktwolke einer Tabakpflanze}
 	\label{fig:Bild50}
 \end{figure}
@@ -608,13 +582,13 @@ Die Daten für den zweiten Datensatz Blätter stammen vom Fraunhofer Institut de
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=0.5\textwidth]{leaf1.png}
-	\caption{3D Punktwolke einer Tabakpflanze}
+	\caption{3D Punktwolke eines Tabakblattes mit 2048 Punkten}
 	\label{fig:Bild51}
 \end{figure}
 \newpage
 \subsection{Datensatz 2. Versuchsaufbau}\label{sec:versuch2_daten}
 
-Für den zweiten Versuchsaufbau wird auf den in Datensatz Versuchsaufbau 1. Blatt Datensatz "Blätter" zurück gegriffen. Das heißt der Grunddatensatz besteht aus 422 unterschiedlichen Blättern. Dieser Datensatz wird nun dahingehen verändert um das Rekonstruieren von Tabakblättern welche durch Artefakte von ihren Urzustand verändert wurden Rückgengig zu machen. Die Artefakte simulieren dabei das Verdecken von anderen Blättern beim Scanverfahren was zu unvollständigen Blättern führen kann. Dieses verdecken wir durch 3D-Sphären simuliert wie in Abb. \ref{fig52} dargestellt. Die Sphären bestehen aus 100 000 Punkte welche alle einen maximalen Radius von 15 mm haben und welcher jeder Punkt aus einer Normalverteilung entnommen wird um  eine gleichmäßige Verteilung der Punkte zu gewährleisten. Die Sphären werden nun vom Koordinatenursprung in euklidischen Raum bewegt das sich 46 unterschiedlichen Sphären im Raum ergeben. Diese werden dahin gehen Bewegt um möglichst eine hohe Differenzmenge mit den 422 Blättern im Datensatz zu haben. In Abb  \ref{fig:Bild52} sind alle Sphären symbolisch eingefügt werden um dieses Vorgehen zu Veranschaulichen. Um nun das Verdecken zu Simulieren wird die Differenzmenge je Blatt mit einer der Sphären genommen. Wobei die Differenzmenge eines Punktes der nähst Nachbar in einen Radius von 3mm befindet. Durch die dieses Verfahren entstehen Kreisförmige Löcher in den Blättern welches in Abb. \ref{fig:54} dargestellt ist. Anschließend werden alle erzeugten "zerstörten" Blätter nach der Anzahl ihrer übrig geblieben Punkte gefiltert um zu gewährleisten das genügen Punkte aus dem Urblatt entfernt wurden sind und eine visuelle Diskrepanz zwischen den Blätter vorhanden sind. Was letztendlich zu 2047 zerstörten Blättern geführt hat mit jeweils 2048 Punkten.
+Für den zweiten Versuchsaufbau wird auf den in Datensatz Versuchsaufbau 1. Blatt Datensatz ``Blätter`` zurück gegriffen. Der Grunddatensatz besteht aus 422 unterschiedlichen Blättern. Dieser Datensatz wird nun dahingehen verändert, das Löcher in die Blattoberfläche eingefügt werden. Diese Löcher simulieren das andere Blätter bei dem Scanverfahren die Sicht des Scanners auf das Blatt verdecken und dieses somit unvollständig eingescannt wird. Dieses Verdecken wir durch 3D-Sphären simuliert wie in Abb. \ref{fig:Bild52}  rot dargestellt. Die Sphären bestehen aus 10 000 Punkten, welche alle einen maximalen Radius von 15 mm haben und alle aus einer Normalverteilung entnommen werden, um  eine gleichmäßige Verteilung der Punkte zu gewährleisten. Die Sphären werden nun vom Koordinatenursprung im euklidischen Raum bewegt, sodass sich 46 unterschiedliche Sphären im Raum ergeben. Diese werden dahin gehend im Raum bewegt um möglichst eine hohe Differenzmenge mit den 422 Blättern im Datensatz zu haben. In Abb. \ref{fig:Bild53} sind alle Sphären symbolisch eingefügt, um dieses Vorgehen zu Veranschaulichen. Um nun das Verdecken zu simulieren, wird die Differenzmenge je Blatt mit einer der Sphären errechnet. Wobei die Differenzmenge eines Punktes der nächste Nachbar in einen Radius von 3mm befindet. Durch die dieses Verfahren entstehen kreisförmige Löcher in den Blättern welches in Abb. \ref{fig:Bild54} dargestellt ist. Anschließend werden alle erzeugten `` zerstörten`` Blätter nach der Anzahl ihrer übrig geblieben Punkte gefiltert um zu gewährleisten das genügen Punkte aus dem Urblatt entfernt worden sind und eine visuelle Diskrepanz zwischen den Blätter vorhanden ist. Dieses Vorgehen hat letztendlich zu 2047 zerstörten Blättern mit jeweils 2048 Punkten geführt.
 
 \begin{figure}[htbp] 
 	\centering
@@ -633,7 +607,7 @@ Für den zweiten Versuchsaufbau wird auf den in Datensatz Versuchsaufbau 1. Blat
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=1.0\textwidth]{training_destroyed.png}
-	\caption{3D Punktwolke einer Tabakpflanze}
+	\caption{3D Punktwolke von zerstörten Tabakblättern}
 	\label{fig:Bild54}
 \end{figure}
 \newpage
@@ -641,27 +615,23 @@ Für den zweiten Versuchsaufbau wird auf den in Datensatz Versuchsaufbau 1. Blat
 
 \subsection{Versuchsaufbau 1 - GAN}\label{sec:versuch1-aufbau}
 
-Der Versuchsaufbau 1 besteht aus zwei unterschiedlichen Versuchen. Aufbau 1.1 ist das RAW-GAN(\cite{3dgan}), dabei wird auf den Vanilla-GAN Aufbau zurückgegriffen. Die Meta Trainingsvariablen für diesen Versuch sind Learningrate mit 0,0005 und einen Adam Optimizer welcher zu den stochastischen Gradient Descent Verfahren aus Kapitel \ref{sec:test} und dabei auf das aus Kapitel \ref{sec:momentum} zurückgreift, mit einem Beta1 von 0,5 und einem Beta2 von 0,5. Die Batchgröße ist 64. Der Discriminator besteht aus 5-Layern welche aus 1-Dimensionalen Convolutionen-Layer bestehen mit einer Filteranzahl [64, 128, 256, 256, 512] je Layer. Mit einer Kernel Größe von 1 und Stride von 1. Also Aktivierungsfunktion wird die ReLu-Funktion genutzt. Darauf folgen 3 Fully-Connected-Layer mit der Größe [128, 64, 1] alle mit einer ReLu-Funktion. Der Generator des RAW-GAN besteht auf 6 Fully-Connected-Layern mit [64, 128, 512, 1024 ,1536 ,6144] Neuronen, jeweils mit der Relu Aktivierungsfunktion. Der Noisevektor z wird aus einer 128-D Normal Verteilung entnommen mit $\mu$ = 0 und $\sigma$ =  0,2. Als Zielfunktion wird die Wasserstein Metric gewählt da diese bessere Ergebnisse im Versuchsaufbau von Achlioptas, Panos und Diamanti\cite{3dgan} erzielt hat. Das Training erfolgt jeweils mit den Datensätze "Stuhl" und "Tabakblätter" beschrieben in Kapitel \ref{sec:versuch1-traingsdaten}.
+Der Versuchsaufbau 1 besteht aus zwei unterschiedlichen Versuchen. Aufbau 1.1 ist das RAW-GAN(\cite{3dgan}), dabei wird auf den Vanilla-GAN Aufbau zurückgegriffen. Die Meta Trainingsvariablen für diesen Versuch sind Learningrate mit 0,0005 und einen Adam Optimizer, welcher zu den Mini-Batch Gradient Descent Verfahren aus Kapitel \ref{sec:test}, und dabei auf das aus Kapitel \ref{sec:momentum}, zurückgreift, mit einem Beta1 von 0,5 und einem Beta2 von 0,5. Die Batchgröße ist 64. Der Discriminator besteht aus 5-Layern, welche aus 1-Dimensionalen Convolutionen-Layer bestehen mit einer Filteranzahl [64, 128, 256, 256, 512] je Layer. Mit einer Kernel Größe von 1 und Stride von 1. Also Aktivierungsfunktion wird die ReLu-Funktion genutzt. Darauf folgen 3 Fully-Connected-Layer mit der Größe [128, 64, 1] alle mit einer ReLu-Funktion. Der Generator des RAW-GAN besteht auf 6 Fully-Connected-Layern mit [64, 128, 512, 1024 ,1536 ,6144] Neuronen, jeweils mit der Relu Aktivierungsfunktion. Der Noisevektor z wird aus einer 128-D Normal Verteilung entnommen mit $\mu$ = 0 und $\sigma$ =  0,2. Als Zielfunktion wird die Wasserstein Metric gewählt da diese bessere Ergebnisse im Versuchsaufbau von Achlioptas, Panos und Diamanti\cite{3dgan} erzielt hat. Das Training erfolgt jeweils mit den Datensätze "Stühle" und "Blätter" wie in Kapitel \ref{sec:versuch1-traingsdaten} beschrieben.
 \\\\
-Der Versuchsaufbau 1.2 ist das Latent-GAN welches in Kapitel \ref{sec:3dgan} vorgestellt wurde. Es wurde die Implementierung von \cite{3dgan} verwendet $(www.github.com/optas/latent_3d_points)$. Zunächst wird dabei der Autoencoder mit den Trainingsdaten trainiert. Das Training erfolgt einer Learningrate von 0,0005 und einer Batchsize von 50. Der Encoder besteht dabei aus 4 1-D Convolutional-Layern mit [64, 128, 246, 1024] Filtern, eine Stride von 1 und Size von 1. Die Batchgröße ist 64. Als Aktivierungsfunktion wir die Relu verwendet. Der Encoder besteht aus 3 Fully-Connected-Layern mit [256, 256, 6144] Neuronen, alle mit der ReLu-Zielfunktion. Das Training erfolgt jeweils mit den Datensätze "Stuhl" und "Tabakblätter" beschrieben in Kapitel \ref{sec:versuch1-traingsdaten} und wurde auf 500 Epochen durchgeführt. 
-\\\\
-Nach dem Training des Autoencoder kann der komprimierte Latent Code welcher von Encoder erstellt wird dazu verwendet werden das Latent-GAN zu trainieren. Alle Trainingsdaten werden nun durch den Encoder komprimiert um ihre 128-D Latenten Code y zu erzeugen. Mit diesen wird nun das GAN trainiert um eigene Latente Code zu produzieren welche von den Decoder wieder auf ihre ursprüngliche Dimension von 2048 Punkten zu projizieren. In Abb. \ref{fig:Bild39} ist dieser Prozess dargestellt. Der Generator des Latent-GAN besteht aus 2 Fully-Connected-Layer mit [128, 128] Neuronen welche als Aktivierungsfunktion eine ReLu-Funktion benutzen. Der Noisevektor z wird aus einer 128-D Normal Verteilung entnommen mit $\mu$ = 0 und $\sigma$ =  0,2. Der Discriminator besteht aus [128, 64, 1] Fully-Connected-Layern welche ebenfalls ReLu-Funktion nutzen.Als Zielfunktion wird die Wasserstein Metrik gewählt da diese bessere Ergebnisse im Versuchsaufbau von Achlioptas, Panos und Diamanti\cite{3dgan} erzielt hat. 
+Der Versuchsaufbau 1.2 ist das Latent-GAN, welches in Kapitel \ref{sec:3dgan} bereits vorgestellt wurde. Es wurde die Implementierung von \cite{3dgan} verwendet $(www.github.com/optas/latent_3d_points)$. Zunächst wird dabei der Autoencoder mit den Trainingsdaten trainiert. Das Training erfolgt mit einer Learningrate von 0,0005 und einer Batchsize von 50. Der Encoder besteht dabei aus 4 1-D Convolutional-Layern mit [64, 128, 246, 1024] Filtern, eine Stride von 1 und Size von 1. Die Batchgröße ist 64. Als Aktivierungsfunktion wir die Relu verwendet. Der Encoder besteht aus 3 Fully-Connected-Layern mit [256, 256, 6144] Neuronen, alle mit der ReLu-Zielfunktion. Das Training erfolgt jeweils mit den Datensätze "Stühle" und "Blätter" wie in Kapitel \ref{sec:versuch1-traingsdaten} beschrieben und wurde auf 500 Epochen durchgeführt. Nach dem Training des Autoencoder kann der komprimierte Latent Code welcher von Encoder erstellt wird, dazu verwendet werden, das Latent-GAN zu trainieren. Alle Trainingsdaten werden nun durch den Encoder komprimiert, um ihre 128-D Latenten Code y zu erzeugen. Mit diesen wird nun das GAN trainiert, um eigene Latente Codes zu produzieren, welche vom Decoder wieder auf ihre ursprüngliche Dimension von 2048 Punkten projiziert werden. In Abb. \ref{fig:Bild39} ist dieser Prozess dargestellt. Der Generator des Latent-GAN besteht aus 2 Fully-Connected-Layer mit [128, 128] Neuronen, welche als Aktivierungsfunktion eine ReLu-Funktion benutzen. Der Noisevektor z wird aus einer 128-D Normal Verteilung entnommen mit $\mu$ = 0 und $\sigma$ =  0,2. Der Discriminator besteht aus [128, 64, 1] Fully-Connected-Layern welche ebenfalls ReLu-Funktion nutzen. Als Zielfunktion wird die Wasserstein Metrik gewählt, da diese bessere Ergebnisse im Versuchsaufbau von Achlioptas, Panos und Diamanti\cite{3dgan} erzielt hat. 
 
 \subsection{Versuchsaufbau 2 - CGAN für Punktwolkenrekonstruktion }\label{sec:versuch2-aufbau}
 
-Da sich im Versuchsaufbau 1 das Latent-CGAN bessere Ergebnisse liefert bei erlernen von Punktwolken Daten. Wird im Versuchsaufbau 2.1 Latent-CGAN das komprimieren von Trainingsdaten übernommen und dahin gehen verändert, das Ziel von C-GAN zu übernehmen und bedingte Wahrscheinlichkeiten zu lernen. Zunächst werden wie bei Versuchsaufbau 1 die Trainingsdaten vgl.\ref{sec:versuch1-traingsdaten} an einen Autoencoder trainiert. Dabei wird jeweils ein Autoencoder für zerstörte Blätter heran genommen und einer für unzerstörte im Urzustand befindende Blätter.
+Da im Versuchsaufbau 1 das Latent-CGAN bessere Ergebnisse beim erlernen von Punktwolken Daten liefert, wird im Versuchsaufbau 2.1 Latent-CGAN das komprimieren von Trainingsdaten übernommen und dahin gehend verändert, dass Ziel von C-GAN zu übernehmen und bedingte Wahrscheinlichkeiten zu lernen. Zunächst werden wie bei Versuchsaufbau 1 die Trainingsdaten vgl.\ref{sec:versuch2_daten} an einen Autoencoder trainiert. Dabei wird jeweils ein Autoencoder für zerstörte Blätter heran genommen und einer für unzerstörte im Urzustand.
 \\\\
-Die Autoencoder folgen dabei den gleichen Aufbau wie in Versuchsaufbau 1.2. Der Encoder besteht dabei aus 4 1-D Convolutional-Layern mit [64, 128, 246, 1024] Filtern, eine Stride von 1 und Size von 1. Als Aktivierungsfunktion wir die Relu verwendet. Der Decoder besteht aus 3 Fully-Connected-Layern mit [256, 256, 6144] Neuronen, alle mit der ReLu-Zielfunktion. Als Batchsize wird 64 genommen. Als Zielfunktion wird jeweils einmal die Chamfer Distance getestet und die Earthmover Distance. Für den Autoencoder wurde die Implementierung von \cite{3dgan} verwendet $(www.github.com/optas/latent_3d_points)$ 
+Die Autoencoder folgen dabei den gleichen Aufbau wie in Versuchsaufbau 1.2. Der Encoder besteht dabei aus 4 1-D Convolutional-Layern mit [64, 128, 246, 1024] Filtern, eine Stride von 1 und Size von 1. Als Aktivierungsfunktion wird die ReLu-Funktion verwendet. Der Decoder besteht aus 3 Fully-Connected-Layern mit [256, 256, 6144] Neuronen, alle mit der ReLu-Zielfunktion. Als Batchsize wird 64 genommen. Als Zielfunktion wird jeweils einmal die CD getestet und die EMD. Für den Autoencoder wurde die Implementierung von \cite{3dgan} verwendet$(www.github.com/optas/latent_3d_points)$. 
 \\\\
-Der Generator des Latent-CGAN bekommt als Input z einen 128-D Vektor, welcher aus einer Normal Verteilung entnommen mit $\mu$ = 0 und $\sigma$ =  0,2. Y welches zusätzlich zu z den Generator zum Training eingespeist wird sind die von Autoencoder codierten 128-D komprimierten "zerstörte" Tabakblätter. Der Generator des Latent-GAN besteht aus 2-Fully-Connected-Layer mit [128, 128] Neuronen welche als Aktivierungsfunktion eine Leaky-ReLu-Funktion benutzen. Der Discriminator besteht aus 2 Fully-Connectected-Layern mit der Größe [128, 128]. Der Discriminator bekommt als Input entweder den vom Generator erzeugten latenten Code x' welcher vom Encoder des Autoencoder zu einen unzerstörten Blatt gemappt werden kann und zusätzlich y also (x`,y). Oder ein aus unseren Trainingsdaten stammendes (x,y) Paar welches als reale-Datensätze gekennzeichnet ist. Als Ziel wird jeweils das Wasserstein Metrik und die Vanilla - GAN Metrik Loss-Function benutzt.
+Der Generator des Latent-CGAN bekommt als Input z einen 128-D Vektor, welcher aus einer Normal Verteilungz mit $\mu$ = 0 und $\sigma$ =  0,2 entnommen wurde. Y welches zusätzlich zu z den Generator zum Training eingespeist wird sind die von Autoencoder codierten 128-D komprimierten zerstörte Tabakblätter. Der Generator des Latent-GAN besteht aus 2-Fully-Connected-Layer mit [128, 128] Neuronen, welche als Aktivierungsfunktion eine Leaky-ReLu-Funktion benutzen. Der Discriminator besteht aus 2 Fully-Connectected-Layern mit der Größe [128, 128]. Der Discriminator bekommt als Input entweder den vom Generator erzeugten latenten Code x' welcher vom Encoder des Autoencoder zu einen unzerstörten Blatt gemappt werden kann und zusätzlich y also (x',y). Oder ein aus unseren Trainingsdaten stammendes (x,y) Paar, welche als reale-Datensätze gekennzeichnet sind. Als Ziel wird jeweils die Wasserstein Metrik und die Vanilla - GAN Metrik Loss-Function benutzt. Beim Trainingsaufbau 2.2 RAW-CGAN bekommt der Generator als Input Noisevektor z einen 128-D Vektor, aus einer  Normal Verteilung entnommen mit $\mu$ =  0 und $\sigma$ =  0,2. Des weiteren wird als y den Generator die zerstörte Blatt Punktwolke welche als ein 6144-D Vektor dargestellt werden als Input übergeben. Der Generator besteht aus Fully-Connected-Layern mit [6272, 3163, 1568, 3136, 4850, 5680, 6144] Neuronen je Layer. Als Aktivierungsfunktion wird die Leaky-ReLu genommen. Im letzten Layern wird keine Aktivierungsfunktion verwendet um den Output linea verarbeitbar zu machen und damit Euklidische Koordinaten generiert werden können. Des weiteren wird nach jedem Layer ein Batch-Normalisation-Layer eingesetzt mit Momentum 0,9 und einen Beta1 und Beta2 von 0,5 eingesetzt. Des Discriminator besteht aus [12288, 6144, 3072,1536, 768, 384, 128, 32, 1] Fully-Connected-Layern mit Aktivierungsfunktion Leaky-ReLu bis auf den letzten Layer in den wird die Sigmoid-Funktion verwendet, wenn als Zielfunktion die Vanilla-GAN gewählt wird. Bei Verwendung der Wasserstein Metrik wird auf eine Aktivierungsfunktion verzichtet. Des weiteren wird nach jedem Layer ein Batch-Normalisation-Layer eingesetzt mit Momentum 0.9 und einen Beta1 und Beta2 von 0,5. Der Input des Discriminator ist die vom Generator erstellten (x',y) oder die direkt aus dem Trainingsdaten stammenden Punktwolken Paare des zerstörten Blatt y und Urzustand Blatt x als Tupel (x,y).Als Zielfunktion wird die Vanilla-GAN und W-GAN Zielfunktion getestet.
 \\\\
-Beim Trainingsaufbau 2.2 RAW-CGAN bekommt der Generator als Input Noisevektor z einen 128-D Vektor aus einer  Normal Verteilung entnommen mit $\mu$ =  0 und $\sigma$ =  0,2. Des weiteren wird als y den Generator die  zerstörte Blatt Punktwolken welche als ein 6144-D Vektor dargestellt werden als Input übergeben. Der Generator besteht aus Fully-Connected-Layern mit [6272, 3163, 1568, 3136, 4850, 5680, 6144] Neuronen je Layer. Als Aktivierungsfunktion wird die Leaky-ReLu genommen. Im letzten Layern wird keine Aktivierungsfunktion verwendet um den Output linear Verarbeitbar zu machen und damit Euklidische Koordinaten generiert werden können. Des weiteren wird nach jedem Layer ein Batch-Normalisation-Layer eingesetzt mit Momentum 0,9 und einen Beta1 und Beta2 von 0,5 eingesetzt. Des Discriminator besteht aus [12288, 6144, 3072,1536, 768, 384, 128, 32, 1] Fully-Connected-Layern mit Aktivierungsfunktion Leaky-ReLu bis auf den letzten Layer in den wird die Sigmoid-Funktion verwendet, wenn als Zielfunktion die Vanilla-GAN gewählt wird. Bei Verwendung der Wasserstein Metrik wird auf eine Aktivierungsfunktion verzichtet. Des weiteren wird nach jedem Layer ein Batch-Normalisation-Layer eingesetzt mit Momentum 0.9 und einen Beta1 und Beta2 von 0,5. Der Input des Discriminator sind die von Generator erstellten (x',y) oder die direkt aus dem Trainingsdaten stammenden Punktwolken Paare zerstörtes Blatt y und Urzustand Blatt x als Tupel (x,y).Als Zielfunktion wird die Vanilla-GAN und W-GAN Zielfunktion getestet.
-\\\\
-Im weiteren Versuchsaufbau für den RAW-CGAN wird der Discriminator umgebaut um ihn durch Convolutional-Layer bessere Lernfähigkeiten geben kann dies sorgt nicht nur für Vorteile für D dadurch kann auch der Generator durch den Gradianten des Discriminators einen besseren latenten Raum lernen soll. Der Generator bleibt in diesen Aufbau gleich der Discriminator bekommt [64, 128, 256, 256, 512] 1-D-Convolutional-Layer mit einer Kernel-Größe von 1 und Stride von 1 als Aktivierungsfunktion wird eine Leaky-ReLu verwendet. Die Batchsize beträgt 64. Anschließend folgen [128, 32, 1] Fully-Conncected Layer mit Leaky-Relu. Zwischen jeden Layer befindet sich ein Batch-Normalisation-Layer mit Momentum von 0,9 und einen Beta1 und Beta2 von 0,5. In Abb. \ref{fig:Bild55} kann der Aufbau und Konnektivät der einzelnen Komponenten entnommen werden.
+Im weiteren Versuchsaufbau für den RAW-CGAN wird der Discriminator umgebaut um ihn durch Convolutional-Layer bessere Lernfähigkeiten zu geben. Dies sorgt nicht nur für Vorteile für den Discriminator dadurch kann auch der Generator durch den Gradianten des Discriminators einen besseren latenten Raum lernen. Der Generator bleibt in diesen Aufbau gleich der Discriminator bekommt [64, 128, 256, 256, 512] 1-D-Convolutional-Layer, mit einer Kernel-Größe von 1 und Stride von 1 als Aktivierungsfunktion wird eine Leaky-ReLu verwendet. Die Batchsize beträgt 64. Anschließend folgen [128, 32, 1] Fully-Conncected-Layer mit Leaky-Relu. Zwischen jeden Layer befindet sich ein Batch-Normalisation-Layer mit Momentum von 0,9 und einen Beta1 und Beta2 von 0,5. Abb. \ref{fig:Bild55} kann der Aufbau und Konnektivät der einzelnen Komponenten entnommen werden.
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.6\textwidth]{point-cgan.png}
+	\includegraphics[width=0.7\textwidth]{point-cgan.png}
 	\caption{Aufbau des RAW-CGAN}
 	\label{fig:Bild55}
 \end{figure}
@@ -669,115 +639,102 @@ Im weiteren Versuchsaufbau für den RAW-CGAN wird der Discriminator umgebaut um 
 
 \section{Evaluation und Ergebnisse}
 
-Es wird nun in diesen Kapitel auf die Ergebnisse von Versuchsaufbau 1 und 2 eingegangen. Zunächst wird Versuchsaufbau 1 vgl. \ref{sec:versuch1-aufbau} des erlernen von latenten Raum von Punktwolken gezeigt. Dabei wird ein Vergleich zwischen den Modeldaten Satz Stühle sowie einen aus der Praxis Stammenden Datensatz Tabakblätter aufgezeigt. Anschließend wird auf die Ergebnisse aus Versuchsaufbau 2 vgl. \ref{sec:versuch2-aufbau} eingegangen. Dabei wird evaluiert ob es möglich ist die zerstörten Blattdaten auf ihren Urzustand wieder herzustellen und aussagekräftige Ergebnisse für die Anwendbarkeit in der Praxis vorhanden sind. Da es keine gängige Validierungsmethode beziehungsweise Validierungsmetrik gibt wird bei der Prüfung der Testergebnisse auf das menschliche Auge verlassen und die Prüfung erfolgt durch eine Sichtprüfung.  
+In diesen Kapitel wird auf die Ergebnisse von Versuchsaufbau 1 und 2 eingegangen. Zunächst wird Versuchsaufbau 1, vgl. \ref{sec:versuch1-aufbau} des Erlernen von latentem Raum von Punktwolken gezeigt. Dabei wird ein Vergleich zwischen den Modeldatensatz ``Stühle`` sowie einen aus der Praxis stammenden Datensatz ``Blätter`` aufgezeigt. Anschließend wird auf die Ergebnisse aus Versuchsaufbau 2 vgl. \ref{sec:versuch2-aufbau} eingegangen. Dabei wird evaluiert, ob es möglich ist die zerstörten Blattdaten in ihrem Urzustand wieder herzustellen und aussagekräftige Ergebnisse für die Anwendbarkeit in der Praxis vorhanden sind. Da es keine gängige Validierungsmethoden, beziehungsweise Validierungsmetriken gibt, wird sich bei der Prüfung der Testergebnisse auf das menschliche Auge verlassen, so dass die Prüfung in Form einer Sichtprüfung erfolgt.
 
 \subsection{Ergebnisse - Versuchsaufbau 1}
 
-Von RAW-GAN vom Versuchsaufbau 1.1 mit den Blattdaten welches nach 500 Epochen Training lassen sich in Abb.\ref{fig:Bild56} Beispieldatensätze welche vom Generator erzeugten wurden entnehmen. Wie zu erkennen ist sind die Blätter nicht gut genug für eine Weiterverarbeitung. Der Latente Raum welcher von den GAN gelernt wurde und am Ende durch den Generator produziert wurde zeigt keine Ähnlichkeit mit normalen Blättern welche im Datensatz enthalten waren. Die Daten erinnern eher an einen hohlen Ball als an Blättern. Es Formen sich Punktansammlungen nähe des Koordinatenursprungs und es lässt keine Anzeichen von Bilden einer Fläche da. Die Daten erinnern eher an einen hohlen Ball als an Blättern. Wobei eine starke Punkthäufung am Koordinaten Urpsprung festzustellen ist und einzelne verteile Punkte außen herum. Die Starke Punkthäufung am Koordinaten Ursprung ergibt dadurch das die reale Blattdaten an dieser stelle häufig vertreten sind und sich dann an den Blattkanten unterscheiden. Dadurch lernt der Generator an diesen hohen Schnittpunkt mehr Punkte zu generieren als Außerhalb. Dieser Effekt ist in Abb. \ref{fig:Bild81} zu erkennen. Dargestellt sind 24 Datensätze aus den Blattdatensatz welche in einen Koordinaten System geladen wurden sind aus verschiedenen Blickwinkeln. Die Punkte häufen sich in der nähe des Koordinatenursprungs und sind geringer Verteilt im äußeren Bereich. Vergleicht man das nun mit Abb.\ref{Bild56} sind diese dichten Ansammlungen ebenfalls zu erkennen. Der W-GAN Loss für den Generator und Discriminator können in Abbildung \ref{fig:Bild80} entnommen werden. Der Loss des Discriminator und Generator bleibt konstant über mehrere Epochen es ist kein Anzeichen von Verbesserung zu erkennen sollte das Training länger als 500 Epochen laufen. 
-
+Von RAW-GAN aus Versuchsaufbau 1.1 mit den Blattdaten lassen sich nach 500 Epochen Training Beispieldatensätze, welche vom Generator erzeugten wurden aus Abb.\ref{fig:Bild100} entnehmen. Wie zu erkennen ist, sind die Blätter nicht gut genug für eine Weiterverarbeitung. Der latente Raum, welcher von den GAN gelernt wurde und am Ende durch den Generator produziert wurde, zeigt keine Ähnlichkeit mit normalen Blättern, welche im Datensatz enthalten waren. Die Daten erinnern eher an einen hohlen Ball, als an Blättern. Es formen sich Punktansammlungen in der nähe des Koordinatenursprungs und es lässt sich kein Anzeichen von Bilden einer Blattfläche erkennen.
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.0\textwidth]{raw_gan_leaf_example.png}
+	\caption{Generierte Beispieldaten vom Generator des RAW-GAN mit den Blattdaten}
+	\label{fig:Bild100}
+\end{figure}
+Die starke Punkthäufung am Koordinaten Ursprung ergeben sich dadurch, dass die realen Blattdaten an dieser Stelle häufig vertreten sind und sich an den Blattkanten eher unterscheiden. So lernt der Generator an diesen vermehrten Schnittpunkt mehr Punkte zu generieren als außerhalb. Dieser Effekt ist in Abb. \ref{fig:Bild81} zu erkennen. Dargestellt sind 24 Datensätze aus dem Blattdatensatz, welche aus verschiedenen Blickwinkeln in einen Koordinatensystem geladen wurden sind. Die Punkte häufen sich in der Nähe des Koordinatenursprungs und sind im äußeren Bereich schwächer Verteilt. 
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.0\textwidth]{ansammlung.png}
+	\caption{24 Punktwolken aus dem Blattdatensatz in einen Koordinatensystem}
+	\label{fig:Bild81}
+\end{figure}
+Vergleicht man dies mit Abb.\ref{fig:Bild100} sind dort dichte Ansammlungen ebenfalls zu erkennen. Der W-GAN Loss für den Generator und Discriminator kann in Abb. \ref{fig:Bild1002} entnommen werden. Der Loss des Discriminators und Generators bleibt konstant über mehrere Epochen. Es ist kein Anzeichen von Verbesserung zu erkennen wenn das Training länger als 500 Epochen läuft. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\textwidth]{raw_gan_leaf_result.png}
 	\caption{Trainingsverlauf des RAW-GAN mit den Blattdaten}
-	\label{fig:Bild80}
+	\label{fig:Bild1002}
 \end{figure}
+~\\\\
+Ähnliche Ergebnisse sind auch beim RAW-GAN von Versuchsaufbau 1.1 mit den Stuhldaten zu beobachten. Wobei die Qualität der Stühle stärker an die im Trainingsdatensatz enthalten Daten erinnert vgl. Abb. \ref{fig:Bild58}. Es zeichnen sich Lehne und Stuhlbeine in den Daten ab, die vom GAN trainierten Generator stammen. Der Trainingsverlauf ist Abb. \ref{fig:Bild57} zu entnehmen. Dabei ist zu sehen das der Discriminator sich nicht mehr verbessert und der Generator keine besseren Ergebnisse liefern kann. Diese Ergebnisse decken sich mit den von Achlioptas, Panos und Diamanti \cite{3dgan} festgestellten Ergebnissen in den das RAW-GAN keine qualitativ gute Stuhldaten erzeugen konnte. 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.5\textwidth]{raw_gan_leaf_example.png}
-	\caption{Generierte Beispieldaten von Generator des RAW-GAN mit den Blattdaten}
-	\label{fig:Bild56}
-\end{figure}
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=0.5\textwidth]{ansammlung.png}
-	\caption{24 Pointclouds aus den Blattdatensatz in einen Koordinatensystem}
-	\label{fig:Bild81}
-\end{figure}
-
-Ähnliche Ergebnisse sind auch beim RAW-GAN vom Versuchsaufbau 1.1 mit Stuhldaten zu beobachten. Wobei die Qualität der Stühle mehr an die im Trainingsdatensatz stammende Daten erinnert. Es zeichnen sich Lehne und Stuhlbeine von dem GAN trainierten Generator erzeugten Daten ab. Der Trainingsverlauf ist in Abb. \ref{fig:Bild57} zu entnehmen. Dabei ist zu sehen das der Discriminator sich nicht mehr verbessert und der Generator keine besseren Ergebnisse liefern kann. Diese Ergebnisse decken sich mit den von Achlioptas, Panos und Diamanti \cite{3dgan} festgestellten Ergebnissen in den das RAW-GAN keine qualitativ gute Stuhldaten erzeugen konnte. 
-
+	\includegraphics[width=1.0\textwidth]{raw_gan_chair_example.png}
+	\caption{Generierte Beispieldaten von Generator des RAW-GAN mit den Stuhldaten}
+	\label{fig:Bild58}
+	\end{figure}
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=0.5\textwidth]{raw_gan_chair_result.png}
 	\caption{Trainingsverlauf des RAW-GAN mit den Stuhldaten}
 	\label{fig:Bild57}
 \end{figure}
-
+\pagebreak\linebreak 
+Um nun die Ursache genauer zu beleuchten, was die Gründe für  den Qualitätsunterschied zwischen den beiden generierten Datensätzen ausmacht und um festzustellen ob durch mehr Blattdaten bessere Ergebnisse erzeugt werden können, wurden die Stuhldaten auf 422 Trainingsdaten reduziert und ein erneutes Training des RAW-GAN durchgeführt. Die erzeugte Beispieldaten können aus Abb. \ref{fig:Bild60} entnommen werden. Vergleicht man die Qualität des RAW-GAN mit 422 Stuhldaten und 
+6778 Stuhldaten (vgl. Abb.\ref{fig:Bild58})ist in Abb.\ref{fig:Bild60} eine Steigerung der Qualität klar festzustellen. 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.5\textwidth]{raw_gan_chair_example.png}
-	\caption{Generierte Beispieldaten von Generator des RAW-GAN mit den Stuhldaten}
-	\label{fig:Bild58}
-\end{figure}
-
-Um nun die Ursache genauer zu begründen, welche die Gründe für  den Qualitätsunterschied zwischen den beiden generierten Daten auszumachen und festzustellen ob durch mehr Blattdaten bessere Ergebnisse erzeugt werden können. Wurden  die Stuhldaten auf 422 Trainingsdaten reduziert und ein erneutes Training des RAW-GAN durchgeführt. Die erzeugte Beispieldaten können aus Abb. \ref{fig:Bild60} entnommen werden. Vergleicht man nun die Qualität von den RAW-GAN mit 422 Stuhldaten Trainingsdaten und 
-6778 Stuhldaten  Abb.\ref{fig:Bild59} ist eine Steigerung der Qualität klar festzustellen. Der Trainingsverlauf in Abb. \ref{fig:Bild59} ähnelt der von Abb .\ref{fig:Bild60}. Der Discriminator ist zu schnell perfekt trainiert und gibt den Generator keine Chance mehr nachzuziehen. Es ist eine Tendenz festzustellen das durch eine Erhöhung der Blattdaten auch die Qualität des RAW-GAN steigern könnte.
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=0.5\textwidth]{raw_gan_result_400_result.png}
+	\includegraphics[width=1.0\textwidth]{raw_gan_result_400_result.png}
 	\caption{Trainingsbeispiele des RAW-GAN mit den 422 Stuhldaten}
 	\label{fig:Bild60}
 \end{figure}
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=0.5\textwidth]{raw_gan_result_400_examples.png}
-	\caption{Trainingsverlauf des RAW-GAN mit den 422 Stuhldaten}
-	\label{fig:Bild59}
-\end{figure}
-
-Für Versuchsaufbau 1.2 Latent-GAN mit Stühlen kann der Trainingsverlauf aus Abb. \ref{fig:Bild61} entnommen werden. Der Generator Loss verbessert sich zwar gering über mehre Epochen der Discriminator jedoch bleibt konstant auf einen guten Ergebnisse und lässt keine starken Verbesserung des Generators mehr zu. Beispieldatensätze welche von Generator nach Beendigung des Trainings erzeugt wurden in dem der latente-Code von G in den Decoder als Input gegeben wurde sind in Abb. \ref{fig:Bild62} zu entnehmen. Diese sind qualitativ hochwertige Daten welche eine Ähnlichkeit mit denen aus dem Trainingsdatensatz widerspiegeln. Die Ergebnisse decken sich mit den von \cite{3dgan} festgestellten Ergebnissen in den das RAW-GAN keine qualitativ gute Stuhldaten erzeugen konnte. 
-
+~\\\\
+Für Versuchsaufbau 1.2 Latent-GAN mit Stühlen kann der Trainingsverlauf aus Abb. \ref{fig:Bild61} entnommen werden. Der Generator Loss verbessert sich zwar über mehrere Epochen gering, der Discriminator jedoch bleibt konstant auf einen guten Ergebnisse und lässt keine starken Verbesserung des Generators mehr zu. 
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=0.5\textwidth]{latent_gan_chair_result.png}
-	\caption{Trainingsverlauf des Latent-GAN mit den Stuhldaten}
+	\caption{Trainingsverlauf des RAW-GAN mit den 422 Stuhldaten}
 	\label{fig:Bild61}
 \end{figure}
-
+Beispieldatensätze, welche vom Generator nach Beendigung des Trainings erzeugt wurden in dem der latente-Code von Generator in den Decoder als Input gegeben wurde sind in Abb. \ref{fig:Bild62} zu entnehmen. Diese sind qualitativ hochwertige Daten welche eine Ähnlichkeit mit denen aus dem Trainingsdatensatz widerspiegeln. Die Ergebnisse decken sich mit den von \cite{3dgan} festgestellten Ergebnissen, in welchen das Latent-GAN qualitativ gute Stuhldaten erzeugen konnte. 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.5\textwidth]{latent_gan_chair_example.png}
-	\caption{Trainingsergebnisse des Latent-GAN mit den Stuhldaten}
+	\includegraphics[width=1.0\textwidth]{latent_gan_chair_example.png}
+	\caption{Trainingsbeispiele des RAW-GAN mit den 422 Stuhldaten}
 	\label{fig:Bild62}
 \end{figure}
-
-Das Latent-GAN welches mit den Blattdaten trainiert wurde können exemplarisch generierte Daten aus der Abb. \ref{fig:Bild64} entnommen werden. Diese zeigen eine qualitativ gute Grundfläche welche in der Trainingsdatengesamtheit enthalten ist. Jedoch ist festzustellen das es starke Punkthäufungen an gewissen Bereichen je Blatt gibt, diese sind beispielsweise im 2. Blatt von Rechts in Abb. \ref{fig:Bild64} zu erkennen und mit einen roten Kreis markiert. Der Trainingsverlauf in Abb. \ref{fig:Bild63} zu entnehmen sind keine starken Veränderungen im weiteren Trainingsverlauf zu entnehmen das Training stagniert schon über mehrere Epochen. 
+~\\\\
+Das Latent-GAN welches mit den Blattdaten trainiert wurde, können exemplarisch generierte Daten aus der Abb. \ref{fig:Bild64} entnommen werden. Diese zeigen eine qualitative Grundfläche, welche in der Trainingsdatengesamtheit enthalten ist. Jedoch ist festzustellen, dass es starke Punkthäufungen an gewissen Bereichen je Blatt gibt, diese sind beispielsweise im zweiten Blatt von Rechts, auf Abb. \ref{fig:Bild64} zu erkennen und mit einem roten Kreis markiert. Der Trainingsverlauf in Abb. \ref{fig:Bild63} zu entnehmen, dass keine starken Veränderungen im weiteren Trainingsverlauf zu erwarten ist und das Training schon über mehrere Epochen stagniert.
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.0\textwidth]{latent_gan_leaf_example.png}.
+	\caption{Trainingsergebnisse des Latent-GAN mit den Blattdaten}
+	\label{fig:Bild64}
+\end{figure}
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=0.5\textwidth]{Latent_gan_training_result.png}
 	\caption{Trainingsverlauf des Latent-GAN mit den Blattdaten}
 	\label{fig:Bild63}
 \end{figure}
+\pagebreak\linebreak 
+Um die Ergebnisse von Testaufbau 1.2 Latent-GAN mit Stuhldaten besser vergleichbar zu machen und um ersichtlich zu machen, ob eine Erhöhung der Anzahl der Tabakblätter Daten zu einem besseren Ergebnis führen  und die Punktanhäufung sich reproduzieren lässt, wurden 422 Stuhldaten genommen um das Latent-GAN zu trainieren. In Abb. \ref{fig:Bild66} sind die exemplarisch erzeugten Daten des Generator zu entnehmen. Zu erkennen ist ein ähnlich Phonemen wie bei den Blattdaten. Hohe Punktanhäufungen finden sich an Kanten der Sitzfläche, zum Übergang der Stuhlbeine. Dadurch lassen sich Rückschlüsse darauf ziehen, dass eine Erhöhung der Daten zu einer besseren Qualität de kann. Der Trainingsverlauf kann aus Abb. \ref{fig:Bild65} entnommen werden auch dieser zeigt eine Stagnation des Verlaufs schon über mehre Epochen an und verspricht keine Erhöhung der Qualität beim weiteren Verlauf des Trainings.
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.5\textwidth]{latent_gan_leaf_example.png}
-	\caption{Trainingsergebnisse des Latent-GAN mit den Blattdaten}
-	\label{fig:Bild64}
-\end{figure}
-
-Um die Ergebnisse von Testaufbau 1.2 Latent-GAN mit Stuhldaten besser zu Vergleichen und um ersichtlich zu machen ob eine Erhöhung der Anzahl der Tabakblätter Daten zu einen besseren Ergebniss führen kann und die Punktanhäufung sich reproduzieren lässt, wurden 422 Stuhldaten genommen um das Latent-GAN zu trainieren. In Abb. \ref{fig:Bild66} sind die exemplarische erzeugte Daten von Generator zu entnehmen. Zu erkennen ist ein ähnlich Phonemen wie bei den Blattdaten. Hohe Punktanhäufungen an Kanten der Sitzfläche zum Übergang der Stuhlbeine. Dadurch lässt sich Rückschlüsse ziehen das eine Erhöhung der Daten zu einer besseren Qualität der Daten führen kann. Der Trainingsverlauf kann aus Abb. \ref{fig:Bild65} entnommen werden auch dieser zeigt eine Stagnation des Verlaufs schon über mehre Epochen an und verspricht keine Erhöhung der Qualität. 
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=0.5\textwidth]{raw_gan_latent_gan_chair_result_400_example.png}
-	\caption{Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}
-	\label{fig:Bild65}
-\end{figure}
-
-\begin{figure}[htbp] 
-	\centering
-	\includegraphics[width=0.5\textwidth]{raw_gan_latent_gan_chair_example_400.png}
+	\includegraphics[width=1.0\textwidth]{raw_gan_latent_gan_chair_example_400.png}
 	\caption{Traingsergebnisse des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}
 	\label{fig:Bild66}
 \end{figure}
-
-Zusammengefasst besonders auf den Hinblick des Blattdatensatzes lässt sich feststellen das bei den Stuhldatensatz die Ergebnisse von Achlioptas, Panos und Diamanti\cite{3dgan} reproduziert werden konnte. Bei einen Datensatz welcher durch Scanverfahren von realen Objekten in diesen Beispiel Tabakblättern konnte gezeigt werden das durch das Latent-GAN eine erste Annäherung an qualitativ Hochwertig generierten Daten zu sehen ist. Durch eine Erhöhung der Trainingsdaten lässt sich auch eine Erhöhung der Qualität feststellen wie bei den Stuhldaten gezeigt wurde, sowie bei RAW-GAN und Latent-GAN. Des weiteren können aber keine Aussagen getroffen werden um welche Höhe die Qualitätssteigerung statt  finden kann. Die Datensätze unterscheiden sich in ihrer Aufbereitung. Die Stuhldaten sind besser auf einen Koordinaten Ursprung geeicht wie in Abb. \ref{fig:Bild85} festzustellen ist, in dieser sind mehre Stühle in ein Koordinaten System geladen zum Vergleich die Blattdaten im Abb. \ref{fig:Bild81} Zu erkennen ist einen enorme Überschneidung der einzelnen Punktwolken bei Stühlen im Vergleich zu Blattdaten dies hilft den Suchraum für die GANS einzuschränken und erleichtert das Training. Es müssten sich bessere Datenvorverarbeitungsschritte bei den Blattdaten erhoben werden. Außerdem sind die 422 Blattdaten zum Vergleich zu den 6778 Stuhldaten sehr gering und hilft den Latenten-GAN und RAW-GAN den latenten Raum besser zu erlernen da die Grundgesamtheit mehr abgedeckt ist. Aus technischer Sicht könnte bessere Layer strukturen für bessere Ergebnisse. Die Bearbeitung mit Convolutionen-Layer auf Bilddaten hat erst den großen Durchbruch bei der Rekonstruktion bei Bilddaten möglich gemacht\cite{imagerecon}. Da nun unser Generator nur aus Fully-Connected-Layern besteht und 3D-Punktwolken komplexer sind als Bilder kann an dieser Stelle definitiv noch nachgearbeitet werden. Beispielsweise könnte ein 1D-Deconvolutional-Layer implementiert werden. Welche bei Tensorflow 1.12 als Prototyp zur Verfügung steht. Eine andere Möglichkeit wäre auf die Arbeit von Cai, Zhongang  und Yu \cite{3d-conv} anzusetzen dieser postuliert eine Methode für 3D-Convolution Methode welche auf 3D-Punktwolken arbeitet und eine Invarianz im Euklidischen Raum lernt mit deren Hilfe es leicht sein soll Rotationen der Punktwolke zu erlernen.
-
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[width=0.8\textwidth]{chair_all.png}
+	\includegraphics[width=0.4\textwidth]{raw_gan_latent_gan_chair_result_400_example.png}
+	\caption{Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten}
+	\label{fig:Bild65}
+\end{figure}
+\pagebreak\linebreak
+Zusammengefasst besonders auf den Hinblick des Blattdatensatzes lässt sich feststellen das bei den Stuhldatensatz die Ergebnisse von Achlioptas, Panos und Diamanti\cite{3dgan} reproduziert werden konnte. Bei einen Datensatz welcher durch Scanverfahren von realen Objekten in diesen Beispiel Tabakblättern konnte gezeigt werden das durch das Latent-GAN eine erste Annäherung an qualitativ Hochwertig generierten Daten zu sehen ist. Durch eine Erhöhung der Trainingsdaten lässt sich auch eine Erhöhung der Qualität feststellen wie bei den Stuhldaten gezeigt wurde, sowie bei RAW-GAN und Latent-GAN. Des weiteren können aber keine Aussagen getroffen werden um welche Höhe die Qualitätssteigerung statt  finden kann. Die Datensätze unterscheiden sich in ihrer Aufbereitung. Die Stuhldaten sind besser auf einen Koordinaten Ursprung geeicht wie in Abb. \ref{fig:Bild85} festzustellen ist, in dieser sind mehre Stühle in ein Koordinaten System geladen zum Vergleich die Blattdaten im Abb. \ref{fig:Bild1001} Zu erkennen ist einen enorme Überschneidung der einzelnen Punktwolken bei Stühlen im Vergleich zu Blattdaten dies hilft den Suchraum für die GANS einzuschränken und erleichtert das Training. Es müssten sich bessere Datenvorverarbeitungsschritte bei den Blattdaten erhoben werden. Außerdem sind die 422 Blattdaten zum Vergleich zu den 6778 Stuhldaten sehr gering und hilft den Latenten-GAN und RAW-GAN den latenten Raum besser zu erlernen da die Grundgesamtheit mehr abgedeckt ist. Aus technischer Sicht könnte bessere Layer strukturen für bessere Ergebnisse. Die Bearbeitung mit Convolutionen-Layer auf Bilddaten hat erst den großen Durchbruch bei der Rekonstruktion bei Bilddaten möglich gemacht\cite{imagerecon}. Da nun unser Generator nur aus Fully-Connected-Layern besteht und 3D-Punktwolken komplexer sind als Bilder kann an dieser Stelle definitiv noch nachgearbeitet werden. Beispielsweise könnte ein 1D-Deconvolutional-Layer implementiert werden. Welche bei Tensorflow 1.12 als Prototyp zur Verfügung steht. Eine andere Möglichkeit wäre auf die Arbeit von Cai, Zhongang  und Yu \cite{3d-conv} anzusetzen dieser postuliert eine Methode für 3D-Convolution Methode welche auf 3D-Punktwolken arbeitet und eine Invarianz im Euklidischen Raum lernt mit deren Hilfe es leicht sein soll Rotationen der Punktwolke zu erlernen.
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=1.0\textwidth]{chair_all.png}
 	\caption{24 Stuhldaten in einen Koordinaten System geladen}
 	\label{fig:Bild85}
 \end{figure}
@@ -879,13 +836,13 @@ Als nächtest  erfolgen die Ergebnisse von Testaufbau 2.2 RAW-CGAN mit Convoluti
 	\label{fig:Bild78}
 \end{figure}
 
-Zuletzt erfolgen die Ergebnisse von Testaufbau 1.2 RAW-CGAN mit Deconvolutional-Layer mit der Wasserstein-Metric, welches mit den nicht komprimierten Daten trainiert wird. Dass heißt wie in \ref{sec:versuch2_daten} beschrieben Blattdaten. Der Trainingsverlauf vom Generator und Discriminator kann in Abb. \ref{fig:Bild81} entnommen werden. Aus den Verlauf des Discriminator Loss arbeitet sich konstant nach unten hat zwei Ausbrecher welche aber kein Einfluss auf den weiteren Trainingsverlauf hat. Der Generator springt zwar noch am Ende des Trainings aber die Sprünge sind in einen so niedrigen Intervall das keine große Veränderung mehr erwartet werden kann. Die vom Generator generierten Outputs in Abb. \ref{fig:Bild82} und deren dazugehöriger Input in Abb. \ref{fig:Bild83} zeigen schon die Umrisse der Blätter auf jedoch sind die Blattflächen nicht gebildet. 
+Zuletzt erfolgen die Ergebnisse von Testaufbau 1.2 RAW-CGAN mit Deconvolutional-Layer mit der Wasserstein-Metric, welches mit den nicht komprimierten Daten trainiert wird. Dass heißt wie in \ref{sec:versuch2_daten} beschrieben Blattdaten. Der Trainingsverlauf vom Generator und Discriminator kann in Abb. \ref{fig:Bild1001} entnommen werden. Aus den Verlauf des Discriminator Loss arbeitet sich konstant nach unten hat zwei Ausbrecher welche aber kein Einfluss auf den weiteren Trainingsverlauf hat. Der Generator springt zwar noch am Ende des Trainings aber die Sprünge sind in einen so niedrigen Intervall das keine große Veränderung mehr erwartet werden kann. Die vom Generator generierten Outputs in Abb. \ref{fig:Bild82} und deren dazugehöriger Input in Abb. \ref{fig:Bild83} zeigen schon die Umrisse der Blätter auf jedoch sind die Blattflächen nicht gebildet. 
 
 \begin{figure}[htbp] 
 	\centering
 	\includegraphics[width=0.5\textwidth]{cgan_ws_loss.png}
 	\caption{Discriminator und Generator Loss RAW-DGAN mit Convolutional-Layer und Wasserstein Distanz}
-	\label{fig:Bild81}
+	\label{fig:Bild1001}
 \end{figure}
 
 \begin{figure}[htbp] 
@@ -920,14 +877,17 @@ Im Versuchsaufbau 2.2 zeigen sich bessere Ergebnisse mit der Verwendung von Conv
 \end{description}
 
 
-welche in dieser Arbeit überprüft wurden, ist festzuhalten das Ziel 1 durch GANs machbar ist jedoch noch Verbesserungen in der Qualität möglich sind. Diese können durch Beispielsweiße, erhöhung der Trainingsdaten, eine Datenvorverarbeitung welche den Suchraum einschränkt oder Verbesserung des GAN Modells durch verwendung von 1D- deconvolutional-Layer oder 3D-Convolutional-Layer für Punktwolken \cite{3d-conv} möglicher weiße erreicht werden. 
+welche in dieser Arbeit überprüft wurden, ist festzuhalten das Ziel 1 durch GANs machbar ist jedoch noch Verbesserungen in der Qualität möglich sind. Diese können durch Beispielsweiße, Erhöhung der Trainingsdaten, eine Datenvorverarbeitung welche den Suchraum einschränkt oder Verbesserung des GAN Modells durch Verwendung von 1D- deconvolutional-Layer oder 3D-Convolutional-Layer für Punktwolken \cite{3d-conv} möglicher weiße erreicht werden. 
 \\\\
-Für Ziel 2 welches in Kapitel \ref{sec:versuch2-aufbau} überprüft wurde ist festzuhalten das der Aufbau des Latent-CGAN abgebrochen werden musste, da der Autoencoder es nicht geschafft das die zerstörten Trainingsdaten zu erlernen. 
+Für Ziel 2 welches in Kapitel \ref{sec:versuch2-aufbau} überprüft wurde ist festzuhalten das der Aufbau des Latent-CGAN abgebrochen werden musste, da der Autoencoder es nicht geschafft das die zerstörten Trainingsdaten zu erlernen. Und somit eine weitere durchführung des Versuchsaufbau umöglich macht. Jedoch war festzustellen das die Autoencoder die Löcher in den Blättern mit Punkte füllten und somit eine Rekonstruction möglicht machten. Dies ist auf die beiden Zielfunktionen des Autoencoder zurück zuführen welche eine durch das Distanzmaß zwischen 2 Punktwolken dafür sorgt das die Punktwolken gedehnt werden und  Ob eine praktische Anwendung dadurch ermöglicht ist und ob diese Rekonstruktion nur für die Form für Blätter gilt oder auch Beispielsweise ähnliche Ergebnisse beim Stuhldaten Satz liefert muss in Zukünftigen Arbeiten geprüft werden. 
+
+Im Versuchsaufbau 2.2 zeigen sich bessere Ergebnisse mit der Verwendung von Convolutional-Layer im Discriminator. Ein qualitativer Unterschied zwischen den Versuchsaufbau 2.2 RAW-CGAN mit Convolutional-Layer und Vanilla-GAN oder Wasserstein Metrik lässt sich nicht feststellen. Jedoch lässt durch die Convolutional-Layer das erlernen der Latenten-Struktur besser gelingen. Eine Rekonstruktion ist aber auch mit diesen Model nicht möglich. Jedoch kann nicht ausgeschlossen sein das GAN durch andere Aufbauten wie Beispielsweise mit 1D-Deconvolutional-Layer implementiert werden. Welche bei Tensorflow 1.12 als Prototyp zur Verfügung steht. Eine andere Möglichkeit wäre auf die Arbeit von Cai, Zhongang  und Yu \cite{3d-conv} anzusetzen dieser postuliert eine Methode für 3D-Convolution Methode welche auf 3D-Punktwolken arbeitet und eine Invarianz im Euklidischen Raum lernt mit deren Hilfe es leicht sein soll Rotationen der Punktwolke zu erlernen. Durch diese neuen Module könnte das erlernen des latenten Raumes von 3d-Punktwolken möglich gemacht werden und das letztendliche Ziel, 3D-Punktwolken zu rekonstruieren möglich gemacht werden. 
 
 
 auch zeigt beispielsweiße bei der Rekonstruction von Bildern das erst durch den Einsatz verbesserter Convolution Methoden es erst Möglich gemacht wurde Bilder zu rekonstruieren und zu verändert \cite{imagerecon}.
 
 Eine weitere Möglichkeit ist das Konzept welches Zhu, Jun-Yan und Park \cite{pix2pix}, mit ihren Pix2Pix Model vorgestellt haben. In dieser Verwendet sich die C-GAN Loss Funktion und ändern diese um Zusätzlich zu der üblichen Loss-Funktion die Differenz zwischen Generator Output und den dazugehörigen Urzustand Trainingsdatensatz zu berechnen und addieren dies zu der Loss-Funktion. Der Optimizer versucht nun dieses Differenz zusätzlich zu Minimieren. Man könnte dieses Verfahren nun für Punktwolken übernehmen und mit der CD oder EMD implementieren. 
+
 
 
 Fast man nun Versuchsaufbau 2 zusammen. Ist festzustellen das in Versuchsaufbau 2.1 abgebrochen werden musste da die Autoencoder nicht fähig waren die zerstörten Trainingsdaten zu erlernen. Jedoch schafften sie die Daten zu rekonstruieren obwohl dies nicht als Ziel für die Autoencoder definiert wurde. Ob eine praktische Anwendung dadurch ermöglicht ist und ob diese Rekonstruktion nur für die Form für Blätter gilt oder auch Beispielsweise ähnliche Ergebnisse beim Stuhldaten Satz liefert muss geprüft werden. Die beiden Zielfunktionen des Autoencoder, CD und EMD, hatten beide ein ähnliches Problem welcher Punkt in Punktwolke x ist die dazugehörige Punkt in Punktwolke y. Beide lösten dies indem sie die nähsten Nachbarn eines Punktes suchen aus der anderen Punktwolke.  Jedoch für dieses Mapping zu Problemen führen wie man in Abb. erkennen kann. Die rote Punktwolke ist der erste Versuch des Autoencoder die grüne Punktwolke zu kopieren. Eine Zuordnung in diesem Stadium welcher Punkt in rot zu grün gehört ist sehr schwierig. Dadurch resultiert das Punkte in Zentrum eher als nächster Nachbar identifiziert werden. Und lassen in weiteren Trainingsverlauf die Punktwolke wie einen Teig außernander gehen und lassen es nicht zu die Löcher zu entstehen. Für eine weitere Nutzung könnte an dieser Stelle angestetzt werden und andere Zielfunktionen für Autoencoder mit Punktwolken entwickelt werden. 
