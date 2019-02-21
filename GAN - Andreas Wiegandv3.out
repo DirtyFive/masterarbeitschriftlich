@@ -15,8 +15,8 @@
 \BOOKMARK [2][-]{subsection.1.2.3}{Convolution Neural Networks}{section.1.2}% 15
 \BOOKMARK [2][-]{subsection.1.2.4}{Autoencoder}{section.1.2}% 16
 \BOOKMARK [2][-]{subsection.1.2.5}{Generative Adversarial Network}{section.1.2}% 17
-\BOOKMARK [3][-]{subsubsection.1.2.5.1}{Probleme mit Generative Adverserial Networks}{subsection.1.2.5}% 18
-\BOOKMARK [3][-]{subsubsection.1.2.5.2}{L\366sungsans\344tze f\374r Generative Adverserial Networks Probleme}{subsection.1.2.5}% 19
+\BOOKMARK [3][-]{subsubsection.1.2.5.1}{Probleme mit GANs}{subsection.1.2.5}% 18
+\BOOKMARK [3][-]{subsubsection.1.2.5.2}{L\366sungsans\344tze f\374r die GAN Probleme}{subsection.1.2.5}% 19
 \BOOKMARK [2][-]{subsection.1.2.6}{Conditional-GAN}{section.1.2}% 20
 \BOOKMARK [2][-]{subsection.1.2.7}{3D-GAN}{section.1.2}% 21
 \BOOKMARK [2][-]{subsection.1.2.8}{Rekonstruktion von Daten}{section.1.2}% 22
@@ -29,4 +29,4 @@
 \BOOKMARK [2][-]{subsection.1.4.1}{Ergebnisse - Versuchsaufbau 1}{section.1.4}% 29
 \BOOKMARK [2][-]{subsection.1.4.2}{Ergebnisse - Versuchsaufbau 2}{section.1.4}% 30
 \BOOKMARK [1][-]{section.1.5}{Zusammenfassung und Diskussion }{chapter.1}% 31
-\BOOKMARK [1][-]{section*.59}{Literatur}{chapter.1}% 32
+\BOOKMARK [1][-]{section*.60}{Literatur}{chapter.1}% 32

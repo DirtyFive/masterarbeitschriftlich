@@ -19,8 +19,8 @@
 \contentsline {subsection}{\numberline {2.3}Convolution Neural Networks}{18}{subsection.1.2.3}
 \contentsline {subsection}{\numberline {2.4}Autoencoder}{21}{subsection.1.2.4}
 \contentsline {subsection}{\numberline {2.5}Generative Adversarial Network}{24}{subsection.1.2.5}
-\contentsline {subsubsection}{\numberline {2.5.1}Probleme mit Generative Adverserial Networks}{27}{subsubsection.1.2.5.1}
-\contentsline {subsubsection}{\numberline {2.5.2}L\IeC {\"o}sungsans\IeC {\"a}tze f\IeC {\"u}r Generative Adverserial Networks Probleme}{27}{subsubsection.1.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.1}Probleme mit GANs}{27}{subsubsection.1.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.2}L\IeC {\"o}sungsans\IeC {\"a}tze f\IeC {\"u}r die GAN Probleme}{27}{subsubsection.1.2.5.2}
 \contentsline {subsection}{\numberline {2.6}Conditional-GAN}{30}{subsection.1.2.6}
 \contentsline {subsection}{\numberline {2.7}3D-GAN}{31}{subsection.1.2.7}
 \contentsline {subsection}{\numberline {2.8}Rekonstruktion von Daten}{32}{subsection.1.2.8}
@@ -31,6 +31,6 @@
 \contentsline {subsection}{\numberline {3.4}Versuchsaufbau 2 - CGAN f\IeC {\"u}r Punktwolkenrekonstruktion }{38}{subsection.1.3.4}
 \contentsline {section}{\numberline {4}Evaluation und Ergebnisse}{40}{section.1.4}
 \contentsline {subsection}{\numberline {4.1}Ergebnisse - Versuchsaufbau 1}{40}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {4.2}Ergebnisse - Versuchsaufbau 2}{47}{subsection.1.4.2}
-\contentsline {section}{\numberline {5}Zusammenfassung und Diskussion }{55}{section.1.5}
-\contentsline {section}{Literatur}{60}{section*.59}
+\contentsline {subsection}{\numberline {4.2}Ergebnisse - Versuchsaufbau 2}{48}{subsection.1.4.2}
+\contentsline {section}{\numberline {5}Zusammenfassung und Diskussion }{58}{section.1.5}
+\contentsline {section}{Literatur}{62}{section*.60}

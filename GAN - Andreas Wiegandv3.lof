@@ -39,19 +39,20 @@
 \contentsline {figure}{\numberline {37}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Blattdaten\relax }}{45}{figure.caption.39}
 \contentsline {figure}{\numberline {38}{\ignorespaces Traingsergebnisse des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten\relax }}{45}{figure.caption.40}
 \contentsline {figure}{\numberline {39}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten\relax }}{46}{figure.caption.41}
-\contentsline {figure}{\numberline {40}{\ignorespaces 24 Stuhldaten in einen Koordinaten System geladen\relax }}{47}{figure.caption.42}
-\contentsline {figure}{\numberline {41}{\ignorespaces Trainingsverlauf des Autoencoder mit CD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten\relax }}{48}{figure.caption.43}
-\contentsline {figure}{\numberline {42}{\ignorespaces Trainingsbeispiele des Autoencoder mit CD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Output\relax }}{48}{figure.caption.44}
-\contentsline {figure}{\numberline {43}{\ignorespaces Trainingsbeispiele des Autoencoder mit CD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Input\relax }}{48}{figure.caption.45}
-\contentsline {figure}{\numberline {44}{\ignorespaces Trainingsverlauf des Autoencoder mit EMD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten \relax }}{50}{figure.caption.46}
-\contentsline {figure}{\numberline {45}{\ignorespaces Trainingsbeispiele des Autoencoder mit EMD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Output\relax }}{50}{figure.caption.47}
-\contentsline {figure}{\numberline {46}{\ignorespaces Trainingsbeispiele des Autoencoder mit EMD-Distanz f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Input\relax }}{51}{figure.caption.48}
-\contentsline {figure}{\numberline {47}{\ignorespaces Generator und Discriminator Loss des RAW-CGAN mit Wasserstein Distanz\relax }}{51}{figure.caption.49}
-\contentsline {figure}{\numberline {48}{\ignorespaces Der Input aus welchen vom RAW-CGAN die Daten rekonstruiert wurden\relax }}{52}{figure.caption.50}
-\contentsline {figure}{\numberline {49}{\ignorespaces Vom Generator des RAW-CGAN rekonstruierte Daten\relax }}{52}{figure.caption.51}
-\contentsline {figure}{\numberline {50}{\ignorespaces RAW-CGAN Loss\relax }}{52}{figure.caption.52}
-\contentsline {figure}{\numberline {51}{\ignorespaces Der Output aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurde\relax }}{53}{figure.caption.53}
-\contentsline {figure}{\numberline {52}{\ignorespaces Der Input aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurden\relax }}{53}{figure.caption.54}
-\contentsline {figure}{\numberline {53}{\ignorespaces Discriminator und Generator Loss RAW-DGAN mit Convolutional-Layer und Wasserstein Distanz\relax }}{53}{figure.caption.55}
-\contentsline {figure}{\numberline {54}{\ignorespaces Der Output aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurde\relax }}{53}{figure.caption.56}
-\contentsline {figure}{\numberline {55}{\ignorespaces Der Input aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurden\relax }}{53}{figure.caption.57}
+\contentsline {figure}{\numberline {40}{\ignorespaces 24 Stuhldaten in einen Koordinatensystem geladen\relax }}{47}{figure.caption.42}
+\contentsline {figure}{\numberline {41}{\ignorespaces Trainingsbeispiele des Autoencoder mit CD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Output\relax }}{48}{figure.caption.43}
+\contentsline {figure}{\numberline {42}{\ignorespaces Trainingsbeispiele des Autoencoder mit CD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Input\relax }}{48}{figure.caption.44}
+\contentsline {figure}{\numberline {43}{\ignorespaces Trainingsverlauf des Autoencoder mit CD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten\relax }}{49}{figure.caption.45}
+\contentsline {figure}{\numberline {44}{\ignorespaces Trainingsbeispiele des Autoencoder mit EMD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Output\relax }}{50}{figure.caption.46}
+\contentsline {figure}{\numberline {45}{\ignorespaces Trainingsbeispiele des Autoencoder mit EMD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Input\relax }}{50}{figure.caption.47}
+\contentsline {figure}{\numberline {46}{\ignorespaces Trainingsverlauf des Autoencoder mit EMD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten \relax }}{51}{figure.caption.48}
+\contentsline {figure}{\numberline {47}{\ignorespaces Der Input aus welchen vom RAW-CGAN mit EMD die Daten rekonstruiert wurden\relax }}{52}{figure.caption.49}
+\contentsline {figure}{\numberline {48}{\ignorespaces Output des Generators vom RAW-CGAN mit EMD\relax }}{52}{figure.caption.50}
+\contentsline {figure}{\numberline {49}{\ignorespaces Generator und Discriminator Loss des RAW-CGAN mit EMD\relax }}{53}{figure.caption.51}
+\contentsline {figure}{\numberline {50}{\ignorespaces Der Output aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurde\relax }}{53}{figure.caption.52}
+\contentsline {figure}{\numberline {51}{\ignorespaces Der Input aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurden\relax }}{54}{figure.caption.53}
+\contentsline {figure}{\numberline {52}{\ignorespaces RAW-CGAN mit Convolutional-Layern und Vanilla-GAN-Loss\relax }}{54}{figure.caption.54}
+\contentsline {figure}{\numberline {53}{\ignorespaces Discriminator und Generator Loss RAW-DGAN mit Convolutional-Layer und Wasserstein Metrik\relax }}{55}{figure.caption.55}
+\contentsline {figure}{\numberline {54}{\ignorespaces Der Output aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurde\relax }}{55}{figure.caption.56}
+\contentsline {figure}{\numberline {55}{\ignorespaces Der Input aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurden\relax }}{56}{figure.caption.57}
+\contentsline {figure}{\numberline {56}{\ignorespaces Rot der Output des Autoencoders in Epoche 1, Gr\IeC {\"u}n der Input des Autoencoders \relax }}{57}{figure.caption.58}

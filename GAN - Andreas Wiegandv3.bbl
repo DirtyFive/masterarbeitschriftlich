@@ -87,6 +87,33 @@ Arjovsky, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Bang%
+\ \BBA {} Shim%
+}{%
+Bang%
+\ \BBA {} Shim%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+vanishing}
+\APACinsertmetastar {%
+vanishing}%
+\begin{APACrefauthors}%
+Bang, D.%
+\BCBT {}\ \BBA {} Shim, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Improved training of generative adversarial networks
+  using representative features} {Improved training of generative adversarial
+  networks using representative features}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1801.09195}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 \APACcitebtitle {batchnorm Chun}}{%
 \APACcitebtitle {batchnorm Chun}}{%
 {\protect \APACyear {{\protect \bibnodate {}}}}%
@@ -159,9 +186,9 @@ Dong%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2016}}%
 {\protect \APACexlab {{\protect \BCnt {1}}}}}]{%
-imagere1}
+imagerecon}
 \APACinsertmetastar {%
-imagere1}%
+imagerecon}%
 \begin{APACrefauthors}%
 Dong, C.%
 , Loy, C\BPBI C.%
@@ -175,8 +202,7 @@ Dong, C.%
 {\BBOQ}\APACrefatitle {Image super-resolution using deep convolutional
   networks} {Image super-resolution using deep convolutional networks}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{IEEE transactions on pattern analysis and machine
-  intelligence}{38}{2}{295--307}.
+\APACjournalVolNumPages{}{38}{2}{295--307}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -189,9 +215,9 @@ Dong%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2016}}%
 {\protect \APACexlab {{\protect \BCnt {2}}}}}]{%
-imagerecon}
+imagere1}
 \APACinsertmetastar {%
-imagerecon}%
+imagere1}%
 \begin{APACrefauthors}%
 Dong, C.%
 , Loy, C\BPBI C.%
@@ -205,7 +231,8 @@ Dong, C.%
 {\BBOQ}\APACrefatitle {Image super-resolution using deep convolutional
   networks} {Image super-resolution using deep convolutional networks}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{}{38}{2}{295--307}.
+\APACjournalVolNumPages{IEEE transactions on pattern analysis and machine
+  intelligence}{38}{2}{295--307}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -262,24 +289,6 @@ Fan, H.%
 \BIn{} \APACrefbtitle {2017 IEEE Cosnference on Computer Vision and Pattern
   Recognition (CVPR)} {2017 ieee cosnference on computer vision and pattern
   recognition (cvpr)}\ (\BPGS\ 2463--2471).
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-\APACcitebtitle {gan lilian weng}}{%
-\APACcitebtitle {gan lilian weng}}{%
-{\protect \APACyear {{\protect \bibnodate {}}}}%
-}]{%
-gan_prob}
-\APACinsertmetastar {%
-gan_prob}%
-\APACrefbtitle {gan lilian weng.} {gan lilian weng.}
-\newblock
-\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
-\newblock
-\APAChowpublished
-  {\url{https://lilianweng.github.io/lil-log/2017/08/20/from-GAN-to-WGAN.html}}.
-\newblock
-\APACrefnote{Accessed: 2019-02-16}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
