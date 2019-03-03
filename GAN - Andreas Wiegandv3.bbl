@@ -292,35 +292,6 @@ Fan, H.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Golik%
-, Doetsch%
-\BCBL {}\ \BBA {} Ney%
-}{%
-Golik%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2013}}%
-}]{%
-crossentropy}
-\APACinsertmetastar {%
-crossentropy}%
-\begin{APACrefauthors}%
-Golik, P.%
-, Doetsch, P.%
-\BCBL {}\ \BBA {} Ney, H.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2013}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Cross-entropy vs. squared error training: a theoretical
-  and experimental comparison.} {Cross-entropy vs. squared error training: a
-  theoretical and experimental comparison.}{\BBCQ}
-\newblock
-\BIn{} \APACrefbtitle {Interspeech} {Interspeech}\ (\BVOL~13, \BPGS\
-  1756--1760).
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Goodfellow%
 , Bengio%
 , Courville%
@@ -415,6 +386,28 @@ Haque, M\BPBI R.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Haykin%
+}{%
+Haykin%
+}{%
+{\protect \APACyear {1994}}%
+}]{%
+neuralnet}
+\APACinsertmetastar {%
+neuralnet}%
+\begin{APACrefauthors}%
+Haykin, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1994}.
+\newblock
+\APACrefbtitle {Neural networks} {Neural networks}\ (\BVOL~2).
+\newblock
+\APACaddressPublisher{}{Prentice hall New York}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Hinton%
 \ \BBA {} Salakhutdinov%
 }{%
@@ -484,8 +477,8 @@ Ioffe, S.%
 \newblock
 \APACrefYearMonthDay{2015}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Batch normalization: Accelerating deep network training
-  by reducing internal covariate shift} {Batch normalization: Accelerating deep
+{\BBOQ}\APACrefatitle {Batch Normalization: Accelerating Deep Network Training
+  by Reducing Internal Covariate Shift} {Batch normalization: Accelerating deep
   network training by reducing internal covariate shift}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{arXiv preprint arXiv:1502.03167}{}{}{}.
@@ -547,35 +540,6 @@ Mirza, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Morabbi%
-, Keyvanpour%
-\BCBL {}\ \BBA {} Shojaedini%
-}{%
-Morabbi%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2018}}%
-}]{%
-saddleimage}
-\APACinsertmetastar {%
-saddleimage}%
-\begin{APACrefauthors}%
-Morabbi, S.%
-, Keyvanpour, M.%
-\BCBL {}\ \BBA {} Shojaedini, S\BPBI V.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2018}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {A new method for P300 detection in deep belief networks:
-  Nesterov momentum and drop based learning rate} {A new method for p300
-  detection in deep belief networks: Nesterov momentum and drop based learning
-  rate}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Health and Technology}{}{}{1--16}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Ng%
 \ \BBA {} Jordan%
 }{%
@@ -602,6 +566,36 @@ Ng, A\BPBI Y.%
 \newblock
 \BIn{} \APACrefbtitle {Advances in neural information processing systems}
   {Advances in neural information processing systems}\ (\BPGS\ 841--848).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pound%
+\ \protect \BOthers {.}}{%
+Pound%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+plants}
+\APACinsertmetastar {%
+plants}%
+\begin{APACrefauthors}%
+Pound, M\BPBI P.%
+, Atkinson, J\BPBI A.%
+, Townsend, A\BPBI J.%
+, Wilson, M\BPBI H.%
+, Griffiths, M.%
+, Jackson, A\BPBI S.%
+\BDBL {}others%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep machine learning provides state-of-the-art
+  performance in image-based plant phenotyping} {Deep machine learning provides
+  state-of-the-art performance in image-based plant phenotyping}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Gigascience}{6}{10}{gix083}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -708,6 +702,29 @@ Salimans, T.%
 \newblock
 \BIn{} \APACrefbtitle {Advances in Neural Information Processing Systems}
   {Advances in neural information processing systems}\ (\BPGS\ 2234--2242).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Schmidhuber%
+}{%
+Schmidhuber%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+conv_adv}
+\APACinsertmetastar {%
+conv_adv}%
+\begin{APACrefauthors}%
+Schmidhuber, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep learning in neural networks: An overview} {Deep
+  learning in neural networks: An overview}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Neural networks}{61}{}{85--117}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
