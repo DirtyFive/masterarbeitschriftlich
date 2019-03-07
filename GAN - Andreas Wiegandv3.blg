@@ -1,22 +1,21 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: GAN - Andreas Wiegandv3.aux
 The style file: apacite.bst
 Database file #1: mybib.bib
-I was expecting a `,' or a `}'---line 26 of file mybib.bib
+I was expecting a `,' or a `}'---line 39 of file mybib.bib
  :  
  :  year = {2017}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 41 of file mybib.bib
+I was expecting a `,' or a `}'---line 54 of file mybib.bib
  :  
  :  year = {2014}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 48 of file mybib.bib
+I was expecting a `,' or a `}'---line 61 of file mybib.bib
  :  
  :  year = {2017}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "backprob"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No journal in 3dgan
 Warning--No journal in imagerecon

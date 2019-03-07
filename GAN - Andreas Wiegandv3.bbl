@@ -292,6 +292,32 @@ Fan, H.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Gharakhanian%
+}{%
+Gharakhanian%
+}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+ganpic}
+\APACinsertmetastar {%
+ganpic}%
+\begin{APACrefauthors}%
+Gharakhanian, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+\APACrefbtitle {Generative Adversrial Networks.} {Generative adversrial
+  networks.}
+\newblock
+\APAChowpublished
+  {\url{https://www.kdnuggets.com/2017/01/generative-adversarial-networks-hot-topic-machine-learning.html}}.
+\newblock
+\APACrefnote{Accessed: 2019-02-18}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Goodfellow%
 , Bengio%
 , Courville%
@@ -485,6 +511,31 @@ Ioffe, S.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Leonidas J.~Guibas%
+\ \BBA {} Su%
+}{%
+Leonidas J.~Guibas%
+\ \BBA {} Su%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+3dpointcloud}
+\APACinsertmetastar {%
+3dpointcloud}%
+\begin{APACrefauthors}%
+Leonidas J.~Guibas, A\BPBI D.%
+\BCBT {}\ \BBA {} Su, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{March}{}.
+\newblock
+\APACrefbtitle {Machine Learning for 3D Data.} {Machine learning for 3d data.}
+\newblock
+\APACaddressPublisher{}{Stanford University}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Liu%
 \ \protect \BOthers {.}}{%
 Liu%
@@ -673,6 +724,33 @@ Ruder, S.%
 
 \newblock
 \APACjournalVolNumPages{arXiv preprint arXiv:1609.04747}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rumelhart%
+, Hinton%
+\BCBL {}\ \BBA {} Williams%
+}{%
+Rumelhart%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1986}}%
+}]{%
+backprob}
+\APACinsertmetastar {%
+backprob}%
+\begin{APACrefauthors}%
+Rumelhart, D\BPBI E.%
+, Hinton, G\BPBI E.%
+\BCBL {}\ \BBA {} Williams, R\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1986}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning representations by back-propagating errors}
+  {Learning representations by back-propagating errors}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{nature}{323}{6088}{533}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

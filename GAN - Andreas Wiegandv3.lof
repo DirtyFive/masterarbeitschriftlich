@@ -8,49 +8,49 @@
 \contentsline {figure}{\numberline {6}{\ignorespaces Convolution Beispiel\cite {conv}\relax }}{14}{figure.caption.8}
 \contentsline {figure}{\numberline {7}{\ignorespaces Deconvolution Beispiel \cite {conv}\relax }}{15}{figure.caption.9}
 \contentsline {figure}{\numberline {8}{\ignorespaces Autoencoder\relax }}{16}{figure.caption.10}
-\contentsline {figure}{\numberline {9}{\ignorespaces Earth Mover Distance\relax }}{17}{figure.caption.11}
-\contentsline {figure}{\numberline {10}{\ignorespaces Chamfer Distance\relax }}{18}{figure.caption.12}
-\contentsline {figure}{\numberline {11}{\ignorespaces Generativ Adverserial Network\relax }}{18}{figure.caption.13}
+\contentsline {figure}{\numberline {9}{\ignorespaces Earth Mover Distance f\IeC {\"u}r Punktwolken \cite {3dpointcloud}\relax }}{17}{figure.caption.11}
+\contentsline {figure}{\numberline {10}{\ignorespaces Chamfer Distance f\IeC {\"u}r Punktwolken \cite {3dpointcloud}\relax }}{17}{figure.caption.12}
+\contentsline {figure}{\numberline {11}{\ignorespaces Generativ Adversarial Network \cite {ganpic}\relax }}{18}{figure.caption.13}
 \contentsline {figure}{\numberline {12}{\ignorespaces Deep Convolutional GAN\cite {dc-gan_book}\relax }}{20}{figure.caption.14}
-\contentsline {figure}{\numberline {13}{\ignorespaces Conditional Adverserial Network\cite {cgan}\relax }}{24}{figure.caption.15}
-\contentsline {figure}{\numberline {14}{\ignorespaces Latent-GAN\relax }}{25}{figure.caption.16}
-\contentsline {figure}{\numberline {15}{\ignorespaces Bild Rekonstruktion eines Hundes welches durch ein Artefakt zerst\IeC {\"o}rt wurde\relax }}{27}{figure.caption.17}
-\contentsline {figure}{\numberline {16}{\ignorespaces Polygon File Format\relax }}{27}{figure.caption.18}
-\contentsline {figure}{\numberline {17}{\ignorespaces Visualisierte Punktwolke eines Tabakblattes\relax }}{28}{figure.caption.19}
-\contentsline {figure}{\numberline {18}{\ignorespaces Scankopf und Scanaufbau f\IeC {\"u}r die 3D-Punktwolken Gewinnung\relax }}{28}{figure.caption.20}
-\contentsline {figure}{\numberline {19}{\ignorespaces 3D Punktwolke einer Tabakpflanze\relax }}{29}{figure.caption.21}
-\contentsline {figure}{\numberline {20}{\ignorespaces 3D Punktwolke einer Tabakpflanze\relax }}{32}{figure.caption.22}
-\contentsline {figure}{\numberline {21}{\ignorespaces 3D Punktwolke eines Tabakblattes mit 2048 Punkten\relax }}{33}{figure.caption.23}
-\contentsline {figure}{\numberline {22}{\ignorespaces Tabakblatt mit Sph\IeC {\"a}re welche die Differenzmenge bilden\relax }}{34}{figure.caption.24}
-\contentsline {figure}{\numberline {23}{\ignorespaces Sph\IeC {\"a}re im Raum welche das Verdecken der Bl\IeC {\"a}tter simulieren\relax }}{34}{figure.caption.25}
-\contentsline {figure}{\numberline {24}{\ignorespaces 3D Punktwolke von zerst\IeC {\"o}rten Tabakbl\IeC {\"a}ttern\relax }}{34}{figure.caption.26}
-\contentsline {figure}{\numberline {25}{\ignorespaces Aufbau des RAW-CGAN\relax }}{37}{figure.caption.27}
-\contentsline {figure}{\numberline {26}{\ignorespaces Generierte Beispieldaten vom Generator des RAW-GAN mit den Blattdaten\relax }}{38}{figure.caption.28}
-\contentsline {figure}{\numberline {27}{\ignorespaces 24 Punktwolken aus dem Blattdatensatz in einen Koordinatensystem\relax }}{39}{figure.caption.29}
-\contentsline {figure}{\numberline {28}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Blattdaten\relax }}{39}{figure.caption.30}
-\contentsline {figure}{\numberline {29}{\ignorespaces Generierte Beispieldaten von Generator des RAW-GAN mit den Stuhldaten\relax }}{40}{figure.caption.31}
-\contentsline {figure}{\numberline {30}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Stuhldaten\relax }}{40}{figure.caption.32}
-\contentsline {figure}{\numberline {31}{\ignorespaces Trainingsbeispiele des RAW-GAN mit den 422 Stuhldaten\relax }}{41}{figure.caption.33}
-\contentsline {figure}{\numberline {32}{\ignorespaces Trainingsverlauf des RAW-GAN mit den 422 Stuhldaten\relax }}{41}{figure.caption.34}
-\contentsline {figure}{\numberline {33}{\ignorespaces Trainingsbeispiele des RAW-GAN mit den 422 Stuhldaten\relax }}{42}{figure.caption.35}
-\contentsline {figure}{\numberline {34}{\ignorespaces Trainingsergebnisse des Latent-GAN mit den Blattdaten\relax }}{42}{figure.caption.36}
-\contentsline {figure}{\numberline {35}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Blattdaten\relax }}{43}{figure.caption.37}
-\contentsline {figure}{\numberline {36}{\ignorespaces Traingsergebnisse des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten\relax }}{43}{figure.caption.38}
-\contentsline {figure}{\numberline {37}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten und 400 Trainingsdaten\relax }}{44}{figure.caption.39}
-\contentsline {figure}{\numberline {38}{\ignorespaces 24 Stuhldaten in einen Koordinatensystem geladen\relax }}{45}{figure.caption.40}
-\contentsline {figure}{\numberline {39}{\ignorespaces Trainingsbeispiele des Autoencoder mit CD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Output\relax }}{46}{figure.caption.41}
-\contentsline {figure}{\numberline {40}{\ignorespaces Trainingsbeispiele des Autoencoder mit CD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Input\relax }}{46}{figure.caption.42}
-\contentsline {figure}{\numberline {41}{\ignorespaces Trainingsverlauf des Autoencoder mit CD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten\relax }}{47}{figure.caption.43}
-\contentsline {figure}{\numberline {42}{\ignorespaces Trainingsbeispiele des Autoencoder mit EMD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Output\relax }}{48}{figure.caption.44}
-\contentsline {figure}{\numberline {43}{\ignorespaces Trainingsbeispiele des Autoencoder mit EMD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Input\relax }}{48}{figure.caption.45}
-\contentsline {figure}{\numberline {44}{\ignorespaces Trainingsverlauf des Autoencoder mit EMD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten \relax }}{49}{figure.caption.46}
-\contentsline {figure}{\numberline {45}{\ignorespaces Der Input aus welchen vom RAW-CGAN mit EMD die Daten rekonstruiert wurden\relax }}{50}{figure.caption.47}
-\contentsline {figure}{\numberline {46}{\ignorespaces Output des Generators vom RAW-CGAN mit EMD\relax }}{50}{figure.caption.48}
-\contentsline {figure}{\numberline {47}{\ignorespaces Generator und Discriminator Loss des RAW-CGAN mit EMD\relax }}{51}{figure.caption.49}
-\contentsline {figure}{\numberline {48}{\ignorespaces Der Output aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurde\relax }}{51}{figure.caption.50}
-\contentsline {figure}{\numberline {49}{\ignorespaces Der Input aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurden\relax }}{52}{figure.caption.51}
-\contentsline {figure}{\numberline {50}{\ignorespaces RAW-CGAN mit Convolutional-Layern und Vanilla-GAN-Loss\relax }}{52}{figure.caption.52}
-\contentsline {figure}{\numberline {51}{\ignorespaces Discriminator und Generator Loss RAW-DGAN mit Convolutional-Layer und Wasserstein Metrik\relax }}{53}{figure.caption.53}
-\contentsline {figure}{\numberline {52}{\ignorespaces Der Output aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurde\relax }}{53}{figure.caption.54}
-\contentsline {figure}{\numberline {53}{\ignorespaces Der Input aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurden\relax }}{54}{figure.caption.55}
-\contentsline {figure}{\numberline {54}{\ignorespaces Rot der Output des Autoencoders in Epoche 1, Gr\IeC {\"u}n der Input des Autoencoders \relax }}{55}{figure.caption.56}
+\contentsline {figure}{\numberline {13}{\ignorespaces Conditional Adverserial Network\cite {cgan}\relax }}{23}{figure.caption.15}
+\contentsline {figure}{\numberline {14}{\ignorespaces Latent-GAN\relax }}{24}{figure.caption.16}
+\contentsline {figure}{\numberline {15}{\ignorespaces Bild Rekonstruktion eines Hundes, welches durch ein Artefakt zerst\IeC {\"o}rt wurde\relax }}{26}{figure.caption.17}
+\contentsline {figure}{\numberline {16}{\ignorespaces Polygon File Format\relax }}{26}{figure.caption.18}
+\contentsline {figure}{\numberline {17}{\ignorespaces Visualisierte Punktwolke eines Tabakblattes\relax }}{27}{figure.caption.19}
+\contentsline {figure}{\numberline {18}{\ignorespaces Scankopf und Scanaufbau f\IeC {\"u}r die 3D-Punktwolken Gewinnung\relax }}{27}{figure.caption.20}
+\contentsline {figure}{\numberline {19}{\ignorespaces 3D Punktwolke einer Tabakpflanze\relax }}{28}{figure.caption.21}
+\contentsline {figure}{\numberline {20}{\ignorespaces 3D Punktwolke einer Tabakpflanze\relax }}{31}{figure.caption.22}
+\contentsline {figure}{\numberline {21}{\ignorespaces 3D Punktwolke eines Tabakblattes mit 2048 Punkten\relax }}{32}{figure.caption.23}
+\contentsline {figure}{\numberline {22}{\ignorespaces Tabakblatt mit Sph\IeC {\"a}re, welche die Differenzmenge bilden\relax }}{33}{figure.caption.24}
+\contentsline {figure}{\numberline {23}{\ignorespaces Sph\IeC {\"a}re im Raum, welche das Verdecken der Bl\IeC {\"a}tter simuliert\relax }}{33}{figure.caption.25}
+\contentsline {figure}{\numberline {24}{\ignorespaces 3D Punktwolke von zerst\IeC {\"o}rten Tabakbl\IeC {\"a}ttern\relax }}{33}{figure.caption.26}
+\contentsline {figure}{\numberline {25}{\ignorespaces Aufbau des RAW-CGAN\relax }}{36}{figure.caption.27}
+\contentsline {figure}{\numberline {26}{\ignorespaces Generierte Beispieldaten vom Generator des RAW-GAN mit den Blattdaten\relax }}{37}{figure.caption.28}
+\contentsline {figure}{\numberline {27}{\ignorespaces 24 Punktwolken aus dem Blattdatensatz in einen Koordinatensystem\relax }}{38}{figure.caption.29}
+\contentsline {figure}{\numberline {28}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Blattdaten\relax }}{38}{figure.caption.30}
+\contentsline {figure}{\numberline {29}{\ignorespaces Generierte Beispieldaten vom Generator des RAW-GAN mit den Stuhldaten\relax }}{39}{figure.caption.31}
+\contentsline {figure}{\numberline {30}{\ignorespaces Trainingsverlauf des RAW-GAN mit den Stuhldaten\relax }}{39}{figure.caption.32}
+\contentsline {figure}{\numberline {31}{\ignorespaces Trainingsbeispiele des RAW-GAN mit den 422 Stuhldaten\relax }}{40}{figure.caption.33}
+\contentsline {figure}{\numberline {32}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten\relax }}{40}{figure.caption.34}
+\contentsline {figure}{\numberline {33}{\ignorespaces Trainingsbeispiele des Latent-GAN mit den Stuhldaten\relax }}{41}{figure.caption.35}
+\contentsline {figure}{\numberline {34}{\ignorespaces Trainingsergebnisse des Latent-GAN mit den Blattdaten\relax }}{41}{figure.caption.36}
+\contentsline {figure}{\numberline {35}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Blattdaten\relax }}{42}{figure.caption.37}
+\contentsline {figure}{\numberline {36}{\ignorespaces Trainingsergebnisse des Latent-GAN mit den Stuhldaten und 422 Trainingsdaten\relax }}{42}{figure.caption.38}
+\contentsline {figure}{\numberline {37}{\ignorespaces Trainingsverlauf des Latent-GAN mit den Stuhldaten und 422 Trainingsdaten\relax }}{43}{figure.caption.39}
+\contentsline {figure}{\numberline {38}{\ignorespaces 24 Stuhldaten in einen Koordinatensystem geladen\relax }}{44}{figure.caption.40}
+\contentsline {figure}{\numberline {39}{\ignorespaces Trainingsbeispiele des Autoencoder mit CD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Output\relax }}{45}{figure.caption.41}
+\contentsline {figure}{\numberline {40}{\ignorespaces Trainingsbeispiele des Autoencoder mit CD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Input\relax }}{45}{figure.caption.42}
+\contentsline {figure}{\numberline {41}{\ignorespaces Trainingsverlauf des Autoencoder mit CD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten\relax }}{46}{figure.caption.43}
+\contentsline {figure}{\numberline {42}{\ignorespaces Trainingsbeispiele des Autoencoder mit EMD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Output\relax }}{47}{figure.caption.44}
+\contentsline {figure}{\numberline {43}{\ignorespaces Trainingsbeispiele des Autoencoder mit EMD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten - Input\relax }}{47}{figure.caption.45}
+\contentsline {figure}{\numberline {44}{\ignorespaces Trainingsverlauf des Autoencoder mit EMD f\IeC {\"u}r zerst\IeC {\"o}rte Blattdaten \relax }}{48}{figure.caption.46}
+\contentsline {figure}{\numberline {45}{\ignorespaces Der Input aus welchen vom RAW-CGAN mit EMD die Daten rekonstruiert wurden\relax }}{49}{figure.caption.47}
+\contentsline {figure}{\numberline {46}{\ignorespaces Output des Generators vom RAW-CGAN mit EMD\relax }}{49}{figure.caption.48}
+\contentsline {figure}{\numberline {47}{\ignorespaces Generator und Discriminator Loss des RAW-CGAN mit EMD\relax }}{50}{figure.caption.49}
+\contentsline {figure}{\numberline {48}{\ignorespaces Der Output, aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurde\relax }}{50}{figure.caption.50}
+\contentsline {figure}{\numberline {49}{\ignorespaces Der Input, aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurden\relax }}{51}{figure.caption.51}
+\contentsline {figure}{\numberline {50}{\ignorespaces RAW-CGAN mit Convolutional-Layern und Vanilla-GAN-Loss\relax }}{51}{figure.caption.52}
+\contentsline {figure}{\numberline {51}{\ignorespaces Discriminator und Generator Loss RAW-DGAN mit Convolutional-Layer und Wasserstein Metrik\relax }}{52}{figure.caption.53}
+\contentsline {figure}{\numberline {52}{\ignorespaces Der Output aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurde\relax }}{52}{figure.caption.54}
+\contentsline {figure}{\numberline {53}{\ignorespaces Der Input aus welchen vom RAW-CGAN mit Convolutional Layern die Daten rekonstruiert wurden\relax }}{53}{figure.caption.55}
+\contentsline {figure}{\numberline {54}{\ignorespaces Rot der Output des Autoencoders in Epoche 1, Gr\IeC {\"u}n der Input des Autoencoders \relax }}{54}{figure.caption.56}
